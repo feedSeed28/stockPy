@@ -1,0 +1,25 @@
+{
+  "name": "stock-quant-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "max dev",
+    "build": "max build",
+    "preview": "max preview",
+    "lint": "max lint",
+    "test": "max test"
+  },
+  "dependencies": {
+    "@ant-design/pro-components": "^2.8.0",
+    "@umijs/max": "^4.4.0",
+    "antd": "^5.22.0",
+    "axios": "^1.7.0",
+    "echarts": "^5.5.0",
+    "echarts-for-react": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.5.0"
+  }
+}
