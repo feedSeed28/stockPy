@@ -1,3 +1,25 @@
+# =============================================================================
+# Docker Compose — Stock Quant System
+# =============================================================================
+#
+# Docker 是可选方案，不是必选项。
+# 如果你已有原生 MySQL 8 运行在 localhost:3306，无需使用此文件。
+# 本项目当前使用原生 MySQL，此文件供以下场景使用：
+#   - 在新机器上快速部署
+#   - 不想安装原生 MySQL
+#   - 需要隔离的开发环境
+#
+# 首次使用：
+#   1. 安装 Docker Desktop: https://www.docker.com/products/docker-desktop/
+#   2. 在本目录执行: docker-compose up -d mysql
+#   3. MySQL 数据持久化在 Docker Volume 中，重启不会丢失
+#
+# 注意：
+#   - 如果本机已有 MySQL 占用 3306 端口，需修改下方 ports 映射
+#   - 首次启动会自动执行 docker/mysql/init.sql 创建用户和数据库
+#   - MYSQL_ROOT_PASSWORD 通过环境变量或 .env 文件设置，默认 "root"
+# =============================================================================
+
 version: "3.8"
 
 services:

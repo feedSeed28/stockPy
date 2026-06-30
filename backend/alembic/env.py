@@ -6,7 +6,7 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 
 from app.core.config import settings
-from app.models.base import Base
+from app.models import Base  # re-exports from models.__init__ with all tables registered
 
 # Alembic Config object
 config = context.config

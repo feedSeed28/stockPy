@@ -33,5 +33,9 @@ Thumbs.db
 *.log
 logs/
 
+# Data exports (large files, don't commit)
+*.sql
+!docker/mysql/init.sql
+
 # Docker
 docker-compose.override.yml
