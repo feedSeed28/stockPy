@@ -16,6 +16,7 @@
       "@umijs/max": "^4.4.0",
       "antd": "^5.22.0",
       "axios": "^1.7.0",
+      "dayjs": "^1.11.21",
       "echarts": "^5.5.0",
       "echarts-for-react": "^3.0.0"
     },
@@ -36,7 +37,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 13
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -49,7 +50,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 21
+        "register": 12
       },
       "enableBy": "register"
     },
@@ -62,7 +63,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 7
       },
       "enableBy": "register"
     },
@@ -79,7 +80,7 @@
             0
           ]
         },
-        "register": 52
+        "register": 4
       },
       "enableBy": "register"
     },
@@ -96,7 +97,7 @@
             2
           ]
         },
-        "register": 19
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -110,10 +111,11 @@
       "time": {
         "hooks": {
           "modifyRoutes": [
+            0,
             0
           ]
         },
-        "register": 12
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -125,8 +127,16 @@
       "key": "aiDev",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 3
+        "hooks": {
+          "onDevCompileDone": [
+            24,
+            3,
+            2,
+            4,
+            4
+          ]
+        },
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -140,10 +150,14 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            70
+            35
+          ],
+          "onGenerateFiles": [
+            4,
+            21
           ]
         },
-        "register": 122
+        "register": 27
       },
       "enableBy": "register"
     },
@@ -155,7 +169,12 @@
       "key": "umiInfo",
       "config": {},
       "time": {
-        "hooks": {},
+        "hooks": {
+          "addEntryCode": [
+            0,
+            0
+          ]
+        },
         "register": 1
       },
       "enableBy": "register"
@@ -174,9 +193,68 @@
           ],
           "onCheck": [
             0
+          ],
+          "onPrepareBuildSuccess": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "onCheckCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
           ]
         },
-        "register": 6
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -193,7 +271,7 @@
             0
           ]
         },
-        "register": 8
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -206,7 +284,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -223,7 +301,7 @@
             0
           ]
         },
-        "register": 46
+        "register": 13
       },
       "enableBy": "register"
     },
@@ -1075,7 +1153,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1089,10 +1167,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            0
+            1
           ]
         },
-        "register": 4
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1104,8 +1182,12 @@
       "key": "devTool",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 4
+        "hooks": {
+          "addBeforeMiddlewares": [
+            22
+          ]
+        },
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1118,7 +1200,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 126
+        "register": 93
       },
       "enableBy": "register"
     },
@@ -1131,7 +1213,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 257
+        "register": 47
       },
       "enableBy": "config"
     },
@@ -1144,7 +1226,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 95
+        "register": 31
       },
       "enableBy": "config"
     },
@@ -1159,9 +1241,17 @@
         "hooks": {
           "modifyAppData": [
             0
+          ],
+          "addBeforeMiddlewares": [
+            0
+          ],
+          "modifyHTMLFavicon": [
+            0,
+            0,
+            0
           ]
         },
-        "register": 6
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1173,8 +1263,17 @@
       "key": "helmet",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 3
+        "hooks": {
+          "onGenerateFiles": [
+            5,
+            1
+          ],
+          "addRuntimePlugin": [
+            0,
+            0
+          ]
+        },
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1187,7 +1286,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1202,9 +1301,12 @@
         "hooks": {
           "onStart": [
             1
+          ],
+          "addBeforeMiddlewares": [
+            0
           ]
         },
-        "register": 110
+        "register": 41
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1216,7 +1318,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1240,7 +1342,18 @@
       "key": "overrides",
       "config": {},
       "time": {
-        "hooks": {},
+        "hooks": {
+          "onGenerateFiles": [
+            0,
+            0
+          ],
+          "addEntryImports": [
+            0,
+            0,
+            1,
+            0
+          ]
+        },
         "register": 0
       },
       "enableBy": "register"
@@ -1269,9 +1382,19 @@
         "hooks": {
           "modifyConfig": [
             2
+          ],
+          "onGenerateFiles": [
+            217,
+            49
+          ],
+          "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0
           ]
         },
-        "register": 11
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
@@ -1282,8 +1405,15 @@
       "key": "publicPathPolyfill",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 13
+        "hooks": {
+          "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1295,8 +1425,13 @@
       "key": "prepare",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 7
+        "hooks": {
+          "onGenerateFiles": [
+            148,
+            0
+          ]
+        },
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1309,7 +1444,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1322,7 +1457,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1334,8 +1469,16 @@
       "key": "terminal",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 3
+        "hooks": {
+          "onGenerateFiles": [
+            21,
+            0
+          ],
+          "addBeforeMiddlewares": [
+            1
+          ]
+        },
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1347,8 +1490,15 @@
       "key": "tmpFiles",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 35
+        "hooks": {
+          "onGenerateFiles": [
+            33,
+            49,
+            12,
+            10
+          ]
+        },
+        "register": 6
       },
       "enableBy": "register"
     },
@@ -1361,7 +1511,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1386,7 +1536,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 3
       },
       "enableBy": "config"
     },
@@ -1398,8 +1548,13 @@
       "key": "configTypes",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 28
+        "hooks": {
+          "onGenerateFiles": [
+            653,
+            24
+          ]
+        },
+        "register": 5
       },
       "enableBy": "register"
     },
@@ -1411,8 +1566,12 @@
       "key": "transform",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 13
+        "hooks": {
+          "addBeforeBabelPresets": [
+            0
+          ]
+        },
+        "register": 5
       },
       "enableBy": "register"
     },
@@ -1425,7 +1584,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 20
+        "register": 3
       },
       "enableBy": "config"
     },
@@ -1438,7 +1597,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1451,7 +1610,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 39
+        "register": 9
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/monorepo/redirect": {
@@ -1463,7 +1622,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 52
+        "register": 28
       },
       "enableBy": "config"
     },
@@ -1475,8 +1634,13 @@
       "key": "test",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 6
+        "hooks": {
+          "onGenerateFiles": [
+            9,
+            1
+          ]
+        },
+        "register": 3
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
@@ -1488,7 +1652,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1501,7 +1665,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 14
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1514,7 +1678,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1527,7 +1691,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 14
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/swc/swc": {
@@ -1540,10 +1704,10 @@
       "time": {
         "hooks": {
           "addOnDemandDeps": [
-            0
+            1
           ]
         },
-        "register": 9
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1556,7 +1720,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 25
+        "register": 4
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/mako/mako": {
@@ -1568,7 +1732,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1581,7 +1745,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1594,7 +1758,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/utoopack/utoopack": {
@@ -1606,7 +1770,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 13
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian": {
@@ -1618,7 +1782,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 17
+        "register": 4
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad": {
@@ -1629,8 +1793,14 @@
       "key": "routePreloadOnLoad",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 80
+        "hooks": {
+          "addHTMLHeadScripts": [
+            0,
+            0,
+            0
+          ]
+        },
+        "register": 37
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/bundler/bundler": {
@@ -1641,8 +1811,12 @@
       "key": "preset-umi:bundler",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 21
+        "hooks": {
+          "modifyUniBundler": [
+            16072
+          ]
+        },
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1655,7 +1829,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 29
+        "register": 7
       },
       "enableBy": "register"
     },
@@ -1668,7 +1842,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 112
+        "register": 46
       },
       "enableBy": "register"
     },
@@ -1682,10 +1856,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            31
+            32
           ]
         },
-        "register": 361
+        "register": 50
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -1697,7 +1871,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 10
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1710,7 +1884,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1723,7 +1897,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1736,7 +1910,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1749,7 +1923,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1762,7 +1936,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 4
       },
       "enableBy": "register"
     },
@@ -1775,7 +1949,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1788,7 +1962,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 12
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1801,7 +1975,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1814,7 +1988,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1827,7 +2001,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1840,7 +2014,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 14
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1853,7 +2027,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1866,7 +2040,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1879,7 +2053,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1892,7 +2066,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1905,7 +2079,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1918,7 +2092,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1931,7 +2105,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 36
+        "register": 26
       },
       "enableBy": "register"
     },
@@ -1957,7 +2131,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 24
+        "register": 5
       },
       "enableBy": "register"
     },
@@ -1969,8 +2143,20 @@
       "key": "access",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 17
+        "hooks": {
+          "addRuntimePlugin": [
+            0,
+            0
+          ],
+          "onGenerateFiles": [
+            3,
+            1
+          ],
+          "addTmpGenerateWatcherPaths": [
+            0
+          ]
+        },
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1998,16 +2184,40 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            4
+            3
           ],
           "modifyAppData": [
             0
           ],
           "onCheck": [
             0
+          ],
+          "addEntryImportsAhead": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "addRuntimePlugin": [
+            0,
+            0
+          ],
+          "addRuntimePluginKey": [
+            0,
+            0
+          ],
+          "onGenerateFiles": [
+            16,
+            1
+          ],
+          "addExtraBabelPlugins": [
+            0
+          ],
+          "chainWebpack": [
+            0
           ]
         },
-        "register": 27
+        "register": 11
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/dva": {
@@ -2019,7 +2229,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 27
+        "register": 12
       },
       "enableBy": "config"
     },
@@ -2031,7 +2241,24 @@
       "key": "initialState",
       "config": {},
       "time": {
-        "hooks": {},
+        "hooks": {
+          "addRuntimePlugin": [
+            0,
+            0
+          ],
+          "addRuntimePluginKey": [
+            0,
+            0
+          ],
+          "onGenerateFiles": [
+            2,
+            1
+          ],
+          "addExtraModels": [
+            0,
+            0
+          ]
+        },
         "register": 1
       },
       "enableBy": "config"
@@ -2051,13 +2278,26 @@
             0
           ],
           "addLayouts": [
-            1
+            1,
+            0
           ],
           "modifyAppData": [
             1
+          ],
+          "addRuntimePlugin": [
+            0,
+            0
+          ],
+          "addRuntimePluginKey": [
+            0,
+            0
+          ],
+          "onGenerateFiles": [
+            36,
+            3
           ]
         },
-        "register": 7
+        "register": 6
       },
       "enableBy": "config"
     },
@@ -2070,7 +2310,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 4
       },
       "enableBy": "config"
     },
@@ -2083,7 +2323,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 41
+        "register": 3
       },
       "enableBy": "config"
     },
@@ -2095,8 +2335,20 @@
       "key": "model",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 3
+        "hooks": {
+          "addRuntimePlugin": [
+            0,
+            0
+          ],
+          "onGenerateFiles": [
+            19,
+            11
+          ],
+          "addTmpGenerateWatcherPaths": [
+            0
+          ]
+        },
+        "register": 7
       },
       "enableBy": "config"
     },
@@ -2109,7 +2361,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -2121,7 +2373,12 @@
       "key": "qiankun",
       "config": {},
       "time": {
-        "hooks": {},
+        "hooks": {
+          "addRuntimePluginKey": [
+            0,
+            0
+          ]
+        },
         "register": 2
       },
       "enableBy": "register"
@@ -2135,7 +2392,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 14
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/qiankun/slave": {
@@ -2159,7 +2416,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2171,8 +2428,17 @@
       "key": "request",
       "config": {},
       "time": {
-        "hooks": {},
-        "register": 1
+        "hooks": {
+          "addRuntimePluginKey": [
+            0,
+            0
+          ],
+          "onGenerateFiles": [
+            48,
+            4
+          ]
+        },
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2185,7 +2451,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -2198,7 +2464,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -2228,7 +2494,7 @@
             0
           ]
         },
-        "register": 15
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2245,7 +2511,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2259,10 +2525,11 @@
       "time": {
         "hooks": {
           "onCheckPkgJSON": [
+            0,
             0
           ]
         },
-        "register": 2
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2275,7 +2542,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 1
       },
       "enableBy": "register"
     }
@@ -2297,12 +2564,23 @@
     "routes": [
       {
         "path": "/",
-        "redirect": "/home"
+        "redirect": "/stocks"
       },
       {
-        "name": "首页",
-        "path": "/home",
-        "component": "./Home"
+        "name": "股票列表",
+        "path": "/stocks",
+        "component": "./Stocks"
+      },
+      {
+        "name": "股票详情",
+        "path": "/stocks/:code",
+        "component": "./Stocks/Detail",
+        "hideInMenu": true
+      },
+      {
+        "name": "板块",
+        "path": "/boards",
+        "component": "./Boards"
       }
     ],
     "npmClient": "pnpm",
@@ -2354,12 +2632,23 @@
     "routes": [
       {
         "path": "/",
-        "redirect": "/home"
+        "redirect": "/stocks"
       },
       {
-        "name": "首页",
-        "path": "/home",
-        "component": "./Home"
+        "name": "股票列表",
+        "path": "/stocks",
+        "component": "./Stocks"
+      },
+      {
+        "name": "股票详情",
+        "path": "/stocks/:code",
+        "component": "./Stocks/Detail",
+        "hideInMenu": true
+      },
+      {
+        "name": "板块",
+        "path": "/boards",
+        "component": "./Boards"
       }
     ],
     "npmClient": "pnpm",
@@ -3289,21 +3578,44 @@
   "routes": {
     "1": {
       "path": "/",
-      "redirect": "/home",
+      "redirect": "/stocks",
       "parentId": "ant-design-pro-layout",
       "id": "1",
       "absPath": "/"
     },
     "2": {
-      "name": "首页",
-      "path": "/home",
-      "file": "@/pages/Home/index.tsx",
+      "name": "股票列表",
+      "path": "/stocks",
+      "file": "@/pages/Stocks/index.tsx",
       "parentId": "ant-design-pro-layout",
       "id": "2",
-      "absPath": "/home",
-      "__content": "import { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Typography } from \"antd\";\n\nconst { Title, Paragraph } = Typography;\n\nexport default function HomePage() {\n  return (\n    <PageContainer>\n      <Card>\n        <Title level={3}>Stock Quant System</Title>\n        <Paragraph>股票量化系统 — P0 骨架就绪 ✅</Paragraph>\n      </Card>\n    </PageContainer>\n  );\n}\n",
+      "absPath": "/stocks",
+      "__content": "/** A-stock list page with search, filter, and pagination. */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Tag } from \"antd\";\nimport { useNavigate } from \"@umijs/max\";\nimport { fetchStocks } from \"@/services/stock\";\nimport type { StockInfo } from \"@/services/typings\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\n\nconst exchangeColor: Record<string, string> = {\n  SH: \"red\",\n  SZ: \"green\",\n  BJ: \"blue\",\n};\n\nconst columns: ProColumns<StockInfo>[] = [\n  {\n    title: \"代码\",\n    dataIndex: \"code\",\n    key: \"code\",\n    width: 100,\n    copyable: true,\n  },\n  {\n    title: \"名称\",\n    dataIndex: \"name\",\n    key: \"name\",\n    width: 120,\n  },\n  {\n    title: \"交易所\",\n    dataIndex: \"exchange\",\n    key: \"exchange\",\n    width: 90,\n    valueType: \"select\",\n    valueEnum: {\n      SH: { text: \"上海\" },\n      SZ: { text: \"深圳\" },\n      BJ: { text: \"北京\" },\n    },\n    render: (_, row) => (\n      <Tag color={exchangeColor[row.exchange] || \"default\"}>{row.exchange}</Tag>\n    ),\n  },\n  {\n    title: \"板块\",\n    dataIndex: \"board_type\",\n    key: \"board_type\",\n    width: 90,\n    valueType: \"select\",\n    valueEnum: {\n      \"主板\": { text: \"主板\" },\n      \"科创板\": { text: \"科创板\" },\n      \"创业板\": { text: \"创业板\" },\n      \"北交所\": { text: \"北交所\" },\n    },\n    render: (_, row) => row.board_type || \"-\",\n  },\n  {\n    title: \"行业\",\n    dataIndex: \"industry\",\n    key: \"industry\",\n    width: 150,\n    ellipsis: true,\n    search: false,\n  },\n  {\n    title: \"状态\",\n    dataIndex: \"is_active\",\n    key: \"is_active\",\n    width: 80,\n    valueType: \"select\",\n    valueEnum: {\n      true: { text: \"上市\" },\n      false: { text: \"退市\" },\n    },\n    render: (_, row) =>\n      row.is_active ? (\n        <Tag color=\"green\">上市</Tag>\n      ) : (\n        <Tag color=\"red\">退市</Tag>\n      ),\n  },\n];\n\nexport default function StocksPage() {\n  const navigate = useNavigate();\n\n  return (\n    <PageContainer>\n      <ProTable<StockInfo>\n        columns={columns}\n        rowKey=\"code\"\n        request={async (params: Record<string, any>) => {\n          const { current, pageSize, exchange, board_type, keyword, is_active } =\n            params;\n          const res = await fetchStocks({\n            page: current,\n            page_size: pageSize,\n            exchange,\n            board_type,\n            is_active: is_active === undefined ? true : is_active,\n            keyword,\n          });\n          return {\n            data: res.items,\n            total: res.total,\n            success: true,\n          };\n        }}\n        search={{\n          labelWidth: \"auto\",\n          defaultCollapsed: false,\n        }}\n        onRow={(record) => ({\n          onClick: () => navigate(`/stocks/${record.code}`),\n          style: { cursor: \"pointer\" },\n        })}\n        pagination={{ defaultPageSize: 30, showSizeChanger: true }}\n        scroll={{ y: 500 }}\n      />\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
-      "__absFile": "D:/project/stock_py/frontend/src/pages/Home/index.tsx"
+      "__absFile": "D:/project/stock_py/frontend/src/pages/Stocks/index.tsx"
+    },
+    "3": {
+      "name": "股票详情",
+      "path": "/stocks/:code",
+      "hideInMenu": true,
+      "file": "@/pages/Stocks/Detail/index.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "3",
+      "absPath": "/stocks/:code",
+      "__content": "/** Stock detail page — info card + K-line chart + financials. */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Descriptions, Tabs, Tag, message } from \"antd\";\nimport { useParams } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport { fetchStock } from \"@/services/stock\";\nimport type { StockInfo } from \"@/services/typings\";\nimport KlineChart from \"./KlineChart\";\nimport FinancialsView from \"./FinancialsView\";\n\nexport default function StockDetailPage() {\n  const { code } = useParams<{ code: string }>();\n  const [stock, setStock] = useState<StockInfo | null>(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    if (!code) return;\n    setLoading(true);\n    fetchStock(code)\n      .then(setStock)\n      .catch(() => message.error(\"Failed to load stock info\"))\n      .finally(() => setLoading(false));\n  }, [code]);\n\n  if (!code) return null;\n\n  const exchangeColor: Record<string, string> = {\n    SH: \"red\",\n    SZ: \"green\",\n    BJ: \"blue\",\n  };\n\n  return (\n    <PageContainer\n      title={`${stock?.name || code} (${code})`}\n      loading={loading}\n    >\n      {stock && (\n        <Card style={{ marginBottom: 16 }}>\n          <Descriptions column={4} size=\"small\">\n            <Descriptions.Item label=\"代码\">{stock.code}</Descriptions.Item>\n            <Descriptions.Item label=\"名称\">{stock.name}</Descriptions.Item>\n            <Descriptions.Item label=\"交易所\">\n              <span style={{ color: exchangeColor[stock.exchange] }}>\n                {stock.exchange}\n              </span>\n            </Descriptions.Item>\n            <Descriptions.Item label=\"板块\">\n              {stock.board_type || \"-\"}\n            </Descriptions.Item>\n            <Descriptions.Item label=\"行业\">\n              {stock.industry || \"-\"}\n            </Descriptions.Item>\n            <Descriptions.Item label=\"状态\">\n              {stock.is_active ? \"✅ 上市\" : \"❌ 退市\"}\n            </Descriptions.Item>\n            <Descriptions.Item label=\"上市日期\">\n              {stock.listed_date || \"-\"}\n            </Descriptions.Item>\n          </Descriptions>\n        </Card>\n      )}\n\n      <Card>\n        <Tabs\n          defaultActiveKey=\"kline\"\n          items={[\n            {\n              key: \"kline\",\n              label: \"K线图\",\n              children: <KlineChart code={code} />,\n            },\n            {\n              key: \"financials\",\n              label: \"财务数据\",\n              children: <FinancialsView code={code} />,\n            },\n          ]}\n        />\n      </Card>\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/Stocks/Detail/index.tsx"
+    },
+    "4": {
+      "name": "板块",
+      "path": "/boards",
+      "file": "@/pages/Boards/index.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "4",
+      "absPath": "/boards",
+      "__content": "/** Industry / concept boards page. */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Tag, Drawer, List, Typography } from \"antd\";\nimport { useEffect, useMemo, useState } from \"react\";\nimport { fetchBoards, fetchBoardMembers } from \"@/services/stock\";\nimport type { BoardInfo, BoardMember } from \"@/services/typings\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\n\nexport default function BoardsPage() {\n  const [drawerOpen, setDrawerOpen] = useState(false);\n  const [members, setMembers] = useState<BoardMember[]>([]);\n  const [boardName, setBoardName] = useState(\"\");\n  const [membersLoading, setMembersLoading] = useState(false);\n  const [allBoards, setAllBoards] = useState<BoardInfo[]>([]);\n\n  // Load all boards once for dropdown options\n  useEffect(() => {\n    fetchBoards({ page_size: 1000 }).then((res) => setAllBoards(res.items));\n  }, []);\n\n  // Derive unique codes and names for dropdowns\n  const codeEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_code]) map[b.board_code] = { text: b.board_code };\n    });\n    return map;\n  }, [allBoards]);\n\n  const nameEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_name]) map[b.board_name] = { text: b.board_name };\n    });\n    return map;\n  }, [allBoards]);\n\n  const columns: ProColumns<BoardInfo>[] = [\n    {\n      title: \"板块代码\",\n      dataIndex: \"board_code\",\n      key: \"board_code\",\n      width: 120,\n      valueType: \"select\",\n      valueEnum: codeEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"板块名称\",\n      dataIndex: \"board_name\",\n      key: \"board_name\",\n      width: 200,\n      valueType: \"select\",\n      valueEnum: nameEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"类型\",\n      dataIndex: \"board_type\",\n      key: \"board_type\",\n      width: 100,\n      valueType: \"select\",\n      valueEnum: {\n        industry: { text: \"行业\" },\n        concept: { text: \"概念\" },\n      },\n      render: (_, row) => (\n        <Tag color={row.board_type === \"industry\" ? \"blue\" : \"orange\"}>\n          {row.board_type === \"industry\" ? \"行业\" : \"概念\"}\n        </Tag>\n      ),\n    },\n    {\n      title: \"数据源\",\n      dataIndex: \"source\",\n      key: \"source\",\n      width: 80,\n      valueType: \"select\",\n      valueEnum: {\n        em: { text: \"东方财富\" },\n        ths: { text: \"同花顺\" },\n      },\n    },\n  ];\n\n      <Drawer\n        title={`${boardName} — 成分股`}\n        open={drawerOpen}\n        onClose={() => setDrawerOpen(false)}\n        width={400}\n        loading={membersLoading}\n      >\n        <List\n          dataSource={members}\n          renderItem={(item) => (\n            <List.Item>\n              <Typography.Text copyable={{ text: item.stock_code }}>\n                {item.stock_code}\n              </Typography.Text>\n              <Typography.Text style={{ marginLeft: 12 }}>\n                {item.stock_name || \"-\"}\n              </Typography.Text>\n            </List.Item>\n          )}\n        />\n      </Drawer>\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/Boards/index.tsx"
     },
     "ant-design-pro-layout": {
       "id": "ant-design-pro-layout",
@@ -3324,10 +3636,22 @@
     "cliName": "max"
   },
   "bundleStatus": {
-    "done": false
+    "done": true,
+    "progresses": [
+      {
+        "percent": 0.9243589743589743,
+        "status": "sealing",
+        "details": [
+          "asset processing",
+          "SourceMapDevToolPlugin",
+          "src_services_stock_ts-webpack_container_remote_mf_ant-design_pro-components.async.js",
+          "restored cached SourceMap"
+        ]
+      }
+    ]
   },
   "mfsuBundleStatus": {
-    "done": false
+    "done": true
   },
   "react": {
     "version": "18.3.1",
@@ -3368,5 +3692,3474 @@
   "pluginLayout": {
     "pkgPath": "D:/project/stock_py/frontend/node_modules/@ant-design/pro-components",
     "version": "2.8.10"
+  },
+  "prepare": {
+    "buildResult": {
+      "errors": [],
+      "warnings": [],
+      "metafile": {
+        "inputs": {
+          "src/.umi/core/polyfill.ts": {
+            "bytes": 27965,
+            "imports": [
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.error.cause.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.aggregate-error.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.aggregate-error.cause.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.at.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.find-last.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.find-last-index.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.push.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.reduce-right.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.to-reversed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.to-sorted.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.to-spliced.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.with.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.map.group-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.object.group-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.object.has-own.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.promise.any.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.promise.with-resolvers.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.reflect.to-string-tag.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.regexp.flags.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.string.at-alternative.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.string.is-well-formed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.string.replace-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.string.to-well-formed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.at.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.find-last.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.find-last-index.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.set.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.to-reversed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.to-sorted.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.with.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.suppressed-error.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.from-async.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.filter-out.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.filter-reject.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.group.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.group-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.group-by-to-map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.group-to-map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.is-template-object.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.last-index.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.last-item.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.unique-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array-buffer.detached.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array-buffer.transfer.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array-buffer.transfer-to-fixed-length.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-disposable-stack.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.as-indexed-pairs.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.async-dispose.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.drop.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.every.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.filter.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.find.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.flat-map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.for-each.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.indexed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.some.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.take.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.to-array.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.bigint.range.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.composite-key.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.composite-symbol.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.data-view.get-float16.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.data-view.get-uint8-clamped.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.data-view.set-float16.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.data-view.set-uint8-clamped.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.disposable-stack.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.demethodize.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.is-callable.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.is-constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.un-this.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.as-indexed-pairs.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.dispose.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.drop.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.every.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.filter.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.find.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.flat-map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.for-each.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.indexed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.range.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.some.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.take.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.to-array.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.to-async.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.json.is-raw-json.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.json.parse.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.json.raw-json.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.delete-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.emplace.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.every.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.filter.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.find.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.find-key.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.includes.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.key-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.key-of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.map-keys.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.map-values.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.merge.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.some.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.update.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.update-or-insert.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.upsert.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.clamp.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.deg-per-rad.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.degrees.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.fscale.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.f16round.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.iaddh.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.imulh.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.isubh.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.rad-per-deg.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.radians.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.scale.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.seeded-prng.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.signbit.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.umulh.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.number.from-string.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.number.range.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.object.iterate-entries.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.object.iterate-keys.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.object.iterate-values.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.observable.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.promise.try.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.define-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.delete-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.get-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.get-own-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.has-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.has-own-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.regexp.escape.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.add-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.delete-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.difference.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.difference.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.every.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.filter.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.find.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.intersection.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.intersection.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-disjoint-from.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-disjoint-from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-subset-of.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-subset-of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-superset-of.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-superset-of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.join.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.some.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.symmetric-difference.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.symmetric-difference.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.union.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.union.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.string.at.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.string.cooked.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.string.code-points.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.string.dedent.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.async-dispose.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.dispose.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.is-registered-symbol.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.is-registered.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.is-well-known-symbol.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.is-well-known.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.matcher.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.metadata-key.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.observable.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.pattern-match.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.replace-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.from-async.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.filter-out.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.filter-reject.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.group-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.to-spliced.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.unique-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.uint8-array.from-base64.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.uint8-array.from-hex.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.uint8-array.to-base64.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.uint8-array.to-hex.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.delete-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.emplace.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.upsert.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-set.add-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-set.delete-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-set.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-set.of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.dom-exception.stack.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.immediate.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.self.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.structured-clone.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.url.can-parse.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.url-search-params.delete.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.url-search-params.has.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.url-search-params.size.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/regenerator-runtime@0.13.11/node_modules/regenerator-runtime/runtime.js",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/core/defineApp.ts": {
+            "bytes": 1297,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/.umi/plugin-access/context.ts": {
+            "bytes": 180,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-access/index.tsx": {
+            "bytes": 2740,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/plugin-access/context.ts",
+                "kind": "import-statement",
+                "original": "./context"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-model/index.tsx": {
+            "bytes": 5253,
+            "imports": [
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/fast-deep-equal@3.1.3/node_modules/fast-deep-equal/index.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/app.tsx": {
+            "bytes": 215,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/.umi/core/helmetContext.ts": {
+            "bytes": 119,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/.umi/core/helmet.ts": {
+            "bytes": 459,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/core/helmetContext.ts",
+                "kind": "import-statement",
+                "original": "./helmetContext"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-access/runtime.tsx": {
+            "bytes": 421,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/plugin-access/context.ts",
+                "kind": "import-statement",
+                "original": "./context"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-initialState/Provider.tsx": {
+            "bytes": 594,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/plugin-model/index.tsx",
+                "kind": "import-statement",
+                "original": "@@/plugin-model"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-initialState/runtime.tsx": {
+            "bytes": 247,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/plugin-initialState/Provider.tsx",
+                "kind": "import-statement",
+                "original": "./Provider"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-layout/icons.tsx": {
+            "bytes": 113,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/.umi/plugin-layout/runtime.tsx": {
+            "bytes": 730,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/plugin-layout/icons.tsx",
+                "kind": "import-statement",
+                "original": "./icons"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-initialState/@@initialState.ts": {
+            "bytes": 153,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/.umi/plugin-model/model.ts": {
+            "bytes": 282,
+            "imports": [
+              {
+                "path": "src/.umi/plugin-initialState/@@initialState.ts",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/.umi/plugin-initialState/@@initialState"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-model/runtime.tsx": {
+            "bytes": 639,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/plugin-model/index.tsx",
+                "kind": "import-statement",
+                "original": "./"
+              },
+              {
+                "path": "src/.umi/plugin-model/model.ts",
+                "kind": "import-statement",
+                "original": "./model"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/core/plugin.ts": {
+            "bytes": 2359,
+            "imports": [
+              {
+                "path": "src/app.tsx",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/app.tsx"
+              },
+              {
+                "path": "src/.umi/core/helmet.ts",
+                "kind": "import-statement",
+                "original": "@@/core/helmet.ts"
+              },
+              {
+                "path": "src/.umi/plugin-access/runtime.tsx",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/.umi/plugin-access/runtime.tsx"
+              },
+              {
+                "path": "src/.umi/plugin-initialState/runtime.tsx",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/.umi/plugin-initialState/runtime.tsx"
+              },
+              {
+                "path": "src/.umi/plugin-layout/runtime.tsx",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/.umi/plugin-layout/runtime.tsx"
+              },
+              {
+                "path": "src/.umi/plugin-model/runtime.tsx",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/.umi/plugin-model/runtime.tsx"
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "umi"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-request/request.ts": {
+            "bytes": 9461,
+            "imports": [
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/axios@1.18.1/node_modules/axios",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@ahooksjs+use-request@2.8.15_react@18.3.1/node_modules/@ahooksjs/use-request",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "umi"
+              },
+              {
+                "path": "src/.umi/core/plugin.ts",
+                "kind": "import-statement",
+                "original": "../core/plugin"
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@ahooksjs+use-request@2.8.15_react@18.3.1/node_modules/@ahooksjs/use-request/es/types",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-request/index.ts": {
+            "bytes": 190,
+            "imports": [
+              {
+                "path": "src/.umi/plugin-request/request.ts",
+                "kind": "import-statement",
+                "original": "./request"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/core/history.ts": {
+            "bytes": 1788,
+            "imports": [
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/core/terminal.ts": {
+            "bytes": 1417,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/.umi/testBrowser.tsx": {
+            "bytes": 2624,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "umi"
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/core/history.ts",
+                "kind": "import-statement",
+                "original": "./core/history"
+              },
+              {
+                "path": "src/.umi/core/plugin.ts",
+                "kind": "import-statement",
+                "original": "./core/plugin"
+              },
+              {
+                "path": "src/.umi/core/route.tsx",
+                "kind": "import-statement",
+                "original": "./core/route"
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/global.less",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd/dist/reset.css",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/exports.ts": {
+            "bytes": 2181,
+            "imports": [
+              {
+                "path": "src/.umi/core/defineApp.ts",
+                "kind": "import-statement",
+                "original": "./core/defineApp"
+              },
+              {
+                "path": "src/.umi/plugin-access/index.tsx",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/.umi/plugin-access"
+              },
+              {
+                "path": "src/.umi/plugin-model/index.tsx",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/.umi/plugin-model"
+              },
+              {
+                "path": "src/.umi/plugin-request/index.ts",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/.umi/plugin-request"
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/.umi/plugin-access/types.d",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/.umi/plugin-antd/types.d",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/.umi/plugin-layout/types.d",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/.umi/plugin-request/types.d",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/umi@4.6.67_@babel+core@7.29_d3dbad258dc026af2d8d955f16d00e46/node_modules/umi/client/client/plugin.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/core/history.ts",
+                "kind": "import-statement",
+                "original": "./core/history"
+              },
+              {
+                "path": "src/.umi/core/terminal.ts",
+                "kind": "import-statement",
+                "original": "./core/terminal"
+              },
+              {
+                "path": "src/.umi/testBrowser.tsx",
+                "kind": "import-statement",
+                "original": "./testBrowser"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/core/EmptyRoute.tsx": {
+            "bytes": 285,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "umi"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/services/stock.ts": {
+            "bytes": 4938,
+            "imports": [
+              {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/Stocks/index.tsx": {
+            "bytes": 2982,
+            "imports": [
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "@umijs/max"
+              },
+              {
+                "path": "src/services/stock.ts",
+                "kind": "import-statement",
+                "original": "@/services/stock"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/Stocks/Detail/KlineChart.tsx": {
+            "bytes": 4276,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "echarts-for-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "dayjs",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/services/stock.ts",
+                "kind": "import-statement",
+                "original": "@/services/stock"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/Stocks/Detail/FinancialsView.tsx": {
+            "bytes": 3463,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "echarts-for-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/services/stock.ts",
+                "kind": "import-statement",
+                "original": "@/services/stock"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/Stocks/Detail/index.tsx": {
+            "bytes": 2615,
+            "imports": [
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "@umijs/max"
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/services/stock.ts",
+                "kind": "import-statement",
+                "original": "@/services/stock"
+              },
+              {
+                "path": "src/pages/Stocks/Detail/KlineChart.tsx",
+                "kind": "import-statement",
+                "original": "./KlineChart"
+              },
+              {
+                "path": "src/pages/Stocks/Detail/FinancialsView.tsx",
+                "kind": "import-statement",
+                "original": "./FinancialsView"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/Boards/index.tsx": {
+            "bytes": 3236,
+            "imports": [
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/services/stock.ts",
+                "kind": "import-statement",
+                "original": "@/services/stock"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-layout/Logo.tsx": {
+            "bytes": 3741,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-layout/Exception.tsx": {
+            "bytes": 1109,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "@umijs/max"
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-layout/rightRender.tsx": {
+            "bytes": 3094,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@ant-design+icons@4.8.3_rea_19faa62653f401826ad5c42b19a83e78/node_modules/@ant-design/icons",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/plugin-layout/Layout.tsx": {
+            "bytes": 5669,
+            "imports": [
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "@umijs/max"
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "./Layout.css",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/plugin-layout/Logo.tsx",
+                "kind": "import-statement",
+                "original": "./Logo"
+              },
+              {
+                "path": "src/.umi/plugin-layout/Exception.tsx",
+                "kind": "import-statement",
+                "original": "./Exception"
+              },
+              {
+                "path": "src/.umi/plugin-layout/rightRender.tsx",
+                "kind": "import-statement",
+                "original": "./rightRender"
+              },
+              {
+                "path": "src/.umi/plugin-model/index.tsx",
+                "kind": "import-statement",
+                "original": "@@/plugin-model"
+              },
+              {
+                "path": "src/.umi/plugin-access/index.tsx",
+                "kind": "import-statement",
+                "original": "@@/plugin-access"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/core/route.tsx": {
+            "bytes": 1224,
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/core/EmptyRoute.tsx",
+                "kind": "dynamic-import",
+                "original": "./EmptyRoute"
+              },
+              {
+                "path": "src/pages/Stocks/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/Stocks/index.tsx"
+              },
+              {
+                "path": "src/pages/Stocks/Detail/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/Stocks/Detail/index.tsx"
+              },
+              {
+                "path": "src/pages/Boards/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/Boards/index.tsx"
+              },
+              {
+                "path": "src/.umi/plugin-layout/Layout.tsx",
+                "kind": "dynamic-import",
+                "original": "D:/project/stock_py/frontend/src/.umi/plugin-layout/Layout.tsx"
+              }
+            ],
+            "format": "esm"
+          },
+          "src/.umi/umi.ts": {
+            "bytes": 2261,
+            "imports": [
+              {
+                "path": "src/.umi/core/polyfill.ts",
+                "kind": "import-statement",
+                "original": "./core/polyfill"
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/global.less",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd/dist/reset.css",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/core/route.tsx",
+                "kind": "import-statement",
+                "original": "./core/route"
+              },
+              {
+                "path": "src/.umi/core/plugin.ts",
+                "kind": "import-statement",
+                "original": "./core/plugin"
+              },
+              {
+                "path": "src/.umi/core/history.ts",
+                "kind": "import-statement",
+                "original": "./core/history"
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "umi"
+              }
+            ],
+            "format": "esm"
+          }
+        },
+        "outputs": {
+          "src/.umi/out/umi.js": {
+            "imports": [
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/fast-deep-equal@3.1.3/node_modules/fast-deep-equal/index.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/axios@1.18.1/node_modules/axios",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@ahooksjs+use-request@2.8.15_react@18.3.1/node_modules/@ahooksjs/use-request",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/global.less",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd/dist/reset.css",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/.umi/plugin-access/types.d",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/.umi/plugin-antd/types.d",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/.umi/plugin-layout/types.d",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/.umi/plugin-request/types.d",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/umi@4.6.67_@babel+core@7.29_d3dbad258dc026af2d8d955f16d00e46/node_modules/umi/client/client/plugin.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "echarts-for-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "dayjs",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "echarts-for-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@ant-design+icons@4.8.3_rea_19faa62653f401826ad5c42b19a83e78/node_modules/@ant-design/icons",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "./Layout.css",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.error.cause.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.aggregate-error.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.aggregate-error.cause.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.at.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.find-last.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.find-last-index.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.push.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.reduce-right.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.to-reversed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.to-sorted.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.to-spliced.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.array.with.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.map.group-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.object.group-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.object.has-own.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.promise.any.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.promise.with-resolvers.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.reflect.to-string-tag.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.regexp.flags.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.string.at-alternative.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.string.is-well-formed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.string.replace-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.string.to-well-formed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.at.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.find-last.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.find-last-index.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.set.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.to-reversed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.to-sorted.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/es.typed-array.with.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.suppressed-error.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.from-async.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.filter-out.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.filter-reject.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.group.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.group-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.group-by-to-map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.group-to-map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.is-template-object.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.last-index.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.last-item.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array.unique-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array-buffer.detached.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array-buffer.transfer.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.array-buffer.transfer-to-fixed-length.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-disposable-stack.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.as-indexed-pairs.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.async-dispose.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.drop.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.every.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.filter.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.find.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.flat-map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.for-each.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.indexed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.some.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.take.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.async-iterator.to-array.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.bigint.range.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.composite-key.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.composite-symbol.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.data-view.get-float16.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.data-view.get-uint8-clamped.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.data-view.set-float16.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.data-view.set-uint8-clamped.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.disposable-stack.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.demethodize.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.is-callable.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.is-constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.function.un-this.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.constructor.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.as-indexed-pairs.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.dispose.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.drop.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.every.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.filter.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.find.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.flat-map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.for-each.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.indexed.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.range.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.some.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.take.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.to-array.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.iterator.to-async.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.json.is-raw-json.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.json.parse.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.json.raw-json.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.delete-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.emplace.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.every.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.filter.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.find.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.find-key.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.includes.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.key-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.key-of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.map-keys.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.map-values.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.merge.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.some.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.update.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.update-or-insert.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.map.upsert.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.clamp.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.deg-per-rad.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.degrees.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.fscale.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.f16round.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.iaddh.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.imulh.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.isubh.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.rad-per-deg.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.radians.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.scale.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.seeded-prng.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.signbit.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.math.umulh.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.number.from-string.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.number.range.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.object.iterate-entries.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.object.iterate-keys.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.object.iterate-values.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.observable.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.promise.try.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.define-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.delete-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.get-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.get-own-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.has-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.has-own-metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.reflect.metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.regexp.escape.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.add-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.delete-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.difference.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.difference.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.every.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.filter.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.find.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.intersection.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.intersection.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-disjoint-from.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-disjoint-from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-subset-of.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-subset-of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-superset-of.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.is-superset-of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.join.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.map.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.reduce.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.some.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.symmetric-difference.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.symmetric-difference.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.union.v2.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.set.union.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.string.at.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.string.cooked.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.string.code-points.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.string.dedent.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.async-dispose.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.dispose.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.is-registered-symbol.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.is-registered.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.is-well-known-symbol.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.is-well-known.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.matcher.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.metadata.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.metadata-key.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.observable.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.pattern-match.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.symbol.replace-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.from-async.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.filter-out.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.filter-reject.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.group-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.to-spliced.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.typed-array.unique-by.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.uint8-array.from-base64.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.uint8-array.from-hex.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.uint8-array.to-base64.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.uint8-array.to-hex.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.delete-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.emplace.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-map.upsert.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-set.add-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-set.delete-all.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-set.from.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/esnext.weak-set.of.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.dom-exception.stack.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.immediate.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.self.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.structured-clone.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.url.can-parse.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.url-search-params.delete.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.url-search-params.has.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/core-js@3.34.0/node_modules/core-js/modules/web.url-search-params.size.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/regenerator-runtime@0.13.11/node_modules/regenerator-runtime/runtime.js",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/src/global.less",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd/dist/reset.css",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "exports": [],
+            "entryPoint": "src/.umi/umi.ts",
+            "inputs": {
+              "src/.umi/core/defineApp.ts": {
+                "bytesInOutput": 140
+              },
+              "src/.umi/plugin-access/context.ts": {
+                "bytesInOutput": 188
+              },
+              "src/.umi/plugin-access/index.tsx": {
+                "bytesInOutput": 2428
+              },
+              "src/.umi/plugin-model/index.tsx": {
+                "bytesInOutput": 3376
+              },
+              "src/app.tsx": {
+                "bytesInOutput": 276
+              },
+              "src/.umi/core/helmetContext.ts": {
+                "bytesInOutput": 129
+              },
+              "src/.umi/core/helmet.ts": {
+                "bytesInOutput": 547
+              },
+              "src/.umi/plugin-access/runtime.tsx": {
+                "bytesInOutput": 519
+              },
+              "src/.umi/plugin-initialState/Provider.tsx": {
+                "bytesInOutput": 667
+              },
+              "src/.umi/plugin-initialState/runtime.tsx": {
+                "bytesInOutput": 395
+              },
+              "src/.umi/plugin-layout/icons.tsx": {
+                "bytesInOutput": 135
+              },
+              "src/.umi/plugin-layout/runtime.tsx": {
+                "bytesInOutput": 813
+              },
+              "src/.umi/plugin-initialState/@@initialState.ts": {
+                "bytesInOutput": 218
+              },
+              "src/.umi/plugin-model/model.ts": {
+                "bytesInOutput": 225
+              },
+              "src/.umi/plugin-model/runtime.tsx": {
+                "bytesInOutput": 776
+              },
+              "src/.umi/core/plugin.ts": {
+                "bytesInOutput": 1797
+              },
+              "src/.umi/plugin-request/request.ts": {
+                "bytesInOutput": 5274
+              },
+              "src/.umi/plugin-request/index.ts": {
+                "bytesInOutput": 121
+              },
+              "src/.umi/core/history.ts": {
+                "bytesInOutput": 1386
+              },
+              "src/.umi/core/terminal.ts": {
+                "bytesInOutput": 1530
+              },
+              "src/.umi/testBrowser.tsx": {
+                "bytesInOutput": 2457
+              },
+              "src/.umi/exports.ts": {
+                "bytesInOutput": 3717
+              },
+              "src/.umi/core/EmptyRoute.tsx": {
+                "bytesInOutput": 381
+              },
+              "src/services/stock.ts": {
+                "bytesInOutput": 1596
+              },
+              "src/pages/Stocks/index.tsx": {
+                "bytesInOutput": 3280
+              },
+              "src/pages/Stocks/Detail/KlineChart.tsx": {
+                "bytesInOutput": 4272
+              },
+              "src/pages/Stocks/Detail/FinancialsView.tsx": {
+                "bytesInOutput": 3568
+              },
+              "src/pages/Stocks/Detail/index.tsx": {
+                "bytesInOutput": 2840
+              },
+              "src/pages/Boards/index.tsx": {
+                "bytesInOutput": 3568
+              },
+              "src/.umi/plugin-layout/Logo.tsx": {
+                "bytesInOutput": 5504
+              },
+              "src/.umi/plugin-layout/Exception.tsx": {
+                "bytesInOutput": 1105
+              },
+              "src/.umi/plugin-layout/rightRender.tsx": {
+                "bytesInOutput": 2884
+              },
+              "src/.umi/plugin-layout/Layout.tsx": {
+                "bytesInOutput": 5773
+              },
+              "src/.umi/core/route.tsx": {
+                "bytesInOutput": 1252
+              },
+              "src/.umi/core/polyfill.ts": {
+                "bytesInOutput": 27862
+              },
+              "src/.umi/umi.ts": {
+                "bytesInOutput": 2059
+              }
+            },
+            "bytes": 95268
+          }
+        }
+      }
+    }
   }
 }

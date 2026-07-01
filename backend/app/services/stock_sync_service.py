@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 # ── Constants ─────────────────────────────────────────────────────────────
 
 BATCH_SIZE = 200  # rows per INSERT batch
-SYNC_CONCURRENCY = 5  # max concurrent stock-level sync tasks
+SYNC_CONCURRENCY = 2  # max concurrent stock-level sync tasks (keep low to avoid rate limits)
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────
@@ -304,40 +304,55 @@ class StockSyncService:
         end_date: str,
         model_cls: type,
         unique_cols: list[str],
+        max_retries: int = 3,
     ) -> int:
-        """Sync K-line for a single stock."""
-        await throttle()
-        df: pd.DataFrame = await asyncio.to_thread(
-            ak.stock_zh_a_hist,
-            symbol=code,
-            period=period,
-            start_date=start_date,
-            end_date=end_date,
-            adjust=adjust_type,
-        )
-        if df.empty:
-            return 0
+        """Sync K-line for a single stock, with retry on connection errors."""
+        last_err = None
+        for attempt in range(max_retries + 1):
+            try:
+                await throttle()
+                df: pd.DataFrame = await asyncio.to_thread(
+                    ak.stock_zh_a_hist,
+                    symbol=code,
+                    period=period,
+                    start_date=start_date,
+                    end_date=end_date,
+                    adjust=adjust_type,
+                )
+                if df.empty:
+                    return 0
 
-        rows = []
-        for _, r in df.iterrows():
-            rows.append({
-                "id": _uid(),
-                "stock_code": code,
-                "trade_date": _to_date(r.get("日期")),
-                "adjust_type": adjust_type,
-                "open": _to_float(r.get("开盘")),
-                "close": _to_float(r.get("收盘")),
-                "high": _to_float(r.get("最高")),
-                "low": _to_float(r.get("最低")),
-                "volume": _to_int(r.get("成交量")) or 0,
-                "amount": _to_float(r.get("成交额")) or 0.0,
-                "amplitude": _to_float(r.get("振幅")),
-                "change_pct": _to_float(r.get("涨跌幅")),
-                "change_amount": _to_float(r.get("涨跌额")),
-                "turnover_rate": _to_float(r.get("换手率")),
-            })
+                rows = []
+                for _, r in df.iterrows():
+                    rows.append({
+                        "id": _uid(),
+                        "stock_code": code,
+                        "trade_date": _to_date(r.get("日期")),
+                        "adjust_type": adjust_type,
+                        "open": _to_float(r.get("开盘")),
+                        "close": _to_float(r.get("收盘")),
+                        "high": _to_float(r.get("最高")),
+                        "low": _to_float(r.get("最低")),
+                        "volume": _to_int(r.get("成交量")) or 0,
+                        "amount": _to_float(r.get("成交额")) or 0.0,
+                        "amplitude": _to_float(r.get("振幅")),
+                        "change_pct": _to_float(r.get("涨跌幅")),
+                        "change_amount": _to_float(r.get("涨跌额")),
+                        "turnover_rate": _to_float(r.get("换手率")),
+                    })
 
-        return await _batch_upsert(self.db, rows, model_cls, unique_cols)
+                return await _batch_upsert(self.db, rows, model_cls, unique_cols)
+
+            except Exception as e:
+                last_err = e
+                if attempt < max_retries:
+                    delay = 2 ** attempt  # 1s, 2s, 4s
+                    logger.warning("K-line retry %d/%d for %s: %s", attempt + 1, max_retries, code, e)
+                    await asyncio.sleep(delay)
+                else:
+                    logger.error("K-line failed for %s after %d retries: %s", code, max_retries, last_err)
+
+        raise last_err
 
     async def sync_daily_incremental(
         self, adjust_type: str = "qfq", lookback_days: int = 5

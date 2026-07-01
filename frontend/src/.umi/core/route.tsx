@@ -4,12 +4,14 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"path":"/","redirect":"/home","parentId":"ant-design-pro-layout","id":"1"},"2":{"name":"首页","path":"/home","parentId":"ant-design-pro-layout","id":"2"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true}} as const;
+  const routes = {"1":{"path":"/","redirect":"/stocks","parentId":"ant-design-pro-layout","id":"1"},"2":{"name":"股票列表","path":"/stocks","parentId":"ant-design-pro-layout","id":"2"},"3":{"name":"股票详情","path":"/stocks/:code","hideInMenu":true,"parentId":"ant-design-pro-layout","id":"3"},"4":{"name":"板块","path":"/boards","parentId":"ant-design-pro-layout","id":"4"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true}} as const;
   return {
     routes,
     routeComponents: {
 '1': React.lazy(() => import('./EmptyRoute')),
-'2': React.lazy(() => import(/* webpackChunkName: "p__Home__index" */'@/pages/Home/index.tsx')),
+'2': React.lazy(() => import(/* webpackChunkName: "p__Stocks__index" */'@/pages/Stocks/index.tsx')),
+'3': React.lazy(() => import(/* webpackChunkName: "p__Stocks__Detail__index" */'@/pages/Stocks/Detail/index.tsx')),
+'4': React.lazy(() => import(/* webpackChunkName: "p__Boards__index" */'@/pages/Boards/index.tsx')),
 'ant-design-pro-layout': React.lazy(() => import(/* webpackChunkName: "umi__plugin-layout__Layout" */'D:/project/stock_py/frontend/src/.umi/plugin-layout/Layout.tsx')),
 },
   };

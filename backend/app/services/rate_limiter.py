@@ -38,7 +38,7 @@ class TokenBucket:
 
 
 # Global rate limiter instance (3 calls/sec, burst 5)
-_bucket = TokenBucket(calls_per_second=3.0, burst=5)
+_bucket = TokenBucket(calls_per_second=2.0, burst=3)
 
 
 async def throttle():

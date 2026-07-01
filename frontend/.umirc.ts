@@ -12,12 +12,23 @@ export default defineConfig({
   routes: [
     {
       path: "/",
-      redirect: "/home",
+      redirect: "/stocks",
     },
     {
-      name: "首页",
-      path: "/home",
-      component: "./Home",
+      name: "股票列表",
+      path: "/stocks",
+      component: "./Stocks",
+    },
+    {
+      name: "股票详情",
+      path: "/stocks/:code",
+      component: "./Stocks/Detail",
+      hideInMenu: true,
+    },
+    {
+      name: "板块",
+      path: "/boards",
+      component: "./Boards",
     },
   ],
   npmClient: "pnpm",

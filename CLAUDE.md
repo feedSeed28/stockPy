@@ -86,12 +86,13 @@ stock_py/
 - **Resume**: `sync_status` table tracks progress, restart skips already-synced data
 
 ## Current Phase
-- [x] P0: Project Skeleton (completed)
-- [x] P1: Data Layer (models, AKShare sync service, API endpoints)
-- [ ] P2: Scheduler (APScheduler tasks — integrated in P1)
-- [ ] P3: API Layer (CRUD endpoints — integrated in P1)
-- [ ] P4: Frontend (pages, charts)
-- [ ] P5: Quant Engine (indicators, backtesting)
+- [x] P0: Project Skeleton
+- [x] P1: Data Layer — 10 tables, 5,204/5,528 stocks synced (94.1%), 13 API endpoints
+- [x] P2: Frontend — stock list, K-line charts (ECharts), financial dashboard, boards (completed 2026-07-01)
+- [ ] P3: Quant Engine — technical indicators, screening, backtesting
+
+> Note: Original P2 (Scheduler) and P3 (API Layer) were absorbed into P1.
+> Remaining 324 stocks are 北交所 (Beijing Stock Exchange) — Sina source doesn't support them.
 
 ## Key Decisions
 See `docs/decisions/` for Architecture Decision Records.

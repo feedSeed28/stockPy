@@ -2,11 +2,12 @@
 
 Usage (from backend/ directory):
     PYTHONUTF8=1 python scripts/sync_full.py
-    # or via Makefile from project root: make sync-full
 """
 
-import asyncio
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+import asyncio
 from app.core.database import async_session
 from app.services.stock_sync_service import StockSyncService
 
