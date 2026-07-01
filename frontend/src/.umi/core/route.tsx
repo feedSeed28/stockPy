@@ -4,7 +4,7 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"path":"/","redirect":"/stocks","parentId":"ant-design-pro-layout","id":"1"},"2":{"name":"股票列表","path":"/stocks","parentId":"ant-design-pro-layout","id":"2"},"3":{"name":"股票详情","path":"/stocks/:code","hideInMenu":true,"parentId":"ant-design-pro-layout","id":"3"},"4":{"name":"板块","path":"/boards","parentId":"ant-design-pro-layout","id":"4"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true}} as const;
+  const routes = {"1":{"path":"/","redirect":"/stocks","parentId":"ant-design-pro-layout","id":"1"},"2":{"name":"股票列表","path":"/stocks","parentId":"ant-design-pro-layout","id":"2"},"3":{"name":"股票详情","path":"/stocks/:code","hideInMenu":true,"parentId":"ant-design-pro-layout","id":"3"},"4":{"name":"板块","path":"/boards","parentId":"ant-design-pro-layout","id":"4"},"5":{"name":"选股","path":"/screener","parentId":"ant-design-pro-layout","id":"5"},"6":{"name":"回测","path":"/backtest","parentId":"ant-design-pro-layout","id":"6"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true}} as const;
   return {
     routes,
     routeComponents: {
@@ -12,6 +12,8 @@ export async function getRoutes() {
 '2': React.lazy(() => import(/* webpackChunkName: "p__Stocks__index" */'@/pages/Stocks/index.tsx')),
 '3': React.lazy(() => import(/* webpackChunkName: "p__Stocks__Detail__index" */'@/pages/Stocks/Detail/index.tsx')),
 '4': React.lazy(() => import(/* webpackChunkName: "p__Boards__index" */'@/pages/Boards/index.tsx')),
+'5': React.lazy(() => import(/* webpackChunkName: "p__Screener__index" */'@/pages/Screener/index.tsx')),
+'6': React.lazy(() => import(/* webpackChunkName: "p__Backtest__index" */'@/pages/Backtest/index.tsx')),
 'ant-design-pro-layout': React.lazy(() => import(/* webpackChunkName: "umi__plugin-layout__Layout" */'D:/project/stock_py/frontend/src/.umi/plugin-layout/Layout.tsx')),
 },
   };

@@ -88,11 +88,57 @@ stock_py/
 ## Current Phase
 - [x] P0: Project Skeleton
 - [x] P1: Data Layer — 10 tables, 5,204/5,528 stocks synced (94.1%), 13 API endpoints
-- [x] P2: Frontend — stock list, K-line charts (ECharts), financial dashboard, boards (completed 2026-07-01)
-- [ ] P3: Quant Engine — technical indicators, screening, backtesting
+- [x] P2: Frontend — stock list, K-line charts (ECharts), financial dashboard, boards
+- [x] P3: Quant Engine — 9 technical indicators, stock screener, backtest (3 strategies)
 
-> Note: Original P2 (Scheduler) and P3 (API Layer) were absorbed into P1.
-> Remaining 324 stocks are 北交所 (Beijing Stock Exchange) — Sina source doesn't support them.
+> Note: Original P2 (Scheduler) + P3 (API) merged into P1. Original P4 (Frontend) → P2, P5 (Quant) → P3.
+
+## Project Summary (as of 2026-07-01)
+
+### Backend — 25 Python files, 3,344 lines
+- ORM: 10 data tables + sync_status
+- API: 17 endpoints (health + stocks/13 + boards/2 + quant/4)
+- Services: sync, query, indicators, screener, backtest, safe_syncer, rate_limiter
+- Tasks: 6 APScheduler incremental sync jobs
+- Scripts: sync_sina, sync_financials, sync_full, sync_stocks, sync_daily
+
+### Frontend — 11 TS/TSX files
+- Pages: Stocks (list + detail + KlineChart + FinancialsView), Boards, Screener, Backtest
+- Services: stock.ts (all API wrappers), typings.d.ts
+
+### Data — 1,636 万行日K线, 5,528 只股票, 99.3% 行业覆盖
+- sync_sina.py: Sina source (stable, ~2.5h for full daily K-line)
+- sync_financials.py: Sina source with SafeSyncer anti-blocking (~1.5h)
+- 东方财富 source: intermittent IP blocks, use SafeSyncer when syncing
+
+### API Docs
+- Online: http://localhost:8000/docs (Swagger)
+- Offline: docs/api/api-reference.md
+
+### Remaining Data (not yet synced)
+| Table | Notes |
+|-------|-------|
+| stock_daily_quote | ✅ 16.4M rows (missing 324 北交所) |
+| stock_financial_indicator | 🔄 script ready: `python scripts/sync_financials.py` |
+| stock_weekly_quote | ⏳ needs script |
+| stock_monthly_quote | ⏳ needs script |
+| stock_performance_report | ⏳ `stock_yjbb_em()` (东方财富) |
+| stock_fund_flow_daily | ⏳ `stock_individual_fund_flow()` (东方财富, blocked) |
+| stock_board_info/member | ⏳ 东方财富, blocked |
+| stock_profit_forecast | ⏳ 东方财富, blocked |
+
+### Optional Future
+- User auth, Tushare data source migration, portfolio backtest, CI/CD, tests
+| stock_profit_forecast | ❌ empty | Analyst estimates |
+
+### Optional Enhancements
+- Authentication / user accounts
+- Multi-stock portfolio backtest
+- Factor analysis / risk model
+- Real-time push (WebSocket)
+- Docker one-click deploy
+- Unit / integration tests
+- CI/CD pipeline
 
 ## Key Decisions
 See `docs/decisions/` for Architecture Decision Records.

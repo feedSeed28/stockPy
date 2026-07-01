@@ -30,6 +30,16 @@ export default defineConfig({
       path: "/boards",
       component: "./Boards",
     },
+    {
+      name: "选股",
+      path: "/screener",
+      component: "./Screener",
+    },
+    {
+      name: "回测",
+      path: "/backtest",
+      component: "./Backtest",
+    },
   ],
   npmClient: "pnpm",
   proxy: {

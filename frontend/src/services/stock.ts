@@ -157,3 +157,49 @@ export async function fetchBoardMembers(
   );
   return data.data;
 }
+
+// ── Quant ────────────────────────────────────────────────────────────────
+
+export async function computeIndicators(
+  code: string,
+  indicators: string[],
+  params: Record<string, any> = {}
+): Promise<Record<string, any>> {
+  const { data } = await axios.post<ApiResponse<Record<string, any>>>(
+    `/api/v1/quant/stocks/${code}/indicators`,
+    { indicators, params }
+  );
+  return data.data;
+}
+
+export async function runScreener(params: {
+  conditions: Array<{ field: string; op: string; value?: any; params?: any }>;
+  sort_by?: string;
+  limit?: number;
+}): Promise<{ results: any[]; total: number; conditions: any[] }> {
+  const { data } = await axios.post<ApiResponse<any>>(
+    "/api/v1/quant/screener",
+    params
+  );
+  return data.data;
+}
+
+export async function runBacktest(params: {
+  stock_code: string;
+  strategy: string;
+  params?: Record<string, any>;
+  start_date?: string;
+  end_date?: string;
+  initial_capital?: number;
+}): Promise<any> {
+  const { data } = await axios.post<ApiResponse<any>>(
+    "/api/v1/quant/backtest",
+    params
+  );
+  return data.data;
+}
+
+export async function fetchStrategies(): Promise<Record<string, any>> {
+  const { data } = await axios.get<ApiResponse<any>>("/api/v1/quant/strategies");
+  return data.data;
+}
