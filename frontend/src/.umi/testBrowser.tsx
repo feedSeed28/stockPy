@@ -11,6 +11,7 @@ import type { Location } from 'history';
 
 
 import 'D:/project/stock_py/frontend/src/global.less';
+import 'D:/project/stock_py/frontend/src/global.ts';
 import 'antd/dist/reset.css';
 const publicPath = '/';
 const runtimePublicPath = false;

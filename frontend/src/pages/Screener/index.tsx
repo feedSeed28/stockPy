@@ -13,7 +13,6 @@ import {
   Form,
   Popconfirm,
 } from "antd";
-import { PlusOutlined, DeleteOutlined, SearchOutlined } from "@ant-design/icons";
 import { useNavigate } from "@umijs/max";
 import { useState } from "react";
 import { runScreener } from "@/services/stock";
@@ -169,24 +168,22 @@ export default function ScreenerPage() {
                 />
               )}
               <Button
-                icon={<DeleteOutlined />}
                 danger
                 onClick={() => removeCondition(c.key)}
                 disabled={conditions.length <= 1}
-              />
+              >✕</Button>
             </Space>
           ))}
           <Space>
-            <Button icon={<PlusOutlined />} onClick={addCondition}>
-              添加条件
+            <Button onClick={addCondition}>
+              + 添加条件
             </Button>
             <Button
               type="primary"
-              icon={<SearchOutlined />}
               onClick={handleSearch}
               loading={loading}
             >
-              开始筛选
+              🔍 开始筛选
             </Button>
           </Space>
         </Space>

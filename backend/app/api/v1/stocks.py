@@ -4,9 +4,11 @@ from datetime import date
 from typing import Optional
 
 from fastapi import APIRouter, Depends, Query
+from sqlalchemy import desc, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db
+from app.models.stock_quote import StockDailyQuote
 from app.schemas.common import ApiResponse
 from app.services import stock_query_service as qs
 
@@ -241,6 +243,58 @@ async def get_fund_flow(
             for f in items
         ],
         "total": total, "page": page, "page_size": page_size,
+    })
+
+
+@router.get("/{code}/today")
+async def get_today_summary(code: str, db: AsyncSession = Depends(get_db)):
+    """当日行情摘要 + 涨停统计."""
+    from datetime import date, timedelta
+    from sqlalchemy import func, desc
+
+    # Latest bar
+    result = await db.execute(
+        select(StockDailyQuote)
+        .where(StockDailyQuote.stock_code == code, StockDailyQuote.adjust_type == "qfq")
+        .order_by(desc(StockDailyQuote.trade_date))
+        .limit(1)
+    )
+    bar = result.scalar_one_or_none()
+
+    if bar is None:
+        return ApiResponse(data={"code": code, "message": "无K线数据"})
+
+    today = date.today()
+    year_start = date(today.year, 1, 1)
+
+    # Limit-up counts
+    async def _count_lu(start_d, threshold=9.8):
+        r = await db.execute(
+            select(func.count()).select_from(StockDailyQuote).where(
+                StockDailyQuote.stock_code == code,
+                StockDailyQuote.adjust_type == "qfq",
+                StockDailyQuote.trade_date >= start_d,
+                StockDailyQuote.change_pct >= threshold,
+            )
+        )
+        return r.scalar() or 0
+
+    return ApiResponse(data={
+        "code": code,
+        "trade_date": str(bar.trade_date),
+        "open": bar.open,
+        "close": bar.close,
+        "high": bar.high,
+        "low": bar.low,
+        "volume": bar.volume,
+        "amount": bar.amount,
+        "change_pct": bar.change_pct,
+        "change_amount": bar.change_amount,
+        "turnover_rate": bar.turnover_rate,
+        "amplitude": bar.amplitude,
+        "lu_5d": await _count_lu(today - timedelta(days=5)),
+        "lu_30d": await _count_lu(today - timedelta(days=30)),
+        "lu_year": await _count_lu(year_start),
     })
 
 

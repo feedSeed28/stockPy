@@ -93,26 +93,37 @@ stock_py/
 
 > Note: Original P2 (Scheduler) + P3 (API) merged into P1. Original P4 (Frontend) → P2, P5 (Quant) → P3.
 
-## Project Summary (as of 2026-07-01)
+## Project Summary (as of 2026-07-03)
 
-### Backend — 25 Python files, 3,344 lines
-- ORM: 10 data tables + sync_status
-- API: 17 endpoints (health + stocks/13 + boards/2 + quant/4)
-- Services: sync, query, indicators, screener, backtest, safe_syncer, rate_limiter
-- Tasks: 6 APScheduler incremental sync jobs
-- Scripts: sync_sina, sync_financials, sync_full, sync_stocks, sync_daily
+### Database
+- stock_info: 5,528 stocks, 99.3% industry coverage
+- stock_daily_quote: 16.4M rows, 5,204/5,528 stocks (Sina source)
+- stock_board_info: 464 boards (同花顺 source)
+- 6 tables still empty — scripts ready
 
-### Frontend — 11 TS/TSX files
-- Pages: Stocks (list + detail + KlineChart + FinancialsView), Boards, Screener, Backtest
-- Services: stock.ts (all API wrappers), typings.d.ts
+### Backend (API — 20 endpoints)
+| Group | Endpoints |
+|-------|-----------|
+| Health | 1 |
+| Stocks | 13 (list, detail, daily/weekly/monthly K-line, financials, forecast, fund-flow, kline-range) |
+| Boards | 2 (list, members) |
+| Quant | 4 (indicators, screener, backtest, strategies) |
+| 涨停板 | 1 (needs 东方财富 unblock) |
+| 龙虎榜 | 3 (daily detail, institution, stock-stats — Sina ✅) |
 
-### Data — 1,636 万行日K线, 5,528 只股票, 99.3% 行业覆盖
-- sync_sina.py: Sina source (stable, ~2.5h for full daily K-line)
-- sync_financials.py: Sina source with SafeSyncer anti-blocking (~1.5h)
-- 东方财富 source: intermittent IP blocks, use SafeSyncer when syncing
+### Frontend (7 pages)
+- /stocks, /stocks/:code, /boards, /screener, /backtest, /limit-up, /lhb
+
+### Data Sources
+| Source | Status |
+|--------|--------|
+| Sina (新浪) | ✅ K-line, financials, 龙虎榜 |
+| 同花顺 | ✅ boards |
+| 东方财富 | ❌ blocked (~July 1) — limit-up, fund flow, seat detail |
 
 ### API Docs
 - Online: http://localhost:8000/docs (Swagger)
+- Offline: docs/api/api-reference.md
 - Offline: docs/api/api-reference.md
 
 ### Remaining Data (not yet synced)

@@ -151,6 +151,39 @@ def detect_death_cross(fast: pd.Series, slow: pd.Series) -> pd.Series:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
+# Trend Strength (趋势强度)
+# ═══════════════════════════════════════════════════════════════════════════
+
+
+def compute_slope(df: pd.DataFrame, period: int = 20, field: str = "close") -> pd.Series:
+    """Linear regression slope over `period` bars.
+
+    Positive = uptrend, negative = downtrend, ~0 = sideways.
+    Uses numpy.polyfit for least-squares fit.
+    """
+    values = df[field].values
+    x = np.arange(period)
+    result = np.full(len(values), np.nan)
+
+    for i in range(period - 1, len(values)):
+        y = values[i - period + 1 : i + 1]
+        slope_val, _ = np.polyfit(x, y, 1)
+        result[i] = slope_val
+
+    return pd.Series(result, index=df.index)
+
+
+def compute_slope_pct(df: pd.DataFrame, period: int = 20, field: str = "close") -> pd.Series:
+    """Slope as percentage of current price (normalized).
+
+    Makes slope comparable across stocks with different price levels.
+    slope_pct = slope / current_price * 100
+    """
+    slope_raw = compute_slope(df, period, field)
+    return (slope_raw / df[field].values) * 100
+
+
+# ═══════════════════════════════════════════════════════════════════════════
 # Indicator Registry — maps name → compute function
 # ═══════════════════════════════════════════════════════════════════════════
 
@@ -164,4 +197,6 @@ INDICATOR_REGISTRY: dict[str, tuple[callable, dict]] = {
     "atr": (compute_atr, {"period": 14}),
     "obv": (compute_obv, {}),
     "volume_ma": (compute_volume_ma, {"period": 5}),
+    "slope": (compute_slope, {"period": 20}),
+    "slope_pct": (compute_slope_pct, {"period": 20}),
 }

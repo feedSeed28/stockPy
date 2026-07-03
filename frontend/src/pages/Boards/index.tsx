@@ -14,9 +14,21 @@ export default function BoardsPage() {
   const [membersLoading, setMembersLoading] = useState(false);
   const [allBoards, setAllBoards] = useState<BoardInfo[]>([]);
 
-  // Load all boards once for dropdown options
+  // Load all boards once for dropdown options (fetch all pages)
   useEffect(() => {
-    fetchBoards({ page_size: 1000 }).then((res) => setAllBoards(res.items));
+    async function loadAll() {
+      let all: BoardInfo[] = [];
+      let page = 1;
+      const pageSize = 200;
+      while (true) {
+        const res = await fetchBoards({ page, page_size: pageSize });
+        all = [...all, ...res.items];
+        if (all.length >= res.total) break;
+        page++;
+      }
+      setAllBoards(all);
+    }
+    loadAll();
   }, []);
 
   // Derive unique codes and names for dropdowns

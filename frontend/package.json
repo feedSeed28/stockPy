@@ -10,6 +10,7 @@
     "test": "max test"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.3.2",
     "@ant-design/pro-components": "^2.8.0",
     "@umijs/max": "^4.4.0",
     "antd": "^5.22.0",

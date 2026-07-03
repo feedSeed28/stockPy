@@ -17,7 +17,6 @@ import {
   Table,
   message,
 } from "antd";
-import { PlayCircleOutlined } from "@ant-design/icons";
 import ReactECharts from "echarts-for-react";
 import { useState } from "react";
 import { runBacktest, fetchStrategies } from "@/services/stock";
@@ -116,12 +115,11 @@ export default function BacktestPage() {
               </Form.Item>
               <Button
                 type="primary"
-                icon={<PlayCircleOutlined />}
                 onClick={handleRun}
                 loading={loading}
                 block
               >
-                运行回测
+                ▶ 运行回测
               </Button>
             </Form>
           </Card>

@@ -203,3 +203,10 @@ export async function fetchStrategies(): Promise<Record<string, any>> {
   const { data } = await axios.get<ApiResponse<any>>("/api/v1/quant/strategies");
   return data.data;
 }
+
+// ── Today's summary ──────────────────────────────────────────────────────
+
+export async function fetchTodaySummary(code: string): Promise<any> {
+  const { data } = await axios.get<ApiResponse<any>>(`/api/v1/stocks/${code}/today`);
+  return data.code === 200 ? data.data : null;
+}

@@ -12,6 +12,7 @@
       "test": "max test"
     },
     "dependencies": {
+      "@ant-design/icons": "^6.3.2",
       "@ant-design/pro-components": "^2.8.0",
       "@umijs/max": "^4.4.0",
       "antd": "^5.22.0",
@@ -37,7 +38,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -77,10 +78,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            0
+            1
           ]
         },
-        "register": 4
+        "register": 5
       },
       "enableBy": "register"
     },
@@ -97,7 +98,7 @@
             2
           ]
         },
-        "register": 3
+        "register": 4
       },
       "enableBy": "register"
     },
@@ -116,10 +117,11 @@
             0,
             0,
             0,
+            0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -133,17 +135,17 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            24,
-            3,
-            2,
-            4,
-            4,
-            13,
-            2,
-            7
+            73,
+            6,
+            7,
+            11,
+            8,
+            6,
+            6,
+            5
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -157,14 +159,15 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            35
+            37
           ],
           "onGenerateFiles": [
-            4,
-            21,
+            3,
+            8,
+            6,
             7,
-            514,
-            9,
+            7,
+            463,
             9
           ]
         },
@@ -187,10 +190,11 @@
             0,
             0,
             0,
+            0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -211,17 +215,17 @@
             0
           ],
           "onPrepareBuildSuccess": [
-            1,
-            1,
             0,
+            0,
+            0,
+            0,
+            1,
             0,
             0
           ],
           "onCheckCode": [
-            0,
-            0,
-            0,
-            0,
+            1,
+            1,
             0,
             0,
             0,
@@ -274,7 +278,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -291,7 +295,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -319,10 +323,10 @@
         "hooks": {
           "modifyConfig": [
             0,
-            1
+            0
           ]
         },
-        "register": 13
+        "register": 15
       },
       "enableBy": "register"
     },
@@ -1188,7 +1192,7 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            0
           ]
         },
         "register": 1
@@ -1205,10 +1209,10 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            22
+            10
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -1221,7 +1225,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 93
+        "register": 88
       },
       "enableBy": "register"
     },
@@ -1234,7 +1238,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 47
+        "register": 48
       },
       "enableBy": "config"
     },
@@ -1247,7 +1251,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 31
+        "register": 25
       },
       "enableBy": "config"
     },
@@ -1271,40 +1275,10 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1318,14 +1292,16 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            5,
+            2,
+            1,
+            1,
             1,
             0,
-            19,
-            2,
-            2
+            1,
+            1
           ],
           "addRuntimePlugin": [
+            0,
             0,
             0,
             0,
@@ -1347,7 +1323,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "enableBy": "config"
     },
@@ -1361,10 +1337,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            2
           ],
           "addBeforeMiddlewares": [
-            0
+            1
           ]
         },
         "register": 41
@@ -1405,17 +1381,20 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
+            1,
             0,
             0,
             0,
-            0,
+            1,
             0,
             0
           ],
           "addEntryImports": [
             0,
             0,
-            1,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1440,7 +1419,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1458,14 +1437,17 @@
             0
           ],
           "onGenerateFiles": [
-            217,
-            49,
-            22,
-            54,
-            21,
-            25
+            89,
+            23,
+            19,
+            23,
+            31,
+            25,
+            30
           ],
           "addPolyfillImports": [
+            0,
+            0,
             0,
             0,
             0,
@@ -1480,7 +1462,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 3
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
@@ -1504,10 +1486,12 @@
             0,
             0,
             0,
+            0,
+            0,
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1521,7 +1505,8 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            148,
+            104,
+            0,
             0,
             0,
             0,
@@ -1529,7 +1514,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1542,7 +1527,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1555,7 +1540,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1569,15 +1554,16 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            21,
-            0,
+            1,
             0,
             1,
-            1,
-            1
+            0,
+            0,
+            0,
+            0
           ],
           "addBeforeMiddlewares": [
-            1
+            0
           ]
         },
         "register": 1
@@ -1594,21 +1580,23 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            33,
-            49,
-            12,
-            10,
+            20,
             9,
+            17,
+            8,
+            18,
             6,
-            163,
-            56,
-            26,
-            6,
-            11,
+            14,
+            7,
+            15,
+            8,
+            15,
+            7,
+            17,
             6
           ]
         },
-        "register": 6
+        "register": 7
       },
       "enableBy": "register"
     },
@@ -1621,7 +1609,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "enableBy": "config"
     },
@@ -1634,7 +1622,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/ssr/ssr": {
@@ -1646,7 +1634,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 4
       },
       "enableBy": "config"
     },
@@ -1660,15 +1648,16 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            653,
-            24,
-            9,
-            51,
-            24,
+            481,
+            29,
+            10,
+            10,
+            10,
+            11,
             11
           ]
         },
-        "register": 5
+        "register": 4
       },
       "enableBy": "register"
     },
@@ -1685,7 +1674,7 @@
             0
           ]
         },
-        "register": 5
+        "register": 4
       },
       "enableBy": "register"
     },
@@ -1736,7 +1725,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 28
+        "register": 25
       },
       "enableBy": "config"
     },
@@ -1750,15 +1739,16 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            9,
+            7,
             1,
             1,
-            2,
+            1,
+            1,
             2,
             1
           ]
         },
-        "register": 3
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
@@ -1783,7 +1773,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       },
       "enableBy": "config"
     },
@@ -1809,7 +1799,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/swc/swc": {
@@ -1822,7 +1812,7 @@
       "time": {
         "hooks": {
           "addOnDemandDeps": [
-            1
+            0
           ]
         },
         "register": 1
@@ -1850,7 +1840,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1863,7 +1853,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config"
     },
@@ -1876,7 +1866,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/utoopack/utoopack": {
@@ -1888,7 +1878,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian": {
@@ -1913,44 +1903,14 @@
       "time": {
         "hooks": {
           "addHTMLHeadScripts": [
+            68,
             0,
             0,
             0,
-            1,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1
+            0
           ]
         },
-        "register": 37
+        "register": 33
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/bundler/bundler": {
@@ -1963,7 +1923,7 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            16072
+            771
           ]
         },
         "register": 2
@@ -1979,7 +1939,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 5
       },
       "enableBy": "register"
     },
@@ -1992,7 +1952,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 46
+        "register": 42
       },
       "enableBy": "register"
     },
@@ -2009,7 +1969,7 @@
             32
           ]
         },
-        "register": 50
+        "register": 47
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2021,7 +1981,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2047,7 +2007,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2073,7 +2033,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2086,7 +2046,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 3
       },
       "enableBy": "register"
     },
@@ -2099,7 +2059,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2151,7 +2111,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2203,7 +2163,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2242,7 +2202,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2255,7 +2215,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 26
+        "register": 31
       },
       "enableBy": "register"
     },
@@ -2281,7 +2241,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 4
       },
       "enableBy": "register"
     },
@@ -2300,6 +2260,7 @@
             0,
             0,
             0,
+            0,
             0
           ],
           "onGenerateFiles": [
@@ -2307,7 +2268,8 @@
             1,
             1,
             1,
-            2,
+            1,
+            1,
             1
           ],
           "addTmpGenerateWatcherPaths": [
@@ -2342,7 +2304,7 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            3,
+            2,
             1
           ],
           "modifyAppData": [
@@ -2363,9 +2325,12 @@
             0,
             0,
             0,
+            0,
+            0,
             0
           ],
           "addRuntimePlugin": [
+            0,
             0,
             0,
             0,
@@ -2377,15 +2342,17 @@
             0,
             0,
             0,
-            1,
+            0,
+            0,
             0,
             0
           ],
           "onGenerateFiles": [
-            16,
+            3,
+            2,
             1,
+            2,
             1,
-            29,
             1,
             1
           ],
@@ -2396,7 +2363,7 @@
             0
           ]
         },
-        "register": 11
+        "register": 10
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/dva": {
@@ -2408,7 +2375,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 12
+        "register": 11
       },
       "enableBy": "config"
     },
@@ -2427,6 +2394,7 @@
             0,
             0,
             0,
+            0,
             0
           ],
           "addRuntimePluginKey": [
@@ -2435,17 +2403,20 @@
             0,
             0,
             0,
+            0,
             0
           ],
           "onGenerateFiles": [
-            2,
+            3,
+            1,
+            0,
             1,
             1,
             1,
-            2,
             1
           ],
           "addExtraModels": [
+            0,
             0,
             0,
             0,
@@ -2474,9 +2445,10 @@
             0
           ],
           "addLayouts": [
-            1,
             0,
-            1,
+            0,
+            0,
+            0,
             0,
             0,
             0
@@ -2490,6 +2462,7 @@
             0,
             0,
             0,
+            0,
             0
           ],
           "addRuntimePluginKey": [
@@ -2498,18 +2471,20 @@
             0,
             0,
             0,
+            0,
             0
           ],
           "onGenerateFiles": [
-            36,
-            3,
-            3,
-            80,
+            8,
+            4,
             6,
-            4
+            3,
+            3,
+            5,
+            3
           ]
         },
-        "register": 6
+        "register": 4
       },
       "enableBy": "config"
     },
@@ -2535,7 +2510,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -2554,21 +2529,23 @@
             0,
             0,
             0,
+            0,
             0
           ],
           "onGenerateFiles": [
             19,
-            11,
-            8,
-            49,
+            18,
             13,
-            11
+            14,
+            16,
+            15,
+            15
           ],
           "addTmpGenerateWatcherPaths": [
             0
           ]
         },
-        "register": 7
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -2581,7 +2558,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2600,10 +2577,11 @@
             0,
             0,
             0,
+            0,
             0
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2628,7 +2606,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/react-query": {
@@ -2659,18 +2637,20 @@
             0,
             0,
             0,
+            0,
             0
           ],
           "onGenerateFiles": [
-            48,
-            4,
+            7,
+            1,
             2,
-            3,
+            1,
+            1,
             2,
-            2
+            1
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2683,7 +2663,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2696,7 +2676,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2709,7 +2689,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -2727,7 +2707,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2744,7 +2724,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -2758,11 +2738,10 @@
       "time": {
         "hooks": {
           "onCheckPkgJSON": [
-            0,
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2775,7 +2754,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     }
@@ -2794,6 +2773,9 @@
     "layout": {
       "title": "Stock Quant"
     },
+    "headScripts": [
+      "(function(){var w=console.warn;console.warn=function(){if(typeof arguments[0]==='string'&&arguments[0].indexOf('findDOMNode')>-1)return;w.apply(console,arguments)}})()"
+    ],
     "routes": [
       {
         "path": "/",
@@ -2814,8 +2796,59 @@
         "name": "板块",
         "path": "/boards",
         "component": "./Boards"
+      },
+      {
+        "name": "选股",
+        "path": "/screener",
+        "component": "./Screener"
+      },
+      {
+        "name": "回测",
+        "path": "/backtest",
+        "component": "./Backtest"
+      },
+      {
+        "name": "行情",
+        "path": "/market",
+        "component": "./Market"
+      },
+      {
+        "name": "龙虎榜",
+        "path": "/lhb",
+        "component": "./LHB"
+      },
+      {
+        "name": "涨停板",
+        "path": "/limit-up",
+        "routes": [
+          {
+            "path": "/limit-up",
+            "redirect": "/limit-up/main"
+          },
+          {
+            "name": "主板",
+            "path": "/limit-up/main",
+            "component": "./LimitUp"
+          },
+          {
+            "name": "创业板",
+            "path": "/limit-up/chinext",
+            "component": "./LimitUp"
+          },
+          {
+            "name": "科创板",
+            "path": "/limit-up/star",
+            "component": "./LimitUp"
+          }
+        ]
       }
     ],
+    "mfsu": {
+      "exclude": [
+        "echarts",
+        "echarts-for-react"
+      ]
+    },
     "npmClient": "pnpm",
     "proxy": {
       "/api": {
@@ -2837,7 +2870,11 @@
     "svgr": {},
     "publicPath": "/",
     "mfsu": {
-      "strategy": "eager"
+      "strategy": "eager",
+      "exclude": [
+        "echarts",
+        "echarts-for-react"
+      ]
     },
     "ignoreMomentLocale": true,
     "externals": {},
@@ -2862,6 +2899,9 @@
     "layout": {
       "title": "Stock Quant"
     },
+    "headScripts": [
+      "(function(){var w=console.warn;console.warn=function(){if(typeof arguments[0]==='string'&&arguments[0].indexOf('findDOMNode')>-1)return;w.apply(console,arguments)}})()"
+    ],
     "routes": [
       {
         "path": "/",
@@ -2882,6 +2922,51 @@
         "name": "板块",
         "path": "/boards",
         "component": "./Boards"
+      },
+      {
+        "name": "选股",
+        "path": "/screener",
+        "component": "./Screener"
+      },
+      {
+        "name": "回测",
+        "path": "/backtest",
+        "component": "./Backtest"
+      },
+      {
+        "name": "行情",
+        "path": "/market",
+        "component": "./Market"
+      },
+      {
+        "name": "龙虎榜",
+        "path": "/lhb",
+        "component": "./LHB"
+      },
+      {
+        "name": "涨停板",
+        "path": "/limit-up",
+        "routes": [
+          {
+            "path": "/limit-up",
+            "redirect": "/limit-up/main"
+          },
+          {
+            "name": "主板",
+            "path": "/limit-up/main",
+            "component": "./LimitUp"
+          },
+          {
+            "name": "创业板",
+            "path": "/limit-up/chinext",
+            "component": "./LimitUp"
+          },
+          {
+            "name": "科创板",
+            "path": "/limit-up/star",
+            "component": "./LimitUp"
+          }
+        ]
       }
     ],
     "npmClient": "pnpm",
@@ -3835,7 +3920,7 @@
       "parentId": "ant-design-pro-layout",
       "id": "3",
       "absPath": "/stocks/:code",
-      "__content": "/** Stock detail page — info card + K-line chart + financials. */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Descriptions, Tabs, Tag, message } from \"antd\";\nimport { useParams } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport { fetchStock } from \"@/services/stock\";\nimport type { StockInfo } from \"@/services/typings\";\nimport KlineChart from \"./KlineChart\";\nimport FinancialsView from \"./FinancialsView\";\n\nexport default function StockDetailPage() {\n  const { code } = useParams<{ code: string }>();\n  const [stock, setStock] = useState<StockInfo | null>(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    if (!code) return;\n    setLoading(true);\n    fetchStock(code)\n      .then(setStock)\n      .catch(() => message.error(\"Failed to load stock info\"))\n      .finally(() => setLoading(false));\n  }, [code]);\n\n  if (!code) return null;\n\n  const exchangeColor: Record<string, string> = {\n    SH: \"red\",\n    SZ: \"green\",\n    BJ: \"blue\",\n  };\n\n  return (\n    <PageContainer\n      title={`${stock?.name || code} (${code})`}\n      loading={loading}\n    >\n      {stock && (\n        <Card style={{ marginBottom: 16 }}>\n          <Descriptions column={4} size=\"small\">\n            <Descriptions.Item label=\"代码\">{stock.code}</Descriptions.Item>\n            <Descriptions.Item label=\"名称\">{stock.name}</Descriptions.Item>\n            <Descriptions.Item label=\"交易所\">\n              <span style={{ color: exchangeColor[stock.exchange] }}>\n                {stock.exchange}\n              </span>\n            </Descriptions.Item>\n            <Descriptions.Item label=\"板块\">\n              {stock.board_type || \"-\"}\n            </Descriptions.Item>\n            <Descriptions.Item label=\"行业\">\n              {stock.industry || \"-\"}\n            </Descriptions.Item>\n            <Descriptions.Item label=\"状态\">\n              {stock.is_active ? \"✅ 上市\" : \"❌ 退市\"}\n            </Descriptions.Item>\n            <Descriptions.Item label=\"上市日期\">\n              {stock.listed_date || \"-\"}\n            </Descriptions.Item>\n          </Descriptions>\n        </Card>\n      )}\n\n      <Card>\n        <Tabs\n          defaultActiveKey=\"kline\"\n          items={[\n            {\n              key: \"kline\",\n              label: \"K线图\",\n              children: <KlineChart code={code} />,\n            },\n            {\n              key: \"financials\",\n              label: \"财务数据\",\n              children: <FinancialsView code={code} />,\n            },\n          ]}\n        />\n      </Card>\n    </PageContainer>\n  );\n}\n",
+      "__content": "/** Stock detail page */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, Descriptions, Row, Statistic, Tabs, message } from \"antd\";\nimport { useParams } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport { fetchStock, fetchTodaySummary } from \"@/services/stock\";\nimport type { StockInfo } from \"@/services/typings\";\nimport KlineChart from \"./KlineChart\";\nimport FinancialsView from \"./FinancialsView\";\n\nexport default function StockDetailPage() {\n  const { code } = useParams<{ code: string }>();\n  const [stock, setStock] = useState<StockInfo | null>(null);\n  const [today, setToday] = useState<any>(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    if (!code) return;\n    setLoading(true);\n    Promise.all([fetchStock(code), fetchTodaySummary(code)])\n      .then(([s, t]) => { setStock(s); setToday(t); })\n      .catch(() => message.error(\"加载失败\"))\n      .finally(() => setLoading(false));\n  }, [code]);\n\n  if (!code) return null;\n\n  return (\n    <PageContainer title={`${stock?.name || code} (${code})`} loading={loading}>\n      {/* Today's performance card */}\n      {today && (\n        <Row gutter={16} style={{ marginBottom: 16 }}>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"最新价\" value={today.close?.toFixed(2)} precision={2}\n                valueStyle={{ color: (today.change_pct || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontSize: 24 }} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"涨跌幅\" value={today.change_pct?.toFixed(2)} suffix=\"%\"\n                valueStyle={{ color: (today.change_pct || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontSize: 24 }} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"涨跌额\" value={today.change_amount?.toFixed(2)}\n                valueStyle={{ color: (today.change_amount || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontSize: 24 }} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"成交额(亿)\" value={(today.amount / 1e8).toFixed(2)} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"换手率\" value={today.turnover_rate?.toFixed(2)} suffix=\"%\" />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"振幅\" value={today.amplitude?.toFixed(2)} suffix=\"%\" />\n            </Card>\n          </Col>\n        </Row>\n      )}\n\n      {/* Limit-up stats */}\n      {today && (\n        <Row gutter={16} style={{ marginBottom: 16 }}>\n          <Col span={6}>\n            <Card size=\"small\" style={{ background: \"#fff7e6\" }}>\n              <Statistic title=\"近5日涨停\" value={today.lu_5d || 0}\n                valueStyle={{ color: today.lu_5d > 0 ? \"#cf1322\" : \"#999\", fontSize: 20 }} />\n            </Card>\n          </Col>\n          <Col span={6}>\n            <Card size=\"small\" style={{ background: \"#fff1f0\" }}>\n              <Statistic title=\"近30日涨停\" value={today.lu_30d || 0}\n                valueStyle={{ color: today.lu_30d > 0 ? \"#cf1322\" : \"#999\", fontSize: 20 }} />\n            </Card>\n          </Col>\n          <Col span={6}>\n            <Card size=\"small\" style={{ background: \"#f6ffed\" }}>\n              <Statistic title=\"今年涨停\" value={today.lu_year || 0}\n                valueStyle={{ color: today.lu_year > 0 ? \"#cf1322\" : \"#999\", fontSize: 20 }} />\n            </Card>\n          </Col>\n          <Col span={6}>\n            <Card size=\"small\">\n              <Statistic title=\"日期\" value={today.trade_date || \"-\"} />\n            </Card>\n          </Col>\n        </Row>\n      )}\n\n      {/* Basic info */}\n      {stock && (\n        <Card style={{ marginBottom: 16 }}>\n          <Descriptions column={5} size=\"small\">\n            <Descriptions.Item label=\"代码\">{stock.code}</Descriptions.Item>\n            <Descriptions.Item label=\"名称\">{stock.name}</Descriptions.Item>\n            <Descriptions.Item label=\"交易所\">{stock.exchange}</Descriptions.Item>\n            <Descriptions.Item label=\"板块\">{stock.board_type || \"-\"}</Descriptions.Item>\n            <Descriptions.Item label=\"行业\">{stock.industry || \"-\"}</Descriptions.Item>\n          </Descriptions>\n        </Card>\n      )}\n\n      {/* K-line + Financials */}\n      <Card>\n        <Tabs defaultActiveKey=\"kline\" items={[\n          { key: \"kline\", label: \"K线图\", children: <KlineChart code={code} /> },\n          { key: \"financials\", label: \"财务数据\", children: <FinancialsView code={code} /> },\n        ]} />\n      </Card>\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "D:/project/stock_py/frontend/src/pages/Stocks/Detail/index.tsx"
     },
@@ -3846,9 +3931,100 @@
       "parentId": "ant-design-pro-layout",
       "id": "4",
       "absPath": "/boards",
-      "__content": "/** Industry / concept boards page. */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Tag, Drawer, List, Typography } from \"antd\";\nimport { useEffect, useMemo, useState } from \"react\";\nimport { fetchBoards, fetchBoardMembers } from \"@/services/stock\";\nimport type { BoardInfo, BoardMember } from \"@/services/typings\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\n\nexport default function BoardsPage() {\n  const [drawerOpen, setDrawerOpen] = useState(false);\n  const [members, setMembers] = useState<BoardMember[]>([]);\n  const [boardName, setBoardName] = useState(\"\");\n  const [membersLoading, setMembersLoading] = useState(false);\n  const [allBoards, setAllBoards] = useState<BoardInfo[]>([]);\n\n  // Load all boards once for dropdown options\n  useEffect(() => {\n    fetchBoards({ page_size: 1000 }).then((res) => setAllBoards(res.items));\n  }, []);\n\n  // Derive unique codes and names for dropdowns\n  const codeEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_code]) map[b.board_code] = { text: b.board_code };\n    });\n    return map;\n  }, [allBoards]);\n\n  const nameEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_name]) map[b.board_name] = { text: b.board_name };\n    });\n    return map;\n  }, [allBoards]);\n\n  const columns: ProColumns<BoardInfo>[] = [\n    {\n      title: \"板块代码\",\n      dataIndex: \"board_code\",\n      key: \"board_code\",\n      width: 120,\n      valueType: \"select\",\n      valueEnum: codeEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"板块名称\",\n      dataIndex: \"board_name\",\n      key: \"board_name\",\n      width: 200,\n      valueType: \"select\",\n      valueEnum: nameEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"类型\",\n      dataIndex: \"board_type\",\n      key: \"board_type\",\n      width: 100,\n      valueType: \"select\",\n      valueEnum: {\n        industry: { text: \"行业\" },\n        concept: { text: \"概念\" },\n      },\n      render: (_, row) => (\n        <Tag color={row.board_type === \"industry\" ? \"blue\" : \"orange\"}>\n          {row.board_type === \"industry\" ? \"行业\" : \"概念\"}\n        </Tag>\n      ),\n    },\n    {\n      title: \"数据源\",\n      dataIndex: \"source\",\n      key: \"source\",\n      width: 80,\n      valueType: \"select\",\n      valueEnum: {\n        em: { text: \"东方财富\" },\n        ths: { text: \"同花顺\" },\n      },\n    },\n  ];\n\n  const loadMembers = async (boardId: string, name: string) => {\n    setBoardName(name);\n    setDrawerOpen(true);\n    setMembersLoading(true);\n    try {\n      const res = await fetchBoardMembers(boardId);\n      setMembers(res.items);\n    } finally {\n      setMembersLoading(false);\n    }\n  };\n\n  return (\n    <PageContainer>\n      <ProTable<BoardInfo>\n        columns={columns}\n        rowKey=\"id\"\n        request={async (params: Record<string, any>) => {\n          const { current, pageSize, board_type, board_code, board_name } =\n            params;\n          const res = await fetchBoards({\n            page: current,\n            page_size: pageSize,\n            board_type,\n          });\n          // Client-side filter for dropdown selections\n          let items = res.items;\n          let total = res.total;\n          if (board_code) {\n            items = items.filter((b) => b.board_code === board_code);\n            total = items.length;\n          }\n          if (board_name) {\n            items = items.filter((b) => b.board_name === board_name);\n            total = items.length;\n          }\n          return {\n            data: items,\n            total,\n            success: true,\n          };\n        }}\n        search={{ labelWidth: \"auto\", defaultCollapsed: false }}\n        onRow={(record) => ({\n          onClick: () => loadMembers(record.id, record.board_name),\n          style: { cursor: \"pointer\" },\n        })}\n        pagination={{ defaultPageSize: 30 }}\n      />\n\n      <Drawer\n        title={`${boardName} — 成分股`}\n        open={drawerOpen}\n        onClose={() => setDrawerOpen(false)}\n        width={400}\n        loading={membersLoading}\n      >\n        <List\n          dataSource={members}\n          renderItem={(item) => (\n            <List.Item>\n              <Typography.Text copyable={{ text: item.stock_code }}>\n                {item.stock_code}\n              </Typography.Text>\n              <Typography.Text style={{ marginLeft: 12 }}>\n                {item.stock_name || \"-\"}\n              </Typography.Text>\n            </List.Item>\n          )}\n        />\n      </Drawer>\n    </PageContainer>\n  );\n}\n",
+      "__content": "/** Industry / concept boards page. */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Tag, Drawer, List, Typography } from \"antd\";\nimport { useEffect, useMemo, useState } from \"react\";\nimport { fetchBoards, fetchBoardMembers } from \"@/services/stock\";\nimport type { BoardInfo, BoardMember } from \"@/services/typings\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\n\nexport default function BoardsPage() {\n  const [drawerOpen, setDrawerOpen] = useState(false);\n  const [members, setMembers] = useState<BoardMember[]>([]);\n  const [boardName, setBoardName] = useState(\"\");\n  const [membersLoading, setMembersLoading] = useState(false);\n  const [allBoards, setAllBoards] = useState<BoardInfo[]>([]);\n\n  // Load all boards once for dropdown options (fetch all pages)\n  useEffect(() => {\n    async function loadAll() {\n      let all: BoardInfo[] = [];\n      let page = 1;\n      const pageSize = 200;\n      while (true) {\n        const res = await fetchBoards({ page, page_size: pageSize });\n        all = [...all, ...res.items];\n        if (all.length >= res.total) break;\n        page++;\n      }\n      setAllBoards(all);\n    }\n    loadAll();\n  }, []);\n\n  // Derive unique codes and names for dropdowns\n  const codeEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_code]) map[b.board_code] = { text: b.board_code };\n    });\n    return map;\n  }, [allBoards]);\n\n  const nameEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_name]) map[b.board_name] = { text: b.board_name };\n    });\n    return map;\n  }, [allBoards]);\n\n  const columns: ProColumns<BoardInfo>[] = [\n    {\n      title: \"板块代码\",\n      dataIndex: \"board_code\",\n      key: \"board_code\",\n      width: 120,\n      valueType: \"select\",\n      valueEnum: codeEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"板块名称\",\n      dataIndex: \"board_name\",\n      key: \"board_name\",\n      width: 200,\n      valueType: \"select\",\n      valueEnum: nameEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"类型\",\n      dataIndex: \"board_type\",\n      key: \"board_type\",\n      width: 100,\n      valueType: \"select\",\n      valueEnum: {\n        industry: { text: \"行业\" },\n        concept: { text: \"概念\" },\n      },\n      render: (_, row) => (\n        <Tag color={row.board_type === \"industry\" ? \"blue\" : \"orange\"}>\n          {row.board_type === \"industry\" ? \"行业\" : \"概念\"}\n        </Tag>\n      ),\n    },\n    {\n      title: \"数据源\",\n      dataIndex: \"source\",\n      key: \"source\",\n      width: 80,\n      valueType: \"select\",\n      valueEnum: {\n        em: { text: \"东方财富\" },\n        ths: { text: \"同花顺\" },\n      },\n    },\n  ];\n\n  const loadMembers = async (boardId: string, name: string) => {\n    setBoardName(name);\n    setDrawerOpen(true);\n    setMembersLoading(true);\n    try {\n      const res = await fetchBoardMembers(boardId);\n      setMembers(res.items);\n    } finally {\n      setMembersLoading(false);\n    }\n  };\n\n  return (\n    <PageContainer>\n      <ProTable<BoardInfo>\n        columns={columns}\n        rowKey=\"id\"\n        request={async (params: Record<string, any>) => {\n          const { current, pageSize, board_type, board_code, board_name } =\n            params;\n          const res = await fetchBoards({\n            page: current,\n            page_size: pageSize,\n            board_type,\n          });\n          // Client-side filter for dropdown selections\n          let items = res.items;\n          let total = res.total;\n          if (board_code) {\n            items = items.filter((b) => b.board_code === board_code);\n            total = items.length;\n          }\n          if (board_name) {\n            items = items.filter((b) => b.board_name === board_name);\n            total = items.length;\n          }\n          return {\n            data: items,\n            total,\n            success: true,\n          };\n        }}\n        search={{ labelWidth: \"auto\", defaultCollapsed: false }}\n        onRow={(record) => ({\n          onClick: () => loadMembers(record.id, record.board_name),\n          style: { cursor: \"pointer\" },\n        })}\n        pagination={{ defaultPageSize: 30 }}\n      />\n\n      <Drawer\n        title={`${boardName} — 成分股`}\n        open={drawerOpen}\n        onClose={() => setDrawerOpen(false)}\n        width={400}\n        loading={membersLoading}\n      >\n        <List\n          dataSource={members}\n          renderItem={(item) => (\n            <List.Item>\n              <Typography.Text copyable={{ text: item.stock_code }}>\n                {item.stock_code}\n              </Typography.Text>\n              <Typography.Text style={{ marginLeft: 12 }}>\n                {item.stock_name || \"-\"}\n              </Typography.Text>\n            </List.Item>\n          )}\n        />\n      </Drawer>\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "D:/project/stock_py/frontend/src/pages/Boards/index.tsx"
+    },
+    "5": {
+      "name": "选股",
+      "path": "/screener",
+      "file": "@/pages/Screener/index.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "5",
+      "absPath": "/screener",
+      "__content": "/** Stock screener — build filter conditions, scan all A-stocks. */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport {\n  Button,\n  Card,\n  Select,\n  InputNumber,\n  Space,\n  Table,\n  Tag,\n  message,\n  Form,\n  Popconfirm,\n} from \"antd\";\nimport { useNavigate } from \"@umijs/max\";\nimport { useState } from \"react\";\nimport { runScreener } from \"@/services/stock\";\n\nconst FIELD_OPTIONS = [\n  { label: \"ROE (%)\", value: \"roe\" },\n  { label: \"毛利率 (%)\", value: \"gross_margin\" },\n  { label: \"营收增长率 (%)\", value: \"revenue_growth\" },\n  { label: \"利润增长率 (%)\", value: \"profit_growth\" },\n  { label: \"资产负债率 (%)\", value: \"debt_ratio\" },\n  { label: \"流动比率\", value: \"current_ratio\" },\n  { label: \"基本EPS\", value: \"eps_basic\" },\n  { label: \"每股净资产\", value: \"bvps\" },\n  { label: \"MA金叉\", value: \"ma_cross\" },\n  { label: \"MACD金叉\", value: \"macd_cross\" },\n  { label: \"RSI\", value: \"rsi\" },\n];\n\nconst OP_OPTIONS: Record<string, { label: string; value: string }[]> = {\n  roe: [\n    { label: \">\", value: \"gt\" },\n    { label: \"<\", value: \"lt\" },\n  ],\n  gross_margin: [\n    { label: \">\", value: \"gt\" },\n    { label: \"<\", value: \"lt\" },\n  ],\n  revenue_growth: [\n    { label: \">\", value: \"gt\" },\n    { label: \"<\", value: \"lt\" },\n  ],\n  profit_growth: [\n    { label: \">\", value: \"gt\" },\n    { label: \"<\", value: \"lt\" },\n  ],\n  debt_ratio: [\n    { label: \">\", value: \"gt\" },\n    { label: \"<\", value: \"lt\" },\n  ],\n  current_ratio: [\n    { label: \">\", value: \"gt\" },\n    { label: \"<\", value: \"lt\" },\n  ],\n  eps_basic: [\n    { label: \">\", value: \"gt\" },\n    { label: \"<\", value: \"lt\" },\n  ],\n  bvps: [\n    { label: \">\", value: \"gt\" },\n    { label: \"<\", value: \"lt\" },\n  ],\n  ma_cross: [{ label: \"金叉\", value: \"golden\" }],\n  macd_cross: [{ label: \"金叉\", value: \"golden\" }],\n  rsi: [\n    { label: \"<\", value: \"lt\" },\n    { label: \">\", value: \"gt\" },\n  ],\n};\n\ninterface ConditionRow {\n  key: string;\n  field: string;\n  op: string;\n  value?: number;\n  params?: Record<string, any>;\n}\n\nexport default function ScreenerPage() {\n  const navigate = useNavigate();\n  const [conditions, setConditions] = useState<ConditionRow[]>([\n    { key: \"1\", field: \"roe\", op: \"gt\", value: 15 },\n  ]);\n  const [results, setResults] = useState<any[]>([]);\n  const [loading, setLoading] = useState(false);\n\n  const addCondition = () => {\n    const key = String(Date.now());\n    setConditions([...conditions, { key, field: \"roe\", op: \"gt\", value: 10 }]);\n  };\n\n  const removeCondition = (key: string) => {\n    setConditions(conditions.filter((c) => c.key !== key));\n  };\n\n  const updateCondition = (key: string, updates: Partial<ConditionRow>) => {\n    setConditions(\n      conditions.map((c) => (c.key === key ? { ...c, ...updates } : c))\n    );\n  };\n\n  const handleSearch = async () => {\n    setLoading(true);\n    try {\n      const res = await runScreener({\n        conditions: conditions.map((c) => ({\n          field: c.field,\n          op: c.op,\n          value: c.value,\n          params: c.params,\n        })),\n        limit: 100,\n      });\n      setResults(res.results);\n      message.success(`Found ${res.total} stocks`);\n    } catch {\n      message.error(\"Screener failed\");\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  const columns = [\n    { title: \"代码\", dataIndex: \"code\", key: \"code\", width: 100 },\n    { title: \"名称\", dataIndex: \"name\", key: \"name\", width: 120 },\n    { title: \"行业\", dataIndex: \"industry\", key: \"industry\", width: 120 },\n    {\n      title: \"信号\",\n      dataIndex: \"_signal\",\n      key: \"_signal\",\n      width: 150,\n      render: (v: string) => v ? <Tag color=\"green\">{v}</Tag> : null,\n    },\n    { title: \"ROE\", dataIndex: \"_roe\", key: \"_roe\", width: 80 },\n    { title: \"RSI\", dataIndex: \"_rsi\", key: \"_rsi\", width: 80 },\n  ];\n\n  return (\n    <PageContainer>\n      <Card title=\"选股条件\" style={{ marginBottom: 16 }}>\n        <Space direction=\"vertical\" size=\"middle\" style={{ width: \"100%\" }}>\n          {conditions.map((c) => (\n            <Space key={c.key} align=\"center\">\n              <Select\n                value={c.field}\n                onChange={(v) => {\n                  const defaultOp = OP_OPTIONS[v]?.[0]?.value || \"gt\";\n                  updateCondition(c.key, { field: v, op: defaultOp });\n                }}\n                options={FIELD_OPTIONS}\n                style={{ width: 150 }}\n              />\n              <Select\n                value={c.op}\n                onChange={(v) => updateCondition(c.key, { op: v })}\n                options={OP_OPTIONS[c.field] || []}\n                style={{ width: 80 }}\n              />\n              {![\"ma_cross\", \"macd_cross\"].includes(c.field) && (\n                <InputNumber\n                  value={c.value}\n                  onChange={(v) => updateCondition(c.key, { value: v ?? undefined })}\n                  style={{ width: 100 }}\n                />\n              )}\n              <Button\n                danger\n                onClick={() => removeCondition(c.key)}\n                disabled={conditions.length <= 1}\n              >✕</Button>\n            </Space>\n          ))}\n          <Space>\n            <Button onClick={addCondition}>\n              + 添加条件\n            </Button>\n            <Button\n              type=\"primary\"\n              onClick={handleSearch}\n              loading={loading}\n            >\n              🔍 开始筛选\n            </Button>\n          </Space>\n        </Space>\n      </Card>\n\n      <Card title={`筛选结果 (${results.length})`}>\n        <Table\n          dataSource={results}\n          columns={columns}\n          rowKey=\"code\"\n          pagination={{ pageSize: 30 }}\n          onRow={(record) => ({\n            onClick: () => navigate(`/stocks/${record.code}`),\n            style: { cursor: \"pointer\" },\n          })}\n        />\n      </Card>\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/Screener/index.tsx"
+    },
+    "6": {
+      "name": "回测",
+      "path": "/backtest",
+      "file": "@/pages/Backtest/index.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "6",
+      "absPath": "/backtest",
+      "__content": "/** Backtest page — configure strategy, run backtest, view results. */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport {\n  Button,\n  Card,\n  Col,\n  Descriptions,\n  Form,\n  Input,\n  InputNumber,\n  Row,\n  Select,\n  Space,\n  Spin,\n  Statistic,\n  Table,\n  message,\n} from \"antd\";\nimport ReactECharts from \"echarts-for-react\";\nimport { useState } from \"react\";\nimport { runBacktest, fetchStrategies } from \"@/services/stock\";\n\nconst STRATEGY_OPTIONS = [\n  { label: \"MA均线金叉\", value: \"ma_cross\" },\n  { label: \"MACD金叉\", value: \"macd\" },\n  { label: \"RSI超买超卖\", value: \"rsi\" },\n];\n\nexport default function BacktestPage() {\n  const [form] = Form.useForm();\n  const [loading, setLoading] = useState(false);\n  const [result, setResult] = useState<any>(null);\n\n  const handleRun = async () => {\n    const values = form.getFieldsValue();\n    setLoading(true);\n    try {\n      const res = await runBacktest({\n        stock_code: values.stock_code || \"000001\",\n        strategy: values.strategy || \"ma_cross\",\n        params: values.fast ? { fast: values.fast, slow: values.slow } : undefined,\n        initial_capital: values.initial_capital || 100000,\n      });\n      setResult(res);\n      message.success(\"Backtest complete\");\n    } catch {\n      message.error(\"Backtest failed\");\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  const equityOption = result\n    ? {\n        tooltip: { trigger: \"axis\" },\n        grid: { left: \"8%\", right: \"4%\", top: \"4%\", bottom: \"8%\" },\n        xAxis: {\n          type: \"category\",\n          data: result.equity_curve?.map((e: any) => e.date) || [],\n        },\n        yAxis: { type: \"value\" },\n        series: [\n          {\n            name: \"权益\",\n            type: \"line\",\n            data: result.equity_curve?.map((e: any) => e.equity) || [],\n            smooth: true,\n            areaStyle: { opacity: 0.1 },\n          },\n        ],\n      }\n    : {};\n\n  const tradeColumns = [\n    { title: \"买入日期\", dataIndex: \"buy_date\", key: \"buy_date\", width: 110 },\n    { title: \"买入价\", dataIndex: \"buy_price\", key: \"buy_price\", width: 80 },\n    { title: \"卖出日期\", dataIndex: \"sell_date\", key: \"sell_date\", width: 110 },\n    { title: \"卖出价\", dataIndex: \"sell_price\", key: \"sell_price\", width: 80 },\n    {\n      title: \"盈亏\",\n      dataIndex: \"pnl_pct\",\n      key: \"pnl_pct\",\n      width: 90,\n      render: (v: number) => (\n        <span style={{ color: v > 0 ? \"red\" : \"green\" }}>\n          {v?.toFixed(2)}%\n        </span>\n      ),\n    },\n  ];\n\n  return (\n    <PageContainer>\n      <Row gutter={16}>\n        <Col span={8}>\n          <Card title=\"策略配置\">\n            <Form form={form} layout=\"vertical\" initialValues={{\n              stock_code: \"000001\", strategy: \"ma_cross\", fast: 5, slow: 20, initial_capital: 100000\n            }}>\n              <Form.Item label=\"股票代码\" name=\"stock_code\">\n                <Input placeholder=\"000001\" />\n              </Form.Item>\n              <Form.Item label=\"策略\" name=\"strategy\">\n                <Select options={STRATEGY_OPTIONS} />\n              </Form.Item>\n              <Form.Item label=\"快线周期\" name=\"fast\">\n                <InputNumber min={2} max={60} />\n              </Form.Item>\n              <Form.Item label=\"慢线周期\" name=\"slow\">\n                <InputNumber min={5} max={120} />\n              </Form.Item>\n              <Form.Item label=\"初始资金\" name=\"initial_capital\">\n                <InputNumber min={1000} step={10000} style={{ width: \"100%\" }} />\n              </Form.Item>\n              <Button\n                type=\"primary\"\n                onClick={handleRun}\n                loading={loading}\n                block\n              >\n                ▶ 运行回测\n              </Button>\n            </Form>\n          </Card>\n        </Col>\n\n        <Col span={16}>\n          <Spin spinning={loading}>\n            {result ? (\n              <>\n                <Row gutter={16} style={{ marginBottom: 16 }}>\n                  <Col span={6}>\n                    <Card>\n                      <Statistic title=\"总收益\" value={result.total_return_pct} suffix=\"%\" precision={2}\n                        valueStyle={{ color: result.total_return_pct > 0 ? \"#cf1322\" : \"#3f8600\" }} />\n                    </Card>\n                  </Col>\n                  <Col span={6}>\n                    <Card>\n                      <Statistic title=\"年化收益\" value={result.annual_return_pct} suffix=\"%\" precision={2} />\n                    </Card>\n                  </Col>\n                  <Col span={6}>\n                    <Card>\n                      <Statistic title=\"最大回撤\" value={result.max_drawdown_pct} suffix=\"%\" precision={2}\n                        valueStyle={{ color: \"#cf1322\" }} />\n                    </Card>\n                  </Col>\n                  <Col span={6}>\n                    <Card>\n                      <Statistic title=\"夏普比率\" value={result.sharpe_ratio} precision={2} />\n                    </Card>\n                  </Col>\n                </Row>\n                <Row gutter={16} style={{ marginBottom: 16 }}>\n                  <Col span={8}>\n                    <Card><Statistic title=\"胜率\" value={result.win_rate_pct} suffix=\"%\" precision={1} /></Card>\n                  </Col>\n                  <Col span={8}>\n                    <Card><Statistic title=\"交易次数\" value={result.trade_count} /></Card>\n                  </Col>\n                  <Col span={8}>\n                    <Card><Statistic title=\"最终权益\" value={result.final_equity} precision={2} /></Card>\n                  </Col>\n                </Row>\n                <Card title=\"权益曲线\" style={{ marginBottom: 16 }}>\n                  <ReactECharts option={equityOption} style={{ height: 300 }} />\n                </Card>\n                <Card title=\"交易记录\">\n                  <Table dataSource={result.trades} columns={tradeColumns} rowKey=\"buy_date\"\n                    pagination={{ pageSize: 10 }} size=\"small\" />\n                </Card>\n              </>\n            ) : (\n              <Card>\n                配置策略参数后点击\"运行回测\"\n              </Card>\n            )}\n          </Spin>\n        </Col>\n      </Row>\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/Backtest/index.tsx"
+    },
+    "7": {
+      "name": "行情",
+      "path": "/market",
+      "file": "@/pages/Market/index.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "7",
+      "absPath": "/market",
+      "__content": "/** Today's market overview — 当日涨跌行情 */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Card, Col, Row, Statistic, Typography } from \"antd\";\nimport { useNavigate } from \"@umijs/max\";\nimport { useState } from \"react\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\nimport axios from \"axios\";\n\nconst columns: ProColumns[] = [\n  { title: \"代码\", dataIndex: \"code\", key: \"code\", width: 100, copyable: true },\n  { title: \"名称\", dataIndex: \"name\", key: \"name\", width: 120 },\n  { title: \"行业\", dataIndex: \"industry\", key: \"industry\", width: 100, ellipsis: true, search: false },\n  {\n    title: \"涨跌幅\",\n    dataIndex: \"change_pct\",\n    key: \"change_pct\",\n    width: 100,\n    sorter: true,\n    render: (_: any, r: any) => (\n      <span style={{ color: (r.change_pct || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontWeight: \"bold\" }}>\n        {(r.change_pct || 0) > 0 ? \"+\" : \"\"}{r.change_pct?.toFixed(2)}%\n      </span>\n    ),\n  },\n  { title: \"涨跌额\", dataIndex: \"change_amount\", key: \"change_amount\", width: 80, search: false,\n    render: (_: any, r: any) => (\n      <span style={{ color: (r.change_amount || 0) >= 0 ? \"#cf1322\" : \"#3f8600\" }}>{r.change_amount?.toFixed(2)}</span>\n    )},\n  { title: \"收盘\", dataIndex: \"close\", key: \"close\", width: 80, search: false },\n  { title: \"开盘\", dataIndex: \"open\", key: \"open\", width: 80, search: false },\n  { title: \"最高\", dataIndex: \"high\", key: \"high\", width: 80, search: false },\n  { title: \"最低\", dataIndex: \"low\", key: \"low\", width: 80, search: false },\n  { title: \"成交量(手)\", dataIndex: \"volume\", key: \"volume\", width: 100, search: false,\n    render: (v: number) => (v ? (v / 100).toFixed(0) : \"-\") },\n  { title: \"成交额(亿)\", dataIndex: \"amount\", key: \"amount\", width: 100, search: false,\n    render: (v: number) => (v ? (v / 1e8).toFixed(2) : \"-\") },\n  { title: \"换手率\", dataIndex: \"turnover_rate\", key: \"turnover_rate\", width: 80, search: false,\n    render: (v: number) => (v ? v.toFixed(2) + \"%\" : \"-\") },\n  { title: \"振幅\", dataIndex: \"amplitude\", key: \"amplitude\", width: 80, search: false,\n    render: (v: number) => (v ? v.toFixed(2) + \"%\" : \"-\") },\n];\n\nexport default function MarketPage() {\n  const navigate = useNavigate();\n  const [stats, setStats] = useState({ up: 0, down: 0, flat: 0, total: 0, date: \"\" });\n\n  return (\n    <PageContainer title={stats.date ? `行情概览 — ${stats.date}` : \"行情概览\"}>\n      <Row gutter={16} style={{ marginBottom: 16 }}>\n        <Col span={6}>\n          <Card><Statistic title=\"📈 上涨\" value={stats.up} valueStyle={{ color: \"#cf1322\" }} /></Card>\n        </Col>\n        <Col span={6}>\n          <Card><Statistic title=\"📉 下跌\" value={stats.down} valueStyle={{ color: \"#3f8600\" }} /></Card>\n        </Col>\n        <Col span={6}>\n          <Card><Statistic title=\"➖ 平盘\" value={stats.flat} /></Card>\n        </Col>\n        <Col span={6}>\n          <Card><Statistic title=\"📊 总数\" value={stats.total} /></Card>\n        </Col>\n      </Row>\n\n      <ProTable\n        columns={columns}\n        rowKey=\"code\"\n        request={async (params: Record<string, any>) => {\n          const sortBy = params.sorter?.field || \"change_pct\";\n          const order = params.sorter?.order === \"ascend\" ? \"asc\" : \"desc\";\n          try {\n            const { data } = await axios.get(\"/api/v1/market/today\", {\n              params: { page: params.current, page_size: params.pageSize, sort_by: sortBy, order },\n            });\n            if (data.code === 200) {\n              const d = data.data;\n              setStats({\n                up: d.stats?.up || 0, down: d.stats?.down || 0,\n                flat: d.stats?.flat || 0, total: d.total || 0, date: d.date || \"\",\n              });\n              return { data: d.items, total: d.total, success: true };\n            }\n          } catch {}\n          return { data: [], total: 0, success: true };\n        }}\n        search={false}\n        onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: \"pointer\" } })}\n        pagination={{ defaultPageSize: 50, showSizeChanger: true }}\n        scroll={{ y: 500 }}\n        dateFormatter=\"string\"\n      />\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/Market/index.tsx"
+    },
+    "8": {
+      "name": "龙虎榜",
+      "path": "/lhb",
+      "file": "@/pages/LHB/index.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "8",
+      "absPath": "/lhb",
+      "__content": "/** 龙虎榜 — daily list, institution detail, stock stats */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { DatePicker, Select, Space, Table, Tabs, message, Tag } from \"antd\";\nimport { useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\nimport dayjs from \"dayjs\";\n\nexport default function LHBPage() {\n  const navigate = useNavigate();\n  const [date, setDate] = useState(dayjs());\n  const [reason, setReason] = useState<string | undefined>();\n  const [reasons, setReasons] = useState<string[]>([]);\n  const [dailyData, setDailyData] = useState<any[]>([]);\n  const [institutionData, setInstitutionData] = useState<any[]>([]);\n  const [statsData, setStatsData] = useState<any[]>([]);\n  const [loading, setLoading] = useState(false);\n\n  const loadDaily = async () => {\n    setLoading(true);\n    try {\n      const params: any = { date: date.format(\"YYYYMMDD\") };\n      if (reason) params.reason = reason;\n      const { data } = await axios.get(\"/api/v1/lhb/daily\", { params });\n      if (data.code === 200) {\n        setDailyData(data.data.items || []);\n        setReasons(data.data.reasons || []);\n      }\n    } catch { message.error(\"加载失败\"); }\n    finally { setLoading(false); }\n  };\n\n  const loadInstitution = async () => {\n    setLoading(true);\n    try {\n      const { data } = await axios.get(\"/api/v1/lhb/institution\");\n      if (data.code === 200) setInstitutionData(data.data.items || []);\n    } catch { message.error(\"加载失败\"); }\n    finally { setLoading(false); }\n  };\n\n  const loadStats = async () => {\n    setLoading(true);\n    try {\n      const { data } = await axios.get(\"/api/v1/lhb/stock-stats\", { params: { period: \"5\" } });\n      if (data.code === 200) setStatsData(data.data.items || []);\n    } catch { message.error(\"加载失败\"); }\n    finally { setLoading(false); }\n  };\n\n  useEffect(() => { loadDaily(); }, [date, reason]);\n\n  const dailyColumns = [\n    { title: \"代码\", dataIndex: \"code\", key: \"code\", width: 100, copyable: true },\n    { title: \"名称\", dataIndex: \"name\", key: \"name\", width: 100 },\n    { title: \"收盘价\", dataIndex: \"close\", key: \"close\", width: 80 },\n    { title: \"对应值\", dataIndex: \"change_val\", key: \"change_val\", width: 80,\n      render: (v: number) => <span style={{ color: v > 0 ? \"red\" : \"green\" }}>{v}%</span> },\n    { title: \"成交额(万)\", dataIndex: \"amount\", key: \"amount\", width: 120,\n      render: (v: number) => (v ? (v / 10000).toFixed(0) : \"-\") },\n    { title: \"上榜原因\", dataIndex: \"reason\", key: \"reason\", ellipsis: true },\n  ];\n\n  const instColumns = [\n    { title: \"代码\", dataIndex: \"code\", key: \"code\", width: 100, copyable: true },\n    { title: \"名称\", dataIndex: \"name\", key: \"name\", width: 100 },\n    { title: \"日期\", dataIndex: \"trade_date\", key: \"trade_date\", width: 110 },\n    { title: \"机构买入(万)\", dataIndex: \"institution_buy\", key: \"institution_buy\", width: 130,\n      render: (v: number) => (v ? (v / 10000).toFixed(0) : \"0\") },\n    { title: \"机构卖出(万)\", dataIndex: \"institution_sell\", key: \"institution_sell\", width: 130,\n      render: (v: number) => (v ? (v / 10000).toFixed(0) : \"0\") },\n    { title: \"净买入(万)\", key: \"net\", width: 120,\n      render: (_: any, r: any) => {\n        const net = (r.institution_buy || 0) - (r.institution_sell || 0);\n        return <span style={{ color: net > 0 ? \"red\" : \"green\" }}>{(net / 10000).toFixed(0)}</span>;\n      }},\n    { title: \"上榜原因\", dataIndex: \"reason\", key: \"reason\", ellipsis: true },\n  ];\n\n  const statsColumns = [\n    { title: \"代码\", dataIndex: \"code\", key: \"code\", width: 100, copyable: true },\n    { title: \"名称\", dataIndex: \"name\", key: \"name\", width: 100 },\n    { title: \"上榜次数\", dataIndex: \"appear_count\", key: \"appear_count\", width: 80,\n      render: (v: number) => <Tag color={v > 3 ? \"red\" : \"blue\"}>{v}</Tag> },\n    { title: \"净买入(万)\", dataIndex: \"net_amount\", key: \"net_amount\", width: 120,\n      render: (v: number) => (v ? <span style={{ color: v > 0 ? \"red\" : \"green\" }}>{(v / 10000).toFixed(0)}</span> : \"-\") },\n    { title: \"累积购买额(万)\", dataIndex: \"total_buy\", key: \"total_buy\", width: 140,\n      render: (v: number) => (v ? (v / 10000).toFixed(0) : \"-\") },\n    { title: \"累积卖出额(万)\", dataIndex: \"total_sell\", key: \"total_sell\", width: 140,\n      render: (v: number) => (v ? (v / 10000).toFixed(0) : \"-\") },\n  ];\n\n  return (\n    <PageContainer title=\"龙虎榜\">\n      <Tabs\n        defaultActiveKey=\"daily\"\n        onChange={(key) => {\n          if (key === \"institution\") loadInstitution();\n          if (key === \"stats\") loadStats();\n          if (key === \"daily\") loadDaily();\n        }}\n        items={[\n          {\n            key: \"daily\",\n            label: \"每日明细\",\n            children: (\n              <Space direction=\"vertical\" style={{ width: \"100%\" }}>\n                <Space>\n                  <DatePicker value={date} onChange={(d) => setDate(d || dayjs())} allowClear={false} />\n                  <Select\n                    placeholder=\"上榜原因（全部）\"\n                    allowClear\n                    style={{ width: 300 }}\n                    value={reason}\n                    onChange={setReason}\n                    options={reasons.map((r) => ({ label: r, value: r }))}\n                  />\n                </Space>\n                <Table\n                  dataSource={dailyData}\n                  columns={dailyColumns}\n                  rowKey=\"code\"\n                  loading={loading}\n                  pagination={false}\n                  scroll={{ y: 500 }}\n                  onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: \"pointer\" } })}\n                />\n              </Space>\n            ),\n          },\n          {\n            key: \"institution\",\n            label: \"机构买卖\",\n            children: (\n              <Table\n                dataSource={institutionData}\n                columns={instColumns}\n                rowKey=\"code\"\n                loading={loading}\n                pagination={{ pageSize: 30 }}\n                scroll={{ y: 500 }}\n                onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: \"pointer\" } })}\n              />\n            ),\n          },\n          {\n            key: \"stats\",\n            label: \"个股统计(5日)\",\n            children: (\n              <Table\n                dataSource={statsData}\n                columns={statsColumns}\n                rowKey=\"code\"\n                loading={loading}\n                pagination={{ pageSize: 30 }}\n                scroll={{ y: 500 }}\n                onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: \"pointer\" } })}\n              />\n            ),\n          },\n        ]}\n      />\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/LHB/index.tsx"
+    },
+    "9": {
+      "name": "涨停板",
+      "path": "/limit-up",
+      "parentId": "ant-design-pro-layout",
+      "id": "9",
+      "absPath": "/limit-up"
+    },
+    "10": {
+      "path": "/limit-up",
+      "redirect": "/limit-up/main",
+      "parentId": "9",
+      "id": "10",
+      "absPath": "/limit-up"
+    },
+    "11": {
+      "name": "主板",
+      "path": "/limit-up/main",
+      "file": "@/pages/LimitUp/index.tsx",
+      "parentId": "9",
+      "id": "11",
+      "absPath": "/limit-up/main",
+      "__content": "/** Limit-up stocks — card layout with period selector */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space } from \"antd\";\nimport { useLocation, useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\n\nconst { Text, Title } = Typography;\n\nconst BOARD_MAP: Record<string, { title: string; param: string }> = {\n  \"/limit-up/main\": { title: \"主板\", param: \"主板\" },\n  \"/limit-up/chinext\": { title: \"创业板\", param: \"创业板\" },\n  \"/limit-up/star\": { title: \"科创板\", param: \"科创板\" },\n};\n\nconst PERIODS = [\n  { label: \"今日\", days: 1 },\n  { label: \"五日\", days: 5 },\n  { label: \"十日\", days: 10 },\n  { label: \"二十日\", days: 20 },\n];\n\nexport default function LimitUpPage() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  const board = BOARD_MAP[location.pathname] || BOARD_MAP[\"/limit-up/main\"];\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(true);\n  const [days, setDays] = useState(1);\n  const [customDays, setCustomDays] = useState<number | null>(null);\n\n  useEffect(() => {\n    setLoading(true);\n    const d = customDays && customDays > 0 ? customDays : days;\n    axios\n      .get(\"/api/v1/limit-up/period\", { params: { days: d, board_type: board.param } })\n      .then(({ data }) => {\n        if (data.code === 200) setItems(data.data.items || []);\n      })\n      .finally(() => setLoading(false));\n  }, [board.param, days, customDays]);\n\n  if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size=\"large\" style={{display:\"block\",margin:\"100px auto\"}}/></PageContainer>;\n\n  return (\n    <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>\n      {/* Period selector */}\n      <Space style={{ marginBottom: 16 }} wrap>\n        {PERIODS.map((p) => (\n          <Button\n            key={p.days}\n            type={days === p.days && !customDays ? \"primary\" : \"default\"}\n            onClick={() => { setDays(p.days); setCustomDays(null); }}\n          >\n            {p.label}\n          </Button>\n        ))}\n        <InputNumber\n          placeholder=\"自定义天数\"\n          min={1}\n          max={365}\n          value={customDays}\n          onChange={(v) => { if (v) { setCustomDays(v); setDays(0); } else { setCustomDays(null); setDays(1); } }}\n          style={{ width: 120 }}\n          addonAfter=\"天\"\n        />\n      </Space>\n\n      {!items.length ? (\n        <Empty description={`近${customDays || days}天暂无涨停数据（可能该板块交易日数据未同步）`} />\n      ) : (\n        <Row gutter={[12, 12]}>\n          {items.map((stock) => (\n            <Col key={stock.code} xs={24} sm={12} md={8} lg={6} xl={4}>\n              <Card\n                hoverable\n                size=\"small\"\n                onClick={() => navigate(`/stocks/${stock.code}`)}\n                style={{ borderRadius: 8, borderTop: \"3px solid #cf1322\" }}\n              >\n                {/* Header */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\", marginBottom: 8 }}>\n                  <Text strong style={{ fontSize: 14 }}>{stock.name}</Text>\n                  <Text type=\"secondary\" copyable={{ text: stock.code }} style={{ fontSize: 12 }}>\n                    {stock.code}\n                  </Text>\n                </div>\n\n                {/* Price + Change */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"baseline\", marginBottom: 8 }}>\n                  <Title level={4} style={{ margin: 0, color: \"#cf1322\" }}>\n                    {stock.price?.toFixed(2)}\n                  </Title>\n                  <Tag color=\"red\" style={{ fontSize: 14, padding: \"2px 8px\" }}>\n                    +{stock.change_pct?.toFixed(2)}%\n                  </Tag>\n                </div>\n\n                {/* Stats grid */}\n                <Row gutter={[4, 4]}>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>涨停次数</Text>\n                    <br />\n                    <Text strong style={{ color: \"#cf1322\", fontSize: 15 }}>\n                      {stock.count || 0}次\n                    </Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>最近日期</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{stock.trade_date || \"-\"}</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>换手率</Text>\n                    <br />\n                    <Text>{stock.turnover?.toFixed(2)}%</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>成交额</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{(stock.amount / 1e8).toFixed(1)}亿</Text>\n                  </Col>\n                </Row>\n\n                {/* Historical stats */}\n                <div style={{ marginTop: 8, borderTop: \"1px solid #f0f0f0\", paddingTop: 6 }}>\n                  <Row gutter={[8, 0]}>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近5日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_5d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_5d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近30日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_30d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_30d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>今年</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_year > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_year || 0}\n                      </Text>\n                    </Col>\n                  </Row>\n                </div>\n\n                {/* Industry */}\n                <div style={{ marginTop: 6, borderTop: \"1px solid #f0f0f0\", paddingTop: 4 }}>\n                  <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                    {stock.industry || \"—\"}\n                  </Text>\n                </div>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      )}\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/LimitUp/index.tsx"
+    },
+    "12": {
+      "name": "创业板",
+      "path": "/limit-up/chinext",
+      "file": "@/pages/LimitUp/index.tsx",
+      "parentId": "9",
+      "id": "12",
+      "absPath": "/limit-up/chinext",
+      "__content": "/** Limit-up stocks — card layout with period selector */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space } from \"antd\";\nimport { useLocation, useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\n\nconst { Text, Title } = Typography;\n\nconst BOARD_MAP: Record<string, { title: string; param: string }> = {\n  \"/limit-up/main\": { title: \"主板\", param: \"主板\" },\n  \"/limit-up/chinext\": { title: \"创业板\", param: \"创业板\" },\n  \"/limit-up/star\": { title: \"科创板\", param: \"科创板\" },\n};\n\nconst PERIODS = [\n  { label: \"今日\", days: 1 },\n  { label: \"五日\", days: 5 },\n  { label: \"十日\", days: 10 },\n  { label: \"二十日\", days: 20 },\n];\n\nexport default function LimitUpPage() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  const board = BOARD_MAP[location.pathname] || BOARD_MAP[\"/limit-up/main\"];\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(true);\n  const [days, setDays] = useState(1);\n  const [customDays, setCustomDays] = useState<number | null>(null);\n\n  useEffect(() => {\n    setLoading(true);\n    const d = customDays && customDays > 0 ? customDays : days;\n    axios\n      .get(\"/api/v1/limit-up/period\", { params: { days: d, board_type: board.param } })\n      .then(({ data }) => {\n        if (data.code === 200) setItems(data.data.items || []);\n      })\n      .finally(() => setLoading(false));\n  }, [board.param, days, customDays]);\n\n  if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size=\"large\" style={{display:\"block\",margin:\"100px auto\"}}/></PageContainer>;\n\n  return (\n    <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>\n      {/* Period selector */}\n      <Space style={{ marginBottom: 16 }} wrap>\n        {PERIODS.map((p) => (\n          <Button\n            key={p.days}\n            type={days === p.days && !customDays ? \"primary\" : \"default\"}\n            onClick={() => { setDays(p.days); setCustomDays(null); }}\n          >\n            {p.label}\n          </Button>\n        ))}\n        <InputNumber\n          placeholder=\"自定义天数\"\n          min={1}\n          max={365}\n          value={customDays}\n          onChange={(v) => { if (v) { setCustomDays(v); setDays(0); } else { setCustomDays(null); setDays(1); } }}\n          style={{ width: 120 }}\n          addonAfter=\"天\"\n        />\n      </Space>\n\n      {!items.length ? (\n        <Empty description={`近${customDays || days}天暂无涨停数据（可能该板块交易日数据未同步）`} />\n      ) : (\n        <Row gutter={[12, 12]}>\n          {items.map((stock) => (\n            <Col key={stock.code} xs={24} sm={12} md={8} lg={6} xl={4}>\n              <Card\n                hoverable\n                size=\"small\"\n                onClick={() => navigate(`/stocks/${stock.code}`)}\n                style={{ borderRadius: 8, borderTop: \"3px solid #cf1322\" }}\n              >\n                {/* Header */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\", marginBottom: 8 }}>\n                  <Text strong style={{ fontSize: 14 }}>{stock.name}</Text>\n                  <Text type=\"secondary\" copyable={{ text: stock.code }} style={{ fontSize: 12 }}>\n                    {stock.code}\n                  </Text>\n                </div>\n\n                {/* Price + Change */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"baseline\", marginBottom: 8 }}>\n                  <Title level={4} style={{ margin: 0, color: \"#cf1322\" }}>\n                    {stock.price?.toFixed(2)}\n                  </Title>\n                  <Tag color=\"red\" style={{ fontSize: 14, padding: \"2px 8px\" }}>\n                    +{stock.change_pct?.toFixed(2)}%\n                  </Tag>\n                </div>\n\n                {/* Stats grid */}\n                <Row gutter={[4, 4]}>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>涨停次数</Text>\n                    <br />\n                    <Text strong style={{ color: \"#cf1322\", fontSize: 15 }}>\n                      {stock.count || 0}次\n                    </Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>最近日期</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{stock.trade_date || \"-\"}</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>换手率</Text>\n                    <br />\n                    <Text>{stock.turnover?.toFixed(2)}%</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>成交额</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{(stock.amount / 1e8).toFixed(1)}亿</Text>\n                  </Col>\n                </Row>\n\n                {/* Historical stats */}\n                <div style={{ marginTop: 8, borderTop: \"1px solid #f0f0f0\", paddingTop: 6 }}>\n                  <Row gutter={[8, 0]}>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近5日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_5d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_5d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近30日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_30d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_30d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>今年</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_year > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_year || 0}\n                      </Text>\n                    </Col>\n                  </Row>\n                </div>\n\n                {/* Industry */}\n                <div style={{ marginTop: 6, borderTop: \"1px solid #f0f0f0\", paddingTop: 4 }}>\n                  <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                    {stock.industry || \"—\"}\n                  </Text>\n                </div>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      )}\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/LimitUp/index.tsx"
+    },
+    "13": {
+      "name": "科创板",
+      "path": "/limit-up/star",
+      "file": "@/pages/LimitUp/index.tsx",
+      "parentId": "9",
+      "id": "13",
+      "absPath": "/limit-up/star",
+      "__content": "/** Limit-up stocks — card layout with period selector */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space } from \"antd\";\nimport { useLocation, useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\n\nconst { Text, Title } = Typography;\n\nconst BOARD_MAP: Record<string, { title: string; param: string }> = {\n  \"/limit-up/main\": { title: \"主板\", param: \"主板\" },\n  \"/limit-up/chinext\": { title: \"创业板\", param: \"创业板\" },\n  \"/limit-up/star\": { title: \"科创板\", param: \"科创板\" },\n};\n\nconst PERIODS = [\n  { label: \"今日\", days: 1 },\n  { label: \"五日\", days: 5 },\n  { label: \"十日\", days: 10 },\n  { label: \"二十日\", days: 20 },\n];\n\nexport default function LimitUpPage() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  const board = BOARD_MAP[location.pathname] || BOARD_MAP[\"/limit-up/main\"];\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(true);\n  const [days, setDays] = useState(1);\n  const [customDays, setCustomDays] = useState<number | null>(null);\n\n  useEffect(() => {\n    setLoading(true);\n    const d = customDays && customDays > 0 ? customDays : days;\n    axios\n      .get(\"/api/v1/limit-up/period\", { params: { days: d, board_type: board.param } })\n      .then(({ data }) => {\n        if (data.code === 200) setItems(data.data.items || []);\n      })\n      .finally(() => setLoading(false));\n  }, [board.param, days, customDays]);\n\n  if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size=\"large\" style={{display:\"block\",margin:\"100px auto\"}}/></PageContainer>;\n\n  return (\n    <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>\n      {/* Period selector */}\n      <Space style={{ marginBottom: 16 }} wrap>\n        {PERIODS.map((p) => (\n          <Button\n            key={p.days}\n            type={days === p.days && !customDays ? \"primary\" : \"default\"}\n            onClick={() => { setDays(p.days); setCustomDays(null); }}\n          >\n            {p.label}\n          </Button>\n        ))}\n        <InputNumber\n          placeholder=\"自定义天数\"\n          min={1}\n          max={365}\n          value={customDays}\n          onChange={(v) => { if (v) { setCustomDays(v); setDays(0); } else { setCustomDays(null); setDays(1); } }}\n          style={{ width: 120 }}\n          addonAfter=\"天\"\n        />\n      </Space>\n\n      {!items.length ? (\n        <Empty description={`近${customDays || days}天暂无涨停数据（可能该板块交易日数据未同步）`} />\n      ) : (\n        <Row gutter={[12, 12]}>\n          {items.map((stock) => (\n            <Col key={stock.code} xs={24} sm={12} md={8} lg={6} xl={4}>\n              <Card\n                hoverable\n                size=\"small\"\n                onClick={() => navigate(`/stocks/${stock.code}`)}\n                style={{ borderRadius: 8, borderTop: \"3px solid #cf1322\" }}\n              >\n                {/* Header */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\", marginBottom: 8 }}>\n                  <Text strong style={{ fontSize: 14 }}>{stock.name}</Text>\n                  <Text type=\"secondary\" copyable={{ text: stock.code }} style={{ fontSize: 12 }}>\n                    {stock.code}\n                  </Text>\n                </div>\n\n                {/* Price + Change */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"baseline\", marginBottom: 8 }}>\n                  <Title level={4} style={{ margin: 0, color: \"#cf1322\" }}>\n                    {stock.price?.toFixed(2)}\n                  </Title>\n                  <Tag color=\"red\" style={{ fontSize: 14, padding: \"2px 8px\" }}>\n                    +{stock.change_pct?.toFixed(2)}%\n                  </Tag>\n                </div>\n\n                {/* Stats grid */}\n                <Row gutter={[4, 4]}>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>涨停次数</Text>\n                    <br />\n                    <Text strong style={{ color: \"#cf1322\", fontSize: 15 }}>\n                      {stock.count || 0}次\n                    </Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>最近日期</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{stock.trade_date || \"-\"}</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>换手率</Text>\n                    <br />\n                    <Text>{stock.turnover?.toFixed(2)}%</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>成交额</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{(stock.amount / 1e8).toFixed(1)}亿</Text>\n                  </Col>\n                </Row>\n\n                {/* Historical stats */}\n                <div style={{ marginTop: 8, borderTop: \"1px solid #f0f0f0\", paddingTop: 6 }}>\n                  <Row gutter={[8, 0]}>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近5日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_5d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_5d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近30日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_30d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_30d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>今年</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_year > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_year || 0}\n                      </Text>\n                    </Col>\n                  </Row>\n                </div>\n\n                {/* Industry */}\n                <div style={{ marginTop: 6, borderTop: \"1px solid #f0f0f0\", paddingTop: 4 }}>\n                  <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                    {stock.industry || \"—\"}\n                  </Text>\n                </div>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      )}\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/LimitUp/index.tsx"
     },
     "ant-design-pro-layout": {
       "id": "ant-design-pro-layout",
@@ -3899,7 +4075,9 @@
   "globalCSS": [
     "D:\\project\\stock_py\\frontend\\src\\global.less"
   ],
-  "globalJS": [],
+  "globalJS": [
+    "D:\\project\\stock_py\\frontend\\src\\global.ts"
+  ],
   "overridesCSS": [],
   "bundler": "webpack",
   "git": {
@@ -5013,6 +5191,10 @@
             ],
             "format": "esm"
           },
+          "src/global.ts": {
+            "bytes": 259,
+            "imports": []
+          },
           "src/.umi/core/defineApp.ts": {
             "bytes": 1297,
             "imports": [],
@@ -5072,7 +5254,7 @@
             "format": "esm"
           },
           "src/app.tsx": {
-            "bytes": 215,
+            "bytes": 46,
             "imports": [],
             "format": "esm"
           },
@@ -5328,7 +5510,7 @@
             "format": "esm"
           },
           "src/.umi/testBrowser.tsx": {
-            "bytes": 2624,
+            "bytes": 2677,
             "imports": [
               {
                 "path": "react",
@@ -5364,6 +5546,11 @@
                 "path": "D:/project/stock_py/frontend/src/global.less",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "src/global.ts",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/global.ts"
               },
               {
                 "path": "antd/dist/reset.css",
@@ -5471,7 +5658,7 @@
             "format": "esm"
           },
           "src/services/stock.ts": {
-            "bytes": 4938,
+            "bytes": 6730,
             "imports": [
               {
                 "path": "axios",
@@ -5513,7 +5700,7 @@
             "format": "esm"
           },
           "src/pages/Stocks/Detail/KlineChart.tsx": {
-            "bytes": 4276,
+            "bytes": 4443,
             "imports": [
               {
                 "path": "react",
@@ -5526,9 +5713,9 @@
                 "external": true
               },
               {
-                "path": "echarts-for-react",
+                "path": "src/services/stock.ts",
                 "kind": "import-statement",
-                "external": true
+                "original": "@/services/stock"
               },
               {
                 "path": "dayjs",
@@ -5536,9 +5723,9 @@
                 "external": true
               },
               {
-                "path": "src/services/stock.ts",
+                "path": "echarts-for-react",
                 "kind": "import-statement",
-                "original": "@/services/stock"
+                "external": true
               },
               {
                 "path": "react/jsx-runtime",
@@ -5580,7 +5767,7 @@
             "format": "esm"
           },
           "src/pages/Stocks/Detail/index.tsx": {
-            "bytes": 2615,
+            "bytes": 4822,
             "imports": [
               {
                 "path": "@ant-design/pro-components",
@@ -5626,7 +5813,7 @@
             "format": "esm"
           },
           "src/pages/Boards/index.tsx": {
-            "bytes": 4736,
+            "bytes": 5032,
             "imports": [
               {
                 "path": "@ant-design/pro-components",
@@ -5647,6 +5834,191 @@
                 "path": "src/services/stock.ts",
                 "kind": "import-statement",
                 "original": "@/services/stock"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/Screener/index.tsx": {
+            "bytes": 5886,
+            "imports": [
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "@umijs/max"
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/services/stock.ts",
+                "kind": "import-statement",
+                "original": "@/services/stock"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/Backtest/index.tsx": {
+            "bytes": 6279,
+            "imports": [
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "echarts-for-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/services/stock.ts",
+                "kind": "import-statement",
+                "original": "@/services/stock"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/Market/index.tsx": {
+            "bytes": 4241,
+            "imports": [
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "@umijs/max"
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/LHB/index.tsx": {
+            "bytes": 6882,
+            "imports": [
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "@umijs/max"
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "dayjs",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/LimitUp/index.tsx": {
+            "bytes": 6946,
+            "imports": [
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "@umijs/max"
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
               },
               {
                 "path": "react/jsx-runtime",
@@ -5781,7 +6153,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 1224,
+            "bytes": 2765,
             "imports": [
               {
                 "path": "react",
@@ -5809,6 +6181,51 @@
                 "original": "@/pages/Boards/index.tsx"
               },
               {
+                "path": "src/pages/Screener/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/Screener/index.tsx"
+              },
+              {
+                "path": "src/pages/Backtest/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/Backtest/index.tsx"
+              },
+              {
+                "path": "src/pages/Market/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/Market/index.tsx"
+              },
+              {
+                "path": "src/pages/LHB/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/LHB/index.tsx"
+              },
+              {
+                "path": "src/.umi/core/EmptyRoute.tsx",
+                "kind": "dynamic-import",
+                "original": "./EmptyRoute"
+              },
+              {
+                "path": "src/.umi/core/EmptyRoute.tsx",
+                "kind": "dynamic-import",
+                "original": "./EmptyRoute"
+              },
+              {
+                "path": "src/pages/LimitUp/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/LimitUp/index.tsx"
+              },
+              {
+                "path": "src/pages/LimitUp/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/LimitUp/index.tsx"
+              },
+              {
+                "path": "src/pages/LimitUp/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/LimitUp/index.tsx"
+              },
+              {
                 "path": "src/.umi/plugin-layout/Layout.tsx",
                 "kind": "dynamic-import",
                 "original": "D:/project/stock_py/frontend/src/.umi/plugin-layout/Layout.tsx"
@@ -5817,7 +6234,7 @@
             "format": "esm"
           },
           "src/.umi/umi.ts": {
-            "bytes": 2261,
+            "bytes": 2314,
             "imports": [
               {
                 "path": "src/.umi/core/polyfill.ts",
@@ -5828,6 +6245,11 @@
                 "path": "D:/project/stock_py/frontend/src/global.less",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "src/global.ts",
+                "kind": "import-statement",
+                "original": "D:/project/stock_py/frontend/src/global.ts"
               },
               {
                 "path": "antd/dist/reset.css",
@@ -6047,7 +6469,167 @@
                 "external": true
               },
               {
+                "path": "dayjs",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
                 "path": "echarts-for-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "echarts-for-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "echarts-for-react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "axios",
                 "kind": "import-statement",
                 "external": true
               },
@@ -6062,26 +6644,6 @@
                 "external": true
               },
               {
-                "path": "react",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "antd",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "echarts-for-react",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "react/jsx-runtime",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
                 "path": "@ant-design/pro-components",
                 "kind": "import-statement",
                 "external": true
@@ -6097,22 +6659,7 @@
                 "external": true
               },
               {
-                "path": "react/jsx-runtime",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "@ant-design/pro-components",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "antd",
-                "kind": "import-statement",
-                "external": true
-              },
-              {
-                "path": "react",
+                "path": "axios",
                 "kind": "import-statement",
                 "external": true
               },
@@ -7275,6 +7822,9 @@
             "exports": [],
             "entryPoint": "src/.umi/umi.ts",
             "inputs": {
+              "src/global.ts": {
+                "bytesInOutput": 273
+              },
               "src/.umi/core/defineApp.ts": {
                 "bytesInOutput": 140
               },
@@ -7288,7 +7838,7 @@
                 "bytesInOutput": 3376
               },
               "src/app.tsx": {
-                "bytesInOutput": 276
+                "bytesInOutput": 199
               },
               "src/.umi/core/helmetContext.ts": {
                 "bytesInOutput": 129
@@ -7336,7 +7886,7 @@
                 "bytesInOutput": 1530
               },
               "src/.umi/testBrowser.tsx": {
-                "bytesInOutput": 2457
+                "bytesInOutput": 2476
               },
               "src/.umi/exports.ts": {
                 "bytesInOutput": 3717
@@ -7345,46 +7895,61 @@
                 "bytesInOutput": 381
               },
               "src/services/stock.ts": {
-                "bytesInOutput": 1596
+                "bytesInOutput": 2041
               },
               "src/pages/Stocks/index.tsx": {
                 "bytesInOutput": 3280
               },
               "src/pages/Stocks/Detail/KlineChart.tsx": {
-                "bytesInOutput": 4272
+                "bytesInOutput": 4472
               },
               "src/pages/Stocks/Detail/FinancialsView.tsx": {
                 "bytesInOutput": 3568
               },
               "src/pages/Stocks/Detail/index.tsx": {
-                "bytesInOutput": 2840
+                "bytesInOutput": 5688
               },
               "src/pages/Boards/index.tsx": {
-                "bytesInOutput": 4671
+                "bytesInOutput": 4937
+              },
+              "src/pages/Screener/index.tsx": {
+                "bytesInOutput": 6460
+              },
+              "src/pages/Backtest/index.tsx": {
+                "bytesInOutput": 7292
+              },
+              "src/pages/Market/index.tsx": {
+                "bytesInOutput": 5290
+              },
+              "src/pages/LHB/index.tsx": {
+                "bytesInOutput": 7885
+              },
+              "src/pages/LimitUp/index.tsx": {
+                "bytesInOutput": 8288
               },
               "src/.umi/plugin-layout/Logo.tsx": {
-                "bytesInOutput": 5504
+                "bytesInOutput": 5514
               },
               "src/.umi/plugin-layout/Exception.tsx": {
-                "bytesInOutput": 1105
+                "bytesInOutput": 1117
               },
               "src/.umi/plugin-layout/rightRender.tsx": {
-                "bytesInOutput": 2884
+                "bytesInOutput": 2887
               },
               "src/.umi/plugin-layout/Layout.tsx": {
                 "bytesInOutput": 5786
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 1252
+                "bytesInOutput": 3013
               },
               "src/.umi/core/polyfill.ts": {
                 "bytesInOutput": 27862
               },
               "src/.umi/umi.ts": {
-                "bytesInOutput": 2059
+                "bytesInOutput": 2074
               }
             },
-            "bytes": 96384
+            "bytes": 137549
           }
         }
       }

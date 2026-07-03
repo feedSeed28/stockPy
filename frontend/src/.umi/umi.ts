@@ -3,6 +3,7 @@
 // DO NOT CHANGE IT MANUALLY!
 import './core/polyfill';
 import 'D:/project/stock_py/frontend/src/global.less';
+import 'D:/project/stock_py/frontend/src/global.ts';
 import 'antd/dist/reset.css';
 import { renderClient } from 'D:/project/stock_py/frontend/node_modules/.pnpm/@umijs+renderer-react@4.6.6_f8bb1566470238dad1cab5ef97d093f7/node_modules/@umijs/renderer-react';
 import { getRoutes } from './core/route';

@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 # ── Constants ─────────────────────────────────────────────────────────────
 
 BATCH_SIZE = 200  # rows per INSERT batch
-SYNC_CONCURRENCY = 2  # max concurrent stock-level sync tasks (keep low to avoid rate limits)
+SYNC_CONCURRENCY = 8  # Sina source tolerates higher concurrency
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────
