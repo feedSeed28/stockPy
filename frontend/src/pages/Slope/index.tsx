@@ -1,7 +1,7 @@
 /** Trend slope screener — MA20 slope across all A-stocks */
 
 import { PageContainer } from "@ant-design/pro-components";
-import { Button, Card, Col, Row, Select, Space, Table, Typography, message } from "antd";
+import { Button, Checkbox, Select, Space, Table, Typography, message } from "antd";
 import { useNavigate } from "@umijs/max";
 import { useState } from "react";
 import axios from "axios";
@@ -22,13 +22,15 @@ export default function SlopePage() {
   const [items, setItems] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [period, setPeriod] = useState(20);
+  const [excludeSt, setExcludeSt] = useState(true);
 
-  const loadData = async (t: string) => {
-    setTrend(t);
+  const loadData = async (t?: string) => {
+    const currentTrend = t || trend;
+    if (t) setTrend(t);
     setLoading(true);
     try {
       const { data } = await axios.get("/api/v1/slope/scan", {
-        params: { trend: t, period, limit: 200 },
+        params: { trend: currentTrend, period, limit: 200, exclude_st: excludeSt },
       });
       if (data.code === 200) setItems(data.data.items || []);
     } catch { message.error("加载失败"); }
@@ -89,6 +91,12 @@ export default function SlopePage() {
           ]}
           style={{ width: 130 }}
         />
+        <Checkbox
+          checked={excludeSt}
+          onChange={(e) => { setExcludeSt(e.target.checked); setTimeout(loadData, 0); }}
+        >
+          不展示ST股票
+        </Checkbox>
       </Space>
 
       <Table

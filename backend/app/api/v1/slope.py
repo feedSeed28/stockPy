@@ -32,6 +32,7 @@ async def scan_trend(
     period: int = Query(20, ge=5, le=60, description="斜率计算周期"),
     field: str = Query("close", description="close / ma_5 / ma_20"),
     board_type: Optional[str] = Query(None, description="主板 / 创业板 / 科创板"),
+    exclude_st: bool = Query(True, description="排除ST股票"),
     limit: int = Query(100, ge=1, le=500),
     db: AsyncSession = Depends(get_db),
 ):
@@ -63,9 +64,13 @@ async def scan_trend(
         prefixes = prefix_map[board_type]
         all_stocks = [s for s in all_stocks if s["code"].startswith(prefixes)]
 
+    # ST filter
+    if exclude_st:
+        all_stocks = [s for s in all_stocks if "ST" not in (s["name"] or "")]
+
     results = []
     for stock in all_stocks:
-        # Get recent K-line
+        # Get recent K-line (skip negative/zero prices from bad data)
         q = await db.execute(
             select(StockDailyQuote)
             .where(

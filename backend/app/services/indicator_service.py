@@ -174,13 +174,15 @@ def compute_slope(df: pd.DataFrame, period: int = 20, field: str = "close") -> p
 
 
 def compute_slope_pct(df: pd.DataFrame, period: int = 20, field: str = "close") -> pd.Series:
-    """Slope as percentage of current price (normalized).
+    """Slope as percentage of average price over the period (normalized).
 
-    Makes slope comparable across stocks with different price levels.
-    slope_pct = slope / current_price * 100
+    Uses absolute average price for normalization so negative closes
+    (from 前复权 adjustments) don't flip the trend sign.
     """
     slope_raw = compute_slope(df, period, field)
-    return (slope_raw / df[field].values) * 100
+    avg_price = df[field].rolling(period).mean().abs()
+    result = np.where(avg_price > 0.01, (slope_raw / avg_price) * 100, slope_raw)
+    return pd.Series(result, index=df.index)
 
 
 # ═══════════════════════════════════════════════════════════════════════════
