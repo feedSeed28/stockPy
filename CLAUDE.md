@@ -4,14 +4,23 @@
 Stock Quant System (stock_py) — A-stock quantitative analysis platform.
 **Scope**: A股沪深两市 only（排除北交所、B股、港股、基金、期货）.
 
+## ⚠️ Critical: IP Blocking Warning
+**Server IP has been blocked by Sina and 东方财富 due to batch sync.**
+- ❌ Batch sync from server (8 concurrent × 5,530 stocks) → IP blocked immediately
+- ✅ Frontend direct calls from browser (user IP) → safe
+- ✅ Single-stock queries via LiveFetcher → safe (1 request per user view)
+- If re-syncing on new machine: use 1 concurrent + 5s delay + run 2-6am
+- See `memory/ip-blocking-lessons.md` for details
+
 ## Quick Start (New Machine)
 ```bash
 git clone <repo> stock_py && cd stock_py
 cd backend && pip install -r requirements.txt && cp .env.example .env
 # Start MySQL, then:
 alembic upgrade head
-python scripts/sync_sina.py        # ~2.5h, Sina source, safe
-python scripts/sync_financials.py  # ~1.5h, SafeSyncer anti-blocking
+# ⚠️ IMPORTANT: Run sync with LOW concurrency to avoid IP block:
+python scripts/sync_sina.py        # K-line full sync (~2.5h, set SYNC_CONCURRENCY=1)
+python scripts/sync_financials.py  # Financial indicators (~1.5h, EM source, SafeSyncer)
 python -m uvicorn app.main:app --reload --port 8000
 # Frontend (another terminal):
 cd frontend && pnpm install && pnpm dev
@@ -19,13 +28,26 @@ cd frontend && pnpm install && pnpm dev
 ```
 
 ## Tech Stack
-- **Backend**: Python 3.12 + FastAPI + SQLAlchemy 2.0 async + asyncmy (MySQL 8)
-- **Frontend**: React 18 + Ant Design Pro v6 + Umi Max + ECharts
-- **Data**: AKShare (Sina primary, 同花顺 secondary, 东方财富 blocked)
+- **Backend**: Python 3.12 + FastAPI + SQLAlchemy 2.0 async + asyncmy (MySQL 8) — 38 py files, 27 API endpoints
+- **Frontend**: React 18 + Ant Design Pro v6 + Umi Max + ECharts — 10 pages
+- **Data**: AKShare (东方财富 EM APIs for browser-direct, Sina for server K-line)
 - **Scheduler**: APScheduler (daily 16:00 incremental)
 - **DB**: MySQL 8, database=stock_data, user=admin
 
-## API (21 endpoints)
+## Architecture: Dual-Mode Data Sources
+
+| Mode | Data Path | Default | Toggle Location |
+|------|-----------|---------|-----------------|
+| 💾 后端接口 | Browser → FastAPI → MySQL | ✅ Default | Data Management page |
+| 🔥 前端直连 | Browser → 东方财富 API (user IP) | Manual | Data Management page |
+
+**Key files:**
+- `frontend/src/utils/dataSource.ts` — mode state (localStorage)
+- `frontend/src/services/eastmoney.ts` — 东方财富 browser API wrapper (14 functions, all CORS ✅)
+- `frontend/src/pages/DataManagement/index.tsx` — toggle UI
+- `backend/app/services/live_fetcher.py` — DB-first with AKShare fallback
+
+## API (27 endpoints)
 | Group | Endpoints |
 |-------|-----------|
 | stocks | list, detail, daily/weekly/monthly K-line, performance, financials, forecast, fund-flow, kline-range, today |
@@ -35,33 +57,47 @@ cd frontend && pnpm install && pnpm dev
 | slope | scan (trend screening: strong_up/mild_up/sideways/mild_down/strong_down) |
 | limit-up | period (local DB, period-based, with historical stats) |
 | lhb | daily detail, institution, stock-stats (Sina source ✅) |
+| data | sync-status, trigger-sync (data management) |
 | health | health check |
 
 ## Database (12 tables)
-- stock_info: 5,205 stocks, 99.3% industry coverage
-- stock_daily_quote: 16.4M rows (Sina source, 前复权)
-- stock_board_info: 464 boards (同花顺)
-- stock_financial_indicator, stock_weekly_quote, stock_monthly_quote, stock_performance_report, stock_fund_flow_daily, stock_board_member, stock_profit_forecast: empty (scripts ready)
+| Table | Status | Rows |
+|-------|--------|------|
+| stock_info | ✅ Complete | 5,530 |
+| stock_daily_quote | ⚠️ Stops at 2026-07-03 | 16.4M |
+| stock_weekly_quote | ✅ | 6,036 |
+| stock_monthly_quote | ⚠️ Partial | 813 |
+| stock_financial_indicator | ✅ Complete (EM source) | 314K (5,206 stocks) |
+| stock_performance_report | ✅ Complete (EM source) | 208K |
+| stock_profit_forecast | ✅ Complete (EM source) | 2,355 |
+| stock_fund_flow_daily | ❌ EM blocked | 1,440 |
+| stock_board_info | ✅ | 464 |
+| stock_board_member | ❌ EM blocked | 0 |
+| sync_status | ✅ | 8 |
 
-## Frontend (9 pages)
-| Page | Route | Features |
-|------|-------|----------|
-| 股票列表 | /stocks | ProTable, exchange/board/status filters |
-| 股票详情 | /stocks/:code | Today stats, limit-up counts, K-line ECharts, financials |
-| 板块 | /boards | Industry/concept list, member drawer |
-| 选股 | /screener | Multi-condition builder (ROE, margins, MA/MACD/RSI cross) |
-| 回测 | /backtest | Strategy config, equity curve, metrics, trades |
-| 趋势 | /slope | MA slope scan, 5 trend types, ST filter, period selector |
-| 行情 | /market | Daily OHLCV, sortable, up/down/flat stats |
-| 涨停板 | /limit-up | Card layout, 今日/5/10/20日 + custom, historical stats |
-| 龙虎榜 | /lhb | Daily detail, institution buy/sell, stock stats (Sina ✅) |
+## Frontend (10 pages)
+| Page | Route | Direct Mode | Backend Mode |
+|------|-------|-------------|--------------|
+| 股票列表 | /stocks | — | ProTable DB query |
+| 股票详情 | /stocks/:code | EM real-time + K-line + financials | Backend DB + LiveFetcher |
+| 板块 | /boards | EM industry/concept + members | Backend DB |
+| 选股 | /screener | — (backend-only) | Multi-condition scan |
+| 回测 | /backtest | — (backend-only) | Strategy + equity curve |
+| 趋势 | /slope | — (backend-only) | MA slope scan |
+| 行情 | /market | EM market list (all stocks) | Backend DB |
+| 涨停板 | /limit-up | EM limit-up pool (today) | DB period query |
+| 龙虎榜 | /lhb | — (Sina no CORS) | Backend Sina proxy |
+| 数据管理 | /data-management | Toggle + sync status | Trigger sync |
 
-## Data Sources Status
-| Source | Status | Used For |
-|--------|--------|----------|
-| Sina (新浪) | ✅ Primary | K-line, financials, 龙虎榜 |
-| 同花顺 | ✅ | Boards |
-| 东方财富 | ❌ Blocked | Limit-up实时 (fallback to local DB period endpoint) |
+## Data Sources Status (2026-07-10)
+| Source | Server Access | Browser Access | Used For |
+|--------|--------------|----------------|----------|
+| Sina (新浪) | ⚠️ IP blocked for batch, OK singles | ❌ No CORS | Server K-line, 龙虎榜 |
+| 东方财富 push2 | ⚠️ Partial | ✅ CORS | Real-time quotes, K-line, boards |
+| 东方财富 push2his | ❌ Blocked (TLS) | ✅ CORS | Historical K-line, fund flow |
+| 东方财富 datacenter | ✅ | ✅ CORS * | Financial indicators |
+| 东方财富 datacenter-web | ✅ | ✅ CORS * | Performance, forecasts |
+| 同花顺 | ✅ | — | Boards (backend) |
 
 ## Key Commands (Windows)
 ```bash
@@ -69,7 +105,7 @@ cd frontend && pnpm install && pnpm dev
 cd backend && set PYTHONUTF8=1 && python -m uvicorn app.main:app --reload --port 8000
 # Frontend
 cd frontend && pnpm dev
-# Sync data
+# Sync data (⚠️ use LOW concurrency: SYNC_CONCURRENCY=1 in stock_sync_service.py)
 cd backend && set PYTHONUTF8=1 && python scripts/sync_sina.py
 cd backend && set PYTHONUTF8=1 && python scripts/sync_financials.py
 # Export DB for transfer
@@ -79,15 +115,15 @@ mysqldump -h localhost -u admin -pZggDLAXkkHXFwQVM --no-create-info --single-tra
 ## Important Notes
 - `python` not `python3` on Windows
 - `PYTHONUTF8=1` needed for Chinese comments in source
-- 北交所 (8xxxxx/4xxxxx/92xxxx) excluded, 323 stocks removed from DB
-- Negative close prices from 前复权 handled correctly (slope uses abs avg price normalization)
-- ST stocks filterable in trend/slope page
-- `scripts/sync_sina.py` uses Sina, safe from IP blocks, supports resume
-- `scripts/sync_financials.py` uses SafeSyncer (2s±0.5s delay, 30/batch, 25s pause)
+- 北交所 (8xxxxx/4xxxxx/92xxxx) excluded
+- **Batch sync concurrency**: NEVER use >2 concurrent workers for Sina/EM APIs
+- **Frontend direct mode** avoids server IP blocking entirely (browser IP per user)
+- **LiveFetcher** auto-fetches single stocks from AKShare when DB is empty
+- `stock_financial_indicator` now uses EM source (`_em` function), Sina version is broken
 
 ## Docs
 - API reference: docs/api/api-reference.md
 - Setup guide: docs/dev-guide/setup.md
-- New machine: docs/dev-guide/new-machine-setup.md
-- P1 design: docs/database/p1-data-layer-design.md
 - Architecture: docs/architecture.md
+- Memory: `memory/MEMORY.md` — full knowledge base index
+- Plan: `plans/warm-beaming-wind.md` — architecture design doc

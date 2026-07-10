@@ -1,11 +1,14 @@
-/** Today's market overview — 当日涨跌行情 */
+/** Today's market overview — 交易时段直连东方财富，盘后走本地DB */
 
 import { PageContainer, ProTable } from "@ant-design/pro-components";
-import { Card, Col, Row, Statistic, Typography } from "antd";
+import { Alert, Card, Col, Row, Statistic } from "antd";
 import { useNavigate } from "@umijs/max";
 import { useState } from "react";
 import type { ProColumns } from "@ant-design/pro-components";
 import axios from "axios";
+
+import { useDirectSource } from "@/utils/dataSource";
+import { fetchRealtimeMarket, type MarketItem } from "@/services/eastmoney";
 
 const columns: ProColumns[] = [
   { title: "代码", dataIndex: "code", key: "code", width: 100, copyable: true },
@@ -41,12 +44,40 @@ const columns: ProColumns[] = [
     render: (v: number) => (v ? v.toFixed(2) + "%" : "-") },
 ];
 
+/** 将东方财富数据格式转换为页面统一格式 */
+function mapEMItem(item: MarketItem): Record<string, any> {
+  return {
+    code: item.code,
+    name: item.name,
+    industry: "",
+    change_pct: item.changePct,
+    change_amount: item.changeAmt,
+    close: item.price,
+    open: item.open,
+    high: item.high,
+    low: item.low,
+    volume: item.volume,
+    amount: item.amount,
+    turnover_rate: item.turnover,
+    amplitude: item.amplitude,
+  };
+}
+
 export default function MarketPage() {
   const navigate = useNavigate();
   const [stats, setStats] = useState({ up: 0, down: 0, flat: 0, total: 0, date: "" });
 
   return (
     <PageContainer title={stats.date ? `行情概览 — ${stats.date}` : "行情概览"}>
+      {/* 数据源提示 */}
+      <Alert
+        type="info"
+        message="行情数据优先直连东方财富 API（用户IP），失败时自动回退本地数据库"
+        style={{ marginBottom: 16 }}
+        showIcon
+        closable
+      />
+
       <Row gutter={16} style={{ marginBottom: 16 }}>
         <Col span={6}>
           <Card><Statistic title="📈 上涨" value={stats.up} valueStyle={{ color: "#cf1322" }} /></Card>
@@ -66,6 +97,24 @@ export default function MarketPage() {
         columns={columns}
         rowKey="code"
         request={async (params: Record<string, any>) => {
+          // ── 直连模式：优先东方财富 ──
+          if (useDirectSource()) {
+            const page = params.current ?? 1;
+            const pageSize = params.pageSize ?? 50;
+            try {
+              const result = await fetchRealtimeMarket(page, pageSize);
+              if (result && result.items.length > 0) {
+                const items = result.items.map(mapEMItem);
+                const up = items.filter((i: any) => i.change_pct > 0).length;
+                const down = items.filter((i: any) => i.change_pct < 0).length;
+                const flat = items.filter((i: any) => i.change_pct === 0).length;
+                setStats({ up, down, flat, total: result.total, date: new Date().toLocaleDateString("zh-CN") });
+                return { data: items, total: result.total, success: true };
+              }
+            } catch {}
+          }
+
+          // ── 后端模式 / 东方财富失败 → 后端DB ──
           const sortBy = params.sorter?.field || "change_pct";
           const order = params.sorter?.order === "ascend" ? "asc" : "desc";
           try {

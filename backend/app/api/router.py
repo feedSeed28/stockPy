@@ -11,8 +11,11 @@ from app.api.v1.lhb import router as lhb_router
 from app.api.v1.market import router as market_router
 from app.api.v1.slope import router as slope_router
 
+from app.api.v1.data import router as data_router
+
 api_router = APIRouter()
 api_router.include_router(health_router, tags=["health"])
+api_router.include_router(data_router, tags=["data"])
 api_router.include_router(stocks_router, tags=["stocks"])
 api_router.include_router(boards_router, tags=["boards"])
 api_router.include_router(quant_router, tags=["quant"])

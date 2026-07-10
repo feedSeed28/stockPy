@@ -1,9 +1,11 @@
-/** ECharts candlestick chart */
+/** ECharts candlestick chart — 直连模式优先东方财富K线API */
 
 import { useEffect, useState } from "react";
-import { DatePicker, Radio, Space, Spin, message, Empty } from "antd";
+import { DatePicker, Radio, Space, Spin, Tag, Empty, message } from "antd";
 import { fetchKline, fetchKlineRange } from "@/services/stock";
 import type { KlineBar } from "@/services/typings";
+import { useDirectSource } from "@/utils/dataSource";
+import { fetchKlineEM, type KlineBar as EMKlineBar } from "@/services/eastmoney";
 import dayjs from "dayjs";
 import ReactECharts from "echarts-for-react";
 
@@ -12,47 +14,79 @@ type Period = "daily" | "weekly" | "monthly";
 
 interface Props { code: string; }
 
+/** EM K线 → 统一格式 */
+function mapEMBar(b: EMKlineBar): KlineBar {
+  return {
+    trade_date: b.date,
+    open: b.open, close: b.close, high: b.high, low: b.low,
+    volume: b.volume, amount: b.amount,
+    amplitude: b.amplitude, change_pct: b.changePct,
+    change_amount: b.changeAmt, turnover_rate: b.turnover,
+  };
+}
+
 export default function KlineChart({ code }: Props) {
   const [period, setPeriod] = useState<Period>("daily");
   const [data, setData] = useState<KlineBar[]>([]);
   const [loading, setLoading] = useState(true);
   const [dateRange, setDateRange] = useState<[string, string] | null>(null);
+  const [source, setSource] = useState<"db" | "live">("db");
+  const direct = useDirectSource();
 
   useEffect(() => {
     if (!code) return;
     setLoading(true);
     setDateRange(null);
 
+    if (direct) {
+      // ── 直连模式：东方财富 K线 API ──
+      fetchKlineEM(code, period, 500)
+        .then((bars) => {
+          const mapped = bars.map(mapEMBar);
+          setData(mapped);
+          if (mapped.length > 0) {
+            const first = mapped[0].trade_date;
+            const last = mapped[mapped.length - 1].trade_date;
+            setDateRange([first, last]);
+          }
+          setSource("live");
+        })
+        .catch(() => message.error("K线加载失败"))
+        .finally(() => setLoading(false));
+      return;
+    }
+
+    // ── 后端模式 ──
     fetchKlineRange(code, period).then((range) => {
       if (range.max_date) {
         const end = dayjs(range.max_date);
         const start = end.subtract(180, "day");
         setDateRange([start.format("YYYY-MM-DD"), end.format("YYYY-MM-DD")]);
-        // Fetch recent data only
         fetchKline(code, {
           period,
           start_date: start.format("YYYY-MM-DD"),
           end_date: end.format("YYYY-MM-DD"),
           page_size: 500,
         }).then((res) => {
-          setData(res.items); // already sorted by trade_date asc
+          setData(res.items);
+          setSource("db");
         }).catch(() => message.error("K线加载失败"))
           .finally(() => setLoading(false));
       } else {
-        // No date range — fetch all
         fetchKline(code, { period, page_size: 500 }).then((res) => {
           setData(res.items);
+          setSource("db");
         }).catch(() => message.error("K线加载失败"))
           .finally(() => setLoading(false));
       }
     }).catch(() => {
-      // Fallback: fetch without date range
       fetchKline(code, { period, page_size: 500 }).then((res) => {
         setData(res.items);
+        setSource("db");
       }).catch(() => message.error("K线加载失败"))
         .finally(() => setLoading(false));
     });
-  }, [code, period]);
+  }, [code, period, direct]);
 
   if (!loading && data.length === 0) {
     return <Empty description="暂无K线数据" />;
@@ -71,7 +105,7 @@ export default function KlineChart({ code }: Props) {
 
   return (
     <div>
-      <Space style={{ marginBottom: 16 }}>
+      <Space style={{ marginBottom: 16 }} wrap>
         <Radio.Group value={period} onChange={(e) => setPeriod(e.target.value)} optionType="button" buttonStyle="solid">
           <Radio value="daily">日K</Radio>
           <Radio value="weekly">周K</Radio>
@@ -87,6 +121,7 @@ export default function KlineChart({ code }: Props) {
             }
           }}
         />
+        {source === "live" && <Tag color="orange">🔥 直连</Tag>}
       </Space>
 
       <Spin spinning={loading}>

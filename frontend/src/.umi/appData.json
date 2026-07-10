@@ -38,7 +38,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -51,7 +51,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 12
+        "register": 510
       },
       "enableBy": "register"
     },
@@ -64,7 +64,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 519
       },
       "enableBy": "register"
     },
@@ -78,10 +78,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            0
           ]
         },
-        "register": 5
+        "register": 31
       },
       "enableBy": "register"
     },
@@ -95,10 +95,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            2
+            3
           ]
         },
-        "register": 4
+        "register": 89
       },
       "enableBy": "register"
     },
@@ -121,10 +121,26 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 1
+        "register": 36
       },
       "enableBy": "register"
     },
@@ -138,21 +154,41 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            73,
-            6,
+            90,
             7,
-            11,
-            8,
-            6,
-            6,
             5,
+            9,
             8,
             7,
-            8,
-            8
+            3,
+            9,
+            3,
+            4,
+            7,
+            6,
+            4,
+            5,
+            4,
+            5,
+            5,
+            5,
+            4,
+            5,
+            4,
+            3,
+            5,
+            5,
+            4,
+            5,
+            4,
+            6,
+            3,
+            5,
+            4,
+            4
           ]
         },
-        "register": 1
+        "register": 25
       },
       "enableBy": "register"
     },
@@ -166,22 +202,38 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            37
+            243
           ],
           "onGenerateFiles": [
-            3,
-            8,
+            29,
+            128,
+            7,
+            7,
+            7,
+            7,
             6,
             7,
-            7,
-            463,
-            9,
             10,
-            130,
-            26
+            13,
+            6,
+            8,
+            6,
+            6,
+            7,
+            9,
+            7,
+            11,
+            9,
+            7,
+            184,
+            10,
+            41,
+            28,
+            7,
+            7
           ]
         },
-        "register": 27
+        "register": 284
       },
       "enableBy": "register"
     },
@@ -204,10 +256,26 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 0
+        "register": 25
       },
       "enableBy": "register"
     },
@@ -221,13 +289,22 @@
       "time": {
         "hooks": {
           "onCheckConfig": [
-            0,
-            0
+            1
           ],
           "onCheck": [
-            0
+            1
           ],
           "onPrepareBuildSuccess": [
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -236,54 +313,89 @@
             0,
             0,
             0,
-            1,
             0,
-            0
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
           ],
           "onCheckCode": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0,
             0,
@@ -300,7 +412,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 4
       },
       "enableBy": "register"
     },
@@ -317,7 +429,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -330,7 +442,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -344,11 +456,10 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            0,
             0
           ]
         },
-        "register": 15
+        "register": 346
       },
       "enableBy": "register"
     },
@@ -1200,7 +1311,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 15
       },
       "enableBy": "config"
     },
@@ -1214,10 +1325,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            0
+            1
           ]
         },
-        "register": 1
+        "register": 35
       },
       "enableBy": "register"
     },
@@ -1231,10 +1342,10 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            10
+            23
           ]
         },
-        "register": 1
+        "register": 23
       },
       "enableBy": "register"
     },
@@ -1247,7 +1358,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 88
+        "register": 357
       },
       "enableBy": "register"
     },
@@ -1260,7 +1371,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 48
+        "register": 681
       },
       "enableBy": "config"
     },
@@ -1273,7 +1384,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 25
+        "register": 402
       },
       "enableBy": "config"
     },
@@ -1300,11 +1411,27 @@
             0,
             0,
             0,
-            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 0
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1318,15 +1445,31 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
+            39,
+            33,
+            1,
+            1,
+            0,
             2,
-            1,
-            1,
+            0,
             1,
             0,
             1,
             1,
             1,
-            50,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            25,
+            1,
+            1,
+            1,
+            1,
             1
           ],
           "addRuntimePlugin": [
@@ -1339,10 +1482,26 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1355,7 +1514,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 14
       },
       "enableBy": "config"
     },
@@ -1369,13 +1528,13 @@
       "time": {
         "hooks": {
           "onStart": [
-            2
+            3
           ],
           "addBeforeMiddlewares": [
             1
           ]
         },
-        "register": 41
+        "register": 221
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1387,7 +1546,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1400,7 +1559,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/overrides/overrides": {
@@ -1413,11 +1572,27 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            1,
             0,
             0,
             0,
-            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1425,6 +1600,38 @@
             0
           ],
           "addEntryImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1460,7 +1667,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1474,22 +1681,69 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            2,
-            0
+            24
           ],
           "onGenerateFiles": [
-            89,
-            23,
+            178,
+            53,
+            18,
             19,
-            23,
-            31,
-            25,
-            30,
+            15,
+            22,
             24,
-            96,
-            18
+            13,
+            28,
+            27,
+            14,
+            14,
+            17,
+            17,
+            13,
+            16,
+            15,
+            25,
+            16,
+            13,
+            68,
+            16,
+            47,
+            35,
+            13,
+            13
           ],
           "addPolyfillImports": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1512,7 +1766,7 @@
             0
           ]
         },
-        "register": 3
+        "register": 17
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
@@ -1535,6 +1789,38 @@
             0,
             0,
             0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1547,7 +1833,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 12
       },
       "enableBy": "register"
     },
@@ -1561,7 +1847,23 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            104,
+            210,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -1586,7 +1888,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 3
       },
       "enableBy": "config"
     },
@@ -1599,7 +1901,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 6
       },
       "enableBy": "config"
     },
@@ -1614,21 +1916,37 @@
         "hooks": {
           "onGenerateFiles": [
             1,
+            1,
             0,
+            0,
+            1,
             1,
             0,
             0,
             0,
             0,
             0,
-            15,
-            0
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            7,
+            0,
+            8,
+            8,
+            0,
+            1
           ],
           "addBeforeMiddlewares": [
             0
           ]
         },
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -1642,29 +1960,61 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
+            50,
+            104,
+            150,
+            113,
+            21,
+            7,
+            551,
+            7,
+            17,
+            6,
+            19,
+            7,
+            24,
+            6,
+            16,
+            6,
             20,
+            6,
+            25,
+            8,
+            18,
+            7,
+            16,
+            7,
+            16,
             9,
-            17,
-            8,
-            18,
+            16,
             6,
-            14,
-            7,
             15,
-            8,
-            15,
-            7,
-            17,
+            5,
+            20,
+            20,
+            16,
             6,
-            28,
+            22,
             7,
-            253,
-            178,
+            16,
+            5,
+            16,
+            5,
+            226,
+            59,
             18,
-            5
+            7,
+            130,
+            57,
+            92,
+            35,
+            15,
+            6,
+            17,
+            7
           ]
         },
-        "register": 7
+        "register": 10
       },
       "enableBy": "register"
     },
@@ -1677,7 +2027,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 5
       },
       "enableBy": "config"
     },
@@ -1690,7 +2040,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/ssr/ssr": {
@@ -1702,7 +2052,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 7
       },
       "enableBy": "config"
     },
@@ -1716,19 +2066,35 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            481,
-            29,
-            10,
-            10,
+            720,
+            36,
+            9,
+            13,
+            11,
+            14,
+            9,
             10,
             11,
             11,
             8,
-            46,
-            10
+            9,
+            8,
+            9,
+            8,
+            10,
+            9,
+            14,
+            24,
+            11,
+            18,
+            10,
+            10,
+            10,
+            14,
+            9
           ]
         },
-        "register": 4
+        "register": 58
       },
       "enableBy": "register"
     },
@@ -1745,7 +2111,7 @@
             0
           ]
         },
-        "register": 4
+        "register": 6
       },
       "enableBy": "register"
     },
@@ -1758,7 +2124,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 4
       },
       "enableBy": "config"
     },
@@ -1784,7 +2150,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 75
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/monorepo/redirect": {
@@ -1796,7 +2162,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 25
+        "register": 82
       },
       "enableBy": "config"
     },
@@ -1810,19 +2176,35 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            7,
+            3,
+            2,
+            1,
             1,
             1,
             1,
             1,
             2,
             1,
+            2,
             1,
-            10,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            1,
+            1,
+            29,
+            1,
+            2,
+            15,
+            1,
             1
           ]
         },
-        "register": 2
+        "register": 3
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
@@ -1847,7 +2229,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -1873,7 +2255,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 3
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/swc/swc": {
@@ -1889,7 +2271,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register"
     },
@@ -1902,7 +2284,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 28
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/mako/mako": {
@@ -1914,7 +2296,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1927,7 +2309,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config"
     },
@@ -1940,7 +2322,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 9
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/utoopack/utoopack": {
@@ -1977,18 +2359,34 @@
       "time": {
         "hooks": {
           "addHTMLHeadScripts": [
-            68,
-            0,
-            0,
-            0,
-            0,
-            0,
+            75,
             0,
             1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 33
+        "register": 112
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/bundler/bundler": {
@@ -2001,10 +2399,10 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            771
+            5148
           ]
         },
-        "register": 2
+        "register": 4
       },
       "enableBy": "register"
     },
@@ -2017,7 +2415,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 8
       },
       "enableBy": "register"
     },
@@ -2030,7 +2428,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 42
+        "register": 117
       },
       "enableBy": "register"
     },
@@ -2044,10 +2442,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            32
+            76
           ]
         },
-        "register": 47
+        "register": 512
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2085,7 +2483,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2111,7 +2509,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2124,7 +2522,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 5
       },
       "enableBy": "register"
     },
@@ -2150,7 +2548,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 12
       },
       "enableBy": "register"
     },
@@ -2163,7 +2561,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2280,7 +2678,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register"
     },
@@ -2293,7 +2691,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 31
+        "register": 63
       },
       "enableBy": "register"
     },
@@ -2319,7 +2717,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 38
       },
       "enableBy": "register"
     },
@@ -2342,11 +2740,39 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onGenerateFiles": [
             3,
             1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
             1,
             1,
             1,
@@ -2354,13 +2780,17 @@
             1,
             1,
             2,
+            1,
+            1,
+            1,
+            1,
             1
           ],
           "addTmpGenerateWatcherPaths": [
             0
           ]
         },
-        "register": 2
+        "register": 107
       },
       "enableBy": "config"
     },
@@ -2388,8 +2818,7 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            2,
-            1
+            22
           ],
           "modifyAppData": [
             0
@@ -2417,9 +2846,57 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2433,6 +2910,22 @@
           ],
           "addRuntimePluginKey": [
             0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2444,16 +2937,32 @@
             0
           ],
           "onGenerateFiles": [
+            20,
+            41,
+            2,
+            1,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1,
             3,
+            1,
+            1,
+            34,
             2,
+            18,
+            8,
             1,
-            2,
-            1,
-            1,
-            1,
-            1,
-            39,
-            2
+            1
           ],
           "addExtraBabelPlugins": [
             0
@@ -2462,7 +2971,7 @@
             0
           ]
         },
-        "register": 10
+        "register": 121
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/dva": {
@@ -2474,7 +2983,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 11
+        "register": 55
       },
       "enableBy": "config"
     },
@@ -2497,6 +3006,22 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "addRuntimePluginKey": [
@@ -2509,10 +3034,37 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onGenerateFiles": [
-            3,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
             1,
             0,
             1,
@@ -2521,9 +3073,30 @@
             1,
             1,
             1,
-            0
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
           ],
           "addExtraModels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2552,10 +3125,25 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            0,
-            0
+            1
           ],
           "addLayouts": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2568,9 +3156,25 @@
             0
           ],
           "modifyAppData": [
-            1
+            5
           ],
           "addRuntimePlugin": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0,
             0,
             0,
@@ -2592,22 +3196,54 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onGenerateFiles": [
-            8,
+            71,
+            41,
             4,
-            6,
+            4,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            2,
+            3,
+            2,
             3,
             3,
             5,
             3,
+            4,
             3,
-            123,
+            3,
+            108,
+            4,
+            35,
+            25,
+            3,
             3
           ]
         },
-        "register": 4
+        "register": 26
       },
       "enableBy": "config"
     },
@@ -2620,7 +3256,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 72
       },
       "enableBy": "config"
     },
@@ -2633,7 +3269,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 5
       },
       "enableBy": "config"
     },
@@ -2656,19 +3292,51 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onGenerateFiles": [
+            98,
+            37,
+            15,
+            16,
+            30,
+            16,
+            16,
+            17,
+            20,
+            17,
             19,
+            21,
+            17,
             18,
+            17,
+            19,
+            15,
+            22,
+            17,
+            16,
+            75,
+            16,
+            43,
+            21,
             13,
-            14,
-            16,
-            15,
-            15,
-            16,
-            66,
-            15
+            17
           ],
           "addTmpGenerateWatcherPaths": [
             0
@@ -2710,10 +3378,26 @@
             0,
             0,
             0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ]
         },
-        "register": 1
+        "register": 12
       },
       "enableBy": "register"
     },
@@ -2726,7 +3410,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 4
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/qiankun/slave": {
@@ -2738,7 +3422,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 4
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/react-query": {
@@ -2750,7 +3434,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "config"
     },
@@ -2772,18 +3456,50 @@
             0,
             0,
             0,
-            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
             0
           ],
           "onGenerateFiles": [
-            7,
+            28,
+            12,
+            2,
+            1,
+            2,
             1,
             2,
             1,
             1,
             2,
+            2,
+            2,
             1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            5,
+            2,
             3,
+            2,
             2,
             2
           ]
@@ -2801,7 +3517,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 26
       },
       "enableBy": "config"
     },
@@ -2827,7 +3543,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 18
       },
       "enableBy": "config"
     },
@@ -2841,11 +3557,10 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            0,
             0
           ]
         },
-        "register": 1
+        "register": 9
       },
       "enableBy": "register"
     },
@@ -2862,7 +3577,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 2
       },
       "enableBy": "register"
     },
@@ -2879,7 +3594,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 6
       },
       "enableBy": "register"
     },
@@ -2892,7 +3607,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 7
       },
       "enableBy": "register"
     }
@@ -2946,6 +3661,11 @@
         "component": "./Backtest"
       },
       {
+        "name": "趋势",
+        "path": "/slope",
+        "component": "./Slope"
+      },
+      {
         "name": "行情",
         "path": "/market",
         "component": "./Market"
@@ -2954,6 +3674,11 @@
         "name": "龙虎榜",
         "path": "/lhb",
         "component": "./LHB"
+      },
+      {
+        "name": "数据管理",
+        "path": "/data-management",
+        "component": "./DataManagement"
       },
       {
         "name": "涨停板",
@@ -3072,6 +3797,11 @@
         "component": "./Backtest"
       },
       {
+        "name": "趋势",
+        "path": "/slope",
+        "component": "./Slope"
+      },
+      {
         "name": "行情",
         "path": "/market",
         "component": "./Market"
@@ -3080,6 +3810,11 @@
         "name": "龙虎榜",
         "path": "/lhb",
         "component": "./LHB"
+      },
+      {
+        "name": "数据管理",
+        "path": "/data-management",
+        "component": "./DataManagement"
       },
       {
         "name": "涨停板",
@@ -4058,7 +4793,7 @@
       "parentId": "ant-design-pro-layout",
       "id": "3",
       "absPath": "/stocks/:code",
-      "__content": "/** Stock detail page */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, Descriptions, Row, Statistic, Tabs, message } from \"antd\";\nimport { useParams } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport { fetchStock, fetchTodaySummary } from \"@/services/stock\";\nimport type { StockInfo } from \"@/services/typings\";\nimport KlineChart from \"./KlineChart\";\nimport FinancialsView from \"./FinancialsView\";\n\nexport default function StockDetailPage() {\n  const { code } = useParams<{ code: string }>();\n  const [stock, setStock] = useState<StockInfo | null>(null);\n  const [today, setToday] = useState<any>(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    if (!code) return;\n    setLoading(true);\n    Promise.all([fetchStock(code), fetchTodaySummary(code)])\n      .then(([s, t]) => { setStock(s); setToday(t); })\n      .catch(() => message.error(\"加载失败\"))\n      .finally(() => setLoading(false));\n  }, [code]);\n\n  if (!code) return null;\n\n  return (\n    <PageContainer title={`${stock?.name || code} (${code})`} loading={loading}>\n      {/* Today's performance card */}\n      {today && (\n        <Row gutter={16} style={{ marginBottom: 16 }}>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"最新价\" value={today.close?.toFixed(2)} precision={2}\n                valueStyle={{ color: (today.change_pct || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontSize: 24 }} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"涨跌幅\" value={today.change_pct?.toFixed(2)} suffix=\"%\"\n                valueStyle={{ color: (today.change_pct || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontSize: 24 }} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"涨跌额\" value={today.change_amount?.toFixed(2)}\n                valueStyle={{ color: (today.change_amount || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontSize: 24 }} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"成交额(亿)\" value={(today.amount / 1e8).toFixed(2)} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"换手率\" value={today.turnover_rate?.toFixed(2)} suffix=\"%\" />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"振幅\" value={today.amplitude?.toFixed(2)} suffix=\"%\" />\n            </Card>\n          </Col>\n        </Row>\n      )}\n\n      {/* Limit-up stats */}\n      {today && (\n        <Row gutter={16} style={{ marginBottom: 16 }}>\n          <Col span={6}>\n            <Card size=\"small\" style={{ background: \"#fff7e6\" }}>\n              <Statistic title=\"近5日涨停\" value={today.lu_5d || 0}\n                valueStyle={{ color: today.lu_5d > 0 ? \"#cf1322\" : \"#999\", fontSize: 20 }} />\n            </Card>\n          </Col>\n          <Col span={6}>\n            <Card size=\"small\" style={{ background: \"#fff1f0\" }}>\n              <Statistic title=\"近30日涨停\" value={today.lu_30d || 0}\n                valueStyle={{ color: today.lu_30d > 0 ? \"#cf1322\" : \"#999\", fontSize: 20 }} />\n            </Card>\n          </Col>\n          <Col span={6}>\n            <Card size=\"small\" style={{ background: \"#f6ffed\" }}>\n              <Statistic title=\"今年涨停\" value={today.lu_year || 0}\n                valueStyle={{ color: today.lu_year > 0 ? \"#cf1322\" : \"#999\", fontSize: 20 }} />\n            </Card>\n          </Col>\n          <Col span={6}>\n            <Card size=\"small\">\n              <Statistic title=\"日期\" value={today.trade_date || \"-\"} />\n            </Card>\n          </Col>\n        </Row>\n      )}\n\n      {/* Basic info */}\n      {stock && (\n        <Card style={{ marginBottom: 16 }}>\n          <Descriptions column={5} size=\"small\">\n            <Descriptions.Item label=\"代码\">{stock.code}</Descriptions.Item>\n            <Descriptions.Item label=\"名称\">{stock.name}</Descriptions.Item>\n            <Descriptions.Item label=\"交易所\">{stock.exchange}</Descriptions.Item>\n            <Descriptions.Item label=\"板块\">{stock.board_type || \"-\"}</Descriptions.Item>\n            <Descriptions.Item label=\"行业\">{stock.industry || \"-\"}</Descriptions.Item>\n          </Descriptions>\n        </Card>\n      )}\n\n      {/* K-line + Financials */}\n      <Card>\n        <Tabs defaultActiveKey=\"kline\" items={[\n          { key: \"kline\", label: \"K线图\", children: <KlineChart code={code} /> },\n          { key: \"financials\", label: \"财务数据\", children: <FinancialsView code={code} /> },\n        ]} />\n      </Card>\n    </PageContainer>\n  );\n}\n",
+      "__content": "/** Stock detail page — 交易时段直连东方财富，盘后走后端DB */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, Descriptions, Row, Statistic, Tag, Tabs, message } from \"antd\";\nimport { useParams } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport { fetchStock, fetchTodaySummary } from \"@/services/stock\";\nimport type { StockInfo } from \"@/services/typings\";\nimport { useDirectSource } from \"@/utils/dataSource\";\nimport { fetchRealtimeQuote } from \"@/services/eastmoney\";\nimport KlineChart from \"./KlineChart\";\nimport FinancialsView from \"./FinancialsView\";\n\n/** 从股票代码推导交易所和板块 */\nfunction deriveInfo(code: string) {\n  return {\n    exchange: code.startsWith(\"6\") ? \"SH\" : \"SZ\",\n    board_type: code.startsWith(\"688\")\n      ? \"科创板\"\n      : code.startsWith(\"300\") || code.startsWith(\"301\")\n        ? \"创业板\"\n        : \"主板\",\n  };\n}\n\nexport default function StockDetailPage() {\n  const { code } = useParams<{ code: string }>();\n  const [stock, setStock] = useState<StockInfo | null>(null);\n  const [today, setToday] = useState<any>(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    if (!code) return;\n    setLoading(true);\n\n    // ── 直连模式：优先东方财富，失败再走后端 ──\n    if (useDirectSource()) {\n      const emPromise = fetchRealtimeQuote(code)\n        .then((em) => {\n          if (!em) return null;\n          const derived = deriveInfo(code);\n          return {\n            stock: {\n              code: em.code, name: em.name,\n              exchange: derived.exchange, board_type: derived.board_type,\n              industry: \"\", is_active: true, listed_date: null,\n              source: \"live\",\n            } as StockInfo,\n            today: {\n              code: em.code,\n              trade_date: new Date().toISOString().slice(0, 10),\n              open: em.open, close: em.price,\n              high: em.high, low: em.low,\n              volume: em.volume, amount: em.amount,\n              change_pct: em.changePct, change_amount: em.changeAmt,\n              turnover_rate: em.turnover, amplitude: em.amplitude,\n              source: \"live\",\n            },\n          };\n        })\n        .catch(() => null);\n\n      const dbPromise = Promise.all([\n        fetchStock(code).catch(() => null),\n        fetchTodaySummary(code).catch(() => null),\n      ]);\n\n      Promise.all([emPromise, dbPromise])\n        .then(([em, [dbStock, dbToday]]) => {\n          if (em) {\n            setStock(\n              dbStock\n                ? { ...em.stock, industry: dbStock.industry, listed_date: dbStock.listed_date }\n                : em.stock\n            );\n            setToday({ ...em.today, lu_5d: dbToday?.lu_5d ?? 0, lu_30d: dbToday?.lu_30d ?? 0, lu_year: dbToday?.lu_year ?? 0 });\n          } else {\n            setStock(dbStock);\n            setToday(dbToday);\n          }\n        })\n        .catch(() => message.error(\"加载失败\"))\n        .finally(() => setLoading(false));\n      return;\n    }\n\n    // ── 后端模式：完全走后端 ──\n    Promise.all([fetchStock(code), fetchTodaySummary(code)])\n      .then(([s, t]) => { setStock(s); setToday(t); })\n      .catch(() => message.error(\"加载失败\"))\n      .finally(() => setLoading(false));\n  }, [code]);\n\n  if (!code) return null;\n\n  return (\n    <PageContainer title={`${stock?.name || code} (${code})`} loading={loading}>\n      {/* Today's performance card */}\n      {today && (\n        <>\n        {today.source === \"live\" && (\n          <Tag color=\"red\" style={{ marginBottom: 8 }}>🔥 实时数据</Tag>\n        )}\n        <Row gutter={16} style={{ marginBottom: 16 }}>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"最新价\" value={today.close?.toFixed(2)} precision={2}\n                valueStyle={{ color: (today.change_pct || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontSize: 24 }} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"涨跌幅\" value={today.change_pct?.toFixed(2)} suffix=\"%\"\n                valueStyle={{ color: (today.change_pct || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontSize: 24 }} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"涨跌额\" value={today.change_amount?.toFixed(2)}\n                valueStyle={{ color: (today.change_amount || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontSize: 24 }} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"成交额(亿)\" value={(today.amount / 1e8).toFixed(2)} />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"换手率\" value={today.turnover_rate?.toFixed(2)} suffix=\"%\" />\n            </Card>\n          </Col>\n          <Col span={4}>\n            <Card size=\"small\">\n              <Statistic title=\"振幅\" value={today.amplitude?.toFixed(2)} suffix=\"%\" />\n            </Card>\n          </Col>\n        </Row>\n        </>\n      )}\n\n      {/* Limit-up stats */}\n      {today && (\n        <>\n        <Row gutter={16} style={{ marginBottom: 16 }}>\n          <Col span={6}>\n            <Card size=\"small\" style={{ background: \"#fff7e6\" }}>\n              <Statistic title=\"近5日涨停\" value={today.lu_5d || 0}\n                valueStyle={{ color: today.lu_5d > 0 ? \"#cf1322\" : \"#999\", fontSize: 20 }} />\n            </Card>\n          </Col>\n          <Col span={6}>\n            <Card size=\"small\" style={{ background: \"#fff1f0\" }}>\n              <Statistic title=\"近30日涨停\" value={today.lu_30d || 0}\n                valueStyle={{ color: today.lu_30d > 0 ? \"#cf1322\" : \"#999\", fontSize: 20 }} />\n            </Card>\n          </Col>\n          <Col span={6}>\n            <Card size=\"small\" style={{ background: \"#f6ffed\" }}>\n              <Statistic title=\"今年涨停\" value={today.lu_year || 0}\n                valueStyle={{ color: today.lu_year > 0 ? \"#cf1322\" : \"#999\", fontSize: 20 }} />\n            </Card>\n          </Col>\n          <Col span={6}>\n            <Card size=\"small\">\n              <Statistic title=\"日期\" value={today.trade_date || \"-\"} />\n            </Card>\n          </Col>\n        </Row>\n        </>\n      )}\n\n      {/* Basic info */}\n      {stock && (\n        <Card style={{ marginBottom: 16 }}>\n          <Descriptions column={5} size=\"small\">\n            <Descriptions.Item label=\"代码\">{stock.code}</Descriptions.Item>\n            <Descriptions.Item label=\"名称\">{stock.name}</Descriptions.Item>\n            <Descriptions.Item label=\"交易所\">{stock.exchange}</Descriptions.Item>\n            <Descriptions.Item label=\"板块\">{stock.board_type || \"-\"}</Descriptions.Item>\n            <Descriptions.Item label=\"行业\">{stock.industry || \"-\"}</Descriptions.Item>\n          </Descriptions>\n        </Card>\n      )}\n\n      {/* K-line + Financials */}\n      <Card>\n        <Tabs defaultActiveKey=\"kline\" items={[\n          { key: \"kline\", label: \"K线图\", children: <KlineChart code={code} /> },\n          { key: \"financials\", label: \"财务数据\", children: <FinancialsView code={code} /> },\n        ]} />\n      </Card>\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "D:/project/stock_py/frontend/src/pages/Stocks/Detail/index.tsx"
     },
@@ -4069,7 +4804,7 @@
       "parentId": "ant-design-pro-layout",
       "id": "4",
       "absPath": "/boards",
-      "__content": "/** Industry / concept boards page. */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Tag, Drawer, List, Typography } from \"antd\";\nimport { useEffect, useMemo, useState } from \"react\";\nimport { fetchBoards, fetchBoardMembers } from \"@/services/stock\";\nimport type { BoardInfo, BoardMember } from \"@/services/typings\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\n\nexport default function BoardsPage() {\n  const [drawerOpen, setDrawerOpen] = useState(false);\n  const [members, setMembers] = useState<BoardMember[]>([]);\n  const [boardName, setBoardName] = useState(\"\");\n  const [membersLoading, setMembersLoading] = useState(false);\n  const [allBoards, setAllBoards] = useState<BoardInfo[]>([]);\n\n  // Load all boards once for dropdown options (fetch all pages)\n  useEffect(() => {\n    async function loadAll() {\n      let all: BoardInfo[] = [];\n      let page = 1;\n      const pageSize = 200;\n      while (true) {\n        const res = await fetchBoards({ page, page_size: pageSize });\n        all = [...all, ...res.items];\n        if (all.length >= res.total) break;\n        page++;\n      }\n      setAllBoards(all);\n    }\n    loadAll();\n  }, []);\n\n  // Derive unique codes and names for dropdowns\n  const codeEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_code]) map[b.board_code] = { text: b.board_code };\n    });\n    return map;\n  }, [allBoards]);\n\n  const nameEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_name]) map[b.board_name] = { text: b.board_name };\n    });\n    return map;\n  }, [allBoards]);\n\n  const columns: ProColumns<BoardInfo>[] = [\n    {\n      title: \"板块代码\",\n      dataIndex: \"board_code\",\n      key: \"board_code\",\n      width: 120,\n      valueType: \"select\",\n      valueEnum: codeEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"板块名称\",\n      dataIndex: \"board_name\",\n      key: \"board_name\",\n      width: 200,\n      valueType: \"select\",\n      valueEnum: nameEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"类型\",\n      dataIndex: \"board_type\",\n      key: \"board_type\",\n      width: 100,\n      valueType: \"select\",\n      valueEnum: {\n        industry: { text: \"行业\" },\n        concept: { text: \"概念\" },\n      },\n      render: (_, row) => (\n        <Tag color={row.board_type === \"industry\" ? \"blue\" : \"orange\"}>\n          {row.board_type === \"industry\" ? \"行业\" : \"概念\"}\n        </Tag>\n      ),\n    },\n    {\n      title: \"数据源\",\n      dataIndex: \"source\",\n      key: \"source\",\n      width: 80,\n      valueType: \"select\",\n      valueEnum: {\n        em: { text: \"东方财富\" },\n        ths: { text: \"同花顺\" },\n      },\n    },\n  ];\n\n  const loadMembers = async (boardId: string, name: string) => {\n    setBoardName(name);\n    setDrawerOpen(true);\n    setMembersLoading(true);\n    try {\n      const res = await fetchBoardMembers(boardId);\n      setMembers(res.items);\n    } finally {\n      setMembersLoading(false);\n    }\n  };\n\n  return (\n    <PageContainer>\n      <ProTable<BoardInfo>\n        columns={columns}\n        rowKey=\"id\"\n        request={async (params: Record<string, any>) => {\n          const { current, pageSize, board_type, board_code, board_name } =\n            params;\n          const res = await fetchBoards({\n            page: current,\n            page_size: pageSize,\n            board_type,\n          });\n          // Client-side filter for dropdown selections\n          let items = res.items;\n          let total = res.total;\n          if (board_code) {\n            items = items.filter((b) => b.board_code === board_code);\n            total = items.length;\n          }\n          if (board_name) {\n            items = items.filter((b) => b.board_name === board_name);\n            total = items.length;\n          }\n          return {\n            data: items,\n            total,\n            success: true,\n          };\n        }}\n        search={{ labelWidth: \"auto\", defaultCollapsed: false }}\n        onRow={(record) => ({\n          onClick: () => loadMembers(record.id, record.board_name),\n          style: { cursor: \"pointer\" },\n        })}\n        pagination={{ defaultPageSize: 30 }}\n      />\n\n      <Drawer\n        title={`${boardName} — 成分股`}\n        open={drawerOpen}\n        onClose={() => setDrawerOpen(false)}\n        width={400}\n        loading={membersLoading}\n      >\n        <List\n          dataSource={members}\n          renderItem={(item) => (\n            <List.Item>\n              <Typography.Text copyable={{ text: item.stock_code }}>\n                {item.stock_code}\n              </Typography.Text>\n              <Typography.Text style={{ marginLeft: 12 }}>\n                {item.stock_name || \"-\"}\n              </Typography.Text>\n            </List.Item>\n          )}\n        />\n      </Drawer>\n    </PageContainer>\n  );\n}\n",
+      "__content": "/** Industry / concept boards page — 直连模式优先东方财富 */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Tag, Drawer, List, Typography, Alert } from \"antd\";\nimport { useEffect, useMemo, useState } from \"react\";\nimport { useNavigate } from \"@umijs/max\";\nimport { fetchBoards, fetchBoardMembers } from \"@/services/stock\";\nimport { useDirectSource } from \"@/utils/dataSource\";\nimport {\n  fetchBoardListEM,\n  fetchBoardMembersEM,\n  type EMBoardInfo,\n  type EMStockBrief,\n} from \"@/services/eastmoney\";\nimport type { BoardInfo, BoardMember } from \"@/services/typings\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\n\nexport default function BoardsPage() {\n  const navigate = useNavigate();\n  const direct = useDirectSource();\n  const [drawerOpen, setDrawerOpen] = useState(false);\n  const [members, setMembers] = useState<BoardMember[]>([]);\n  const [boardName, setBoardName] = useState(\"\");\n  const [membersLoading, setMembersLoading] = useState(false);\n  const [allBoards, setAllBoards] = useState<BoardInfo[]>([]);\n  const [boardsLoaded, setBoardsLoaded] = useState(false);\n\n  // 加载全量板块（直连模式一次拉全，后端模式分页）\n  useEffect(() => {\n    setBoardsLoaded(false);\n    if (direct) {\n      Promise.all([\n        fetchBoardListEM(\"industry\"),\n        fetchBoardListEM(\"concept\"),\n      ]).then(([ind, con]) => {\n        const all: BoardInfo[] = [\n          ...ind.map((b) => ({ id: b.code, board_code: b.code, board_name: b.name, board_type: \"industry\" as const, source: \"em\" as const })),\n          ...con.map((b) => ({ id: b.code, board_code: b.code, board_name: b.name, board_type: \"concept\" as const, source: \"em\" as const })),\n        ];\n        setAllBoards(all);\n        setBoardsLoaded(true);\n      });\n      return;\n    }\n    // 后端模式\n    (async () => {\n      let all: BoardInfo[] = [];\n      let page = 1;\n      const pageSize = 200;\n      while (true) {\n        const res = await fetchBoards({ page, page_size: pageSize });\n        all = [...all, ...res.items];\n        if (all.length >= res.total) break;\n        page++;\n      }\n      setAllBoards(all);\n    })();\n  }, [direct]);\n\n  const codeEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_code]) map[b.board_code] = { text: b.board_code };\n    });\n    return map;\n  }, [allBoards]);\n\n  const nameEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_name]) map[b.board_name] = { text: b.board_name };\n    });\n    return map;\n  }, [allBoards]);\n\n  const columns: ProColumns<BoardInfo>[] = [\n    {\n      title: \"板块代码\",\n      dataIndex: \"board_code\",\n      key: \"board_code\",\n      width: 120,\n      valueType: \"select\",\n      valueEnum: codeEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"板块名称\",\n      dataIndex: \"board_name\",\n      key: \"board_name\",\n      width: 200,\n      valueType: \"select\",\n      valueEnum: nameEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"类型\",\n      dataIndex: \"board_type\",\n      key: \"board_type\",\n      width: 100,\n      valueType: \"select\",\n      valueEnum: {\n        industry: { text: \"行业\" },\n        concept: { text: \"概念\" },\n      },\n      render: (_, row) => (\n        <Tag color={row.board_type === \"industry\" ? \"blue\" : \"orange\"}>\n          {row.board_type === \"industry\" ? \"行业\" : \"概念\"}\n        </Tag>\n      ),\n    },\n    {\n      title: \"数据源\",\n      dataIndex: \"source\",\n      key: \"source\",\n      width: 80,\n      valueType: \"select\",\n      valueEnum: {\n        em: { text: \"东方财富\" },\n        ths: { text: \"同花顺\" },\n      },\n    },\n  ];\n\n  const loadMembers = async (boardCode: string, name: string) => {\n    setBoardName(name);\n    setDrawerOpen(true);\n    setMembersLoading(true);\n    try {\n      if (direct) {\n        // 直连模式：东方财富板块成分股\n        const emMembers = await fetchBoardMembersEM(boardCode);\n        setMembers(emMembers.map((m: EMStockBrief) => ({\n          stock_code: m.code,\n          stock_name: m.name,\n        })));\n      } else {\n        const res = await fetchBoardMembers(boardCode);\n        setMembers(res.items);\n      }\n    } finally {\n      setMembersLoading(false);\n    }\n  };\n\n  return (\n    <PageContainer>\n      {direct && (\n        <Alert\n          type=\"info\"\n          message=\"直连模式 — 板块数据来自东方财富 API（用户IP），点击板块查看成分股\"\n          style={{ marginBottom: 16 }}\n          showIcon\n          closable\n        />\n      )}\n\n      <ProTable<BoardInfo>\n        columns={columns}\n        rowKey=\"id\"\n        request={async (params: Record<string, any>) => {\n          const { current, pageSize, board_type, board_code, board_name } = params;\n\n          let items: BoardInfo[];\n          let total: number;\n\n          if (direct) {\n            // ── 直连模式：复用已加载的全量板块，不重复请求API ──\n            let list = allBoards;\n            if (board_type) {\n              list = list.filter((b) => b.board_type === board_type);\n            }\n            items = list;\n          } else {\n            // ── 后端模式 ──\n            const res = await fetchBoards({\n              page: current,\n              page_size: pageSize,\n              board_type,\n            });\n            items = res.items;\n          }\n\n          // 前端筛选\n          if (board_code) {\n            items = items.filter((b) => b.board_code === board_code);\n          }\n          if (board_name) {\n            items = items.filter((b) => b.board_name === board_name);\n          }\n          total = items.length;\n\n          // 前端分页\n          const start = ((current || 1) - 1) * (pageSize || 30);\n          const paged = items.slice(start, start + (pageSize || 30));\n\n          return { data: paged, total, success: true };\n        }}\n        search={{ labelWidth: \"auto\", defaultCollapsed: false }}\n        onRow={(record) => ({\n          onClick: () => loadMembers(record.board_code, record.board_name),\n          style: { cursor: \"pointer\" },\n        })}\n        pagination={{ defaultPageSize: 30 }}\n      />\n\n      <Drawer\n        title={`${boardName} — 成分股`}\n        open={drawerOpen}\n        onClose={() => setDrawerOpen(false)}\n        width={400}\n        loading={membersLoading}\n      >\n        <List\n          dataSource={members}\n          renderItem={(item) => (\n            <List.Item\n              style={{ cursor: \"pointer\" }}\n              onClick={() => {\n                setDrawerOpen(false);\n                navigate(`/stocks/${item.stock_code}`);\n              }}\n            >\n              <Typography.Text copyable={{ text: item.stock_code }}>\n                {item.stock_code}\n              </Typography.Text>\n              <Typography.Text style={{ marginLeft: 12 }}>\n                {item.stock_name || \"-\"}\n              </Typography.Text>\n            </List.Item>\n          )}\n        />\n      </Drawer>\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "D:/project/stock_py/frontend/src/pages/Boards/index.tsx"
     },
@@ -4102,7 +4837,7 @@
       "parentId": "ant-design-pro-layout",
       "id": "7",
       "absPath": "/slope",
-      "__content": "/** Trend slope screener — MA20 slope across all A-stocks */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Button, Checkbox, Select, Space, Table, Typography, message } from \"antd\";\nimport { useNavigate } from \"@umijs/max\";\nimport { useState } from \"react\";\nimport axios from \"axios\";\n\nconst { Text } = Typography;\n\nconst TRENDS = [\n  { key: \"strong_up\", label: \"强势上涨\", color: \"#cf1322\", bg: \"#fff1f0\" },\n  { key: \"mild_up\", label: \"温和上涨\", color: \"#fa8c16\", bg: \"#fff7e6\" },\n  { key: \"sideways\", label: \"横盘\", color: \"#8c8c8c\", bg: \"#fafafa\" },\n  { key: \"mild_down\", label: \"温和下跌\", color: \"#1890ff\", bg: \"#e6f7ff\" },\n  { key: \"strong_down\", label: \"大跌\", color: \"#3f8600\", bg: \"#f6ffed\" },\n];\n\nexport default function SlopePage() {\n  const navigate = useNavigate();\n  const [trend, setTrend] = useState(\"mild_up\");\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(false);\n  const [period, setPeriod] = useState(20);\n  const [excludeSt, setExcludeSt] = useState(true);\n\n  const loadData = async (t?: string) => {\n    const currentTrend = t || trend;\n    if (t) setTrend(t);\n    setLoading(true);\n    try {\n      const { data } = await axios.get(\"/api/v1/slope/scan\", {\n        params: { trend: currentTrend, period, limit: 200, exclude_st: excludeSt },\n      });\n      if (data.code === 200) setItems(data.data.items || []);\n    } catch { message.error(\"加载失败\"); }\n    finally { setLoading(false); }\n  };\n\n  const formatSlope = (v: number) => {\n    if (v > 0.5) return <Text style={{ color: \"#cf1322\", fontWeight: \"bold\" }}>{v.toFixed(2)}%</Text>;\n    if (v > 0.1) return <Text style={{ color: \"#fa8c16\" }}>{v.toFixed(2)}%</Text>;\n    if (v > -0.1) return <Text style={{ color: \"#8c8c8c\" }}>{v.toFixed(2)}%</Text>;\n    if (v > -0.5) return <Text style={{ color: \"#1890ff\" }}>{v.toFixed(2)}%</Text>;\n    return <Text style={{ color: \"#3f8600\" }}>{v.toFixed(2)}%</Text>;\n  };\n\n  const columns = [\n    { title: \"代码\", dataIndex: \"code\", width: 100 },\n    { title: \"名称\", dataIndex: \"name\", width: 100 },\n    { title: \"行业\", dataIndex: \"industry\", width: 100, ellipsis: true },\n    { title: \"收盘\", dataIndex: \"close\", width: 80 },\n    { title: \"涨跌幅\", dataIndex: \"change_pct\", width: 80,\n      render: (v: number) => <Text style={{ color: v >= 0 ? \"#cf1322\" : \"#3f8600\" }}>{v?.toFixed(2)}%</Text> },\n    { title: `MA5`, dataIndex: \"ma5\", width: 80 },\n    { title: `MA20`, dataIndex: \"ma20\", width: 80 },\n    { title: \"斜率\", dataIndex: \"slope\", width: 100, render: formatSlope },\n    { title: \"成交额(亿)\", dataIndex: \"amount\", width: 100,\n      render: (v: number) => (v ? (v / 1e8).toFixed(1) : \"-\") },\n    { title: \"日期\", dataIndex: \"trade_date\", width: 100 },\n  ];\n\n  return (\n    <PageContainer title=\"趋势斜率扫描\">\n      <Space style={{ marginBottom: 16 }} wrap>\n        {TRENDS.map((t) => (\n          <Button\n            key={t.key}\n            type={trend === t.key ? \"primary\" : \"default\"}\n            onClick={() => loadData(t.key)}\n            loading={loading && trend === t.key}\n            style={{\n              background: trend === t.key ? t.color : t.bg,\n              borderColor: t.color,\n              color: trend === t.key ? \"#fff\" : t.color,\n              fontWeight: \"bold\",\n            }}\n          >\n            {t.label}\n          </Button>\n        ))}\n        <Select\n          value={period}\n          onChange={(v) => { setPeriod(v); loadData(trend); }}\n          options={[\n            { label: \"MA5 斜率\", value: 5 },\n            { label: \"MA10 斜率\", value: 10 },\n            { label: \"MA20 斜率\", value: 20 },\n            { label: \"MA30 斜率\", value: 30 },\n            { label: \"MA60 斜率\", value: 60 },\n          ]}\n          style={{ width: 130 }}\n        />\n      </Space>\n\n      <Table\n        dataSource={items}\n        columns={columns}\n        rowKey=\"code\"\n        loading={loading}\n        pagination={{ pageSize: 50, showSizeChanger: true }}\n        scroll={{ y: 600 }}\n        onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: \"pointer\" } })}\n      />\n    </PageContainer>\n  );\n}\n",
+      "__content": "/** Trend slope screener — MA20 slope across all A-stocks */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Button, Checkbox, Select, Space, Table, Typography, message } from \"antd\";\nimport { useNavigate } from \"@umijs/max\";\nimport { useState } from \"react\";\nimport axios from \"axios\";\n\nconst { Text } = Typography;\n\nconst TRENDS = [\n  { key: \"strong_up\", label: \"强势上涨\", color: \"#cf1322\", bg: \"#fff1f0\" },\n  { key: \"mild_up\", label: \"温和上涨\", color: \"#fa8c16\", bg: \"#fff7e6\" },\n  { key: \"sideways\", label: \"横盘\", color: \"#8c8c8c\", bg: \"#fafafa\" },\n  { key: \"mild_down\", label: \"温和下跌\", color: \"#1890ff\", bg: \"#e6f7ff\" },\n  { key: \"strong_down\", label: \"大跌\", color: \"#3f8600\", bg: \"#f6ffed\" },\n];\n\nexport default function SlopePage() {\n  const navigate = useNavigate();\n  const [trend, setTrend] = useState(\"mild_up\");\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(false);\n  const [period, setPeriod] = useState(20);\n  const [excludeSt, setExcludeSt] = useState(true);\n\n  const loadData = async (t?: string) => {\n    const currentTrend = t || trend;\n    if (t) setTrend(t);\n    setLoading(true);\n    try {\n      const { data } = await axios.get(\"/api/v1/slope/scan\", {\n        params: { trend: currentTrend, period, limit: 200, exclude_st: excludeSt },\n      });\n      if (data.code === 200) setItems(data.data.items || []);\n    } catch { message.error(\"加载失败\"); }\n    finally { setLoading(false); }\n  };\n\n  const formatSlope = (v: number) => {\n    if (v > 0.5) return <Text style={{ color: \"#cf1322\", fontWeight: \"bold\" }}>{v.toFixed(2)}%</Text>;\n    if (v > 0.1) return <Text style={{ color: \"#fa8c16\" }}>{v.toFixed(2)}%</Text>;\n    if (v > -0.1) return <Text style={{ color: \"#8c8c8c\" }}>{v.toFixed(2)}%</Text>;\n    if (v > -0.5) return <Text style={{ color: \"#1890ff\" }}>{v.toFixed(2)}%</Text>;\n    return <Text style={{ color: \"#3f8600\" }}>{v.toFixed(2)}%</Text>;\n  };\n\n  const columns = [\n    { title: \"代码\", dataIndex: \"code\", width: 100 },\n    { title: \"名称\", dataIndex: \"name\", width: 100 },\n    { title: \"行业\", dataIndex: \"industry\", width: 100, ellipsis: true },\n    { title: \"收盘\", dataIndex: \"close\", width: 80 },\n    { title: \"涨跌幅\", dataIndex: \"change_pct\", width: 80,\n      render: (v: number) => <Text style={{ color: v >= 0 ? \"#cf1322\" : \"#3f8600\" }}>{v?.toFixed(2)}%</Text> },\n    { title: `MA5`, dataIndex: \"ma5\", width: 80 },\n    { title: `MA20`, dataIndex: \"ma20\", width: 80 },\n    { title: \"斜率\", dataIndex: \"slope\", width: 100, render: formatSlope },\n    { title: \"成交额(亿)\", dataIndex: \"amount\", width: 100,\n      render: (v: number) => (v ? (v / 1e8).toFixed(1) : \"-\") },\n    { title: \"日期\", dataIndex: \"trade_date\", width: 100 },\n  ];\n\n  return (\n    <PageContainer title=\"趋势斜率扫描\">\n      <Space style={{ marginBottom: 16 }} wrap>\n        {TRENDS.map((t) => (\n          <Button\n            key={t.key}\n            type={trend === t.key ? \"primary\" : \"default\"}\n            onClick={() => loadData(t.key)}\n            loading={loading && trend === t.key}\n            style={{\n              background: trend === t.key ? t.color : t.bg,\n              borderColor: t.color,\n              color: trend === t.key ? \"#fff\" : t.color,\n              fontWeight: \"bold\",\n            }}\n          >\n            {t.label}\n          </Button>\n        ))}\n        <Select\n          value={period}\n          onChange={(v) => { setPeriod(v); loadData(trend); }}\n          options={[\n            { label: \"MA5 斜率\", value: 5 },\n            { label: \"MA10 斜率\", value: 10 },\n            { label: \"MA20 斜率\", value: 20 },\n            { label: \"MA30 斜率\", value: 30 },\n            { label: \"MA60 斜率\", value: 60 },\n          ]}\n          style={{ width: 130 }}\n        />\n        <Checkbox\n          checked={excludeSt}\n          onChange={(e) => { setExcludeSt(e.target.checked); setTimeout(loadData, 0); }}\n        >\n          不展示ST股票\n        </Checkbox>\n      </Space>\n\n      <Table\n        dataSource={items}\n        columns={columns}\n        rowKey=\"code\"\n        loading={loading}\n        pagination={{ pageSize: 50, showSizeChanger: true }}\n        scroll={{ y: 600 }}\n        onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: \"pointer\" } })}\n      />\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "D:/project/stock_py/frontend/src/pages/Slope/index.tsx"
     },
@@ -4113,7 +4848,7 @@
       "parentId": "ant-design-pro-layout",
       "id": "8",
       "absPath": "/market",
-      "__content": "/** Today's market overview — 当日涨跌行情 */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Card, Col, Row, Statistic, Typography } from \"antd\";\nimport { useNavigate } from \"@umijs/max\";\nimport { useState } from \"react\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\nimport axios from \"axios\";\n\nconst columns: ProColumns[] = [\n  { title: \"代码\", dataIndex: \"code\", key: \"code\", width: 100, copyable: true },\n  { title: \"名称\", dataIndex: \"name\", key: \"name\", width: 120 },\n  { title: \"行业\", dataIndex: \"industry\", key: \"industry\", width: 100, ellipsis: true, search: false },\n  {\n    title: \"涨跌幅\",\n    dataIndex: \"change_pct\",\n    key: \"change_pct\",\n    width: 100,\n    sorter: true,\n    render: (_: any, r: any) => (\n      <span style={{ color: (r.change_pct || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontWeight: \"bold\" }}>\n        {(r.change_pct || 0) > 0 ? \"+\" : \"\"}{r.change_pct?.toFixed(2)}%\n      </span>\n    ),\n  },\n  { title: \"涨跌额\", dataIndex: \"change_amount\", key: \"change_amount\", width: 80, search: false,\n    render: (_: any, r: any) => (\n      <span style={{ color: (r.change_amount || 0) >= 0 ? \"#cf1322\" : \"#3f8600\" }}>{r.change_amount?.toFixed(2)}</span>\n    )},\n  { title: \"收盘\", dataIndex: \"close\", key: \"close\", width: 80, search: false },\n  { title: \"开盘\", dataIndex: \"open\", key: \"open\", width: 80, search: false },\n  { title: \"最高\", dataIndex: \"high\", key: \"high\", width: 80, search: false },\n  { title: \"最低\", dataIndex: \"low\", key: \"low\", width: 80, search: false },\n  { title: \"成交量(手)\", dataIndex: \"volume\", key: \"volume\", width: 100, search: false,\n    render: (v: number) => (v ? (v / 100).toFixed(0) : \"-\") },\n  { title: \"成交额(亿)\", dataIndex: \"amount\", key: \"amount\", width: 100, search: false,\n    render: (v: number) => (v ? (v / 1e8).toFixed(2) : \"-\") },\n  { title: \"换手率\", dataIndex: \"turnover_rate\", key: \"turnover_rate\", width: 80, search: false,\n    render: (v: number) => (v ? v.toFixed(2) + \"%\" : \"-\") },\n  { title: \"振幅\", dataIndex: \"amplitude\", key: \"amplitude\", width: 80, search: false,\n    render: (v: number) => (v ? v.toFixed(2) + \"%\" : \"-\") },\n];\n\nexport default function MarketPage() {\n  const navigate = useNavigate();\n  const [stats, setStats] = useState({ up: 0, down: 0, flat: 0, total: 0, date: \"\" });\n\n  return (\n    <PageContainer title={stats.date ? `行情概览 — ${stats.date}` : \"行情概览\"}>\n      <Row gutter={16} style={{ marginBottom: 16 }}>\n        <Col span={6}>\n          <Card><Statistic title=\"📈 上涨\" value={stats.up} valueStyle={{ color: \"#cf1322\" }} /></Card>\n        </Col>\n        <Col span={6}>\n          <Card><Statistic title=\"📉 下跌\" value={stats.down} valueStyle={{ color: \"#3f8600\" }} /></Card>\n        </Col>\n        <Col span={6}>\n          <Card><Statistic title=\"➖ 平盘\" value={stats.flat} /></Card>\n        </Col>\n        <Col span={6}>\n          <Card><Statistic title=\"📊 总数\" value={stats.total} /></Card>\n        </Col>\n      </Row>\n\n      <ProTable\n        columns={columns}\n        rowKey=\"code\"\n        request={async (params: Record<string, any>) => {\n          const sortBy = params.sorter?.field || \"change_pct\";\n          const order = params.sorter?.order === \"ascend\" ? \"asc\" : \"desc\";\n          try {\n            const { data } = await axios.get(\"/api/v1/market/today\", {\n              params: { page: params.current, page_size: params.pageSize, sort_by: sortBy, order },\n            });\n            if (data.code === 200) {\n              const d = data.data;\n              setStats({\n                up: d.stats?.up || 0, down: d.stats?.down || 0,\n                flat: d.stats?.flat || 0, total: d.total || 0, date: d.date || \"\",\n              });\n              return { data: d.items, total: d.total, success: true };\n            }\n          } catch {}\n          return { data: [], total: 0, success: true };\n        }}\n        search={false}\n        onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: \"pointer\" } })}\n        pagination={{ defaultPageSize: 50, showSizeChanger: true }}\n        scroll={{ y: 500 }}\n        dateFormatter=\"string\"\n      />\n    </PageContainer>\n  );\n}\n",
+      "__content": "/** Today's market overview — 交易时段直连东方财富，盘后走本地DB */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Alert, Card, Col, Row, Statistic } from \"antd\";\nimport { useNavigate } from \"@umijs/max\";\nimport { useState } from \"react\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\nimport axios from \"axios\";\n\nimport { useDirectSource } from \"@/utils/dataSource\";\nimport { fetchRealtimeMarket, type MarketItem } from \"@/services/eastmoney\";\n\nconst columns: ProColumns[] = [\n  { title: \"代码\", dataIndex: \"code\", key: \"code\", width: 100, copyable: true },\n  { title: \"名称\", dataIndex: \"name\", key: \"name\", width: 120 },\n  { title: \"行业\", dataIndex: \"industry\", key: \"industry\", width: 100, ellipsis: true, search: false },\n  {\n    title: \"涨跌幅\",\n    dataIndex: \"change_pct\",\n    key: \"change_pct\",\n    width: 100,\n    sorter: true,\n    render: (_: any, r: any) => (\n      <span style={{ color: (r.change_pct || 0) >= 0 ? \"#cf1322\" : \"#3f8600\", fontWeight: \"bold\" }}>\n        {(r.change_pct || 0) > 0 ? \"+\" : \"\"}{r.change_pct?.toFixed(2)}%\n      </span>\n    ),\n  },\n  { title: \"涨跌额\", dataIndex: \"change_amount\", key: \"change_amount\", width: 80, search: false,\n    render: (_: any, r: any) => (\n      <span style={{ color: (r.change_amount || 0) >= 0 ? \"#cf1322\" : \"#3f8600\" }}>{r.change_amount?.toFixed(2)}</span>\n    )},\n  { title: \"收盘\", dataIndex: \"close\", key: \"close\", width: 80, search: false },\n  { title: \"开盘\", dataIndex: \"open\", key: \"open\", width: 80, search: false },\n  { title: \"最高\", dataIndex: \"high\", key: \"high\", width: 80, search: false },\n  { title: \"最低\", dataIndex: \"low\", key: \"low\", width: 80, search: false },\n  { title: \"成交量(手)\", dataIndex: \"volume\", key: \"volume\", width: 100, search: false,\n    render: (v: number) => (v ? (v / 100).toFixed(0) : \"-\") },\n  { title: \"成交额(亿)\", dataIndex: \"amount\", key: \"amount\", width: 100, search: false,\n    render: (v: number) => (v ? (v / 1e8).toFixed(2) : \"-\") },\n  { title: \"换手率\", dataIndex: \"turnover_rate\", key: \"turnover_rate\", width: 80, search: false,\n    render: (v: number) => (v ? v.toFixed(2) + \"%\" : \"-\") },\n  { title: \"振幅\", dataIndex: \"amplitude\", key: \"amplitude\", width: 80, search: false,\n    render: (v: number) => (v ? v.toFixed(2) + \"%\" : \"-\") },\n];\n\n/** 将东方财富数据格式转换为页面统一格式 */\nfunction mapEMItem(item: MarketItem): Record<string, any> {\n  return {\n    code: item.code,\n    name: item.name,\n    industry: \"\",\n    change_pct: item.changePct,\n    change_amount: item.changeAmt,\n    close: item.price,\n    open: item.open,\n    high: item.high,\n    low: item.low,\n    volume: item.volume,\n    amount: item.amount,\n    turnover_rate: item.turnover,\n    amplitude: item.amplitude,\n  };\n}\n\nexport default function MarketPage() {\n  const navigate = useNavigate();\n  const [stats, setStats] = useState({ up: 0, down: 0, flat: 0, total: 0, date: \"\" });\n\n  return (\n    <PageContainer title={stats.date ? `行情概览 — ${stats.date}` : \"行情概览\"}>\n      {/* 数据源提示 */}\n      <Alert\n        type=\"info\"\n        message=\"行情数据优先直连东方财富 API（用户IP），失败时自动回退本地数据库\"\n        style={{ marginBottom: 16 }}\n        showIcon\n        closable\n      />\n\n      <Row gutter={16} style={{ marginBottom: 16 }}>\n        <Col span={6}>\n          <Card><Statistic title=\"📈 上涨\" value={stats.up} valueStyle={{ color: \"#cf1322\" }} /></Card>\n        </Col>\n        <Col span={6}>\n          <Card><Statistic title=\"📉 下跌\" value={stats.down} valueStyle={{ color: \"#3f8600\" }} /></Card>\n        </Col>\n        <Col span={6}>\n          <Card><Statistic title=\"➖ 平盘\" value={stats.flat} /></Card>\n        </Col>\n        <Col span={6}>\n          <Card><Statistic title=\"📊 总数\" value={stats.total} /></Card>\n        </Col>\n      </Row>\n\n      <ProTable\n        columns={columns}\n        rowKey=\"code\"\n        request={async (params: Record<string, any>) => {\n          // ── 直连模式：优先东方财富 ──\n          if (useDirectSource()) {\n            const page = params.current ?? 1;\n            const pageSize = params.pageSize ?? 50;\n            try {\n              const result = await fetchRealtimeMarket(page, pageSize);\n              if (result && result.items.length > 0) {\n                const items = result.items.map(mapEMItem);\n                const up = items.filter((i: any) => i.change_pct > 0).length;\n                const down = items.filter((i: any) => i.change_pct < 0).length;\n                const flat = items.filter((i: any) => i.change_pct === 0).length;\n                setStats({ up, down, flat, total: result.total, date: new Date().toLocaleDateString(\"zh-CN\") });\n                return { data: items, total: result.total, success: true };\n              }\n            } catch {}\n          }\n\n          // ── 后端模式 / 东方财富失败 → 后端DB ──\n          const sortBy = params.sorter?.field || \"change_pct\";\n          const order = params.sorter?.order === \"ascend\" ? \"asc\" : \"desc\";\n          try {\n            const { data } = await axios.get(\"/api/v1/market/today\", {\n              params: { page: params.current, page_size: params.pageSize, sort_by: sortBy, order },\n            });\n            if (data.code === 200) {\n              const d = data.data;\n              setStats({\n                up: d.stats?.up || 0, down: d.stats?.down || 0,\n                flat: d.stats?.flat || 0, total: d.total || 0, date: d.date || \"\",\n              });\n              return { data: d.items, total: d.total, success: true };\n            }\n          } catch {}\n          return { data: [], total: 0, success: true };\n        }}\n        search={false}\n        onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: \"pointer\" } })}\n        pagination={{ defaultPageSize: 50, showSizeChanger: true }}\n        scroll={{ y: 500 }}\n        dateFormatter=\"string\"\n      />\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "D:/project/stock_py/frontend/src/pages/Market/index.tsx"
     },
@@ -4129,49 +4864,60 @@
       "__absFile": "D:/project/stock_py/frontend/src/pages/LHB/index.tsx"
     },
     "10": {
+      "name": "数据管理",
+      "path": "/data-management",
+      "file": "@/pages/DataManagement/index.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "10",
+      "absPath": "/data-management",
+      "__content": "import { PageContainer } from \"@ant-design/pro-components\";\nimport {\n  Badge,\n  Button,\n  Card,\n  Col,\n  message,\n  Row,\n  Space,\n  Statistic,\n  Switch,\n  Table,\n  Tag,\n  Typography,\n} from \"antd\";\nimport { ReloadOutlined, SyncOutlined, ApiOutlined, ThunderboltOutlined, DatabaseOutlined } from \"@ant-design/icons\";\nimport { useEffect, useState, useCallback } from \"react\";\n\nimport { fetchSyncStatus, triggerSync, type SyncStatusItem } from \"@/services/dataManagement\";\nimport { getDataSourceMode, setDataSourceMode, type DataSourceMode } from \"@/utils/dataSource\";\n\nconst { Text, Title } = Typography;\n\n// ── 表名中文映射 ──────────────────────────────────────────────────────────\nconst TABLE_LABELS: Record<string, string> = {\n  stock_info: \"股票列表\",\n  stock_daily_quote: \"日K线\",\n  stock_weekly_quote: \"周K线\",\n  stock_monthly_quote: \"月K线\",\n  stock_financial_indicator: \"财务指标\",\n  stock_performance_report: \"业绩报表\",\n  stock_profit_forecast: \"盈利预测\",\n  stock_fund_flow_daily: \"资金流\",\n  stock_board_info: \"板块信息\",\n  stock_board_member: \"板块成员\",\n};\n\nconst STATUS_COLORS: Record<string, string> = {\n  idle: \"green\",\n  syncing: \"processing\",\n  error: \"red\",\n  pending: \"default\",\n};\n\n// ── 组件 ──────────────────────────────────────────────────────────────────\n\nexport default function DataManagementPage() {\n  const [syncItems, setSyncItems] = useState<SyncStatusItem[]>([]);\n  const [loading, setLoading] = useState(false);\n  const [syncingTable, setSyncingTable] = useState<string | null>(null);\n  const [sourceMode, setSourceMode] = useState<DataSourceMode>(getDataSourceMode);\n\n  const loadStatus = useCallback(async () => {\n    setLoading(true);\n    const items = await fetchSyncStatus();\n    setSyncItems(items);\n    setLoading(false);\n  }, []);\n\n  useEffect(() => {\n    loadStatus();\n  }, [loadStatus]);\n\n  const handleTriggerSync = async (table: string) => {\n    setSyncingTable(table);\n    const result = await triggerSync(table);\n    if (result.ok) {\n      message.success(`${TABLE_LABELS[table] ?? table} 同步已触发`);\n    } else {\n      message.error(result.message || \"触发失败\");\n    }\n    setSyncingTable(null);\n    // 等几秒刷新状态\n    setTimeout(loadStatus, 3000);\n  };\n\n  const columns = [\n    {\n      title: \"数据表\",\n      dataIndex: \"table_name\",\n      key: \"table_name\",\n      render: (_: any, r: SyncStatusItem) =>\n        TABLE_LABELS[r.table_name] ?? r.table_name,\n    },\n    {\n      title: \"行数\",\n      dataIndex: \"row_count\",\n      key: \"row_count\",\n      align: \"right\" as const,\n      render: (v: number | null) =>\n        v != null ? v.toLocaleString() : \"-\",\n    },\n    {\n      title: \"最后数据日期\",\n      dataIndex: \"last_data_date\",\n      key: \"last_data_date\",\n      render: (v: string | null) => v ?? \"-\",\n    },\n    {\n      title: \"最后同步\",\n      dataIndex: \"last_sync_time\",\n      key: \"last_sync_time\",\n      render: (v: string | null) =>\n        v ? new Date(v).toLocaleString(\"zh-CN\") : \"-\",\n    },\n    {\n      title: \"状态\",\n      dataIndex: \"status\",\n      key: \"status\",\n      render: (v: string) => <Tag color={STATUS_COLORS[v] ?? \"default\"}>{v}</Tag>,\n    },\n    {\n      title: \"操作\",\n      key: \"actions\",\n      render: (_: any, r: SyncStatusItem) => (\n        <Button\n          size=\"small\"\n          icon={<SyncOutlined spin={syncingTable === r.table_name} />}\n          loading={syncingTable === r.table_name}\n          onClick={() => handleTriggerSync(r.table_name)}\n        >\n          同步\n        </Button>\n      ),\n    },\n  ];\n\n  return (\n    <PageContainer>\n      {/* 数据源切换 */}\n      <Card style={{ marginBottom: 16 }}>\n        <Row gutter={24} align=\"middle\">\n          <Col>\n            <div style={{ display: \"flex\", alignItems: \"center\", gap: 12 }}>\n              {sourceMode === \"direct\" ? (\n                <ThunderboltOutlined style={{ fontSize: 32, color: \"#fa8c16\" }} />\n              ) : (\n                <DatabaseOutlined style={{ fontSize: 32, color: \"#1677ff\" }} />\n              )}\n              <div>\n                <Text strong style={{ fontSize: 16 }}>\n                  {sourceMode === \"direct\" ? \"🔥 前端直连模式\" : \"💾 后端接口模式\"}\n                </Text>\n                <br />\n                <Text type=\"secondary\" style={{ fontSize: 12 }}>\n                  {sourceMode === \"direct\"\n                    ? \"浏览器直连东方财富 API（用户 IP，单次查询不会被封）\"\n                    : \"全部走后端 FastAPI → MySQL 数据库（默认）\"\n                  }\n                </Text>\n              </div>\n            </div>\n          </Col>\n          <Col flex=\"auto\" style={{ textAlign: \"right\" }}>\n            <Space direction=\"vertical\" size={4} style={{ alignItems: \"center\" }}>\n              <Switch\n                checked={sourceMode === \"backend\"}\n                checkedChildren=\"后端\"\n                unCheckedChildren=\"直连\"\n                onChange={(checked) => {\n                  const newMode: DataSourceMode = checked ? \"backend\" : \"direct\";\n                  setSourceMode(newMode);\n                  setDataSourceMode(newMode);\n                  message.success(`已切换至：${newMode === \"direct\" ? \"前端直连模式\" : \"后端接口模式\"}`);\n                  // 刷新页面以应用新数据源\n                  setTimeout(() => window.location.reload(), 500);\n                }}\n              />\n              <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                点击切换 · 自动刷新页面\n              </Text>\n            </Space>\n          </Col>\n        </Row>\n      </Card>\n\n      {/* 数据源状态 */}\n      <Row gutter={16} style={{ marginBottom: 16 }}>\n        <Col span={8}>\n          <Card size=\"small\">\n            <Statistic\n              title=\"东方财富 API\"\n              value=\"正常\"\n              suffix={<Badge status=\"success\" />}\n              prefix={<ApiOutlined />}\n            />\n            <Text type=\"secondary\" style={{ fontSize: 12 }}>\n              CORS 支持 · 浏览器直调 · 用户 IP 分发\n            </Text>\n          </Card>\n        </Col>\n        <Col span={8}>\n          <Card size=\"small\">\n            <Statistic\n              title=\"新浪 API\"\n              value=\"部分可用\"\n              suffix={<Badge status=\"warning\" />}\n              prefix={<ApiOutlined />}\n            />\n            <Text type=\"secondary\" style={{ fontSize: 12 }}>\n              K线/LHB 正常 · 财务指标已切换EM\n            </Text>\n          </Card>\n        </Col>\n        <Col span={8}>\n          <Card size=\"small\">\n            <Statistic\n              title=\"已缓存数据\"\n              value={syncItems.reduce((s, i) => s + (i.row_count ?? 0), 0).toLocaleString()}\n              suffix=\"行\"\n            />\n            <Text type=\"secondary\" style={{ fontSize: 12 }}>\n              {syncItems.length} 张表\n            </Text>\n          </Card>\n        </Col>\n      </Row>\n\n      {/* 同步状态表 */}\n      <Card title=\"📊 数据库同步状态\" extra={\n        <Button\n          icon={<ReloadOutlined />}\n          size=\"small\"\n          loading={loading}\n          onClick={loadStatus}\n        >\n          刷新\n        </Button>\n      }>\n        <Table\n          dataSource={syncItems}\n          columns={columns}\n          rowKey=\"table_name\"\n          loading={loading}\n          pagination={false}\n          size=\"middle\"\n        />\n      </Card>\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/DataManagement/index.tsx"
+    },
+    "11": {
       "name": "涨停板",
       "path": "/limit-up",
       "parentId": "ant-design-pro-layout",
-      "id": "10",
-      "absPath": "/limit-up"
-    },
-    "11": {
-      "path": "/limit-up",
-      "redirect": "/limit-up/main",
-      "parentId": "10",
       "id": "11",
       "absPath": "/limit-up"
     },
     "12": {
+      "path": "/limit-up",
+      "redirect": "/limit-up/main",
+      "parentId": "11",
+      "id": "12",
+      "absPath": "/limit-up"
+    },
+    "13": {
       "name": "主板",
       "path": "/limit-up/main",
       "file": "@/pages/LimitUp/index.tsx",
-      "parentId": "10",
-      "id": "12",
-      "absPath": "/limit-up/main",
-      "__content": "/** Limit-up stocks — card layout with period selector */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space } from \"antd\";\nimport { useLocation, useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\n\nconst { Text, Title } = Typography;\n\nconst BOARD_MAP: Record<string, { title: string; param: string }> = {\n  \"/limit-up/main\": { title: \"主板\", param: \"主板\" },\n  \"/limit-up/chinext\": { title: \"创业板\", param: \"创业板\" },\n  \"/limit-up/star\": { title: \"科创板\", param: \"科创板\" },\n};\n\nconst PERIODS = [\n  { label: \"今日\", days: 1 },\n  { label: \"五日\", days: 5 },\n  { label: \"十日\", days: 10 },\n  { label: \"二十日\", days: 20 },\n];\n\nexport default function LimitUpPage() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  const board = BOARD_MAP[location.pathname] || BOARD_MAP[\"/limit-up/main\"];\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(true);\n  const [days, setDays] = useState(1);\n  const [customDays, setCustomDays] = useState<number | null>(null);\n\n  useEffect(() => {\n    setLoading(true);\n    const d = customDays && customDays > 0 ? customDays : days;\n    axios\n      .get(\"/api/v1/limit-up/period\", { params: { days: d, board_type: board.param } })\n      .then(({ data }) => {\n        if (data.code === 200) setItems(data.data.items || []);\n      })\n      .finally(() => setLoading(false));\n  }, [board.param, days, customDays]);\n\n  if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size=\"large\" style={{display:\"block\",margin:\"100px auto\"}}/></PageContainer>;\n\n  return (\n    <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>\n      {/* Period selector */}\n      <Space style={{ marginBottom: 16 }} wrap>\n        {PERIODS.map((p) => (\n          <Button\n            key={p.days}\n            type={days === p.days && !customDays ? \"primary\" : \"default\"}\n            onClick={() => { setDays(p.days); setCustomDays(null); }}\n          >\n            {p.label}\n          </Button>\n        ))}\n        <InputNumber\n          placeholder=\"自定义天数\"\n          min={1}\n          max={365}\n          value={customDays}\n          onChange={(v) => { if (v) { setCustomDays(v); setDays(0); } else { setCustomDays(null); setDays(1); } }}\n          style={{ width: 120 }}\n          addonAfter=\"天\"\n        />\n      </Space>\n\n      {!items.length ? (\n        <Empty description={`近${customDays || days}天暂无涨停数据（可能该板块交易日数据未同步）`} />\n      ) : (\n        <Row gutter={[12, 12]}>\n          {items.map((stock) => (\n            <Col key={stock.code} xs={24} sm={12} md={8} lg={6} xl={4}>\n              <Card\n                hoverable\n                size=\"small\"\n                onClick={() => navigate(`/stocks/${stock.code}`)}\n                style={{ borderRadius: 8, borderTop: \"3px solid #cf1322\" }}\n              >\n                {/* Header */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\", marginBottom: 8 }}>\n                  <Text strong style={{ fontSize: 14 }}>{stock.name}</Text>\n                  <Text type=\"secondary\" copyable={{ text: stock.code }} style={{ fontSize: 12 }}>\n                    {stock.code}\n                  </Text>\n                </div>\n\n                {/* Price + Change */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"baseline\", marginBottom: 8 }}>\n                  <Title level={4} style={{ margin: 0, color: \"#cf1322\" }}>\n                    {stock.price?.toFixed(2)}\n                  </Title>\n                  <Tag color=\"red\" style={{ fontSize: 14, padding: \"2px 8px\" }}>\n                    +{stock.change_pct?.toFixed(2)}%\n                  </Tag>\n                </div>\n\n                {/* Stats grid */}\n                <Row gutter={[4, 4]}>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>涨停次数</Text>\n                    <br />\n                    <Text strong style={{ color: \"#cf1322\", fontSize: 15 }}>\n                      {stock.count || 0}次\n                    </Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>最近日期</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{stock.trade_date || \"-\"}</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>换手率</Text>\n                    <br />\n                    <Text>{stock.turnover?.toFixed(2)}%</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>成交额</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{(stock.amount / 1e8).toFixed(1)}亿</Text>\n                  </Col>\n                </Row>\n\n                {/* Historical stats */}\n                <div style={{ marginTop: 8, borderTop: \"1px solid #f0f0f0\", paddingTop: 6 }}>\n                  <Row gutter={[8, 0]}>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近5日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_5d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_5d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近30日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_30d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_30d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>今年</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_year > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_year || 0}\n                      </Text>\n                    </Col>\n                  </Row>\n                </div>\n\n                {/* Industry */}\n                <div style={{ marginTop: 6, borderTop: \"1px solid #f0f0f0\", paddingTop: 4 }}>\n                  <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                    {stock.industry || \"—\"}\n                  </Text>\n                </div>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      )}\n    </PageContainer>\n  );\n}\n",
-      "__isJSFile": true,
-      "__absFile": "D:/project/stock_py/frontend/src/pages/LimitUp/index.tsx"
-    },
-    "13": {
-      "name": "创业板",
-      "path": "/limit-up/chinext",
-      "file": "@/pages/LimitUp/index.tsx",
-      "parentId": "10",
+      "parentId": "11",
       "id": "13",
-      "absPath": "/limit-up/chinext",
-      "__content": "/** Limit-up stocks — card layout with period selector */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space } from \"antd\";\nimport { useLocation, useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\n\nconst { Text, Title } = Typography;\n\nconst BOARD_MAP: Record<string, { title: string; param: string }> = {\n  \"/limit-up/main\": { title: \"主板\", param: \"主板\" },\n  \"/limit-up/chinext\": { title: \"创业板\", param: \"创业板\" },\n  \"/limit-up/star\": { title: \"科创板\", param: \"科创板\" },\n};\n\nconst PERIODS = [\n  { label: \"今日\", days: 1 },\n  { label: \"五日\", days: 5 },\n  { label: \"十日\", days: 10 },\n  { label: \"二十日\", days: 20 },\n];\n\nexport default function LimitUpPage() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  const board = BOARD_MAP[location.pathname] || BOARD_MAP[\"/limit-up/main\"];\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(true);\n  const [days, setDays] = useState(1);\n  const [customDays, setCustomDays] = useState<number | null>(null);\n\n  useEffect(() => {\n    setLoading(true);\n    const d = customDays && customDays > 0 ? customDays : days;\n    axios\n      .get(\"/api/v1/limit-up/period\", { params: { days: d, board_type: board.param } })\n      .then(({ data }) => {\n        if (data.code === 200) setItems(data.data.items || []);\n      })\n      .finally(() => setLoading(false));\n  }, [board.param, days, customDays]);\n\n  if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size=\"large\" style={{display:\"block\",margin:\"100px auto\"}}/></PageContainer>;\n\n  return (\n    <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>\n      {/* Period selector */}\n      <Space style={{ marginBottom: 16 }} wrap>\n        {PERIODS.map((p) => (\n          <Button\n            key={p.days}\n            type={days === p.days && !customDays ? \"primary\" : \"default\"}\n            onClick={() => { setDays(p.days); setCustomDays(null); }}\n          >\n            {p.label}\n          </Button>\n        ))}\n        <InputNumber\n          placeholder=\"自定义天数\"\n          min={1}\n          max={365}\n          value={customDays}\n          onChange={(v) => { if (v) { setCustomDays(v); setDays(0); } else { setCustomDays(null); setDays(1); } }}\n          style={{ width: 120 }}\n          addonAfter=\"天\"\n        />\n      </Space>\n\n      {!items.length ? (\n        <Empty description={`近${customDays || days}天暂无涨停数据（可能该板块交易日数据未同步）`} />\n      ) : (\n        <Row gutter={[12, 12]}>\n          {items.map((stock) => (\n            <Col key={stock.code} xs={24} sm={12} md={8} lg={6} xl={4}>\n              <Card\n                hoverable\n                size=\"small\"\n                onClick={() => navigate(`/stocks/${stock.code}`)}\n                style={{ borderRadius: 8, borderTop: \"3px solid #cf1322\" }}\n              >\n                {/* Header */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\", marginBottom: 8 }}>\n                  <Text strong style={{ fontSize: 14 }}>{stock.name}</Text>\n                  <Text type=\"secondary\" copyable={{ text: stock.code }} style={{ fontSize: 12 }}>\n                    {stock.code}\n                  </Text>\n                </div>\n\n                {/* Price + Change */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"baseline\", marginBottom: 8 }}>\n                  <Title level={4} style={{ margin: 0, color: \"#cf1322\" }}>\n                    {stock.price?.toFixed(2)}\n                  </Title>\n                  <Tag color=\"red\" style={{ fontSize: 14, padding: \"2px 8px\" }}>\n                    +{stock.change_pct?.toFixed(2)}%\n                  </Tag>\n                </div>\n\n                {/* Stats grid */}\n                <Row gutter={[4, 4]}>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>涨停次数</Text>\n                    <br />\n                    <Text strong style={{ color: \"#cf1322\", fontSize: 15 }}>\n                      {stock.count || 0}次\n                    </Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>最近日期</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{stock.trade_date || \"-\"}</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>换手率</Text>\n                    <br />\n                    <Text>{stock.turnover?.toFixed(2)}%</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>成交额</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{(stock.amount / 1e8).toFixed(1)}亿</Text>\n                  </Col>\n                </Row>\n\n                {/* Historical stats */}\n                <div style={{ marginTop: 8, borderTop: \"1px solid #f0f0f0\", paddingTop: 6 }}>\n                  <Row gutter={[8, 0]}>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近5日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_5d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_5d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近30日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_30d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_30d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>今年</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_year > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_year || 0}\n                      </Text>\n                    </Col>\n                  </Row>\n                </div>\n\n                {/* Industry */}\n                <div style={{ marginTop: 6, borderTop: \"1px solid #f0f0f0\", paddingTop: 4 }}>\n                  <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                    {stock.industry || \"—\"}\n                  </Text>\n                </div>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      )}\n    </PageContainer>\n  );\n}\n",
+      "absPath": "/limit-up/main",
+      "__content": "/** Limit-up stocks — card layout with period selector\n *  今日(交易时段): 前端直连东方财富 (用户IP) + 后端补充涨停统计\n *  多日/盘后: 后端DB查询\n */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space, Alert } from \"antd\";\nimport { useLocation, useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\n\nimport { useDirectSource } from \"@/utils/dataSource\";\nimport { fetchLimitUpEM, type LimitUpItem } from \"@/services/eastmoney\";\n\nconst { Text, Title } = Typography;\n\nconst BOARD_MAP: Record<string, { title: string; codePrefixes: string[] }> = {\n  \"/limit-up/main\": { title: \"主板\", codePrefixes: [\"600\", \"601\", \"603\", \"605\", \"000\", \"001\", \"002\", \"003\"] },\n  \"/limit-up/chinext\": { title: \"创业板\", codePrefixes: [\"300\", \"301\"] },\n  \"/limit-up/star\": { title: \"科创板\", codePrefixes: [\"688\"] },\n};\n\nconst PERIODS = [\n  { label: \"今日\", days: 1 },\n  { label: \"五日\", days: 5 },\n  { label: \"十日\", days: 10 },\n  { label: \"二十日\", days: 20 },\n];\n\n/** 同时从后端获取涨停统计（5d/30d/年） */\nasync function fetchLimitUpStats(codes: string[]): Promise<Record<string, any>> {\n  if (codes.length === 0) return {};\n  try {\n    // 用 today summary 逐个获取统计 — 改为批量请求 period=1 然后映射\n    const { data } = await axios.get(\"/api/v1/limit-up/period\", {\n      params: { days: 1, page_size: 200 },\n    });\n    if (data.code === 200 && data.data?.items) {\n      const map: Record<string, any> = {};\n      for (const item of data.data.items) {\n        map[item.code] = item;\n      }\n      return map;\n    }\n  } catch {}\n  return {};\n}\n\nexport default function LimitUpPage() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  const board = BOARD_MAP[location.pathname] || BOARD_MAP[\"/limit-up/main\"];\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(true);\n  const [days, setDays] = useState(1);\n  const [customDays, setCustomDays] = useState<number | null>(null);\n  const [source, setSource] = useState<\"db\" | \"live\">(\"db\");\n\n  const activeDays = customDays && customDays > 0 ? customDays : days;\n  // 直连模式 + 今日 → 前端直连东方财富\n  const useEM = useDirectSource() && activeDays === 1;\n\n  useEffect(() => {\n    setLoading(true);\n    const d = customDays && customDays > 0 ? customDays : days;\n\n    if (useEM) {\n      // ── 今日 + 交易时段：前端直连东方财富 ──\n      const today = new Date().toISOString().slice(0, 10).replace(/-/g, \"\");\n      fetchLimitUpEM(today).then(async (emItems) => {\n        if (emItems.length === 0) {\n          // 东方财富无数据（可能盘前），回退后端\n          const { data } = await axios.get(\"/api/v1/limit-up/period\", {\n            params: { days: 1, board_type: board.title },\n          });\n          if (data.code === 200) {\n            setItems(data.data.items || []);\n            setSource(\"db\");\n          } else {\n            setItems([]);\n          }\n          setLoading(false);\n          return;\n        }\n\n        // 过滤当前板块\n        const filtered = emItems.filter((item: LimitUpItem) =>\n          board.codePrefixes.some((p) => item.code.startsWith(p))\n        );\n\n        // 从后端获取涨停统计\n        const codes = filtered.map((i) => i.code);\n        const stats = await fetchLimitUpStats(codes);\n\n        setItems(\n          filtered.map((item: LimitUpItem) => {\n            const dbStats = stats[item.code] || {};\n            return {\n              code: item.code,\n              name: item.name,\n              price: item.price,\n              change_pct: item.changePct,\n              count: 1, // 今日涨停 = 1次\n              trade_date: new Date().toISOString().slice(0, 10),\n              turnover: item.turnover,\n              amount: item.amount,\n              industry: item.industry,\n              stats_5d: dbStats.stats_5d ?? (item.changePct >= 9.8 ? 1 : 0),\n              stats_30d: dbStats.stats_30d ?? (item.changePct >= 9.8 ? 1 : 0),\n              stats_year: dbStats.stats_year ?? (item.changePct >= 9.8 ? 1 : 0),\n            };\n          })\n        );\n        setSource(\"live\");\n        setLoading(false);\n      }).catch(() => {\n        setLoading(false);\n        setItems([]);\n      });\n    } else {\n      // ── 多日/盘后：后端DB ──\n      axios\n        .get(\"/api/v1/limit-up/period\", { params: { days: d, board_type: board.title } })\n        .then(({ data }) => {\n          if (data.code === 200) setItems(data.data.items || []);\n        })\n        .finally(() => {\n          setLoading(false);\n          setSource(\"db\");\n        });\n    }\n  }, [board.title, board.codePrefixes, days, customDays, useEM]);\n\n  if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size=\"large\" style={{display:\"block\",margin:\"100px auto\"}}/></PageContainer>;\n\n  return (\n    <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>\n      {/* 数据源提示 */}\n      <Alert\n        type={source === \"live\" ? \"warning\" : \"info\"}\n        message={source === \"live\"\n          ? \"🔥 实时数据 — 直连东方财富 (用户IP)，涨停统计来自本地数据库\"\n          : \"💾 本地数据库 — 历史涨停记录\"\n        }\n        style={{ marginBottom: 12 }}\n        showIcon\n        closable\n      />\n\n      {/* Period selector */}\n      <Space style={{ marginBottom: 16 }} wrap>\n        {PERIODS.map((p) => (\n          <Button\n            key={p.days}\n            type={days === p.days && !customDays ? \"primary\" : \"default\"}\n            onClick={() => { setDays(p.days); setCustomDays(null); }}\n          >\n            {p.label}\n          </Button>\n        ))}\n        <InputNumber\n          placeholder=\"自定义天数\"\n          min={1}\n          max={365}\n          value={customDays}\n          onChange={(v) => { if (v) { setCustomDays(v); setDays(0); } else { setCustomDays(null); setDays(1); } }}\n          style={{ width: 120 }}\n          addonAfter=\"天\"\n        />\n      </Space>\n\n      {!items.length ? (\n        <Empty description={`近${activeDays}天暂无涨停数据`} />\n      ) : (\n        <Row gutter={[12, 12]}>\n          {items.map((stock) => (\n            <Col key={stock.code} xs={24} sm={12} md={8} lg={6} xl={4}>\n              <Card\n                hoverable\n                size=\"small\"\n                onClick={() => navigate(`/stocks/${stock.code}`)}\n                style={{ borderRadius: 8, borderTop: \"3px solid #cf1322\" }}\n              >\n                {/* Header */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\", marginBottom: 8 }}>\n                  <Text strong style={{ fontSize: 14 }}>{stock.name}</Text>\n                  <Text type=\"secondary\" copyable={{ text: stock.code }} style={{ fontSize: 12 }}>\n                    {stock.code}\n                  </Text>\n                </div>\n\n                {/* Price + Change */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"baseline\", marginBottom: 8 }}>\n                  <Title level={4} style={{ margin: 0, color: \"#cf1322\" }}>\n                    {stock.price?.toFixed(2)}\n                  </Title>\n                  <Tag color=\"red\" style={{ fontSize: 14, padding: \"2px 8px\" }}>\n                    +{stock.change_pct?.toFixed(2)}%\n                  </Tag>\n                </div>\n\n                {/* Stats grid */}\n                <Row gutter={[4, 4]}>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>涨停次数</Text>\n                    <br />\n                    <Text strong style={{ color: \"#cf1322\", fontSize: 15 }}>\n                      {stock.count || 0}次\n                    </Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>最近日期</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{stock.trade_date || \"-\"}</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>换手率</Text>\n                    <br />\n                    <Text>{stock.turnover?.toFixed(2)}%</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>成交额</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{(stock.amount / 1e8).toFixed(1)}亿</Text>\n                  </Col>\n                </Row>\n\n                {/* Historical stats */}\n                <div style={{ marginTop: 8, borderTop: \"1px solid #f0f0f0\", paddingTop: 6 }}>\n                  <Row gutter={[8, 0]}>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近5日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_5d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_5d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近30日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_30d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_30d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>今年</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_year > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_year || 0}\n                      </Text>\n                    </Col>\n                  </Row>\n                </div>\n\n                {/* Industry */}\n                <div style={{ marginTop: 6, borderTop: \"1px solid #f0f0f0\", paddingTop: 4 }}>\n                  <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                    {stock.industry || \"—\"}\n                  </Text>\n                </div>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      )}\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "D:/project/stock_py/frontend/src/pages/LimitUp/index.tsx"
     },
     "14": {
+      "name": "创业板",
+      "path": "/limit-up/chinext",
+      "file": "@/pages/LimitUp/index.tsx",
+      "parentId": "11",
+      "id": "14",
+      "absPath": "/limit-up/chinext",
+      "__content": "/** Limit-up stocks — card layout with period selector\n *  今日(交易时段): 前端直连东方财富 (用户IP) + 后端补充涨停统计\n *  多日/盘后: 后端DB查询\n */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space, Alert } from \"antd\";\nimport { useLocation, useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\n\nimport { useDirectSource } from \"@/utils/dataSource\";\nimport { fetchLimitUpEM, type LimitUpItem } from \"@/services/eastmoney\";\n\nconst { Text, Title } = Typography;\n\nconst BOARD_MAP: Record<string, { title: string; codePrefixes: string[] }> = {\n  \"/limit-up/main\": { title: \"主板\", codePrefixes: [\"600\", \"601\", \"603\", \"605\", \"000\", \"001\", \"002\", \"003\"] },\n  \"/limit-up/chinext\": { title: \"创业板\", codePrefixes: [\"300\", \"301\"] },\n  \"/limit-up/star\": { title: \"科创板\", codePrefixes: [\"688\"] },\n};\n\nconst PERIODS = [\n  { label: \"今日\", days: 1 },\n  { label: \"五日\", days: 5 },\n  { label: \"十日\", days: 10 },\n  { label: \"二十日\", days: 20 },\n];\n\n/** 同时从后端获取涨停统计（5d/30d/年） */\nasync function fetchLimitUpStats(codes: string[]): Promise<Record<string, any>> {\n  if (codes.length === 0) return {};\n  try {\n    // 用 today summary 逐个获取统计 — 改为批量请求 period=1 然后映射\n    const { data } = await axios.get(\"/api/v1/limit-up/period\", {\n      params: { days: 1, page_size: 200 },\n    });\n    if (data.code === 200 && data.data?.items) {\n      const map: Record<string, any> = {};\n      for (const item of data.data.items) {\n        map[item.code] = item;\n      }\n      return map;\n    }\n  } catch {}\n  return {};\n}\n\nexport default function LimitUpPage() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  const board = BOARD_MAP[location.pathname] || BOARD_MAP[\"/limit-up/main\"];\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(true);\n  const [days, setDays] = useState(1);\n  const [customDays, setCustomDays] = useState<number | null>(null);\n  const [source, setSource] = useState<\"db\" | \"live\">(\"db\");\n\n  const activeDays = customDays && customDays > 0 ? customDays : days;\n  // 直连模式 + 今日 → 前端直连东方财富\n  const useEM = useDirectSource() && activeDays === 1;\n\n  useEffect(() => {\n    setLoading(true);\n    const d = customDays && customDays > 0 ? customDays : days;\n\n    if (useEM) {\n      // ── 今日 + 交易时段：前端直连东方财富 ──\n      const today = new Date().toISOString().slice(0, 10).replace(/-/g, \"\");\n      fetchLimitUpEM(today).then(async (emItems) => {\n        if (emItems.length === 0) {\n          // 东方财富无数据（可能盘前），回退后端\n          const { data } = await axios.get(\"/api/v1/limit-up/period\", {\n            params: { days: 1, board_type: board.title },\n          });\n          if (data.code === 200) {\n            setItems(data.data.items || []);\n            setSource(\"db\");\n          } else {\n            setItems([]);\n          }\n          setLoading(false);\n          return;\n        }\n\n        // 过滤当前板块\n        const filtered = emItems.filter((item: LimitUpItem) =>\n          board.codePrefixes.some((p) => item.code.startsWith(p))\n        );\n\n        // 从后端获取涨停统计\n        const codes = filtered.map((i) => i.code);\n        const stats = await fetchLimitUpStats(codes);\n\n        setItems(\n          filtered.map((item: LimitUpItem) => {\n            const dbStats = stats[item.code] || {};\n            return {\n              code: item.code,\n              name: item.name,\n              price: item.price,\n              change_pct: item.changePct,\n              count: 1, // 今日涨停 = 1次\n              trade_date: new Date().toISOString().slice(0, 10),\n              turnover: item.turnover,\n              amount: item.amount,\n              industry: item.industry,\n              stats_5d: dbStats.stats_5d ?? (item.changePct >= 9.8 ? 1 : 0),\n              stats_30d: dbStats.stats_30d ?? (item.changePct >= 9.8 ? 1 : 0),\n              stats_year: dbStats.stats_year ?? (item.changePct >= 9.8 ? 1 : 0),\n            };\n          })\n        );\n        setSource(\"live\");\n        setLoading(false);\n      }).catch(() => {\n        setLoading(false);\n        setItems([]);\n      });\n    } else {\n      // ── 多日/盘后：后端DB ──\n      axios\n        .get(\"/api/v1/limit-up/period\", { params: { days: d, board_type: board.title } })\n        .then(({ data }) => {\n          if (data.code === 200) setItems(data.data.items || []);\n        })\n        .finally(() => {\n          setLoading(false);\n          setSource(\"db\");\n        });\n    }\n  }, [board.title, board.codePrefixes, days, customDays, useEM]);\n\n  if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size=\"large\" style={{display:\"block\",margin:\"100px auto\"}}/></PageContainer>;\n\n  return (\n    <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>\n      {/* 数据源提示 */}\n      <Alert\n        type={source === \"live\" ? \"warning\" : \"info\"}\n        message={source === \"live\"\n          ? \"🔥 实时数据 — 直连东方财富 (用户IP)，涨停统计来自本地数据库\"\n          : \"💾 本地数据库 — 历史涨停记录\"\n        }\n        style={{ marginBottom: 12 }}\n        showIcon\n        closable\n      />\n\n      {/* Period selector */}\n      <Space style={{ marginBottom: 16 }} wrap>\n        {PERIODS.map((p) => (\n          <Button\n            key={p.days}\n            type={days === p.days && !customDays ? \"primary\" : \"default\"}\n            onClick={() => { setDays(p.days); setCustomDays(null); }}\n          >\n            {p.label}\n          </Button>\n        ))}\n        <InputNumber\n          placeholder=\"自定义天数\"\n          min={1}\n          max={365}\n          value={customDays}\n          onChange={(v) => { if (v) { setCustomDays(v); setDays(0); } else { setCustomDays(null); setDays(1); } }}\n          style={{ width: 120 }}\n          addonAfter=\"天\"\n        />\n      </Space>\n\n      {!items.length ? (\n        <Empty description={`近${activeDays}天暂无涨停数据`} />\n      ) : (\n        <Row gutter={[12, 12]}>\n          {items.map((stock) => (\n            <Col key={stock.code} xs={24} sm={12} md={8} lg={6} xl={4}>\n              <Card\n                hoverable\n                size=\"small\"\n                onClick={() => navigate(`/stocks/${stock.code}`)}\n                style={{ borderRadius: 8, borderTop: \"3px solid #cf1322\" }}\n              >\n                {/* Header */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\", marginBottom: 8 }}>\n                  <Text strong style={{ fontSize: 14 }}>{stock.name}</Text>\n                  <Text type=\"secondary\" copyable={{ text: stock.code }} style={{ fontSize: 12 }}>\n                    {stock.code}\n                  </Text>\n                </div>\n\n                {/* Price + Change */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"baseline\", marginBottom: 8 }}>\n                  <Title level={4} style={{ margin: 0, color: \"#cf1322\" }}>\n                    {stock.price?.toFixed(2)}\n                  </Title>\n                  <Tag color=\"red\" style={{ fontSize: 14, padding: \"2px 8px\" }}>\n                    +{stock.change_pct?.toFixed(2)}%\n                  </Tag>\n                </div>\n\n                {/* Stats grid */}\n                <Row gutter={[4, 4]}>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>涨停次数</Text>\n                    <br />\n                    <Text strong style={{ color: \"#cf1322\", fontSize: 15 }}>\n                      {stock.count || 0}次\n                    </Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>最近日期</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{stock.trade_date || \"-\"}</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>换手率</Text>\n                    <br />\n                    <Text>{stock.turnover?.toFixed(2)}%</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>成交额</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{(stock.amount / 1e8).toFixed(1)}亿</Text>\n                  </Col>\n                </Row>\n\n                {/* Historical stats */}\n                <div style={{ marginTop: 8, borderTop: \"1px solid #f0f0f0\", paddingTop: 6 }}>\n                  <Row gutter={[8, 0]}>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近5日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_5d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_5d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近30日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_30d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_30d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>今年</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_year > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_year || 0}\n                      </Text>\n                    </Col>\n                  </Row>\n                </div>\n\n                {/* Industry */}\n                <div style={{ marginTop: 6, borderTop: \"1px solid #f0f0f0\", paddingTop: 4 }}>\n                  <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                    {stock.industry || \"—\"}\n                  </Text>\n                </div>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      )}\n    </PageContainer>\n  );\n}\n",
+      "__isJSFile": true,
+      "__absFile": "D:/project/stock_py/frontend/src/pages/LimitUp/index.tsx"
+    },
+    "15": {
       "name": "科创板",
       "path": "/limit-up/star",
       "file": "@/pages/LimitUp/index.tsx",
-      "parentId": "10",
-      "id": "14",
+      "parentId": "11",
+      "id": "15",
       "absPath": "/limit-up/star",
-      "__content": "/** Limit-up stocks — card layout with period selector */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space } from \"antd\";\nimport { useLocation, useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\n\nconst { Text, Title } = Typography;\n\nconst BOARD_MAP: Record<string, { title: string; param: string }> = {\n  \"/limit-up/main\": { title: \"主板\", param: \"主板\" },\n  \"/limit-up/chinext\": { title: \"创业板\", param: \"创业板\" },\n  \"/limit-up/star\": { title: \"科创板\", param: \"科创板\" },\n};\n\nconst PERIODS = [\n  { label: \"今日\", days: 1 },\n  { label: \"五日\", days: 5 },\n  { label: \"十日\", days: 10 },\n  { label: \"二十日\", days: 20 },\n];\n\nexport default function LimitUpPage() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  const board = BOARD_MAP[location.pathname] || BOARD_MAP[\"/limit-up/main\"];\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(true);\n  const [days, setDays] = useState(1);\n  const [customDays, setCustomDays] = useState<number | null>(null);\n\n  useEffect(() => {\n    setLoading(true);\n    const d = customDays && customDays > 0 ? customDays : days;\n    axios\n      .get(\"/api/v1/limit-up/period\", { params: { days: d, board_type: board.param } })\n      .then(({ data }) => {\n        if (data.code === 200) setItems(data.data.items || []);\n      })\n      .finally(() => setLoading(false));\n  }, [board.param, days, customDays]);\n\n  if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size=\"large\" style={{display:\"block\",margin:\"100px auto\"}}/></PageContainer>;\n\n  return (\n    <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>\n      {/* Period selector */}\n      <Space style={{ marginBottom: 16 }} wrap>\n        {PERIODS.map((p) => (\n          <Button\n            key={p.days}\n            type={days === p.days && !customDays ? \"primary\" : \"default\"}\n            onClick={() => { setDays(p.days); setCustomDays(null); }}\n          >\n            {p.label}\n          </Button>\n        ))}\n        <InputNumber\n          placeholder=\"自定义天数\"\n          min={1}\n          max={365}\n          value={customDays}\n          onChange={(v) => { if (v) { setCustomDays(v); setDays(0); } else { setCustomDays(null); setDays(1); } }}\n          style={{ width: 120 }}\n          addonAfter=\"天\"\n        />\n      </Space>\n\n      {!items.length ? (\n        <Empty description={`近${customDays || days}天暂无涨停数据（可能该板块交易日数据未同步）`} />\n      ) : (\n        <Row gutter={[12, 12]}>\n          {items.map((stock) => (\n            <Col key={stock.code} xs={24} sm={12} md={8} lg={6} xl={4}>\n              <Card\n                hoverable\n                size=\"small\"\n                onClick={() => navigate(`/stocks/${stock.code}`)}\n                style={{ borderRadius: 8, borderTop: \"3px solid #cf1322\" }}\n              >\n                {/* Header */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\", marginBottom: 8 }}>\n                  <Text strong style={{ fontSize: 14 }}>{stock.name}</Text>\n                  <Text type=\"secondary\" copyable={{ text: stock.code }} style={{ fontSize: 12 }}>\n                    {stock.code}\n                  </Text>\n                </div>\n\n                {/* Price + Change */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"baseline\", marginBottom: 8 }}>\n                  <Title level={4} style={{ margin: 0, color: \"#cf1322\" }}>\n                    {stock.price?.toFixed(2)}\n                  </Title>\n                  <Tag color=\"red\" style={{ fontSize: 14, padding: \"2px 8px\" }}>\n                    +{stock.change_pct?.toFixed(2)}%\n                  </Tag>\n                </div>\n\n                {/* Stats grid */}\n                <Row gutter={[4, 4]}>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>涨停次数</Text>\n                    <br />\n                    <Text strong style={{ color: \"#cf1322\", fontSize: 15 }}>\n                      {stock.count || 0}次\n                    </Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>最近日期</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{stock.trade_date || \"-\"}</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>换手率</Text>\n                    <br />\n                    <Text>{stock.turnover?.toFixed(2)}%</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>成交额</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{(stock.amount / 1e8).toFixed(1)}亿</Text>\n                  </Col>\n                </Row>\n\n                {/* Historical stats */}\n                <div style={{ marginTop: 8, borderTop: \"1px solid #f0f0f0\", paddingTop: 6 }}>\n                  <Row gutter={[8, 0]}>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近5日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_5d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_5d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近30日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_30d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_30d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>今年</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_year > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_year || 0}\n                      </Text>\n                    </Col>\n                  </Row>\n                </div>\n\n                {/* Industry */}\n                <div style={{ marginTop: 6, borderTop: \"1px solid #f0f0f0\", paddingTop: 4 }}>\n                  <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                    {stock.industry || \"—\"}\n                  </Text>\n                </div>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      )}\n    </PageContainer>\n  );\n}\n",
+      "__content": "/** Limit-up stocks — card layout with period selector\n *  今日(交易时段): 前端直连东方财富 (用户IP) + 后端补充涨停统计\n *  多日/盘后: 后端DB查询\n */\n\nimport { PageContainer } from \"@ant-design/pro-components\";\nimport { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space, Alert } from \"antd\";\nimport { useLocation, useNavigate } from \"@umijs/max\";\nimport { useEffect, useState } from \"react\";\nimport axios from \"axios\";\n\nimport { useDirectSource } from \"@/utils/dataSource\";\nimport { fetchLimitUpEM, type LimitUpItem } from \"@/services/eastmoney\";\n\nconst { Text, Title } = Typography;\n\nconst BOARD_MAP: Record<string, { title: string; codePrefixes: string[] }> = {\n  \"/limit-up/main\": { title: \"主板\", codePrefixes: [\"600\", \"601\", \"603\", \"605\", \"000\", \"001\", \"002\", \"003\"] },\n  \"/limit-up/chinext\": { title: \"创业板\", codePrefixes: [\"300\", \"301\"] },\n  \"/limit-up/star\": { title: \"科创板\", codePrefixes: [\"688\"] },\n};\n\nconst PERIODS = [\n  { label: \"今日\", days: 1 },\n  { label: \"五日\", days: 5 },\n  { label: \"十日\", days: 10 },\n  { label: \"二十日\", days: 20 },\n];\n\n/** 同时从后端获取涨停统计（5d/30d/年） */\nasync function fetchLimitUpStats(codes: string[]): Promise<Record<string, any>> {\n  if (codes.length === 0) return {};\n  try {\n    // 用 today summary 逐个获取统计 — 改为批量请求 period=1 然后映射\n    const { data } = await axios.get(\"/api/v1/limit-up/period\", {\n      params: { days: 1, page_size: 200 },\n    });\n    if (data.code === 200 && data.data?.items) {\n      const map: Record<string, any> = {};\n      for (const item of data.data.items) {\n        map[item.code] = item;\n      }\n      return map;\n    }\n  } catch {}\n  return {};\n}\n\nexport default function LimitUpPage() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  const board = BOARD_MAP[location.pathname] || BOARD_MAP[\"/limit-up/main\"];\n  const [items, setItems] = useState<any[]>([]);\n  const [loading, setLoading] = useState(true);\n  const [days, setDays] = useState(1);\n  const [customDays, setCustomDays] = useState<number | null>(null);\n  const [source, setSource] = useState<\"db\" | \"live\">(\"db\");\n\n  const activeDays = customDays && customDays > 0 ? customDays : days;\n  // 直连模式 + 今日 → 前端直连东方财富\n  const useEM = useDirectSource() && activeDays === 1;\n\n  useEffect(() => {\n    setLoading(true);\n    const d = customDays && customDays > 0 ? customDays : days;\n\n    if (useEM) {\n      // ── 今日 + 交易时段：前端直连东方财富 ──\n      const today = new Date().toISOString().slice(0, 10).replace(/-/g, \"\");\n      fetchLimitUpEM(today).then(async (emItems) => {\n        if (emItems.length === 0) {\n          // 东方财富无数据（可能盘前），回退后端\n          const { data } = await axios.get(\"/api/v1/limit-up/period\", {\n            params: { days: 1, board_type: board.title },\n          });\n          if (data.code === 200) {\n            setItems(data.data.items || []);\n            setSource(\"db\");\n          } else {\n            setItems([]);\n          }\n          setLoading(false);\n          return;\n        }\n\n        // 过滤当前板块\n        const filtered = emItems.filter((item: LimitUpItem) =>\n          board.codePrefixes.some((p) => item.code.startsWith(p))\n        );\n\n        // 从后端获取涨停统计\n        const codes = filtered.map((i) => i.code);\n        const stats = await fetchLimitUpStats(codes);\n\n        setItems(\n          filtered.map((item: LimitUpItem) => {\n            const dbStats = stats[item.code] || {};\n            return {\n              code: item.code,\n              name: item.name,\n              price: item.price,\n              change_pct: item.changePct,\n              count: 1, // 今日涨停 = 1次\n              trade_date: new Date().toISOString().slice(0, 10),\n              turnover: item.turnover,\n              amount: item.amount,\n              industry: item.industry,\n              stats_5d: dbStats.stats_5d ?? (item.changePct >= 9.8 ? 1 : 0),\n              stats_30d: dbStats.stats_30d ?? (item.changePct >= 9.8 ? 1 : 0),\n              stats_year: dbStats.stats_year ?? (item.changePct >= 9.8 ? 1 : 0),\n            };\n          })\n        );\n        setSource(\"live\");\n        setLoading(false);\n      }).catch(() => {\n        setLoading(false);\n        setItems([]);\n      });\n    } else {\n      // ── 多日/盘后：后端DB ──\n      axios\n        .get(\"/api/v1/limit-up/period\", { params: { days: d, board_type: board.title } })\n        .then(({ data }) => {\n          if (data.code === 200) setItems(data.data.items || []);\n        })\n        .finally(() => {\n          setLoading(false);\n          setSource(\"db\");\n        });\n    }\n  }, [board.title, board.codePrefixes, days, customDays, useEM]);\n\n  if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size=\"large\" style={{display:\"block\",margin:\"100px auto\"}}/></PageContainer>;\n\n  return (\n    <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>\n      {/* 数据源提示 */}\n      <Alert\n        type={source === \"live\" ? \"warning\" : \"info\"}\n        message={source === \"live\"\n          ? \"🔥 实时数据 — 直连东方财富 (用户IP)，涨停统计来自本地数据库\"\n          : \"💾 本地数据库 — 历史涨停记录\"\n        }\n        style={{ marginBottom: 12 }}\n        showIcon\n        closable\n      />\n\n      {/* Period selector */}\n      <Space style={{ marginBottom: 16 }} wrap>\n        {PERIODS.map((p) => (\n          <Button\n            key={p.days}\n            type={days === p.days && !customDays ? \"primary\" : \"default\"}\n            onClick={() => { setDays(p.days); setCustomDays(null); }}\n          >\n            {p.label}\n          </Button>\n        ))}\n        <InputNumber\n          placeholder=\"自定义天数\"\n          min={1}\n          max={365}\n          value={customDays}\n          onChange={(v) => { if (v) { setCustomDays(v); setDays(0); } else { setCustomDays(null); setDays(1); } }}\n          style={{ width: 120 }}\n          addonAfter=\"天\"\n        />\n      </Space>\n\n      {!items.length ? (\n        <Empty description={`近${activeDays}天暂无涨停数据`} />\n      ) : (\n        <Row gutter={[12, 12]}>\n          {items.map((stock) => (\n            <Col key={stock.code} xs={24} sm={12} md={8} lg={6} xl={4}>\n              <Card\n                hoverable\n                size=\"small\"\n                onClick={() => navigate(`/stocks/${stock.code}`)}\n                style={{ borderRadius: 8, borderTop: \"3px solid #cf1322\" }}\n              >\n                {/* Header */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"center\", marginBottom: 8 }}>\n                  <Text strong style={{ fontSize: 14 }}>{stock.name}</Text>\n                  <Text type=\"secondary\" copyable={{ text: stock.code }} style={{ fontSize: 12 }}>\n                    {stock.code}\n                  </Text>\n                </div>\n\n                {/* Price + Change */}\n                <div style={{ display: \"flex\", justifyContent: \"space-between\", alignItems: \"baseline\", marginBottom: 8 }}>\n                  <Title level={4} style={{ margin: 0, color: \"#cf1322\" }}>\n                    {stock.price?.toFixed(2)}\n                  </Title>\n                  <Tag color=\"red\" style={{ fontSize: 14, padding: \"2px 8px\" }}>\n                    +{stock.change_pct?.toFixed(2)}%\n                  </Tag>\n                </div>\n\n                {/* Stats grid */}\n                <Row gutter={[4, 4]}>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>涨停次数</Text>\n                    <br />\n                    <Text strong style={{ color: \"#cf1322\", fontSize: 15 }}>\n                      {stock.count || 0}次\n                    </Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>最近日期</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{stock.trade_date || \"-\"}</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>换手率</Text>\n                    <br />\n                    <Text>{stock.turnover?.toFixed(2)}%</Text>\n                  </Col>\n                  <Col span={12}>\n                    <Text type=\"secondary\" style={{ fontSize: 11 }}>成交额</Text>\n                    <br />\n                    <Text style={{ fontSize: 12 }}>{(stock.amount / 1e8).toFixed(1)}亿</Text>\n                  </Col>\n                </Row>\n\n                {/* Historical stats */}\n                <div style={{ marginTop: 8, borderTop: \"1px solid #f0f0f0\", paddingTop: 6 }}>\n                  <Row gutter={[8, 0]}>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近5日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_5d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_5d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>近30日</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_30d > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_30d || 0}\n                      </Text>\n                    </Col>\n                    <Col span={8} style={{ textAlign: \"center\" }}>\n                      <Text type=\"secondary\" style={{ fontSize: 10 }}>今年</Text>\n                      <br />\n                      <Text strong style={{ fontSize: 14, color: stock.stats_year > 0 ? \"#cf1322\" : \"#999\" }}>\n                        {stock.stats_year || 0}\n                      </Text>\n                    </Col>\n                  </Row>\n                </div>\n\n                {/* Industry */}\n                <div style={{ marginTop: 6, borderTop: \"1px solid #f0f0f0\", paddingTop: 4 }}>\n                  <Text type=\"secondary\" style={{ fontSize: 11 }}>\n                    {stock.industry || \"—\"}\n                  </Text>\n                </div>\n              </Card>\n            </Col>\n          ))}\n        </Row>\n      )}\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "D:/project/stock_py/frontend/src/pages/LimitUp/index.tsx"
     },
@@ -4204,7 +4950,9 @@
     ]
   },
   "mfsuBundleStatus": {
-    "done": true
+    "done": true,
+    "percent": 1,
+    "status": ""
   },
   "react": {
     "version": "18.3.1",
@@ -5848,8 +6596,24 @@
             ],
             "format": "esm"
           },
+          "src/utils/dataSource.ts": {
+            "bytes": 1177,
+            "imports": [],
+            "format": "esm"
+          },
+          "src/services/eastmoney.ts": {
+            "bytes": 15564,
+            "imports": [
+              {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/Stocks/Detail/KlineChart.tsx": {
-            "bytes": 4443,
+            "bytes": 5670,
             "imports": [
               {
                 "path": "react",
@@ -5865,6 +6629,16 @@
                 "path": "src/services/stock.ts",
                 "kind": "import-statement",
                 "original": "@/services/stock"
+              },
+              {
+                "path": "src/utils/dataSource.ts",
+                "kind": "import-statement",
+                "original": "@/utils/dataSource"
+              },
+              {
+                "path": "src/services/eastmoney.ts",
+                "kind": "import-statement",
+                "original": "@/services/eastmoney"
               },
               {
                 "path": "dayjs",
@@ -5885,7 +6659,7 @@
             "format": "esm"
           },
           "src/pages/Stocks/Detail/FinancialsView.tsx": {
-            "bytes": 3463,
+            "bytes": 5373,
             "imports": [
               {
                 "path": "react",
@@ -5908,6 +6682,16 @@
                 "original": "@/services/stock"
               },
               {
+                "path": "src/utils/dataSource.ts",
+                "kind": "import-statement",
+                "original": "@/utils/dataSource"
+              },
+              {
+                "path": "src/services/eastmoney.ts",
+                "kind": "import-statement",
+                "original": "@/services/eastmoney"
+              },
+              {
                 "path": "react/jsx-runtime",
                 "kind": "import-statement",
                 "external": true
@@ -5916,7 +6700,7 @@
             "format": "esm"
           },
           "src/pages/Stocks/Detail/index.tsx": {
-            "bytes": 4822,
+            "bytes": 7338,
             "imports": [
               {
                 "path": "@ant-design/pro-components",
@@ -5944,6 +6728,16 @@
                 "original": "@/services/stock"
               },
               {
+                "path": "src/utils/dataSource.ts",
+                "kind": "import-statement",
+                "original": "@/utils/dataSource"
+              },
+              {
+                "path": "src/services/eastmoney.ts",
+                "kind": "import-statement",
+                "original": "@/services/eastmoney"
+              },
+              {
                 "path": "src/pages/Stocks/Detail/KlineChart.tsx",
                 "kind": "import-statement",
                 "original": "./KlineChart"
@@ -5962,7 +6756,7 @@
             "format": "esm"
           },
           "src/pages/Boards/index.tsx": {
-            "bytes": 5032,
+            "bytes": 7243,
             "imports": [
               {
                 "path": "@ant-design/pro-components",
@@ -5980,9 +6774,24 @@
                 "external": true
               },
               {
+                "path": "src/.umi/exports.ts",
+                "kind": "import-statement",
+                "original": "@umijs/max"
+              },
+              {
                 "path": "src/services/stock.ts",
                 "kind": "import-statement",
                 "original": "@/services/stock"
+              },
+              {
+                "path": "src/utils/dataSource.ts",
+                "kind": "import-statement",
+                "original": "@/utils/dataSource"
+              },
+              {
+                "path": "src/services/eastmoney.ts",
+                "kind": "import-statement",
+                "original": "@/services/eastmoney"
               },
               {
                 "path": "react/jsx-runtime",
@@ -6101,7 +6910,7 @@
             "format": "esm"
           },
           "src/pages/Market/index.tsx": {
-            "bytes": 4241,
+            "bytes": 6076,
             "imports": [
               {
                 "path": "@ant-design/pro-components",
@@ -6127,6 +6936,16 @@
                 "path": "axios",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "src/utils/dataSource.ts",
+                "kind": "import-statement",
+                "original": "@/utils/dataSource"
+              },
+              {
+                "path": "src/services/eastmoney.ts",
+                "kind": "import-statement",
+                "original": "@/services/eastmoney"
               },
               {
                 "path": "react/jsx-runtime",
@@ -6177,8 +6996,60 @@
             ],
             "format": "esm"
           },
+          "src/services/dataManagement.ts": {
+            "bytes": 947,
+            "imports": [
+              {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
+          "src/pages/DataManagement/index.tsx": {
+            "bytes": 7786,
+            "imports": [
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/icons",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "src/services/dataManagement.ts",
+                "kind": "import-statement",
+                "original": "@/services/dataManagement"
+              },
+              {
+                "path": "src/utils/dataSource.ts",
+                "kind": "import-statement",
+                "original": "@/utils/dataSource"
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              }
+            ],
+            "format": "esm"
+          },
           "src/pages/LimitUp/index.tsx": {
-            "bytes": 6946,
+            "bytes": 10552,
             "imports": [
               {
                 "path": "@ant-design/pro-components",
@@ -6204,6 +7075,16 @@
                 "path": "axios",
                 "kind": "import-statement",
                 "external": true
+              },
+              {
+                "path": "src/utils/dataSource.ts",
+                "kind": "import-statement",
+                "original": "@/utils/dataSource"
+              },
+              {
+                "path": "src/services/eastmoney.ts",
+                "kind": "import-statement",
+                "original": "@/services/eastmoney"
               },
               {
                 "path": "react/jsx-runtime",
@@ -6338,7 +7219,7 @@
             "format": "esm"
           },
           "src/.umi/core/route.tsx": {
-            "bytes": 2953,
+            "bytes": 3171,
             "imports": [
               {
                 "path": "react",
@@ -6389,6 +7270,11 @@
                 "path": "src/pages/LHB/index.tsx",
                 "kind": "dynamic-import",
                 "original": "@/pages/LHB/index.tsx"
+              },
+              {
+                "path": "src/pages/DataManagement/index.tsx",
+                "kind": "dynamic-import",
+                "original": "@/pages/DataManagement/index.tsx"
               },
               {
                 "path": "src/.umi/core/EmptyRoute.tsx",
@@ -6649,6 +7535,11 @@
                 "external": true
               },
               {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
                 "path": "react",
                 "kind": "import-statement",
                 "external": true
@@ -6850,6 +7741,36 @@
               },
               {
                 "path": "dayjs",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react/jsx-runtime",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "axios",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/pro-components",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "antd",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "@ant-design/icons",
+                "kind": "import-statement",
+                "external": true
+              },
+              {
+                "path": "react",
                 "kind": "import-statement",
                 "external": true
               },
@@ -8115,17 +9036,23 @@
               "src/pages/Stocks/index.tsx": {
                 "bytesInOutput": 3280
               },
+              "src/utils/dataSource.ts": {
+                "bytesInOutput": 508
+              },
+              "src/services/eastmoney.ts": {
+                "bytesInOutput": 7497
+              },
               "src/pages/Stocks/Detail/KlineChart.tsx": {
-                "bytesInOutput": 4472
+                "bytesInOutput": 5607
               },
               "src/pages/Stocks/Detail/FinancialsView.tsx": {
-                "bytesInOutput": 3568
+                "bytesInOutput": 5032
               },
               "src/pages/Stocks/Detail/index.tsx": {
-                "bytesInOutput": 5688
+                "bytesInOutput": 8054
               },
               "src/pages/Boards/index.tsx": {
-                "bytesInOutput": 4937
+                "bytesInOutput": 6905
               },
               "src/pages/Screener/index.tsx": {
                 "bytesInOutput": 6460
@@ -8137,13 +9064,19 @@
                 "bytesInOutput": 5396
               },
               "src/pages/Market/index.tsx": {
-                "bytesInOutput": 5292
+                "bytesInOutput": 6928
               },
               "src/pages/LHB/index.tsx": {
                 "bytesInOutput": 7889
               },
+              "src/services/dataManagement.ts": {
+                "bytesInOutput": 632
+              },
+              "src/pages/DataManagement/index.tsx": {
+                "bytesInOutput": 8571
+              },
               "src/pages/LimitUp/index.tsx": {
-                "bytesInOutput": 8313
+                "bytesInOutput": 11249
               },
               "src/.umi/plugin-layout/Logo.tsx": {
                 "bytesInOutput": 5514
@@ -8158,7 +9091,7 @@
                 "bytesInOutput": 5786
               },
               "src/.umi/core/route.tsx": {
-                "bytesInOutput": 3211
+                "bytesInOutput": 3445
               },
               "src/.umi/core/polyfill.ts": {
                 "bytesInOutput": 27862
@@ -8167,7 +9100,7 @@
                 "bytesInOutput": 2074
               }
             },
-            "bytes": 143204
+            "bytes": 172283
           }
         }
       }

@@ -1,17 +1,23 @@
-/** Limit-up stocks — card layout with period selector */
+/** Limit-up stocks — card layout with period selector
+ *  今日(交易时段): 前端直连东方财富 (用户IP) + 后端补充涨停统计
+ *  多日/盘后: 后端DB查询
+ */
 
 import { PageContainer } from "@ant-design/pro-components";
-import { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space } from "antd";
+import { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space, Alert } from "antd";
 import { useLocation, useNavigate } from "@umijs/max";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import { useDirectSource } from "@/utils/dataSource";
+import { fetchLimitUpEM, type LimitUpItem } from "@/services/eastmoney";
+
 const { Text, Title } = Typography;
 
-const BOARD_MAP: Record<string, { title: string; param: string }> = {
-  "/limit-up/main": { title: "主板", param: "主板" },
-  "/limit-up/chinext": { title: "创业板", param: "创业板" },
-  "/limit-up/star": { title: "科创板", param: "科创板" },
+const BOARD_MAP: Record<string, { title: string; codePrefixes: string[] }> = {
+  "/limit-up/main": { title: "主板", codePrefixes: ["600", "601", "603", "605", "000", "001", "002", "003"] },
+  "/limit-up/chinext": { title: "创业板", codePrefixes: ["300", "301"] },
+  "/limit-up/star": { title: "科创板", codePrefixes: ["688"] },
 };
 
 const PERIODS = [
@@ -21,6 +27,25 @@ const PERIODS = [
   { label: "二十日", days: 20 },
 ];
 
+/** 同时从后端获取涨停统计（5d/30d/年） */
+async function fetchLimitUpStats(codes: string[]): Promise<Record<string, any>> {
+  if (codes.length === 0) return {};
+  try {
+    // 用 today summary 逐个获取统计 — 改为批量请求 period=1 然后映射
+    const { data } = await axios.get("/api/v1/limit-up/period", {
+      params: { days: 1, page_size: 200 },
+    });
+    if (data.code === 200 && data.data?.items) {
+      const map: Record<string, any> = {};
+      for (const item of data.data.items) {
+        map[item.code] = item;
+      }
+      return map;
+    }
+  } catch {}
+  return {};
+}
+
 export default function LimitUpPage() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -29,22 +54,99 @@ export default function LimitUpPage() {
   const [loading, setLoading] = useState(true);
   const [days, setDays] = useState(1);
   const [customDays, setCustomDays] = useState<number | null>(null);
+  const [source, setSource] = useState<"db" | "live">("db");
+
+  const activeDays = customDays && customDays > 0 ? customDays : days;
+  // 直连模式 + 今日 → 前端直连东方财富
+  const useEM = useDirectSource() && activeDays === 1;
 
   useEffect(() => {
     setLoading(true);
     const d = customDays && customDays > 0 ? customDays : days;
-    axios
-      .get("/api/v1/limit-up/period", { params: { days: d, board_type: board.param } })
-      .then(({ data }) => {
-        if (data.code === 200) setItems(data.data.items || []);
-      })
-      .finally(() => setLoading(false));
-  }, [board.param, days, customDays]);
+
+    if (useEM) {
+      // ── 今日 + 交易时段：前端直连东方财富 ──
+      const today = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+      fetchLimitUpEM(today).then(async (emItems) => {
+        if (emItems.length === 0) {
+          // 东方财富无数据（可能盘前），回退后端
+          const { data } = await axios.get("/api/v1/limit-up/period", {
+            params: { days: 1, board_type: board.title },
+          });
+          if (data.code === 200) {
+            setItems(data.data.items || []);
+            setSource("db");
+          } else {
+            setItems([]);
+          }
+          setLoading(false);
+          return;
+        }
+
+        // 过滤当前板块
+        const filtered = emItems.filter((item: LimitUpItem) =>
+          board.codePrefixes.some((p) => item.code.startsWith(p))
+        );
+
+        // 从后端获取涨停统计
+        const codes = filtered.map((i) => i.code);
+        const stats = await fetchLimitUpStats(codes);
+
+        setItems(
+          filtered.map((item: LimitUpItem) => {
+            const dbStats = stats[item.code] || {};
+            return {
+              code: item.code,
+              name: item.name,
+              price: item.price,
+              change_pct: item.changePct,
+              count: 1, // 今日涨停 = 1次
+              trade_date: new Date().toISOString().slice(0, 10),
+              turnover: item.turnover,
+              amount: item.amount,
+              industry: item.industry,
+              stats_5d: dbStats.stats_5d ?? (item.changePct >= 9.8 ? 1 : 0),
+              stats_30d: dbStats.stats_30d ?? (item.changePct >= 9.8 ? 1 : 0),
+              stats_year: dbStats.stats_year ?? (item.changePct >= 9.8 ? 1 : 0),
+            };
+          })
+        );
+        setSource("live");
+        setLoading(false);
+      }).catch(() => {
+        setLoading(false);
+        setItems([]);
+      });
+    } else {
+      // ── 多日/盘后：后端DB ──
+      axios
+        .get("/api/v1/limit-up/period", { params: { days: d, board_type: board.title } })
+        .then(({ data }) => {
+          if (data.code === 200) setItems(data.data.items || []);
+        })
+        .finally(() => {
+          setLoading(false);
+          setSource("db");
+        });
+    }
+  }, [board.title, board.codePrefixes, days, customDays, useEM]);
 
   if (loading) return <PageContainer title={`涨停板 — ${board.title}`}><Spin size="large" style={{display:"block",margin:"100px auto"}}/></PageContainer>;
 
   return (
     <PageContainer title={`涨停板 — ${board.title}（${items.length}只）`}>
+      {/* 数据源提示 */}
+      <Alert
+        type={source === "live" ? "warning" : "info"}
+        message={source === "live"
+          ? "🔥 实时数据 — 直连东方财富 (用户IP)，涨停统计来自本地数据库"
+          : "💾 本地数据库 — 历史涨停记录"
+        }
+        style={{ marginBottom: 12 }}
+        showIcon
+        closable
+      />
+
       {/* Period selector */}
       <Space style={{ marginBottom: 16 }} wrap>
         {PERIODS.map((p) => (
@@ -68,7 +170,7 @@ export default function LimitUpPage() {
       </Space>
 
       {!items.length ? (
-        <Empty description={`近${customDays || days}天暂无涨停数据（可能该板块交易日数据未同步）`} />
+        <Empty description={`近${activeDays}天暂无涨停数据`} />
       ) : (
         <Row gutter={[12, 12]}>
           {items.map((stock) => (

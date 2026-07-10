@@ -4,7 +4,7 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"path":"/","redirect":"/stocks","parentId":"ant-design-pro-layout","id":"1"},"2":{"name":"股票列表","path":"/stocks","parentId":"ant-design-pro-layout","id":"2"},"3":{"name":"股票详情","path":"/stocks/:code","hideInMenu":true,"parentId":"ant-design-pro-layout","id":"3"},"4":{"name":"板块","path":"/boards","parentId":"ant-design-pro-layout","id":"4"},"5":{"name":"选股","path":"/screener","parentId":"ant-design-pro-layout","id":"5"},"6":{"name":"回测","path":"/backtest","parentId":"ant-design-pro-layout","id":"6"},"7":{"name":"趋势","path":"/slope","parentId":"ant-design-pro-layout","id":"7"},"8":{"name":"行情","path":"/market","parentId":"ant-design-pro-layout","id":"8"},"9":{"name":"龙虎榜","path":"/lhb","parentId":"ant-design-pro-layout","id":"9"},"10":{"name":"涨停板","path":"/limit-up","parentId":"ant-design-pro-layout","id":"10"},"11":{"path":"/limit-up","redirect":"/limit-up/main","parentId":"10","id":"11"},"12":{"name":"主板","path":"/limit-up/main","parentId":"10","id":"12"},"13":{"name":"创业板","path":"/limit-up/chinext","parentId":"10","id":"13"},"14":{"name":"科创板","path":"/limit-up/star","parentId":"10","id":"14"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true}} as const;
+  const routes = {"1":{"path":"/","redirect":"/stocks","parentId":"ant-design-pro-layout","id":"1"},"2":{"name":"股票列表","path":"/stocks","parentId":"ant-design-pro-layout","id":"2"},"3":{"name":"股票详情","path":"/stocks/:code","hideInMenu":true,"parentId":"ant-design-pro-layout","id":"3"},"4":{"name":"板块","path":"/boards","parentId":"ant-design-pro-layout","id":"4"},"5":{"name":"选股","path":"/screener","parentId":"ant-design-pro-layout","id":"5"},"6":{"name":"回测","path":"/backtest","parentId":"ant-design-pro-layout","id":"6"},"7":{"name":"趋势","path":"/slope","parentId":"ant-design-pro-layout","id":"7"},"8":{"name":"行情","path":"/market","parentId":"ant-design-pro-layout","id":"8"},"9":{"name":"龙虎榜","path":"/lhb","parentId":"ant-design-pro-layout","id":"9"},"10":{"name":"数据管理","path":"/data-management","parentId":"ant-design-pro-layout","id":"10"},"11":{"name":"涨停板","path":"/limit-up","parentId":"ant-design-pro-layout","id":"11"},"12":{"path":"/limit-up","redirect":"/limit-up/main","parentId":"11","id":"12"},"13":{"name":"主板","path":"/limit-up/main","parentId":"11","id":"13"},"14":{"name":"创业板","path":"/limit-up/chinext","parentId":"11","id":"14"},"15":{"name":"科创板","path":"/limit-up/star","parentId":"11","id":"15"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true}} as const;
   return {
     routes,
     routeComponents: {
@@ -17,11 +17,12 @@ export async function getRoutes() {
 '7': React.lazy(() => import(/* webpackChunkName: "p__Slope__index" */'@/pages/Slope/index.tsx')),
 '8': React.lazy(() => import(/* webpackChunkName: "p__Market__index" */'@/pages/Market/index.tsx')),
 '9': React.lazy(() => import(/* webpackChunkName: "p__LHB__index" */'@/pages/LHB/index.tsx')),
-'10': React.lazy(() => import('./EmptyRoute')),
+'10': React.lazy(() => import(/* webpackChunkName: "p__DataManagement__index" */'@/pages/DataManagement/index.tsx')),
 '11': React.lazy(() => import('./EmptyRoute')),
-'12': React.lazy(() => import(/* webpackChunkName: "p__LimitUp__index" */'@/pages/LimitUp/index.tsx')),
+'12': React.lazy(() => import('./EmptyRoute')),
 '13': React.lazy(() => import(/* webpackChunkName: "p__LimitUp__index" */'@/pages/LimitUp/index.tsx')),
 '14': React.lazy(() => import(/* webpackChunkName: "p__LimitUp__index" */'@/pages/LimitUp/index.tsx')),
+'15': React.lazy(() => import(/* webpackChunkName: "p__LimitUp__index" */'@/pages/LimitUp/index.tsx')),
 'ant-design-pro-layout': React.lazy(() => import(/* webpackChunkName: "umi__plugin-layout__Layout" */'D:/project/stock_py/frontend/src/.umi/plugin-layout/Layout.tsx')),
 },
   };

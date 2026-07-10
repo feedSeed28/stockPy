@@ -1,26 +1,86 @@
-/** Financial indicators table and trend chart. */
+/** Financial indicators table and trend chart — 直连模式优先东方财富 */
 
 import { useEffect, useState } from "react";
-import { Space, Table, Spin, message } from "antd";
+import { Space, Table, Tag, Spin, message } from "antd";
 import ReactECharts from "echarts-for-react";
 import {
   fetchFinancialIndicators,
   fetchPerformanceReports,
 } from "@/services/stock";
 import type { FinancialIndicator, PerformanceReport } from "@/services/typings";
+import { useDirectSource } from "@/utils/dataSource";
+import {
+  fetchFinancialsEM,
+  fetchPerformanceEM,
+  type EMFinancialIndicator,
+  type EMPerformanceReport,
+} from "@/services/eastmoney";
 
 interface Props {
   code: string;
+}
+
+/** EM 财务指标 → 页面统一格式 */
+function mapEMFinancial(d: EMFinancialIndicator, idx: number): FinancialIndicator {
+  return {
+    report_date: d.reportDate,
+    eps_basic: d.epsBasic,
+    eps_diluted: d.epsDiluted,
+    bvps: d.bvps,
+    cfps: d.cfps,
+    roe: d.roe,
+    roa: d.roa,
+    gross_margin: d.grossMargin,
+    net_margin: d.netMargin,
+    revenue_growth: d.revenueGrowth,
+    profit_growth: d.profitGrowth,
+  } as FinancialIndicator;
+}
+
+/** EM 业绩报表 → 页面统一格式 */
+function mapEMPerf(d: EMPerformanceReport, idx: number): PerformanceReport {
+  return {
+    report_date: d.reportDate,
+    eps: d.eps,
+    revenue: d.revenue,
+    revenue_yoy: d.revenueYoy,
+    net_profit: d.netProfit,
+    net_profit_yoy: d.netProfitYoy,
+    bvps: d.bvps,
+    roe: d.roe,
+    cfps: d.cfps,
+    gross_margin: d.grossMargin,
+  } as PerformanceReport;
 }
 
 export default function FinancialsView({ code }: Props) {
   const [indicators, setIndicators] = useState<FinancialIndicator[]>([]);
   const [reports, setReports] = useState<PerformanceReport[]>([]);
   const [loading, setLoading] = useState(true);
+  const [source, setSource] = useState<"db" | "live">("db");
+  const direct = useDirectSource();
 
   useEffect(() => {
     if (!code) return;
     setLoading(true);
+
+    if (direct) {
+      // ── 直连模式：东方财富财务API ──
+      Promise.all([
+        fetchFinancialsEM(code),
+        fetchPerformanceEM(code),
+      ])
+        .then(([emFin, emPerf]) => {
+          setIndicators(emFin.map(mapEMFinancial));
+          setReports(emPerf.map(mapEMPerf));
+          setSource("live");
+        })
+        .catch(() => message.error("财务数据加载失败"))
+        .finally(() => setLoading(false));
+      return;
+    }
+
+    // ── 后端模式 ──
     Promise.all([
       fetchFinancialIndicators(code, 1, 20),
       fetchPerformanceReports(code, 1, 20),
@@ -28,10 +88,11 @@ export default function FinancialsView({ code }: Props) {
       .then(([indRes, perfRes]) => {
         setIndicators(indRes.items);
         setReports(perfRes.items);
+        setSource("db");
       })
-      .catch(() => message.error("Failed to load financial data"))
+      .catch(() => message.error("财务数据加载失败"))
       .finally(() => setLoading(false));
-  }, [code]);
+  }, [code, direct]);
 
   // Revenue & Profit trend
   const trendOption = {
@@ -81,8 +142,11 @@ export default function FinancialsView({ code }: Props) {
   return (
     <Spin spinning={loading}>
       <Space direction="vertical" size="large" style={{ width: "100%" }}>
-        <div style={{ fontWeight: "bold", fontSize: 16 }}>
-          营收与净利润趋势（亿元）
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <div style={{ fontWeight: "bold", fontSize: 16 }}>
+            营收与净利润趋势（亿元）
+          </div>
+          {source === "live" && <Tag color="orange">🔥 直连</Tag>}
         </div>
         <ReactECharts
           option={trendOption}

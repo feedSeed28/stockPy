@@ -59,6 +59,11 @@ export default defineConfig({
       component: "./LHB",
     },
     {
+      name: "数据管理",
+      path: "/data-management",
+      component: "./DataManagement",
+    },
+    {
       name: "涨停板",
       path: "/limit-up",
       routes: [

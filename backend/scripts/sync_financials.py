@@ -48,29 +48,27 @@ def _to_float(v):
     except:
         return None
 
-# Sina indicator column mapping
+# 东方财富版财务指标列映射 (Sina: stock_financial_analysis_indicator 已挂)
 COLUMN_MAP = {
-    "日期": "report_date",
-    "基本每股收益": "eps_basic",
-    "稀释每股收益": "eps_diluted",
-    "每股净资产": "bvps",
-    "每股经营现金流": "cfps",
-    "净资产收益率": "roe",
-    "总资产报酬率": "roa",
-    "销售毛利率": "gross_margin",
-    "销售净利率": "net_margin",
-    "主营收入增长率": "revenue_growth",
-    "净利润增长率": "profit_growth",
-    "总资产增长率": "asset_growth",
-    "应收账款周转率": "receivables_turnover",
-    "存货周转率": "inventory_turnover",
-    "总资产周转率": "asset_turnover",
-    "流动比率": "current_ratio",
-    "速动比率": "quick_ratio",
-    "资产负债率": "debt_ratio",
-    "经营活动现金流净额": "operating_cf",
-    "投资活动现金流净额": "investing_cf",
-    "筹资活动现金流净额": "financing_cf",
+    "REPORT_DATE": "report_date",
+    "EPSJB": "eps_basic",
+    "EPSXS": "eps_diluted",
+    "BPS": "bvps",
+    "MGJYXJJE": "cfps",
+    "ROEJQ": "roe",
+    "ZZCJLL": "roa",
+    "XSMLL": "gross_margin",
+    "XSJLL": "net_margin",
+    "TOTALOPERATEREVETZ": "revenue_growth",
+    "PARENTNETPROFITTZ": "profit_growth",
+    "TOAZZL": "asset_growth",
+    "YSZKZZTS": "receivables_turnover",
+    "CHZZTS": "inventory_turnover",
+    "ZZCZZTS": "asset_turnover",
+    "LD": "current_ratio",
+    "SD": "quick_ratio",
+    "ZCFZL": "debt_ratio",
+    "XJLLB": "operating_cf",
 }
 
 async def main():
@@ -91,10 +89,11 @@ async def main():
         print("=" * 50)
 
         async def fetch_one(code: str):
-            """Fetch financial indicators for one stock."""
+            """Fetch financial indicators for one stock (东方财富版)."""
+            em_symbol = f"{code}.{'SH' if code.startswith('6') else 'SZ'}"
             return await asyncio.to_thread(
-                ak.stock_financial_analysis_indicator,
-                symbol=code, start_year="2018"
+                ak.stock_financial_analysis_indicator_em,
+                symbol=em_symbol
             )
 
         async def save_one(code: str, df: pd.DataFrame):
@@ -104,7 +103,7 @@ async def main():
             rows = []
             for _, r in df.iterrows():
                 row_data = {"id": _uid(), "stock_code": code}
-                report_date = _to_date(r.get("日期"))
+                report_date = _to_date(r.get("REPORT_DATE"))
                 if report_date is None:
                     continue
                 row_data["report_date"] = report_date

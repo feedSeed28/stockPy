@@ -453,38 +453,41 @@ class StockSyncService:
             async with sem:
                 try:
                     await throttle()
+                    # 东方财富版财务指标 (Sina版已挂: stock_financial_analysis_indicator)
+                    em_symbol = f"{code}.{'SH' if code.startswith('6') else 'SZ'}"
                     df: pd.DataFrame = await asyncio.to_thread(
-                        ak.stock_financial_analysis_indicator, symbol=code, start_year="1990"
+                        ak.stock_financial_analysis_indicator_em, symbol=em_symbol
                     )
                     if df.empty:
                         return 0
 
                     rows = []
                     for _, r in df.iterrows():
+                        # EM column mapping: English short codes → DB fields
                         row_dict = {
                             "id": _uid(),
                             "stock_code": code,
-                            "report_date": _to_date(r.get("日期")),
-                            "eps_basic": _to_float(r.get("基本每股收益")),
-                            "eps_diluted": _to_float(r.get("稀释每股收益")),
-                            "bvps": _to_float(r.get("每股净资产")),
-                            "cfps": _to_float(r.get("每股经营现金流")),
-                            "roe": _to_float(r.get("净资产收益率")),
-                            "roa": _to_float(r.get("总资产报酬率")),
-                            "gross_margin": _to_float(r.get("销售毛利率")),
-                            "net_margin": _to_float(r.get("销售净利率")),
-                            "revenue_growth": _to_float(r.get("主营收入增长率")),
-                            "profit_growth": _to_float(r.get("净利润增长率")),
-                            "asset_growth": _to_float(r.get("总资产增长率")),
-                            "receivables_turnover": _to_float(r.get("应收账款周转率")),
-                            "inventory_turnover": _to_float(r.get("存货周转率")),
-                            "asset_turnover": _to_float(r.get("总资产周转率")),
-                            "current_ratio": _to_float(r.get("流动比率")),
-                            "quick_ratio": _to_float(r.get("速动比率")),
-                            "debt_ratio": _to_float(r.get("资产负债率")),
-                            "operating_cf": _to_float(r.get("经营活动现金流净额")),
-                            "investing_cf": _to_float(r.get("投资活动现金流净额")),
-                            "financing_cf": _to_float(r.get("筹资活动现金流净额")),
+                            "report_date": _to_date(r.get("REPORT_DATE")),
+                            "eps_basic": _to_float(r.get("EPSJB")),
+                            "eps_diluted": _to_float(r.get("EPSXS")),
+                            "bvps": _to_float(r.get("BPS")),
+                            "cfps": _to_float(r.get("MGJYXJJE")),
+                            "roe": _to_float(r.get("ROEJQ")),
+                            "roa": _to_float(r.get("ZZCJLL")),
+                            "gross_margin": _to_float(r.get("XSMLL")),
+                            "net_margin": _to_float(r.get("XSJLL")),
+                            "revenue_growth": _to_float(r.get("TOTALOPERATEREVETZ")),
+                            "profit_growth": _to_float(r.get("PARENTNETPROFITTZ")),
+                            "asset_growth": _to_float(r.get("TOAZZL")),
+                            "receivables_turnover": _to_float(r.get("YSZKZZTS")),
+                            "inventory_turnover": _to_float(r.get("CHZZTS")),
+                            "asset_turnover": _to_float(r.get("ZZCZZTS")),
+                            "current_ratio": _to_float(r.get("LD")),
+                            "quick_ratio": _to_float(r.get("SD")),
+                            "debt_ratio": _to_float(r.get("ZCFZL")),
+                            "operating_cf": _to_float(r.get("XJLLB")),
+                            "investing_cf": None,  # EM版无此字段
+                            "financing_cf": None,   # EM版无此字段
                             "raw_data": r.to_json() if hasattr(r, "to_json") else str(r.to_dict()),
                         }
                         rows.append(row_dict)
@@ -534,15 +537,11 @@ class StockSyncService:
                 "rating_neutral": _to_int(r.get("机构投资评级(近六个月)-中性")),
                 "rating_underweight": _to_int(r.get("机构投资评级(近六个月)-减持")),
                 "rating_sell": _to_int(r.get("机构投资评级(近六个月)-卖出")),
-                "forecast_eps_year1": _to_float(r.get(r.columns[12] if len(r.columns) > 12 else None)),
-                "forecast_eps_year2": _to_float(r.get(r.columns[16] if len(r.columns) > 16 else None)),
-                "forecast_eps_year3": _to_float(r.get(r.columns[20] if len(r.columns) > 20 else None)),
-                "forecast_eps_year4": _to_float(r.get(r.columns[24] if len(r.columns) > 24 else None)),
-                "forecast_np_year1": _to_float(r.get(r.columns[13] if len(r.columns) > 13 else None)),
-                "forecast_np_year2": _to_float(r.get(r.columns[17] if len(r.columns) > 17 else None)),
-                "forecast_np_year3": _to_float(r.get(r.columns[21] if len(r.columns) > 21 else None)),
-                "forecast_np_year4": _to_float(r.get(r.columns[25] if len(r.columns) > 25 else None)),
-                "target_avg_price": _to_float(r.get(r.columns[28] if len(r.columns) > 28 else None)),
+                # 新版AKShare返回中文列名的EPS预测（13列），旧版有更多列
+                "forecast_eps_year1": _to_float(r.get("2025预测每股收益")),
+                "forecast_eps_year2": _to_float(r.get("2026预测每股收益")),
+                "forecast_eps_year3": _to_float(r.get("2027预测每股收益")),
+                "forecast_eps_year4": _to_float(r.get("2028预测每股收益")),
                 "updated_date": date.today(),
             })
 
