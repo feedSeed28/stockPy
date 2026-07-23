@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 # ── Constants ─────────────────────────────────────────────────────────────
 
 BATCH_SIZE = 200  # rows per INSERT batch
-SYNC_CONCURRENCY = 8  # Sina source tolerates higher concurrency
+SYNC_CONCURRENCY = 1  # Low concurrency to avoid IP block
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────

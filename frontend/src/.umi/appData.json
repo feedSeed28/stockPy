@@ -38,7 +38,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 20
       },
       "enableBy": "register"
     },
@@ -51,7 +51,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 510
+        "register": 547
       },
       "enableBy": "register"
     },
@@ -64,7 +64,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 519
+        "register": 333
       },
       "enableBy": "register"
     },
@@ -81,7 +81,7 @@
             0
           ]
         },
-        "register": 31
+        "register": 126
       },
       "enableBy": "register"
     },
@@ -95,10 +95,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            3
+            20
           ]
         },
-        "register": 89
+        "register": 93
       },
       "enableBy": "register"
     },
@@ -112,35 +112,10 @@
       "time": {
         "hooks": {
           "modifyRoutes": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 36
+        "register": 72
       },
       "enableBy": "register"
     },
@@ -154,41 +129,12 @@
       "time": {
         "hooks": {
           "onDevCompileDone": [
-            90,
-            7,
-            5,
+            71,
             9,
-            8,
-            7,
-            3,
-            9,
-            3,
-            4,
-            7,
-            6,
-            4,
-            5,
-            4,
-            5,
-            5,
-            5,
-            4,
-            5,
-            4,
-            3,
-            5,
-            5,
-            4,
-            5,
-            4,
-            6,
-            3,
-            5,
-            4,
-            4
+            7
           ]
         },
-        "register": 25
+        "register": 49
       },
       "enableBy": "register"
     },
@@ -202,38 +148,13 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            243
+            474
           ],
           "onGenerateFiles": [
-            29,
-            128,
-            7,
-            7,
-            7,
-            7,
-            6,
-            7,
-            10,
-            13,
-            6,
-            8,
-            6,
-            6,
-            7,
-            9,
-            7,
-            11,
-            9,
-            7,
-            184,
-            10,
-            41,
-            28,
-            7,
-            7
+            18
           ]
         },
-        "register": 284
+        "register": 342
       },
       "enableBy": "register"
     },
@@ -247,35 +168,10 @@
       "time": {
         "hooks": {
           "addEntryCode": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 25
+        "register": 15
       },
       "enableBy": "register"
     },
@@ -289,43 +185,14 @@
       "time": {
         "hooks": {
           "onCheckConfig": [
-            1
+            0
           ],
           "onCheck": [
-            1
+            0
           ],
           "onPrepareBuildSuccess": [
-            1,
             0,
-            2,
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1
+            0
           ],
           "onCheckCode": [
             0,
@@ -361,58 +228,10 @@
             0,
             0,
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 4
+        "register": 18
       },
       "enableBy": "register"
     },
@@ -429,7 +248,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 17
       },
       "enableBy": "register"
     },
@@ -442,7 +261,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 25
       },
       "enableBy": "config"
     },
@@ -459,7 +278,7 @@
             0
           ]
         },
-        "register": 346
+        "register": 468
       },
       "enableBy": "register"
     },
@@ -1311,7 +1130,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 15
+        "register": 22
       },
       "enableBy": "config"
     },
@@ -1325,10 +1144,10 @@
       "time": {
         "hooks": {
           "onStart": [
-            1
+            0
           ]
         },
-        "register": 35
+        "register": 20
       },
       "enableBy": "register"
     },
@@ -1342,10 +1161,10 @@
       "time": {
         "hooks": {
           "addBeforeMiddlewares": [
-            23
+            99
           ]
         },
-        "register": 23
+        "register": 20
       },
       "enableBy": "register"
     },
@@ -1358,7 +1177,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 357
+        "register": 431
       },
       "enableBy": "register"
     },
@@ -1371,7 +1190,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 681
+        "register": 1429
       },
       "enableBy": "config"
     },
@@ -1384,7 +1203,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 402
+        "register": 354
       },
       "enableBy": "config"
     },
@@ -1402,36 +1221,9 @@
           ],
           "addBeforeMiddlewares": [
             0
-          ],
-          "modifyHTMLFavicon": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
           ]
         },
-        "register": 2
+        "register": 16
       },
       "enableBy": "register"
     },
@@ -1445,63 +1237,13 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            39,
-            33,
-            1,
-            1,
-            0,
-            2,
-            0,
-            1,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            1,
-            0,
-            1,
-            25,
-            1,
-            1,
-            1,
-            1,
-            1
+            58
           ],
           "addRuntimePlugin": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 2
+        "register": 17
       },
       "enableBy": "register"
     },
@@ -1514,7 +1256,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 14
+        "register": 22
       },
       "enableBy": "config"
     },
@@ -1528,13 +1270,13 @@
       "time": {
         "hooks": {
           "onStart": [
-            3
+            2
           ],
           "addBeforeMiddlewares": [
             1
           ]
         },
-        "register": 221
+        "register": 366
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
@@ -1546,7 +1288,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 22
       },
       "enableBy": "config"
     },
@@ -1559,7 +1301,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 15
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/overrides/overrides": {
@@ -1572,84 +1314,9 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addEntryImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0
           ]
@@ -1667,7 +1334,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 23
       },
       "enableBy": "config"
     },
@@ -1681,92 +1348,17 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            24
+            43
           ],
           "onGenerateFiles": [
-            178,
-            53,
-            18,
-            19,
-            15,
-            22,
-            24,
-            13,
-            28,
-            27,
-            14,
-            14,
-            17,
-            17,
-            13,
-            16,
-            15,
-            25,
-            16,
-            13,
-            68,
-            16,
-            47,
-            35,
-            13,
-            13
+            323
           ],
           "addPolyfillImports": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0,
             0
           ]
         },
-        "register": 17
+        "register": 53
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
@@ -1780,60 +1372,10 @@
         "hooks": {
           "addPolyfillImports": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 12
+        "register": 21
       },
       "enableBy": "register"
     },
@@ -1847,35 +1389,10 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            210,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
+            316
           ]
         },
-        "register": 2
+        "register": 19
       },
       "enableBy": "register"
     },
@@ -1888,7 +1405,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 15
       },
       "enableBy": "config"
     },
@@ -1901,7 +1418,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 16
       },
       "enableBy": "config"
     },
@@ -1915,38 +1432,13 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            1,
-            1,
-            0,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            7,
-            0,
-            8,
-            8,
-            0,
             1
           ],
           "addBeforeMiddlewares": [
             0
           ]
         },
-        "register": 2
+        "register": 17
       },
       "enableBy": "register"
     },
@@ -1960,61 +1452,11 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            50,
-            104,
-            150,
-            113,
-            21,
-            7,
-            551,
-            7,
-            17,
-            6,
-            19,
-            7,
-            24,
-            6,
-            16,
-            6,
-            20,
-            6,
-            25,
-            8,
-            18,
-            7,
-            16,
-            7,
-            16,
-            9,
-            16,
-            6,
-            15,
-            5,
-            20,
-            20,
-            16,
-            6,
-            22,
-            7,
-            16,
-            5,
-            16,
-            5,
-            226,
-            59,
-            18,
-            7,
-            130,
-            57,
-            92,
-            35,
-            15,
-            6,
-            17,
-            7
+            115,
+            100
           ]
         },
-        "register": 10
+        "register": 83
       },
       "enableBy": "register"
     },
@@ -2027,7 +1469,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 32
       },
       "enableBy": "config"
     },
@@ -2040,7 +1482,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 15
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/ssr/ssr": {
@@ -2052,7 +1494,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 75
       },
       "enableBy": "config"
     },
@@ -2066,35 +1508,10 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            720,
-            36,
-            9,
-            13,
-            11,
-            14,
-            9,
-            10,
-            11,
-            11,
-            8,
-            9,
-            8,
-            9,
-            8,
-            10,
-            9,
-            14,
-            24,
-            11,
-            18,
-            10,
-            10,
-            10,
-            14,
-            9
+            1184
           ]
         },
-        "register": 58
+        "register": 101
       },
       "enableBy": "register"
     },
@@ -2111,7 +1528,7 @@
             0
           ]
         },
-        "register": 6
+        "register": 67
       },
       "enableBy": "register"
     },
@@ -2124,7 +1541,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 55
       },
       "enableBy": "config"
     },
@@ -2137,7 +1554,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 16
       },
       "enableBy": "config"
     },
@@ -2150,7 +1567,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 75
+        "register": 163
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/monorepo/redirect": {
@@ -2162,7 +1579,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 82
+        "register": 421
       },
       "enableBy": "config"
     },
@@ -2176,35 +1593,10 @@
       "time": {
         "hooks": {
           "onGenerateFiles": [
-            3,
-            2,
-            1,
-            1,
-            1,
-            1,
-            1,
-            2,
-            1,
-            2,
-            1,
-            1,
-            1,
-            1,
-            1,
-            2,
-            1,
-            2,
-            1,
-            1,
-            29,
-            1,
-            2,
-            15,
-            1,
-            1
+            21
           ]
         },
-        "register": 3
+        "register": 19
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
@@ -2216,7 +1608,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 17
       },
       "enableBy": "config"
     },
@@ -2229,7 +1621,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 18
       },
       "enableBy": "config"
     },
@@ -2242,7 +1634,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 14
       },
       "enableBy": "config"
     },
@@ -2255,7 +1647,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 34
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/swc/swc": {
@@ -2271,7 +1663,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 15
       },
       "enableBy": "register"
     },
@@ -2284,7 +1676,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 28
+        "register": 110
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/mako/mako": {
@@ -2296,7 +1688,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 19
       },
       "enableBy": "config"
     },
@@ -2309,7 +1701,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 15
       },
       "enableBy": "config"
     },
@@ -2322,7 +1714,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 9
+        "register": 31
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/utoopack/utoopack": {
@@ -2334,7 +1726,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 18
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian": {
@@ -2346,7 +1738,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 44
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad": {
@@ -2357,36 +1749,8 @@
       "key": "routePreloadOnLoad",
       "config": {},
       "time": {
-        "hooks": {
-          "addHTMLHeadScripts": [
-            75,
-            0,
-            1,
-            2,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        "register": 112
+        "hooks": {},
+        "register": 217
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/features/bundler/bundler": {
@@ -2399,10 +1763,10 @@
       "time": {
         "hooks": {
           "modifyUniBundler": [
-            5148
+            13612
           ]
         },
-        "register": 4
+        "register": 32
       },
       "enableBy": "register"
     },
@@ -2415,7 +1779,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 8
+        "register": 89
       },
       "enableBy": "register"
     },
@@ -2428,7 +1792,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 117
+        "register": 368
       },
       "enableBy": "register"
     },
@@ -2442,10 +1806,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            76
+            25
           ]
         },
-        "register": 512
+        "register": 1408
       }
     },
     "./node_modules/.pnpm/@umijs+preset-umi@4.6.67_@t_8cd5e5968182685701bea912bb861fed/node_modules/@umijs/preset-umi/dist/commands/help": {
@@ -2457,7 +1821,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 18
       },
       "enableBy": "register"
     },
@@ -2470,7 +1834,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 19
       },
       "enableBy": "register"
     },
@@ -2483,7 +1847,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 16
       },
       "enableBy": "register"
     },
@@ -2496,7 +1860,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 18
       },
       "enableBy": "register"
     },
@@ -2509,7 +1873,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 14
       },
       "enableBy": "register"
     },
@@ -2522,7 +1886,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 40
       },
       "enableBy": "register"
     },
@@ -2535,7 +1899,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 15
       },
       "enableBy": "register"
     },
@@ -2548,7 +1912,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 12
+        "register": 21
       },
       "enableBy": "register"
     },
@@ -2561,7 +1925,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 18
       },
       "enableBy": "register"
     },
@@ -2574,7 +1938,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 15
       },
       "enableBy": "register"
     },
@@ -2587,7 +1951,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 16
       },
       "enableBy": "register"
     },
@@ -2600,7 +1964,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 17
       },
       "enableBy": "register"
     },
@@ -2613,7 +1977,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 15
       },
       "enableBy": "register"
     },
@@ -2626,7 +1990,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 17
       },
       "enableBy": "register"
     },
@@ -2639,7 +2003,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 19
       },
       "enableBy": "register"
     },
@@ -2652,7 +2016,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 19
       },
       "enableBy": "register"
     },
@@ -2665,7 +2029,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 16
       },
       "enableBy": "register"
     },
@@ -2678,7 +2042,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 29
       },
       "enableBy": "register"
     },
@@ -2691,7 +2055,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 63
+        "register": 160
       },
       "enableBy": "register"
     },
@@ -2704,7 +2068,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 18
       },
       "enableBy": "register"
     },
@@ -2717,7 +2081,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 38
+        "register": 74
       },
       "enableBy": "register"
     },
@@ -2731,66 +2095,16 @@
       "time": {
         "hooks": {
           "addRuntimePlugin": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "onGenerateFiles": [
-            3,
-            1,
-            1,
-            2,
-            1,
-            1,
-            2,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            2,
-            1,
-            1,
-            1,
-            1,
-            1
+            2
           ],
           "addTmpGenerateWatcherPaths": [
             0
           ]
         },
-        "register": 107
+        "register": 75
       },
       "enableBy": "config"
     },
@@ -2805,7 +2119,7 @@
       },
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 19
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/antd": {
@@ -2818,7 +2132,7 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            22
+            29
           ],
           "modifyAppData": [
             0
@@ -2828,141 +2142,16 @@
           ],
           "addEntryImportsAhead": [
             0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addRuntimePlugin": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addRuntimePluginKey": [
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "onGenerateFiles": [
-            20,
-            41,
-            2,
-            1,
-            1,
-            2,
-            1,
-            2,
-            1,
-            2,
-            2,
-            1,
-            1,
-            2,
-            1,
-            1,
-            1,
-            3,
-            1,
-            1,
-            34,
-            2,
-            18,
-            8,
-            1,
-            1
+            38
           ],
           "addExtraBabelPlugins": [
             0
@@ -2971,7 +2160,7 @@
             0
           ]
         },
-        "register": 121
+        "register": 266
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/dva": {
@@ -2983,7 +2172,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 55
+        "register": 87
       },
       "enableBy": "config"
     },
@@ -2997,119 +2186,19 @@
       "time": {
         "hooks": {
           "addRuntimePlugin": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addRuntimePluginKey": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "onGenerateFiles": [
-            2,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            1,
-            1,
-            1,
-            1
+            4
           ],
           "addExtraModels": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 1
+        "register": 16
       },
       "enableBy": "config"
     },
@@ -3125,125 +2214,25 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            1
-          ],
-          "addLayouts": [
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
+          "addLayouts": [
+            1
+          ],
           "modifyAppData": [
-            5
+            25
           ],
           "addRuntimePlugin": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "addRuntimePluginKey": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
+            1
           ],
           "onGenerateFiles": [
-            71,
-            41,
-            4,
-            4,
-            3,
-            3,
-            3,
-            3,
-            5,
-            5,
-            2,
-            3,
-            2,
-            3,
-            3,
-            5,
-            3,
-            4,
-            3,
-            3,
-            108,
-            4,
-            35,
-            25,
-            3,
-            3
+            78
           ]
         },
-        "register": 26
+        "register": 177
       },
       "enableBy": "config"
     },
@@ -3256,7 +2245,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 72
+        "register": 147
       },
       "enableBy": "config"
     },
@@ -3269,7 +2258,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 53
       },
       "enableBy": "config"
     },
@@ -3283,66 +2272,16 @@
       "time": {
         "hooks": {
           "addRuntimePlugin": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "onGenerateFiles": [
-            98,
-            37,
-            15,
-            16,
-            30,
-            16,
-            16,
-            17,
-            20,
-            17,
-            19,
-            21,
-            17,
-            18,
-            17,
-            19,
-            15,
-            22,
-            17,
-            16,
-            75,
-            16,
-            43,
-            21,
-            13,
-            17
+            86
           ],
           "addTmpGenerateWatcherPaths": [
             0
           ]
         },
-        "register": 2
+        "register": 19
       },
       "enableBy": "config"
     },
@@ -3355,7 +2294,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 17
       },
       "enableBy": "config"
     },
@@ -3369,35 +2308,10 @@
       "time": {
         "hooks": {
           "addRuntimePluginKey": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ]
         },
-        "register": 12
+        "register": 17
       },
       "enableBy": "register"
     },
@@ -3410,7 +2324,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 33
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/qiankun/slave": {
@@ -3422,7 +2336,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 4
+        "register": 26
       }
     },
     "./node_modules/.pnpm/@umijs+plugins@4.6.67_@babe_0243d1d9039298e6473c63ae3dd943f7/node_modules/@umijs/plugins/dist/react-query": {
@@ -3434,7 +2348,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 17
       },
       "enableBy": "config"
     },
@@ -3448,63 +2362,13 @@
       "time": {
         "hooks": {
           "addRuntimePluginKey": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
             0
           ],
           "onGenerateFiles": [
-            28,
-            12,
-            2,
-            1,
-            2,
-            1,
-            2,
-            1,
-            1,
-            2,
-            2,
-            2,
-            1,
-            1,
-            1,
-            1,
-            1,
-            2,
-            1,
-            1,
-            5,
-            2,
-            3,
-            2,
-            2,
-            2
+            73
           ]
         },
-        "register": 1
+        "register": 17
       },
       "enableBy": "config"
     },
@@ -3517,7 +2381,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 26
+        "register": 48
       },
       "enableBy": "config"
     },
@@ -3530,7 +2394,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 18
       },
       "enableBy": "config"
     },
@@ -3543,7 +2407,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 18
+        "register": 61
       },
       "enableBy": "config"
     },
@@ -3560,7 +2424,7 @@
             0
           ]
         },
-        "register": 9
+        "register": 19
       },
       "enableBy": "register"
     },
@@ -3577,7 +2441,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 14
       },
       "enableBy": "register"
     },
@@ -3594,7 +2458,7 @@
             0
           ]
         },
-        "register": 6
+        "register": 17
       },
       "enableBy": "register"
     },
@@ -3607,7 +2471,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 7
+        "register": 32
       },
       "enableBy": "register"
     }
@@ -4804,7 +3668,7 @@
       "parentId": "ant-design-pro-layout",
       "id": "4",
       "absPath": "/boards",
-      "__content": "/** Industry / concept boards page — 直连模式优先东方财富 */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Tag, Drawer, List, Typography, Alert } from \"antd\";\nimport { useEffect, useMemo, useState } from \"react\";\nimport { useNavigate } from \"@umijs/max\";\nimport { fetchBoards, fetchBoardMembers } from \"@/services/stock\";\nimport { useDirectSource } from \"@/utils/dataSource\";\nimport {\n  fetchBoardListEM,\n  fetchBoardMembersEM,\n  type EMBoardInfo,\n  type EMStockBrief,\n} from \"@/services/eastmoney\";\nimport type { BoardInfo, BoardMember } from \"@/services/typings\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\n\nexport default function BoardsPage() {\n  const navigate = useNavigate();\n  const direct = useDirectSource();\n  const [drawerOpen, setDrawerOpen] = useState(false);\n  const [members, setMembers] = useState<BoardMember[]>([]);\n  const [boardName, setBoardName] = useState(\"\");\n  const [membersLoading, setMembersLoading] = useState(false);\n  const [allBoards, setAllBoards] = useState<BoardInfo[]>([]);\n  const [boardsLoaded, setBoardsLoaded] = useState(false);\n\n  // 加载全量板块（直连模式一次拉全，后端模式分页）\n  useEffect(() => {\n    setBoardsLoaded(false);\n    if (direct) {\n      Promise.all([\n        fetchBoardListEM(\"industry\"),\n        fetchBoardListEM(\"concept\"),\n      ]).then(([ind, con]) => {\n        const all: BoardInfo[] = [\n          ...ind.map((b) => ({ id: b.code, board_code: b.code, board_name: b.name, board_type: \"industry\" as const, source: \"em\" as const })),\n          ...con.map((b) => ({ id: b.code, board_code: b.code, board_name: b.name, board_type: \"concept\" as const, source: \"em\" as const })),\n        ];\n        setAllBoards(all);\n        setBoardsLoaded(true);\n      });\n      return;\n    }\n    // 后端模式\n    (async () => {\n      let all: BoardInfo[] = [];\n      let page = 1;\n      const pageSize = 200;\n      while (true) {\n        const res = await fetchBoards({ page, page_size: pageSize });\n        all = [...all, ...res.items];\n        if (all.length >= res.total) break;\n        page++;\n      }\n      setAllBoards(all);\n    })();\n  }, [direct]);\n\n  const codeEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_code]) map[b.board_code] = { text: b.board_code };\n    });\n    return map;\n  }, [allBoards]);\n\n  const nameEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_name]) map[b.board_name] = { text: b.board_name };\n    });\n    return map;\n  }, [allBoards]);\n\n  const columns: ProColumns<BoardInfo>[] = [\n    {\n      title: \"板块代码\",\n      dataIndex: \"board_code\",\n      key: \"board_code\",\n      width: 120,\n      valueType: \"select\",\n      valueEnum: codeEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"板块名称\",\n      dataIndex: \"board_name\",\n      key: \"board_name\",\n      width: 200,\n      valueType: \"select\",\n      valueEnum: nameEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"类型\",\n      dataIndex: \"board_type\",\n      key: \"board_type\",\n      width: 100,\n      valueType: \"select\",\n      valueEnum: {\n        industry: { text: \"行业\" },\n        concept: { text: \"概念\" },\n      },\n      render: (_, row) => (\n        <Tag color={row.board_type === \"industry\" ? \"blue\" : \"orange\"}>\n          {row.board_type === \"industry\" ? \"行业\" : \"概念\"}\n        </Tag>\n      ),\n    },\n    {\n      title: \"数据源\",\n      dataIndex: \"source\",\n      key: \"source\",\n      width: 80,\n      valueType: \"select\",\n      valueEnum: {\n        em: { text: \"东方财富\" },\n        ths: { text: \"同花顺\" },\n      },\n    },\n  ];\n\n  const loadMembers = async (boardCode: string, name: string) => {\n    setBoardName(name);\n    setDrawerOpen(true);\n    setMembersLoading(true);\n    try {\n      if (direct) {\n        // 直连模式：东方财富板块成分股\n        const emMembers = await fetchBoardMembersEM(boardCode);\n        setMembers(emMembers.map((m: EMStockBrief) => ({\n          stock_code: m.code,\n          stock_name: m.name,\n        })));\n      } else {\n        const res = await fetchBoardMembers(boardCode);\n        setMembers(res.items);\n      }\n    } finally {\n      setMembersLoading(false);\n    }\n  };\n\n  return (\n    <PageContainer>\n      {direct && (\n        <Alert\n          type=\"info\"\n          message=\"直连模式 — 板块数据来自东方财富 API（用户IP），点击板块查看成分股\"\n          style={{ marginBottom: 16 }}\n          showIcon\n          closable\n        />\n      )}\n\n      <ProTable<BoardInfo>\n        columns={columns}\n        rowKey=\"id\"\n        request={async (params: Record<string, any>) => {\n          const { current, pageSize, board_type, board_code, board_name } = params;\n\n          let items: BoardInfo[];\n          let total: number;\n\n          if (direct) {\n            // ── 直连模式：复用已加载的全量板块，不重复请求API ──\n            let list = allBoards;\n            if (board_type) {\n              list = list.filter((b) => b.board_type === board_type);\n            }\n            items = list;\n          } else {\n            // ── 后端模式 ──\n            const res = await fetchBoards({\n              page: current,\n              page_size: pageSize,\n              board_type,\n            });\n            items = res.items;\n          }\n\n          // 前端筛选\n          if (board_code) {\n            items = items.filter((b) => b.board_code === board_code);\n          }\n          if (board_name) {\n            items = items.filter((b) => b.board_name === board_name);\n          }\n          total = items.length;\n\n          // 前端分页\n          const start = ((current || 1) - 1) * (pageSize || 30);\n          const paged = items.slice(start, start + (pageSize || 30));\n\n          return { data: paged, total, success: true };\n        }}\n        search={{ labelWidth: \"auto\", defaultCollapsed: false }}\n        onRow={(record) => ({\n          onClick: () => loadMembers(record.board_code, record.board_name),\n          style: { cursor: \"pointer\" },\n        })}\n        pagination={{ defaultPageSize: 30 }}\n      />\n\n      <Drawer\n        title={`${boardName} — 成分股`}\n        open={drawerOpen}\n        onClose={() => setDrawerOpen(false)}\n        width={400}\n        loading={membersLoading}\n      >\n        <List\n          dataSource={members}\n          renderItem={(item) => (\n            <List.Item\n              style={{ cursor: \"pointer\" }}\n              onClick={() => {\n                setDrawerOpen(false);\n                navigate(`/stocks/${item.stock_code}`);\n              }}\n            >\n              <Typography.Text copyable={{ text: item.stock_code }}>\n                {item.stock_code}\n              </Typography.Text>\n              <Typography.Text style={{ marginLeft: 12 }}>\n                {item.stock_name || \"-\"}\n              </Typography.Text>\n            </List.Item>\n          )}\n        />\n      </Drawer>\n    </PageContainer>\n  );\n}\n",
+      "__content": "/** Industry / concept boards page — 直连模式优先东方财富 */\n\nimport { PageContainer, ProTable } from \"@ant-design/pro-components\";\nimport { Tag, Drawer, List, Typography, Alert } from \"antd\";\nimport { useEffect, useMemo, useState } from \"react\";\nimport { useNavigate } from \"@umijs/max\";\nimport { fetchBoards, fetchBoardMembers } from \"@/services/stock\";\nimport { useDirectSource } from \"@/utils/dataSource\";\nimport {\n  fetchBoardListEM,\n  fetchBoardMembersEM,\n  type EMBoardInfo,\n  type EMStockBrief,\n} from \"@/services/eastmoney\";\nimport type { BoardInfo, BoardMember } from \"@/services/typings\";\nimport type { ProColumns } from \"@ant-design/pro-components\";\n\nexport default function BoardsPage() {\n  const navigate = useNavigate();\n  const direct = useDirectSource();\n  const [drawerOpen, setDrawerOpen] = useState(false);\n  const [members, setMembers] = useState<BoardMember[]>([]);\n  const [boardName, setBoardName] = useState(\"\");\n  const [membersLoading, setMembersLoading] = useState(false);\n  const [allBoards, setAllBoards] = useState<BoardInfo[]>([]);\n  const [boardsLoaded, setBoardsLoaded] = useState(false);\n\n  // 加载全量板块（直连模式一次拉全，后端模式分页）\n  useEffect(() => {\n    setBoardsLoaded(false);\n    if (direct) {\n      Promise.all([\n        fetchBoardListEM(\"industry\"),\n        fetchBoardListEM(\"concept\"),\n      ]).then(([ind, con]) => {\n        const all: BoardInfo[] = [\n          ...ind.map((b) => ({ id: b.code, board_code: b.code, board_name: b.name, board_type: \"industry\" as const, source: \"em\" as const })),\n          ...con.map((b) => ({ id: b.code, board_code: b.code, board_name: b.name, board_type: \"concept\" as const, source: \"em\" as const })),\n        ];\n        setAllBoards(all);\n        setBoardsLoaded(true);\n      });\n      return;\n    }\n    // 后端模式\n    (async () => {\n      let all: BoardInfo[] = [];\n      let page = 1;\n      const pageSize = 200;\n      while (true) {\n        const res = await fetchBoards({ page, page_size: pageSize });\n        all = [...all, ...res.items];\n        if (all.length >= res.total) break;\n        page++;\n      }\n      setAllBoards(all);\n    })();\n  }, [direct]);\n\n  const codeEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_code]) map[b.board_code] = { text: b.board_code };\n    });\n    return map;\n  }, [allBoards]);\n\n  const nameEnum = useMemo(() => {\n    const map: Record<string, { text: string }> = {};\n    allBoards.forEach((b) => {\n      if (!map[b.board_name]) map[b.board_name] = { text: b.board_name };\n    });\n    return map;\n  }, [allBoards]);\n\n  const columns: ProColumns<BoardInfo>[] = [\n    {\n      title: \"板块代码\",\n      dataIndex: \"board_code\",\n      key: \"board_code\",\n      width: 120,\n      valueType: \"select\",\n      valueEnum: codeEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"板块名称\",\n      dataIndex: \"board_name\",\n      key: \"board_name\",\n      width: 200,\n      valueType: \"select\",\n      valueEnum: nameEnum,\n      fieldProps: { showSearch: true, allowClear: true },\n    },\n    {\n      title: \"类型\",\n      dataIndex: \"board_type\",\n      key: \"board_type\",\n      width: 100,\n      valueType: \"select\",\n      valueEnum: {\n        industry: { text: \"行业\" },\n        concept: { text: \"概念\" },\n      },\n      render: (_, row) => (\n        <Tag color={row.board_type === \"industry\" ? \"blue\" : \"orange\"}>\n          {row.board_type === \"industry\" ? \"行业\" : \"概念\"}\n        </Tag>\n      ),\n    },\n    {\n      title: \"数据源\",\n      dataIndex: \"source\",\n      key: \"source\",\n      width: 80,\n      valueType: \"select\",\n      valueEnum: {\n        em: { text: \"东方财富\" },\n        ths: { text: \"同花顺\" },\n      },\n    },\n  ];\n\n  const loadMembers = async (boardCode: string, name: string) => {\n    setBoardName(name);\n    setDrawerOpen(true);\n    setMembersLoading(true);\n    try {\n      if (direct) {\n        // 直连模式：东方财富板块成分股\n        const emMembers = await fetchBoardMembersEM(boardCode);\n        setMembers(emMembers.map((m: EMStockBrief) => ({\n          stock_code: m.code,\n          stock_name: m.name,\n        })));\n      } else {\n        const res = await fetchBoardMembers(boardCode);\n        setMembers(res.items);\n      }\n    } finally {\n      setMembersLoading(false);\n    }\n  };\n\n  return (\n    <PageContainer>\n      {direct && (\n        <Alert\n          type=\"info\"\n          message=\"直连模式 — 板块数据来自东方财富 API（用户IP），点击板块查看成分股\"\n          style={{ marginBottom: 16 }}\n          showIcon\n          closable\n        />\n      )}\n\n      <ProTable<BoardInfo>\n        columns={columns}\n        rowKey=\"id\"\n        loading={direct && !boardsLoaded}\n        request={async (params: Record<string, any>) => {\n          const { current, pageSize, board_type, board_code, board_name } = params;\n\n          let items: BoardInfo[];\n          let total: number;\n\n          if (direct) {\n            // ── 直连模式：复用已加载的全量板块，不重复请求API ──\n            let list = allBoards;\n            if (board_type) {\n              list = list.filter((b) => b.board_type === board_type);\n            }\n            items = list;\n          } else {\n            // ── 后端模式 ──\n            const res = await fetchBoards({\n              page: current,\n              page_size: pageSize,\n              board_type,\n            });\n            items = res.items;\n          }\n\n          // 前端筛选\n          if (board_code) {\n            items = items.filter((b) => b.board_code === board_code);\n          }\n          if (board_name) {\n            items = items.filter((b) => b.board_name === board_name);\n          }\n          total = items.length;\n\n          // 前端分页\n          const start = ((current || 1) - 1) * (pageSize || 30);\n          const paged = items.slice(start, start + (pageSize || 30));\n\n          return { data: paged, total, success: true };\n        }}\n        search={{ labelWidth: \"auto\", defaultCollapsed: false }}\n        onRow={(record) => ({\n          onClick: () => loadMembers(record.board_code, record.board_name),\n          style: { cursor: \"pointer\" },\n        })}\n        pagination={{ defaultPageSize: 30 }}\n      />\n\n      <Drawer\n        title={`${boardName} — 成分股`}\n        open={drawerOpen}\n        onClose={() => setDrawerOpen(false)}\n        width={400}\n        loading={membersLoading}\n      >\n        <List\n          dataSource={members}\n          renderItem={(item) => (\n            <List.Item\n              style={{ cursor: \"pointer\" }}\n              onClick={() => {\n                setDrawerOpen(false);\n                navigate(`/stocks/${item.stock_code}`);\n              }}\n            >\n              <Typography.Text copyable={{ text: item.stock_code }}>\n                {item.stock_code}\n              </Typography.Text>\n              <Typography.Text style={{ marginLeft: 12 }}>\n                {item.stock_name || \"-\"}\n              </Typography.Text>\n            </List.Item>\n          )}\n        />\n      </Drawer>\n    </PageContainer>\n  );\n}\n",
       "__isJSFile": true,
       "__absFile": "D:/project/stock_py/frontend/src/pages/Boards/index.tsx"
     },
@@ -4943,16 +3807,16 @@
     "done": true,
     "progresses": [
       {
-        "percent": 1,
-        "status": "",
-        "details": []
+        "percent": 0.1285467128027682,
+        "status": "building",
+        "details": [
+          "0/2 entries 262/265 dependencies 15/257 modules"
+        ]
       }
     ]
   },
   "mfsuBundleStatus": {
-    "done": true,
-    "percent": 1,
-    "status": ""
+    "done": true
   },
   "react": {
     "version": "18.3.1",

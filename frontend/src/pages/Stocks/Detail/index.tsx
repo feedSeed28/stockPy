@@ -2,7 +2,6 @@
 
 import { PageContainer } from "@ant-design/pro-components";
 import { Card, Col, Descriptions, Row, Statistic, Tag, Tabs, message } from "antd";
-import { useParams } from "@umijs/max";
 import { useEffect, useState } from "react";
 import { fetchStock, fetchTodaySummary } from "@/services/stock";
 import type { StockInfo } from "@/services/typings";
@@ -24,7 +23,8 @@ function deriveInfo(code: string) {
 }
 
 export default function StockDetailPage() {
-  const { code } = useParams<{ code: string }>();
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+  const code = pathParts[pathParts.length - 1];
   const [stock, setStock] = useState<StockInfo | null>(null);
   const [today, setToday] = useState<any>(null);
   const [loading, setLoading] = useState(true);

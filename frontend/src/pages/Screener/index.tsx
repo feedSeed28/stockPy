@@ -13,7 +13,6 @@ import {
   Form,
   Popconfirm,
 } from "antd";
-import { useNavigate } from "@umijs/max";
 import { useState } from "react";
 import { runScreener } from "@/services/stock";
 
@@ -81,7 +80,6 @@ interface ConditionRow {
 }
 
 export default function ScreenerPage() {
-  const navigate = useNavigate();
   const [conditions, setConditions] = useState<ConditionRow[]>([
     { key: "1", field: "roe", op: "gt", value: 15 },
   ]);
@@ -196,7 +194,7 @@ export default function ScreenerPage() {
           rowKey="code"
           pagination={{ pageSize: 30 }}
           onRow={(record) => ({
-            onClick: () => navigate(`/stocks/${record.code}`),
+            onClick: () => window.location.assign(`/stocks/${record.code}`),
             style: { cursor: "pointer" },
           })}
         />

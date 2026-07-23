@@ -2,7 +2,6 @@
 
 import { PageContainer, ProTable } from "@ant-design/pro-components";
 import { Alert, Card, Col, Row, Statistic } from "antd";
-import { useNavigate } from "@umijs/max";
 import { useState } from "react";
 import type { ProColumns } from "@ant-design/pro-components";
 import axios from "axios";
@@ -35,13 +34,13 @@ const columns: ProColumns[] = [
   { title: "最高", dataIndex: "high", key: "high", width: 80, search: false },
   { title: "最低", dataIndex: "low", key: "low", width: 80, search: false },
   { title: "成交量(手)", dataIndex: "volume", key: "volume", width: 100, search: false,
-    render: (v: number) => (v ? (v / 100).toFixed(0) : "-") },
+    render: (_: any, r: any) => (r.volume ? (r.volume / 100).toFixed(0) : "-") },
   { title: "成交额(亿)", dataIndex: "amount", key: "amount", width: 100, search: false,
-    render: (v: number) => (v ? (v / 1e8).toFixed(2) : "-") },
+    render: (_: any, r: any) => (r.amount ? (r.amount / 1e8).toFixed(2) : "-") },
   { title: "换手率", dataIndex: "turnover_rate", key: "turnover_rate", width: 80, search: false,
-    render: (v: number) => (v ? v.toFixed(2) + "%" : "-") },
+    render: (_: any, r: any) => (r.turnover_rate ? r.turnover_rate.toFixed(2) + "%" : "-") },
   { title: "振幅", dataIndex: "amplitude", key: "amplitude", width: 80, search: false,
-    render: (v: number) => (v ? v.toFixed(2) + "%" : "-") },
+    render: (_: any, r: any) => (r.amplitude ? r.amplitude.toFixed(2) + "%" : "-") },
 ];
 
 /** 将东方财富数据格式转换为页面统一格式 */
@@ -64,7 +63,6 @@ function mapEMItem(item: MarketItem): Record<string, any> {
 }
 
 export default function MarketPage() {
-  const navigate = useNavigate();
   const [stats, setStats] = useState({ up: 0, down: 0, flat: 0, total: 0, date: "" });
 
   return (
@@ -133,7 +131,7 @@ export default function MarketPage() {
           return { data: [], total: 0, success: true };
         }}
         search={false}
-        onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
+        onRow={(r) => ({ onClick: () => window.location.assign(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
         pagination={{ defaultPageSize: 50, showSizeChanger: true }}
         scroll={{ y: 500 }}
         dateFormatter="string"

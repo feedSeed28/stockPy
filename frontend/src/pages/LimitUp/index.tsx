@@ -5,7 +5,6 @@
 
 import { PageContainer } from "@ant-design/pro-components";
 import { Card, Col, InputNumber, Row, Tag, Typography, Spin, Empty, Button, Space, Alert } from "antd";
-import { useLocation, useNavigate } from "@umijs/max";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -47,9 +46,7 @@ async function fetchLimitUpStats(codes: string[]): Promise<Record<string, any>> 
 }
 
 export default function LimitUpPage() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const board = BOARD_MAP[location.pathname] || BOARD_MAP["/limit-up/main"];
+  const board = BOARD_MAP[window.location.pathname] || BOARD_MAP["/limit-up/main"];
   const [items, setItems] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [days, setDays] = useState(1);
@@ -178,7 +175,7 @@ export default function LimitUpPage() {
               <Card
                 hoverable
                 size="small"
-                onClick={() => navigate(`/stocks/${stock.code}`)}
+                onClick={() => window.location.assign(`/stocks/${stock.code}`)}
                 style={{ borderRadius: 8, borderTop: "3px solid #cf1322" }}
               >
                 {/* Header */}

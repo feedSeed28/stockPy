@@ -41,6 +41,21 @@ cd frontend && pnpm install && pnpm dev
 | 💾 后端接口 | Browser → FastAPI → MySQL | ✅ Default | Data Management page |
 | 🔥 前端直连 | Browser → 东方财富 API (user IP) | Manual | Data Management page |
 
+## Product Direction
+- Frontend should remain useful when the backend is not running.
+  - Direct mode uses browser-side 东方财富 APIs for market, K-line, quotes, boards, and limit-up views where CORS allows it.
+  - Backend mode uses FastAPI + MySQL for cached historical data, strategy research, and endpoints that cannot be called from browser.
+- Backend is primarily a data sync/cache service plus quant research engine.
+  - Keep sync scripts conservative to avoid IP blocks.
+  - Keep indicators, screeners, and backtests usable from API and future CLI scripts.
+- Future improvement target: add a static data provider/export flow so frontend can read exported JSON without a running backend.
+
+## Correctness Rules
+- Recent K-line windows must query latest rows first (`ORDER BY trade_date DESC LIMIT N`) and then reverse to chronological order before indicator/slope calculations.
+- Backtests must not execute a signal on the same bar that generated it. Current rule: signal is generated on close and executed at the next bar open with slippage/commission.
+- Board member APIs should accept internal board UUIDs; backend query service also tolerates external `board_code` for compatibility.
+- Screener `between` conditions require both `value` and `value2`; normalize reversed bounds before comparison.
+
 **Key files:**
 - `frontend/src/utils/dataSource.ts` — mode state (localStorage)
 - `frontend/src/services/eastmoney.ts` — 东方财富 browser API wrapper (14 functions, all CORS ✅)
@@ -120,6 +135,7 @@ mysqldump -h localhost -u admin -pZggDLAXkkHXFwQVM --no-create-info --single-tra
 - **Frontend direct mode** avoids server IP blocking entirely (browser IP per user)
 - **LiveFetcher** auto-fetches single stocks from AKShare when DB is empty
 - `stock_financial_indicator` now uses EM source (`_em` function), Sina version is broken
+- `tsc --noEmit` should pass before frontend changes are considered complete.
 
 ## Docs
 - API reference: docs/api/api-reference.md

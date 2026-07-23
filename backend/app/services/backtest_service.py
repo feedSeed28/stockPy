@@ -172,35 +172,28 @@ class BacktestRunner:
         position = 0.0  # shares held
         trades: list[Trade] = []
         equity_curve: list[dict] = []
+        pending_signal = Signal.HOLD
 
         # Pre-compute indicators needed by the strategy
         indicators = self._compute_indicators(df, strategy)
 
         for idx in range(len(df)):
             bar_date = df.index[idx] if isinstance(df.index[idx], date) else df["trade_date"].iloc[idx]
-            price = float(df["close"].iloc[idx])
+            open_price = float(df["open"].iloc[idx])
+            close_price = float(df["close"].iloc[idx])
 
-            signal = strategy.on_bar(
-                idx=idx,
-                bar_date=bar_date,
-                df=df,
-                indicators=indicators,
-                position=position,
-                cash=cash,
-            )
-
-            if signal == Signal.BUY and cash > 0:
-                # Open position with all capital (simplified)
-                buy_price = price * (1 + self.slippage)
-                shares = int(cash * 0.95 / buy_price)  # use 95% of cash
+            if pending_signal == Signal.BUY and position == 0 and cash > 0:
+                # Execute yesterday's signal at today's open.
+                buy_price = open_price * (1 + self.slippage)
+                shares = int(cash * 0.95 / (buy_price * (1 + self.commission)))
                 if shares > 0:
                     cost = shares * buy_price * (1 + self.commission)
                     cash -= cost
                     position = shares
                     trades.append(Trade(buy_date=bar_date, buy_price=buy_price, shares=shares))
 
-            elif signal == Signal.SELL and position > 0:
-                sell_price = price * (1 - self.slippage)
+            elif pending_signal == Signal.SELL and position > 0:
+                sell_price = open_price * (1 - self.slippage)
                 revenue = position * sell_price * (1 - self.commission)
                 cash += revenue
                 # Close the last open trade
@@ -212,8 +205,16 @@ class BacktestRunner:
                     open_trade.pnl_pct = (sell_price / open_trade.buy_price - 1) * 100
                 position = 0.0
 
-            equity = cash + position * price
+            equity = cash + position * close_price
             equity_curve.append({"date": str(bar_date), "equity": round(equity, 2)})
+            pending_signal = strategy.on_bar(
+                idx=idx,
+                bar_date=bar_date,
+                df=df,
+                indicators=indicators,
+                position=position,
+                cash=cash,
+            )
 
         # Close any remaining position at last price
         if position > 0:
@@ -222,10 +223,13 @@ class BacktestRunner:
             cash += revenue
             open_trade = next((t for t in reversed(trades) if t.sell_date is None), None)
             if open_trade:
-                open_trade.sell_date = date.today()
+                open_trade.sell_date = df["trade_date"].iloc[-1] if "trade_date" in df.columns else df.index[-1]
                 open_trade.sell_price = last_price
                 open_trade.pnl = (last_price - open_trade.buy_price) * open_trade.shares
                 open_trade.pnl_pct = (last_price / open_trade.buy_price - 1) * 100
+            position = 0.0
+            if equity_curve:
+                equity_curve[-1]["equity"] = round(cash, 2)
 
         return self._compute_metrics(
             equity_curve=equity_curve,
@@ -263,12 +267,14 @@ class BacktestRunner:
         end_date: date,
     ) -> BacktestResult:
         equities = np.array([e["equity"] for e in equity_curve])
-        final_equity = equities[-1]
-        total_return = (final_equity / self.initial_capital - 1) * 100
+        final_equity = float(equities[-1])
+        total_return = float((final_equity / self.initial_capital - 1) * 100)
 
         # Annualized return
         days = max((end_date - start_date).days, 1)
-        annual_return = ((final_equity / self.initial_capital) ** (365.0 / days) - 1) * 100
+        annual_return = float(
+            ((final_equity / self.initial_capital) ** (365.0 / days) - 1) * 100
+        )
 
         # Max drawdown
         peak = np.maximum.accumulate(equities)
@@ -278,7 +284,10 @@ class BacktestRunner:
         # Sharpe ratio (assuming risk-free = 3%)
         daily_returns = np.diff(equities) / equities[:-1]
         if len(daily_returns) > 1 and daily_returns.std() > 0:
-            sharpe = (daily_returns.mean() * 252 - 0.03) / (daily_returns.std() * np.sqrt(252))
+            sharpe = float(
+                (daily_returns.mean() * 252 - 0.03)
+                / (daily_returns.std() * np.sqrt(252))
+            )
         else:
             sharpe = 0.0
 
@@ -310,8 +319,8 @@ class BacktestRunner:
                     "sell_date": str(t.sell_date) if t.sell_date else None,
                     "sell_price": t.sell_price,
                     "shares": t.shares,
-                    "pnl": round(t.pnl, 2) if t.pnl else None,
-                    "pnl_pct": round(t.pnl_pct, 2) if t.pnl_pct else None,
+                    "pnl": round(t.pnl, 2) if t.pnl is not None else None,
+                    "pnl_pct": round(t.pnl_pct, 2) if t.pnl_pct is not None else None,
                 }
                 for t in trades
             ],

@@ -2,13 +2,11 @@
 
 import { PageContainer } from "@ant-design/pro-components";
 import { DatePicker, Select, Space, Table, Tabs, message, Tag } from "antd";
-import { useNavigate } from "@umijs/max";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 
 export default function LHBPage() {
-  const navigate = useNavigate();
   const [date, setDate] = useState(dayjs());
   const [reason, setReason] = useState<string | undefined>();
   const [reasons, setReasons] = useState<string[]>([]);
@@ -124,7 +122,7 @@ export default function LHBPage() {
                   loading={loading}
                   pagination={false}
                   scroll={{ y: 500 }}
-                  onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
+                  onRow={(r) => ({ onClick: () => window.location.assign(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
                 />
               </Space>
             ),
@@ -140,7 +138,7 @@ export default function LHBPage() {
                 loading={loading}
                 pagination={{ pageSize: 30 }}
                 scroll={{ y: 500 }}
-                onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
+                onRow={(r) => ({ onClick: () => window.location.assign(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
               />
             ),
           },
@@ -155,7 +153,7 @@ export default function LHBPage() {
                 loading={loading}
                 pagination={{ pageSize: 30 }}
                 scroll={{ y: 500 }}
-                onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
+                onRow={(r) => ({ onClick: () => window.location.assign(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
               />
             ),
           },

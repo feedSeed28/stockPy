@@ -2,7 +2,6 @@
 
 import { PageContainer, ProTable } from "@ant-design/pro-components";
 import { Tag } from "antd";
-import { useNavigate } from "@umijs/max";
 import { fetchStocks } from "@/services/stock";
 import type { StockInfo } from "@/services/typings";
 import type { ProColumns } from "@ant-design/pro-components";
@@ -84,8 +83,6 @@ const columns: ProColumns<StockInfo>[] = [
 ];
 
 export default function StocksPage() {
-  const navigate = useNavigate();
-
   return (
     <PageContainer>
       <ProTable<StockInfo>
@@ -113,7 +110,7 @@ export default function StocksPage() {
           defaultCollapsed: false,
         }}
         onRow={(record) => ({
-          onClick: () => navigate(`/stocks/${record.code}`),
+          onClick: () => window.location.assign(`/stocks/${record.code}`),
           style: { cursor: "pointer" },
         })}
         pagination={{ defaultPageSize: 30, showSizeChanger: true }}

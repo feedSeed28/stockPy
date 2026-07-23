@@ -2,7 +2,6 @@
 
 import { PageContainer } from "@ant-design/pro-components";
 import { Button, Checkbox, Select, Space, Table, Typography, message } from "antd";
-import { useNavigate } from "@umijs/max";
 import { useState } from "react";
 import axios from "axios";
 
@@ -17,7 +16,6 @@ const TRENDS = [
 ];
 
 export default function SlopePage() {
-  const navigate = useNavigate();
   const [trend, setTrend] = useState("mild_up");
   const [items, setItems] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
@@ -51,12 +49,12 @@ export default function SlopePage() {
     { title: "行业", dataIndex: "industry", width: 100, ellipsis: true },
     { title: "收盘", dataIndex: "close", width: 80 },
     { title: "涨跌幅", dataIndex: "change_pct", width: 80,
-      render: (v: number) => <Text style={{ color: v >= 0 ? "#cf1322" : "#3f8600" }}>{v?.toFixed(2)}%</Text> },
+      render: (_: any, r: any) => <Text style={{ color: r.change_pct >= 0 ? "#cf1322" : "#3f8600" }}>{r.change_pct?.toFixed(2)}%</Text> },
     { title: `MA5`, dataIndex: "ma5", width: 80 },
     { title: `MA20`, dataIndex: "ma20", width: 80 },
     { title: "斜率", dataIndex: "slope", width: 100, render: formatSlope },
     { title: "成交额(亿)", dataIndex: "amount", width: 100,
-      render: (v: number) => (v ? (v / 1e8).toFixed(1) : "-") },
+      render: (_: any, r: any) => (r.amount ? (r.amount / 1e8).toFixed(1) : "-") },
     { title: "日期", dataIndex: "trade_date", width: 100 },
   ];
 
@@ -106,7 +104,7 @@ export default function SlopePage() {
         loading={loading}
         pagination={{ pageSize: 50, showSizeChanger: true }}
         scroll={{ y: 600 }}
-        onRow={(r) => ({ onClick: () => navigate(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
+        onRow={(r) => ({ onClick: () => window.location.assign(`/stocks/${r.code}`), style: { cursor: "pointer" } })}
       />
     </PageContainer>
   );

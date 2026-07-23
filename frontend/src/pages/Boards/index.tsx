@@ -3,7 +3,6 @@
 import { PageContainer, ProTable } from "@ant-design/pro-components";
 import { Tag, Drawer, List, Typography, Alert } from "antd";
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "@umijs/max";
 import { fetchBoards, fetchBoardMembers } from "@/services/stock";
 import { useDirectSource } from "@/utils/dataSource";
 import {
@@ -16,7 +15,6 @@ import type { BoardInfo, BoardMember } from "@/services/typings";
 import type { ProColumns } from "@ant-design/pro-components";
 
 export default function BoardsPage() {
-  const navigate = useNavigate();
   const direct = useDirectSource();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [members, setMembers] = useState<BoardMember[]>([]);
@@ -134,7 +132,8 @@ export default function BoardsPage() {
           stock_name: m.name,
         })));
       } else {
-        const res = await fetchBoardMembers(boardCode);
+        const board = allBoards.find((b) => b.board_code === boardCode);
+        const res = await fetchBoardMembers(board?.id || boardCode);
         setMembers(res.items);
       }
     } finally {
@@ -218,7 +217,7 @@ export default function BoardsPage() {
               style={{ cursor: "pointer" }}
               onClick={() => {
                 setDrawerOpen(false);
-                navigate(`/stocks/${item.stock_code}`);
+                window.location.assign(`/stocks/${item.stock_code}`);
               }}
             >
               <Typography.Text copyable={{ text: item.stock_code }}>

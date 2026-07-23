@@ -8,7 +8,7 @@ from typing import Any, Optional
 import pandas as pd
 from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel, Field
-from sqlalchemy import select
+from sqlalchemy import desc, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db
@@ -41,17 +41,17 @@ async def compute_indicators(
     db: AsyncSession = Depends(get_db),
 ):
     """Compute technical indicators for a stock's recent K-line data."""
-    # Fetch recent K-line
+    # Fetch recent K-line, then restore chronological order for indicators.
     result = await db.execute(
         select(StockDailyQuote)
         .where(
             StockDailyQuote.stock_code == code,
             StockDailyQuote.adjust_type == "qfq",
         )
-        .order_by(StockDailyQuote.trade_date.asc())
+        .order_by(desc(StockDailyQuote.trade_date))
         .limit(300)
     )
-    rows = result.scalars().all()
+    rows = list(reversed(result.scalars().all()))
     if not rows:
         return ApiResponse(code=404, message=f"No K-line data for {code}")
 

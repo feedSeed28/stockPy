@@ -264,20 +264,32 @@ async def get_board_members(
     page: int = 1,
     page_size: int = 100,
 ) -> tuple[list[dict[str, Any]], int]:
-    """Get board members joined with stock_info for names."""
+    """Get board members joined with stock_info for names.
+
+    Accept either the internal UUID id or the external board_code.
+    """
+    board_ref_result = await db.execute(
+        select(StockBoardInfo.id)
+        .where((StockBoardInfo.id == board_id) | (StockBoardInfo.board_code == board_id))
+        .limit(1)
+    )
+    resolved_board_id = board_ref_result.scalar_one_or_none()
+    if resolved_board_id is None:
+        return [], 0
+
     stmt = (
         select(StockBoardMember, StockInfo.name)
         .join(StockInfo, StockBoardMember.stock_code == StockInfo.code, isouter=True)
-        .where(StockBoardMember.board_id == board_id)
+        .where(StockBoardMember.board_id == resolved_board_id)
     )
     count_stmt = select(func.count(StockBoardMember.id)).where(
-        StockBoardMember.board_id == board_id
+        StockBoardMember.board_id == resolved_board_id
     )
 
     total = await db.scalar(count_stmt) or 0
     stmt = stmt.offset((page - 1) * page_size).limit(page_size)
     result = await db.execute(stmt)
     return [
-        {"stock_code": m.StockBoardMember.stock_code, "stock_name": name}
-        for m, name in result.all()
+        {"stock_code": member.stock_code, "stock_name": name}
+        for member, name in result.all()
     ], total

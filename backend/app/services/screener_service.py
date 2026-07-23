@@ -131,7 +131,7 @@ class StockScreener:
             field_val = getattr(ind, cond.field, None)
             if field_val is None:
                 continue
-            if self._compare(field_val, op, val):
+            if self._compare(field_val, op, val, cond.value2):
                 s[f"_{cond.field}"] = round(float(field_val), 2)
                 matched.append(s)
         return matched
@@ -166,7 +166,7 @@ class StockScreener:
                     rsi = compute_rsi(df, cond.params.get("period", 14))
                     last_rsi = float(rsi.iloc[-1])
                     op = cond.op
-                    if self._compare(last_rsi, op, cond.value):
+                    if self._compare(last_rsi, op, cond.value, cond.value2):
                         s["_rsi"] = round(last_rsi, 1)
                         matched.append(s)
 
@@ -201,7 +201,7 @@ class StockScreener:
         return pd.DataFrame(data)
 
     @staticmethod
-    def _compare(field_val: float, op: str, target: Any) -> bool:
+    def _compare(field_val: float, op: str, target: Any, target2: Any = None) -> bool:
         if op == "gt":
             return field_val > float(target)
         if op == "lt":
@@ -213,5 +213,11 @@ class StockScreener:
         if op == "eq":
             return field_val == float(target)
         if op == "between":
-            return float(target) <= field_val <= float(target)
+            if target is None or target2 is None:
+                return False
+            lower = float(target)
+            upper = float(target2)
+            if lower > upper:
+                lower, upper = upper, lower
+            return lower <= field_val <= upper
         return False

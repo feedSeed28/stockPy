@@ -70,17 +70,17 @@ async def scan_trend(
 
     results = []
     for stock in all_stocks:
-        # Get recent K-line (skip negative/zero prices from bad data)
+        # Get recent K-line, then restore chronological order for slope calculation.
         q = await db.execute(
             select(StockDailyQuote)
             .where(
                 StockDailyQuote.stock_code == stock["code"],
                 StockDailyQuote.adjust_type == "qfq",
             )
-            .order_by(StockDailyQuote.trade_date.asc())
+            .order_by(desc(StockDailyQuote.trade_date))
             .limit(period + 5)
         )
-        rows = q.scalars().all()
+        rows = list(reversed(q.scalars().all()))
         if len(rows) < period:
             continue
 
@@ -88,6 +88,12 @@ async def scan_trend(
             {"close": r.close, "trade_date": r.trade_date}
             for r in rows
         ])
+
+        if field.startswith("ma_"):
+            ma_period = int(field.split("_", 1)[1])
+            df[field] = df["close"].rolling(ma_period).mean()
+            if df[field].isna().all():
+                continue
 
         # Compute slope
         slope_series = compute_slope_pct(df, period=period, field=field)
