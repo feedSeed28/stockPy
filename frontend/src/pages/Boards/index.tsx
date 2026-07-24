@@ -3,19 +3,13 @@
 import { PageContainer, ProTable } from "@ant-design/pro-components";
 import { Tag, Drawer, List, Typography, Alert } from "antd";
 import { useEffect, useMemo, useState } from "react";
-import { fetchBoards, fetchBoardMembers } from "@/services/stock";
-import { useDirectSource } from "@/utils/dataSource";
-import {
-  fetchBoardListEM,
-  fetchBoardMembersEM,
-  type EMBoardInfo,
-  type EMStockBrief,
-} from "@/services/eastmoney";
+import { getStockDataProvider } from "@/services/dataProvider";
 import type { BoardInfo, BoardMember } from "@/services/typings";
 import type { ProColumns } from "@ant-design/pro-components";
 
 export default function BoardsPage() {
-  const direct = useDirectSource();
+  const provider = getStockDataProvider();
+  const direct = provider.mode === "direct";
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [members, setMembers] = useState<BoardMember[]>([]);
   const [boardName, setBoardName] = useState("");
@@ -26,32 +20,18 @@ export default function BoardsPage() {
   // 加载全量板块（直连模式一次拉全，后端模式分页）
   useEffect(() => {
     setBoardsLoaded(false);
-    if (direct) {
-      Promise.all([
-        fetchBoardListEM("industry"),
-        fetchBoardListEM("concept"),
-      ]).then(([ind, con]) => {
-        const all: BoardInfo[] = [
-          ...ind.map((b) => ({ id: b.code, board_code: b.code, board_name: b.name, board_type: "industry" as const, source: "em" as const })),
-          ...con.map((b) => ({ id: b.code, board_code: b.code, board_name: b.name, board_type: "concept" as const, source: "em" as const })),
-        ];
-        setAllBoards(all);
-        setBoardsLoaded(true);
-      });
-      return;
-    }
-    // 后端模式
     (async () => {
       let all: BoardInfo[] = [];
       let page = 1;
-      const pageSize = 200;
+      const pageSize = direct ? 1000 : 200;
       while (true) {
-        const res = await fetchBoards({ page, page_size: pageSize });
+        const res = await provider.getBoards({ page, page_size: pageSize });
         all = [...all, ...res.items];
         if (all.length >= res.total) break;
         page++;
       }
       setAllBoards(all);
+      setBoardsLoaded(true);
     })();
   }, [direct]);
 
@@ -119,23 +99,13 @@ export default function BoardsPage() {
     },
   ];
 
-  const loadMembers = async (boardCode: string, name: string) => {
-    setBoardName(name);
+  const loadMembers = async (board: BoardInfo) => {
+    setBoardName(board.board_name);
     setDrawerOpen(true);
     setMembersLoading(true);
     try {
-      if (direct) {
-        // 直连模式：东方财富板块成分股
-        const emMembers = await fetchBoardMembersEM(boardCode);
-        setMembers(emMembers.map((m: EMStockBrief) => ({
-          stock_code: m.code,
-          stock_name: m.name,
-        })));
-      } else {
-        const board = allBoards.find((b) => b.board_code === boardCode);
-        const res = await fetchBoardMembers(board?.id || boardCode);
-        setMembers(res.items);
-      }
+      const res = await provider.getBoardMembers(board);
+      setMembers(res.items);
     } finally {
       setMembersLoading(false);
     }
@@ -172,7 +142,7 @@ export default function BoardsPage() {
             items = list;
           } else {
             // ── 后端模式 ──
-            const res = await fetchBoards({
+            const res = await provider.getBoards({
               page: current,
               page_size: pageSize,
               board_type,
@@ -197,7 +167,7 @@ export default function BoardsPage() {
         }}
         search={{ labelWidth: "auto", defaultCollapsed: false }}
         onRow={(record) => ({
-          onClick: () => loadMembers(record.board_code, record.board_name),
+          onClick: () => loadMembers(record),
           style: { cursor: "pointer" },
         })}
         pagination={{ defaultPageSize: 30 }}

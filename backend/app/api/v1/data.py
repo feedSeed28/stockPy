@@ -1,10 +1,14 @@
-"""数据管理 API — 同步状态查询 & 手动触发同步."""
+"""数据管理 API — 同步状态查询、手动触发同步、静态数据导出."""
 
+import asyncio
 import logging
-from typing import Optional
+import sys
+from datetime import datetime
+from pathlib import Path
+from typing import Any
 
 from fastapi import APIRouter, Depends
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -45,9 +49,35 @@ _TRIGGER_MAP = {
     "stock_performance_report": sync_performance_reports,
 }
 
+_BACKEND_DIR = Path(__file__).resolve().parents[3]
+_EXPORT_SCRIPT = _BACKEND_DIR / "scripts" / "export_frontend_data.py"
+_export_status: dict[str, Any] = {
+    "status": "idle",
+    "started_at": None,
+    "finished_at": None,
+    "output_dir": None,
+    "command": None,
+    "returncode": None,
+    "stdout_tail": "",
+    "stderr_tail": "",
+    "error_message": None,
+}
+
 
 class TriggerRequest(BaseModel):
     table: str
+
+
+class ExportStaticRequest(BaseModel):
+    symbols: str | None = Field(
+        default=None,
+        description="逗号分隔股票代码；为空则只导出股票列表/行情/板块等轻量数据",
+    )
+    all_kline: bool = Field(default=False, description="是否导出所有活跃股票K线")
+    kline_limit: int = Field(default=500, ge=1, le=5000, description="每只股票每周期最多导出K线条数")
+    periods: str = Field(default="daily", description="K线周期：daily,weekly,monthly，可逗号分隔")
+    include_board_members: bool = Field(default=True, description="是否导出板块成分股文件")
+    out: str | None = Field(default=None, description="可选输出目录；默认 frontend/public/data")
 
 
 @router.get("/sync-status")
@@ -104,3 +134,90 @@ async def trigger_sync(req: TriggerRequest):
         return ApiResponse(message=f"{label} 同步已触发，将在后台执行")
     except Exception as e:
         return ApiResponse(code=500, message=f"触发失败: {str(e)[:100]}")
+
+
+@router.post("/export-static")
+async def export_static_data(req: ExportStaticRequest):
+    """触发前端静态 JSON 数据导出（后台执行，不阻塞 HTTP 响应）."""
+    if _export_status["status"] == "running":
+        return ApiResponse(code=409, message="已有导出任务正在执行", data=_export_status)
+
+    if req.all_kline and not req.symbols:
+        logger.warning("Full-market K-line static export requested from UI")
+
+    _export_status.update({
+        "status": "queued",
+        "started_at": None,
+        "finished_at": None,
+        "returncode": None,
+        "stdout_tail": "",
+        "stderr_tail": "",
+        "error_message": None,
+    })
+    asyncio.create_task(_run_static_export(req))
+    return ApiResponse(message="静态数据导出已触发，将在后台执行", data=_export_status)
+
+
+@router.get("/export-static/status")
+async def get_export_static_status():
+    """获取最近一次静态数据导出状态."""
+    return ApiResponse(data=_export_status)
+
+
+async def _run_static_export(req: ExportStaticRequest):
+    started_at = datetime.now()
+    cmd = [
+        sys.executable,
+        str(_EXPORT_SCRIPT),
+        "--kline-limit",
+        str(req.kline_limit),
+        "--periods",
+        req.periods,
+    ]
+    if req.symbols:
+        cmd.extend(["--symbols", req.symbols])
+    if req.all_kline:
+        cmd.append("--all-kline")
+    if not req.include_board_members:
+        cmd.append("--no-board-members")
+    if req.out:
+        cmd.extend(["--out", req.out])
+
+    _export_status.update({
+        "status": "running",
+        "started_at": started_at.isoformat(timespec="seconds"),
+        "finished_at": None,
+        "output_dir": req.out,
+        "command": " ".join(cmd),
+        "returncode": None,
+        "stdout_tail": "",
+        "stderr_tail": "",
+        "error_message": None,
+    })
+
+    try:
+        proc = await asyncio.create_subprocess_exec(
+            *cmd,
+            cwd=str(_BACKEND_DIR),
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+        )
+        stdout, stderr = await proc.communicate()
+        stdout_text = stdout.decode("utf-8", errors="replace")
+        stderr_text = stderr.decode("utf-8", errors="replace")
+        _export_status.update({
+            "status": "success" if proc.returncode == 0 else "error",
+            "finished_at": datetime.now().isoformat(timespec="seconds"),
+            "returncode": proc.returncode,
+            "stdout_tail": stdout_text[-4000:],
+            "stderr_tail": stderr_text[-4000:],
+            "error_message": None if proc.returncode == 0 else stderr_text[-500:],
+        })
+    except Exception as e:
+        logger.exception("Static export failed")
+        _export_status.update({
+            "status": "error",
+            "finished_at": datetime.now().isoformat(timespec="seconds"),
+            "returncode": None,
+            "error_message": str(e),
+        })

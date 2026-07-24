@@ -12,11 +12,12 @@ from sqlalchemy import desc, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db
+from app.models.stock_info import StockInfo
 from app.models.stock_quote import StockDailyQuote
 from app.schemas.common import ApiResponse
-from app.services.indicator_service import INDICATOR_REGISTRY
-from app.services.screener_service import StockScreener
-from app.services.backtest_service import (
+from app.quant.indicators import INDICATOR_REGISTRY
+from app.quant.screener import StockScreener
+from app.quant.backtest import (
     BacktestRunner,
     STRATEGY_REGISTRY,
     BacktestResult,
@@ -121,6 +122,16 @@ class BacktestRequest(BaseModel):
     start_date: Optional[date] = Field(default=None)
     end_date: Optional[date] = Field(default=None)
     initial_capital: float = Field(default=100000.0, ge=1000)
+    commission: float = Field(default=0.0003, ge=0, le=0.01, description="买卖佣金率")
+    stamp_tax: float = Field(default=0.0005, ge=0, le=0.01, description="卖出印花税率")
+    min_commission: float = Field(default=5.0, ge=0, description="单笔最低佣金")
+    slippage: float = Field(default=0.001, ge=0, le=0.05, description="成交滑点比例")
+    lot_size: int = Field(default=100, ge=1, description="买入整数手股数")
+    cash_usage: float = Field(default=0.95, gt=0, le=1, description="单次买入最大资金使用比例")
+    enforce_t1: bool = Field(default=True, description="是否启用A股T+1卖出限制")
+    enforce_price_limit: bool = Field(default=True, description="是否启用涨跌停不可成交规则")
+    skip_suspended: bool = Field(default=True, description="是否跳过停牌/无成交K线")
+    exclude_st: bool = Field(default=True, description="是否拒绝回测ST股票")
 
 
 @router.post("/backtest")
@@ -142,6 +153,11 @@ async def run_backtest(req: BacktestRequest, db: AsyncSession = Depends(get_db))
     if len(rows) < 60:
         return ApiResponse(code=400, message=f"Need at least 60 bars, got {len(rows)}")
 
+    stock_info = await db.get(StockInfo, req.stock_code)
+    is_st = bool(stock_info and stock_info.name and "ST" in stock_info.name.upper())
+    if is_st and req.exclude_st:
+        return ApiResponse(code=400, message=f"{req.stock_code} is ST; set exclude_st=false to backtest it")
+
     df = pd.DataFrame([
         {"trade_date": r.trade_date, "open": r.open, "close": r.close,
          "high": r.high, "low": r.low, "volume": r.volume}
@@ -155,7 +171,19 @@ async def run_backtest(req: BacktestRequest, db: AsyncSession = Depends(get_db))
     strat_cls = STRATEGY_REGISTRY[req.strategy]
     strategy = strat_cls(**req.params)
 
-    runner = BacktestRunner(initial_capital=req.initial_capital)
+    runner = BacktestRunner(
+        initial_capital=req.initial_capital,
+        commission=req.commission,
+        stamp_tax=req.stamp_tax,
+        min_commission=req.min_commission,
+        slippage=req.slippage,
+        lot_size=req.lot_size,
+        cash_usage=req.cash_usage,
+        enforce_t1=req.enforce_t1,
+        enforce_price_limit=req.enforce_price_limit,
+        skip_suspended=req.skip_suspended,
+        is_st=is_st,
+    )
     report = runner.run(
         df=df,
         strategy=strategy,

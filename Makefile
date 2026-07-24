@@ -10,7 +10,10 @@ PYTHON := python3
 .PHONY: install setup dev-backend dev-frontend \
         db-migrate db-revision db-downgrade db-reset \
         db-export db-import db-export-schema db-import-data \
-        sync-full sync-stocks sync-daily sync-status \
+        export-frontend-data \
+        backfill-industry \
+        sync-full sync-stocks sync-daily sync-financials sync-status \
+        run-backtest \
         test lint help
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -101,6 +104,14 @@ db-import-data:
 	$(MYSQL_CMD) < stock_data_only.sql
 	@echo "Done."
 
+# ── Frontend Static Data Export ───────────────────────────────────
+
+export-frontend-data:
+	cd backend && PYTHONUTF8=1 $(PYTHON) scripts/export_frontend_data.py
+
+backfill-industry:
+	cd backend && PYTHONUTF8=1 $(PYTHON) scripts/backfill_stock_industry.py
+
 # ── Data Sync ──────────────────────────────────────────────────────
 
 sync-full:
@@ -111,6 +122,9 @@ sync-stocks:
 
 sync-daily:
 	cd backend && PYTHONUTF8=1 $(PYTHON) scripts/sync_daily.py
+
+sync-financials:
+	cd backend && PYTHONUTF8=1 $(PYTHON) scripts/sync_financials.py
 
 sync-status:
 	cd backend && PYTHONUTF8=1 $(PYTHON) -c "\
@@ -124,6 +138,11 @@ async def main(): \
         for r in result.scalars().all(): \
             print(f'{r.table_name:30s} | {str(r.status):8s} | {str(r.last_data_date):12s} | {r.row_count:>10,} rows'); \
 asyncio.run(main())"
+
+# ── Quant Research ───────────────────────────────────────────────
+
+run-backtest:
+	cd backend && PYTHONUTF8=1 $(PYTHON) scripts/run_backtest.py $(ARGS)
 
 # ═══════════════════════════════════════════════════════════════════════════
 # Test & Lint
@@ -162,12 +181,18 @@ help:
 	@echo "  make db-export-data     Export data only (no CREATE TABLE)"
 	@echo "  make db-import          Import full DB from stock_data_backup.sql"
 	@echo "  make db-import-data     Import data only from stock_data_only.sql"
+	@echo "  make export-frontend-data Export static JSON for standalone frontend"
+	@echo "  make backfill-industry  Fill stock_info.industry from performance reports"
 	@echo ""
 	@echo "Data Sync:"
 	@echo "  make sync-full          Full historical sync (~46 min)"
 	@echo "  make sync-stocks        Stock list only"
 	@echo "  make sync-daily         Daily incremental"
+	@echo "  make sync-financials    Financial indicators with anti-blocking"
 	@echo "  make sync-status        Show sync progress"
+	@echo ""
+	@echo "Quant Research:"
+	@echo "  make run-backtest ARGS=\"--stock 000001 --strategy ma_cross\""
 	@echo ""
 	@echo "Windows users: add PYTHON=python"
 	@echo "  e.g. make dev-backend PYTHON=python"

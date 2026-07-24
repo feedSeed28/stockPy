@@ -78,6 +78,7 @@ export async function fetchRealtimeQuote(code: string): Promise<RealtimeQuote | 
 export interface MarketItem {
   code: string;
   name: string;
+  industry?: string;
   price: number;
   changePct: number;
   changeAmt: number;
@@ -93,39 +94,45 @@ export interface MarketItem {
   floatMv: number;
 }
 
+function mapMarketResponse(data: any): { items: MarketItem[]; total: number } | null {
+  if (!data?.data) return null;
+
+  const items: MarketItem[] = (data.data.diff ?? []).map((d: any) => ({
+    code: d.f12 ?? "",
+    name: d.f14 ?? "",
+    industry: d.f100 ?? "",
+    price: d.f2 ?? 0,
+    changePct: d.f3 ?? 0,
+    changeAmt: d.f4 ?? 0,
+    volume: d.f5 ?? 0,
+    amount: d.f6 ?? 0,
+    amplitude: d.f7 ?? 0,
+    turnover: d.f8 ?? 0,
+    high: d.f15 ?? 0,
+    low: d.f16 ?? 0,
+    open: d.f17 ?? 0,
+    prevClose: d.f18 ?? 0,
+    totalMv: d.f20 ?? 0,
+    floatMv: d.f21 ?? 0,
+  }));
+
+  return { items, total: data.data.total ?? 0 };
+}
+
 /** 获取全市场实时行情列表 */
 export async function fetchRealtimeMarket(
   page: number = 1, pageSize: number = 50
 ): Promise<{ items: MarketItem[]; total: number } | null> {
   // 沪深A股 (排除北交所)
   const fs = "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23";
-  const fields = "f2,f3,f4,f5,f6,f7,f8,f12,f14,f15,f16,f17,f18,f20,f21";
-  const url = `${EM_PUSH}/clist/get?pn=${page}&pz=${pageSize}&po=1&np=1&fltt=2&invt=2` +
+  const baseFields = "f2,f3,f4,f5,f6,f7,f8,f12,f14,f15,f16,f17,f18,f20,f21";
+  const buildUrl = (fields: string) =>
+    `${EM_PUSH}/clist/get?pn=${page}&pz=${pageSize}&po=1&np=1&fltt=2&invt=2` +
     `&fid=f3&fs=${encodeURIComponent(fs)}&fields=${fields}`;
 
   try {
-    const { data } = await axios.get(url, { timeout: 10000 });
-    if (!data?.data) return null;
-
-    const items: MarketItem[] = (data.data.diff ?? []).map((d: any) => ({
-      code: d.f12 ?? "",
-      name: d.f14 ?? "",
-      price: d.f2 ?? 0,
-      changePct: d.f3 ?? 0,
-      changeAmt: d.f4 ?? 0,
-      volume: d.f5 ?? 0,
-      amount: d.f6 ?? 0,
-      amplitude: d.f7 ?? 0,
-      turnover: d.f8 ?? 0,
-      high: d.f15 ?? 0,
-      low: d.f16 ?? 0,
-      open: d.f17 ?? 0,
-      prevClose: d.f18 ?? 0,
-      totalMv: d.f20 ?? 0,
-      floatMv: d.f21 ?? 0,
-    }));
-
-    return { items, total: data.data.total ?? 0 };
+    const { data } = await axios.get(buildUrl(`${baseFields},f100`), { timeout: 10000 });
+    return mapMarketResponse(data);
   } catch {
     return null;
   }

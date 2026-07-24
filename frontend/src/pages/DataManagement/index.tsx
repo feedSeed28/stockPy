@@ -4,8 +4,11 @@ import {
   Button,
   Card,
   Col,
+  Input,
+  InputNumber,
   message,
   Row,
+  Select,
   Space,
   Statistic,
   Switch,
@@ -13,10 +16,17 @@ import {
   Tag,
   Typography,
 } from "antd";
-import { ReloadOutlined, SyncOutlined, ApiOutlined, ThunderboltOutlined, DatabaseOutlined } from "@ant-design/icons";
+import { ReloadOutlined, SyncOutlined, ApiOutlined, ThunderboltOutlined, DatabaseOutlined, DownloadOutlined } from "@ant-design/icons";
 import { useEffect, useState, useCallback } from "react";
 
-import { fetchSyncStatus, triggerSync, type SyncStatusItem } from "@/services/dataManagement";
+import {
+  fetchStaticExportStatus,
+  fetchSyncStatus,
+  triggerStaticExport,
+  triggerSync,
+  type StaticExportStatus,
+  type SyncStatusItem,
+} from "@/services/dataManagement";
 import { getDataSourceMode, setDataSourceMode, type DataSourceMode } from "@/utils/dataSource";
 
 const { Text, Title } = Typography;
@@ -42,6 +52,14 @@ const STATUS_COLORS: Record<string, string> = {
   pending: "default",
 };
 
+const EXPORT_STATUS_COLORS: Record<string, string> = {
+  idle: "default",
+  queued: "processing",
+  running: "processing",
+  success: "green",
+  error: "red",
+};
+
 // ── 组件 ──────────────────────────────────────────────────────────────────
 
 export default function DataManagementPage() {
@@ -49,6 +67,13 @@ export default function DataManagementPage() {
   const [loading, setLoading] = useState(false);
   const [syncingTable, setSyncingTable] = useState<string | null>(null);
   const [sourceMode, setSourceMode] = useState<DataSourceMode>(getDataSourceMode);
+  const [exportSymbols, setExportSymbols] = useState("");
+  const [exportAllKline, setExportAllKline] = useState(false);
+  const [exportKlineLimit, setExportKlineLimit] = useState(500);
+  const [exportPeriods, setExportPeriods] = useState<string[]>(["daily"]);
+  const [includeBoardMembers, setIncludeBoardMembers] = useState(true);
+  const [exporting, setExporting] = useState(false);
+  const [exportStatus, setExportStatus] = useState<StaticExportStatus | null>(null);
 
   const loadStatus = useCallback(async () => {
     setLoading(true);
@@ -57,9 +82,21 @@ export default function DataManagementPage() {
     setLoading(false);
   }, []);
 
+  const loadExportStatus = useCallback(async () => {
+    const status = await fetchStaticExportStatus();
+    if (status) setExportStatus(status);
+  }, []);
+
   useEffect(() => {
     loadStatus();
-  }, [loadStatus]);
+    loadExportStatus();
+  }, [loadStatus, loadExportStatus]);
+
+  useEffect(() => {
+    if (!exportStatus || !["queued", "running"].includes(exportStatus.status)) return;
+    const timer = window.setInterval(loadExportStatus, 3000);
+    return () => window.clearInterval(timer);
+  }, [exportStatus, loadExportStatus]);
 
   const handleTriggerSync = async (table: string) => {
     setSyncingTable(table);
@@ -72,6 +109,25 @@ export default function DataManagementPage() {
     setSyncingTable(null);
     // 等几秒刷新状态
     setTimeout(loadStatus, 3000);
+  };
+
+  const handleStaticExport = async () => {
+    setExporting(true);
+    const result = await triggerStaticExport({
+      symbols: exportSymbols.trim() || undefined,
+      all_kline: exportAllKline,
+      kline_limit: exportKlineLimit,
+      periods: exportPeriods.join(","),
+      include_board_members: includeBoardMembers,
+    });
+    if (result.ok) {
+      message.success(result.message || "静态数据导出已触发");
+      if (result.status) setExportStatus(result.status);
+      setTimeout(loadExportStatus, 1500);
+    } else {
+      message.error(result.message || "触发失败");
+    }
+    setExporting(false);
   };
 
   const columns = [
@@ -215,6 +271,96 @@ export default function DataManagementPage() {
           </Card>
         </Col>
       </Row>
+
+      {/* 静态数据导出 */}
+      <Card
+        title="前端静态数据导出"
+        style={{ marginBottom: 16 }}
+        extra={
+          <Button size="small" icon={<ReloadOutlined />} onClick={loadExportStatus}>
+            刷新状态
+          </Button>
+        }
+      >
+        <Row gutter={[16, 12]} align="middle">
+          <Col xs={24} md={8}>
+            <Text type="secondary">股票代码</Text>
+            <Input
+              placeholder="留空只导出轻量数据；例：000001,600000"
+              value={exportSymbols}
+              disabled={exportAllKline}
+              onChange={(e) => setExportSymbols(e.target.value)}
+            />
+          </Col>
+          <Col xs={12} md={4}>
+            <Text type="secondary">K线条数</Text>
+            <InputNumber
+              min={1}
+              max={5000}
+              value={exportKlineLimit}
+              onChange={(v) => setExportKlineLimit(v || 500)}
+              style={{ width: "100%" }}
+            />
+          </Col>
+          <Col xs={12} md={5}>
+            <Text type="secondary">K线周期</Text>
+            <Select
+              mode="multiple"
+              value={exportPeriods}
+              onChange={(v) => setExportPeriods(v.length ? v : ["daily"])}
+              options={[
+                { label: "日K", value: "daily" },
+                { label: "周K", value: "weekly" },
+                { label: "月K", value: "monthly" },
+              ]}
+              style={{ width: "100%" }}
+            />
+          </Col>
+          <Col xs={12} md={3}>
+            <Space direction="vertical" size={4}>
+              <Text type="secondary">全量K线</Text>
+              <Switch checked={exportAllKline} onChange={setExportAllKline} />
+            </Space>
+          </Col>
+          <Col xs={12} md={4}>
+            <Space direction="vertical" size={4}>
+              <Text type="secondary">板块成员</Text>
+              <Switch checked={includeBoardMembers} onChange={setIncludeBoardMembers} />
+            </Space>
+          </Col>
+          <Col xs={24}>
+            <Space wrap>
+              <Button
+                type="primary"
+                icon={<DownloadOutlined />}
+                loading={exporting || exportStatus?.status === "running" || exportStatus?.status === "queued"}
+                onClick={handleStaticExport}
+              >
+                导出静态数据
+              </Button>
+              <Tag color={EXPORT_STATUS_COLORS[exportStatus?.status || "idle"]}>
+                {exportStatus?.status || "idle"}
+              </Tag>
+              <Text type="secondary">
+                默认输出 frontend/public/data；留空股票代码时只导出股票列表、最新行情、板块和 manifest。
+              </Text>
+            </Space>
+          </Col>
+          {exportStatus?.finished_at && (
+            <Col xs={24}>
+              <Text type="secondary">
+                最近完成：{new Date(exportStatus.finished_at).toLocaleString("zh-CN")}
+                {exportStatus.returncode != null ? ` · returncode=${exportStatus.returncode}` : ""}
+              </Text>
+            </Col>
+          )}
+          {exportStatus?.error_message && (
+            <Col xs={24}>
+              <Text type="danger">{exportStatus.error_message}</Text>
+            </Col>
+          )}
+        </Row>
+      </Card>
 
       {/* 同步状态表 */}
       <Card title="📊 数据库同步状态" extra={

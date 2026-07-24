@@ -18,24 +18,40 @@ async def get_today_market(
     order: str = Query("desc", description="desc / asc"),
     page: int = Query(1, ge=1),
     page_size: int = Query(50, ge=1, le=200),
+    min_rows: int = Query(1000, ge=1, le=10000),
     db: AsyncSession = Depends(get_db),
 ):
     """当日行情概览。
 
     从本地数据库获取最新交易日的涨跌数据，无需调用外部 API。
     """
-    # Find the most recent trading date
-    max_date_result = await db.execute(select(func.max(StockDailyQuote.trade_date)))
-    latest_date = max_date_result.scalar()
-    if not latest_date:
+    latest_stmt = (
+        select(StockDailyQuote.trade_date, func.count().label("row_count"))
+        .where(StockDailyQuote.adjust_type == "qfq")
+        .group_by(StockDailyQuote.trade_date)
+        .having(func.count() >= min_rows)
+        .order_by(desc(StockDailyQuote.trade_date))
+        .limit(1)
+    )
+    latest_result = await db.execute(latest_stmt)
+    latest_row = latest_result.mappings().first()
+
+    if latest_row is None:
+        fallback_stmt = (
+            select(StockDailyQuote.trade_date, func.count().label("row_count"))
+            .where(StockDailyQuote.adjust_type == "qfq")
+            .group_by(StockDailyQuote.trade_date)
+            .order_by(desc(StockDailyQuote.trade_date))
+            .limit(1)
+        )
+        fallback_result = await db.execute(fallback_stmt)
+        latest_row = fallback_result.mappings().first()
+
+    if latest_row is None:
         return ApiResponse(data={"items": [], "total": 0, "date": None})
 
-    # Count totals
-    count_stmt = select(func.count()).select_from(StockDailyQuote).where(
-        StockDailyQuote.trade_date == latest_date,
-        StockDailyQuote.adjust_type == "qfq",
-    )
-    total = await db.scalar(count_stmt) or 0
+    latest_date = latest_row["trade_date"]
+    total = latest_row["row_count"] or 0
 
     # Sort column
     sort_col = getattr(StockDailyQuote, sort_by, StockDailyQuote.change_pct)
@@ -115,6 +131,7 @@ async def get_today_market(
         "total": total,
         "page": page,
         "page_size": page_size,
+        "min_rows": min_rows,
         "stats": {
             "up": up_count,
             "down": down_count,

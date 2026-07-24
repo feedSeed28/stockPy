@@ -3,24 +3,10 @@
 import { PageContainer } from "@ant-design/pro-components";
 import { Card, Col, Descriptions, Row, Statistic, Tag, Tabs, message } from "antd";
 import { useEffect, useState } from "react";
-import { fetchStock, fetchTodaySummary } from "@/services/stock";
 import type { StockInfo } from "@/services/typings";
-import { useDirectSource } from "@/utils/dataSource";
-import { fetchRealtimeQuote } from "@/services/eastmoney";
+import { getStockDataProvider } from "@/services/dataProvider";
 import KlineChart from "./KlineChart";
 import FinancialsView from "./FinancialsView";
-
-/** 从股票代码推导交易所和板块 */
-function deriveInfo(code: string) {
-  return {
-    exchange: code.startsWith("6") ? "SH" : "SZ",
-    board_type: code.startsWith("688")
-      ? "科创板"
-      : code.startsWith("300") || code.startsWith("301")
-        ? "创业板"
-        : "主板",
-  };
-}
 
 export default function StockDetailPage() {
   const pathParts = window.location.pathname.split("/").filter(Boolean);
@@ -32,60 +18,8 @@ export default function StockDetailPage() {
   useEffect(() => {
     if (!code) return;
     setLoading(true);
-
-    // ── 直连模式：优先东方财富，失败再走后端 ──
-    if (useDirectSource()) {
-      const emPromise = fetchRealtimeQuote(code)
-        .then((em) => {
-          if (!em) return null;
-          const derived = deriveInfo(code);
-          return {
-            stock: {
-              code: em.code, name: em.name,
-              exchange: derived.exchange, board_type: derived.board_type,
-              industry: "", is_active: true, listed_date: null,
-              source: "live",
-            } as StockInfo,
-            today: {
-              code: em.code,
-              trade_date: new Date().toISOString().slice(0, 10),
-              open: em.open, close: em.price,
-              high: em.high, low: em.low,
-              volume: em.volume, amount: em.amount,
-              change_pct: em.changePct, change_amount: em.changeAmt,
-              turnover_rate: em.turnover, amplitude: em.amplitude,
-              source: "live",
-            },
-          };
-        })
-        .catch(() => null);
-
-      const dbPromise = Promise.all([
-        fetchStock(code).catch(() => null),
-        fetchTodaySummary(code).catch(() => null),
-      ]);
-
-      Promise.all([emPromise, dbPromise])
-        .then(([em, [dbStock, dbToday]]) => {
-          if (em) {
-            setStock(
-              dbStock
-                ? { ...em.stock, industry: dbStock.industry, listed_date: dbStock.listed_date }
-                : em.stock
-            );
-            setToday({ ...em.today, lu_5d: dbToday?.lu_5d ?? 0, lu_30d: dbToday?.lu_30d ?? 0, lu_year: dbToday?.lu_year ?? 0 });
-          } else {
-            setStock(dbStock);
-            setToday(dbToday);
-          }
-        })
-        .catch(() => message.error("加载失败"))
-        .finally(() => setLoading(false));
-      return;
-    }
-
-    // ── 后端模式：完全走后端 ──
-    Promise.all([fetchStock(code), fetchTodaySummary(code)])
+    const provider = getStockDataProvider();
+    Promise.all([provider.getStock(code), provider.getTodaySummary(code)])
       .then(([s, t]) => { setStock(s); setToday(t); })
       .catch(() => message.error("加载失败"))
       .finally(() => setLoading(false));

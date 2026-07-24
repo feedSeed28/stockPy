@@ -14,6 +14,27 @@ export interface SyncStatusItem {
   error_message: string | null;
 }
 
+export interface StaticExportRequest {
+  symbols?: string;
+  all_kline?: boolean;
+  kline_limit?: number;
+  periods?: string;
+  include_board_members?: boolean;
+  out?: string;
+}
+
+export interface StaticExportStatus {
+  status: "idle" | "queued" | "running" | "success" | "error";
+  started_at: string | null;
+  finished_at: string | null;
+  output_dir: string | null;
+  command: string | null;
+  returncode: number | null;
+  stdout_tail: string;
+  stderr_tail: string;
+  error_message: string | null;
+}
+
 /** 获取所有表的同步状态 */
 export async function fetchSyncStatus(): Promise<SyncStatusItem[]> {
   try {
@@ -31,5 +52,27 @@ export async function triggerSync(table: string): Promise<{ ok: boolean; message
     return { ok: data.code === 200, message: data.message };
   } catch {
     return { ok: false, message: "请求失败" };
+  }
+}
+
+/** 触发前端静态数据导出 */
+export async function triggerStaticExport(
+  payload: StaticExportRequest
+): Promise<{ ok: boolean; message: string; status?: StaticExportStatus }> {
+  try {
+    const { data } = await http.post("/data/export-static", payload);
+    return { ok: data.code === 200, message: data.message, status: data.data };
+  } catch {
+    return { ok: false, message: "请求失败" };
+  }
+}
+
+/** 获取静态数据导出状态 */
+export async function fetchStaticExportStatus(): Promise<StaticExportStatus | null> {
+  try {
+    const { data } = await http.get("/data/export-static/status");
+    return data.data ?? null;
+  } catch {
+    return null;
   }
 }

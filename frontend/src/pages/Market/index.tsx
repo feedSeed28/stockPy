@@ -4,10 +4,8 @@ import { PageContainer, ProTable } from "@ant-design/pro-components";
 import { Alert, Card, Col, Row, Statistic } from "antd";
 import { useState } from "react";
 import type { ProColumns } from "@ant-design/pro-components";
-import axios from "axios";
 
-import { useDirectSource } from "@/utils/dataSource";
-import { fetchRealtimeMarket, type MarketItem } from "@/services/eastmoney";
+import { getStockDataProvider } from "@/services/dataProvider";
 
 const columns: ProColumns[] = [
   { title: "代码", dataIndex: "code", key: "code", width: 100, copyable: true },
@@ -43,25 +41,6 @@ const columns: ProColumns[] = [
     render: (_: any, r: any) => (r.amplitude ? r.amplitude.toFixed(2) + "%" : "-") },
 ];
 
-/** 将东方财富数据格式转换为页面统一格式 */
-function mapEMItem(item: MarketItem): Record<string, any> {
-  return {
-    code: item.code,
-    name: item.name,
-    industry: "",
-    change_pct: item.changePct,
-    change_amount: item.changeAmt,
-    close: item.price,
-    open: item.open,
-    high: item.high,
-    low: item.low,
-    volume: item.volume,
-    amount: item.amount,
-    turnover_rate: item.turnover,
-    amplitude: item.amplitude,
-  };
-}
-
 export default function MarketPage() {
   const [stats, setStats] = useState({ up: 0, down: 0, flat: 0, total: 0, date: "" });
 
@@ -95,38 +74,24 @@ export default function MarketPage() {
         columns={columns}
         rowKey="code"
         request={async (params: Record<string, any>) => {
-          // ── 直连模式：优先东方财富 ──
-          if (useDirectSource()) {
-            const page = params.current ?? 1;
-            const pageSize = params.pageSize ?? 50;
-            try {
-              const result = await fetchRealtimeMarket(page, pageSize);
-              if (result && result.items.length > 0) {
-                const items = result.items.map(mapEMItem);
-                const up = items.filter((i: any) => i.change_pct > 0).length;
-                const down = items.filter((i: any) => i.change_pct < 0).length;
-                const flat = items.filter((i: any) => i.change_pct === 0).length;
-                setStats({ up, down, flat, total: result.total, date: new Date().toLocaleDateString("zh-CN") });
-                return { data: items, total: result.total, success: true };
-              }
-            } catch {}
-          }
-
-          // ── 后端模式 / 东方财富失败 → 后端DB ──
+          const provider = getStockDataProvider();
           const sortBy = params.sorter?.field || "change_pct";
           const order = params.sorter?.order === "ascend" ? "asc" : "desc";
           try {
-            const { data } = await axios.get("/api/v1/market/today", {
-              params: { page: params.current, page_size: params.pageSize, sort_by: sortBy, order },
+            const result = await provider.getMarket({
+              page: params.current,
+              page_size: params.pageSize,
+              sort_by: sortBy,
+              order,
             });
-            if (data.code === 200) {
-              const d = data.data;
-              setStats({
-                up: d.stats?.up || 0, down: d.stats?.down || 0,
-                flat: d.stats?.flat || 0, total: d.total || 0, date: d.date || "",
-              });
-              return { data: d.items, total: d.total, success: true };
-            }
+            setStats({
+              up: result.stats.up,
+              down: result.stats.down,
+              flat: result.stats.flat,
+              total: result.total,
+              date: result.date,
+            });
+            return { data: result.items, total: result.total, success: true };
           } catch {}
           return { data: [], total: 0, success: true };
         }}

@@ -13,7 +13,7 @@ from app.core.database import get_db
 from app.models.stock_info import StockInfo
 from app.models.stock_quote import StockDailyQuote
 from app.schemas.common import ApiResponse
-from app.services.indicator_service import compute_slope_pct
+from app.quant.indicators import compute_slope_pct
 
 router = APIRouter(prefix="/slope", tags=["slope"])
 

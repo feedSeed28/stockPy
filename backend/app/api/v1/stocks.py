@@ -15,6 +15,7 @@ from sqlalchemy import desc, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db
+from app.models.stock_info import StockInfo
 from app.models.stock_quote import StockDailyQuote
 from app.schemas.common import ApiResponse
 from app.services import stock_query_service as qs
@@ -47,6 +48,38 @@ async def list_stocks(
         "total": total,
         "page": page,
         "page_size": page_size,
+    })
+
+
+@router.get("/industries")
+async def get_stock_industries(
+    codes: str = Query(..., description="Comma-separated stock codes"),
+    db: AsyncSession = Depends(get_db),
+):
+    """Batch lookup stock industry names from local stock_info."""
+    parsed_codes = []
+    seen = set()
+    for raw in codes.split(","):
+        code = raw.strip().zfill(6)
+        if len(code) == 6 and code.isdigit() and code not in seen:
+            parsed_codes.append(code)
+            seen.add(code)
+        if len(parsed_codes) >= 500:
+            break
+
+    if not parsed_codes:
+        return ApiResponse(data={"items": [], "map": {}})
+
+    result = await db.execute(
+        select(StockInfo.code, StockInfo.industry).where(StockInfo.code.in_(parsed_codes))
+    )
+    items = [
+        {"code": r.code, "industry": r.industry or ""}
+        for r in result.all()
+    ]
+    return ApiResponse(data={
+        "items": items,
+        "map": {item["code"]: item["industry"] for item in items},
     })
 
 

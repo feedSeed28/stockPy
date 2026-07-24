@@ -18,6 +18,7 @@ node_modules/
 frontend/dist/
 frontend/.umi/
 frontend/.umi-production/
+frontend/public/data/
 
 # IDE
 .idea/
