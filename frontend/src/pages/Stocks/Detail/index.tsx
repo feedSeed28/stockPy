@@ -7,6 +7,7 @@ import type { StockInfo } from "@/services/typings";
 import { getStockDataProvider } from "@/services/dataProvider";
 import KlineChart from "./KlineChart";
 import FinancialsView from "./FinancialsView";
+import YearStats from "./YearStats";
 
 export default function StockDetailPage() {
   const pathParts = window.location.pathname.split("/").filter(Boolean);
@@ -73,35 +74,18 @@ export default function StockDetailPage() {
         </>
       )}
 
-      {/* Limit-up stats */}
+      {/* Year stats — 从今年K线计算：涨跌停 + 大涨大跌 */}
+      <YearStats code={code} />
+
+      {/* Trade date */}
       {today && (
-        <>
         <Row gutter={16} style={{ marginBottom: 16 }}>
           <Col span={6}>
-            <Card size="small" style={{ background: "#fff7e6" }}>
-              <Statistic title="近5日涨停" value={today.lu_5d || 0}
-                valueStyle={{ color: today.lu_5d > 0 ? "#cf1322" : "#999", fontSize: 20 }} />
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card size="small" style={{ background: "#fff1f0" }}>
-              <Statistic title="近30日涨停" value={today.lu_30d || 0}
-                valueStyle={{ color: today.lu_30d > 0 ? "#cf1322" : "#999", fontSize: 20 }} />
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card size="small" style={{ background: "#f6ffed" }}>
-              <Statistic title="今年涨停" value={today.lu_year || 0}
-                valueStyle={{ color: today.lu_year > 0 ? "#cf1322" : "#999", fontSize: 20 }} />
-            </Card>
-          </Col>
-          <Col span={6}>
             <Card size="small">
-              <Statistic title="日期" value={today.trade_date || "-"} />
+              <Statistic title="数据日期" value={today.trade_date || "-"} />
             </Card>
           </Col>
         </Row>
-        </>
       )}
 
       {/* Basic info */}

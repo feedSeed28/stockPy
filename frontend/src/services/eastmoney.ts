@@ -205,10 +205,10 @@ export async function fetchKlineEM(
   code: string, period: string = "daily", limit: number = 200
 ): Promise<KlineBar[]> {
   const klt = KLT_MAP[period] ?? 101;
-  const url = `${EM_PUSH_HIS}/get?fields1=f1,f2,f3,f4,f5,f6` +
+  const url = `${EM_PUSH_HIS}/get` +
+    `?fields1=f1,f2,f3,f4,f5,f6` +
     `&fields2=f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61` +
-    `&ut=7eea3edcaed734bea9cbfc24409ed989` +
-    `&klt=${klt}&fqt=1&secid=${toSecid(code)}&lmt=${limit}&end=20500101`;
+    `&secid=${toSecid(code)}&klt=${klt}&fqt=1&lmt=${limit}&end=20500101`;
 
   try {
     const { data } = await axios.get(url, { timeout: 10000 });

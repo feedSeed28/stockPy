@@ -8,6 +8,7 @@ from app.models.stock_forecast import StockProfitForecast
 from app.models.stock_fund_flow import StockFundFlowDaily
 from app.models.stock_board import StockBoardInfo, StockBoardMember
 from app.models.sync_status import SyncStatus
+from app.models.watchlist import WatchlistGroup, WatchlistItem
 
 __all__ = [
     "Base",
@@ -24,4 +25,6 @@ __all__ = [
     "StockBoardInfo",
     "StockBoardMember",
     "SyncStatus",
+    "WatchlistGroup",
+    "WatchlistItem",
 ]

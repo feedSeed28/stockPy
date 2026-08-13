@@ -264,24 +264,31 @@ export const directProvider: StockDataProvider = {
   async getMarket(params) {
     const page = params.page || 1;
     const pageSize = params.page_size || 50;
-    const result = await fetchRealtimeMarket(page, pageSize);
-    if (!result || !result.items.length) return backendProvider.getMarket(params);
-    let items = result.items.map(mapEMMarketItem);
-    if (items.some((item) => !item.industry)) {
-      const industryMap = await fetchIndustryMap(items.map((item) => item.code));
-      items = items.map((item) => ({
+
+    // 拉全量数据算涨跌统计（不做分页），再本地分页返回
+    const all = await fetchRealtimeMarket(1, 6000);
+    if (!all || !all.items.length) return backendProvider.getMarket(params);
+
+    let allItems = all.items.map(mapEMMarketItem);
+    if (allItems.some((item) => !item.industry)) {
+      const industryMap = await fetchIndustryMap(allItems.map((item) => item.code));
+      allItems = allItems.map((item) => ({
         ...item,
         industry: item.industry || industryMap[item.code] || "",
       }));
     }
+
+    const start = (page - 1) * pageSize;
+    const pagedItems = allItems.slice(start, start + pageSize);
+
     return {
-      items,
-      total: result.total,
+      items: pagedItems,
+      total: all.total,
       date: new Date().toLocaleDateString("zh-CN"),
       stats: {
-        up: items.filter((i) => i.change_pct > 0).length,
-        down: items.filter((i) => i.change_pct < 0).length,
-        flat: items.filter((i) => i.change_pct === 0).length,
+        up: allItems.filter((i) => i.change_pct > 0).length,
+        down: allItems.filter((i) => i.change_pct < 0).length,
+        flat: allItems.filter((i) => i.change_pct === 0).length,
       },
       source: "direct",
     };

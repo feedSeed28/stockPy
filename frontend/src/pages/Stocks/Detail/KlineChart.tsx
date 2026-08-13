@@ -25,52 +25,51 @@ export default function KlineChart({ code }: Props) {
     setDateRange(null);
     const provider = getStockDataProvider();
 
-    if (provider.mode === "direct") {
-      provider.getKline(code, { period, page_size: 500 })
-        .then((res) => {
-          setData(res.items);
+    async function loadKline() {
+      if (provider.mode === "direct") {
+        try {
+          const res = await provider.getKline(code, { period, page_size: 500 });
           if (res.items.length > 0) {
+            setData(res.items);
             const first = res.items[0].trade_date;
             const last = res.items[res.items.length - 1].trade_date;
             setDateRange([first, last]);
+            setSource("live");
+            return;
           }
-          setSource("live");
-        })
-        .catch(() => message.error("K线加载失败"))
-        .finally(() => setLoading(false));
-      return;
+          // 直连返回空 → 回退到后端
+          console.warn("直连K线无数据，回退后端");
+        } catch {
+          console.warn("直连K线请求失败，回退后端");
+        }
+      }
+
+      // ── 后端模式（或直连回退）──
+      try {
+        const range = await provider.getKlineRange(code, period);
+        if (range.max_date) {
+          const end = dayjs(range.max_date);
+          const start = end.subtract(180, "day");
+          setDateRange([start.format("YYYY-MM-DD"), end.format("YYYY-MM-DD")]);
+          const res = await provider.getKline(code, {
+            period,
+            start_date: start.format("YYYY-MM-DD"),
+            end_date: end.format("YYYY-MM-DD"),
+            page_size: 500,
+          });
+          setData(res.items);
+          setSource("db");
+        } else {
+          const res = await provider.getKline(code, { period, page_size: 500 });
+          setData(res.items);
+          setSource("db");
+        }
+      } catch {
+        message.error("K线加载失败");
+      }
     }
 
-    // ── 后端模式 ──
-    provider.getKlineRange(code, period).then((range) => {
-      if (range.max_date) {
-        const end = dayjs(range.max_date);
-        const start = end.subtract(180, "day");
-        setDateRange([start.format("YYYY-MM-DD"), end.format("YYYY-MM-DD")]);
-        provider.getKline(code, {
-          period,
-          start_date: start.format("YYYY-MM-DD"),
-          end_date: end.format("YYYY-MM-DD"),
-          page_size: 500,
-        }).then((res) => {
-          setData(res.items);
-          setSource("db");
-        }).catch(() => message.error("K线加载失败"))
-          .finally(() => setLoading(false));
-      } else {
-        provider.getKline(code, { period, page_size: 500 }).then((res) => {
-          setData(res.items);
-          setSource("db");
-        }).catch(() => message.error("K线加载失败"))
-          .finally(() => setLoading(false));
-      }
-    }).catch(() => {
-      provider.getKline(code, { period, page_size: 500 }).then((res) => {
-        setData(res.items);
-        setSource("db");
-      }).catch(() => message.error("K线加载失败"))
-        .finally(() => setLoading(false));
-    });
+    loadKline().finally(() => setLoading(false));
   }, [code, period]);
 
   if (!loading && data.length === 0) {
